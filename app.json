@@ -1,7 +1,9 @@
 {
   "pages":[
-    "pages/coupon/coupon",
+    "pages/details/details",
     "pages/my/my",
+    "pages/index/index",
+    "pages/coupon/coupon",
     "pages/Withdrawal/Withdrawal",
     "pages/wallet/wallet",
     "pages/news/news",
@@ -12,9 +14,8 @@
     "pages/forget/forget",
     "pages/service/service",
     "pages/Praise/Praise",
-    "pages/index/index",
+ 
     "pages/Searchpage/Searchpage",
-    "pages/details/details",
     "pages/login/login",
     "pages/Escort/Escort"
   ],

@@ -1,9 +1,14 @@
 <view>
-  <van-tabs swipeable title-active-color="#61CF8CFF">
+  <van-tabs swipeable title-active-color="#61CF8CFF" color="#61CF8CFF">
     <van-tab title="待领取">
-      <view class="coupon">
-        
-      </view> 
+      <view class="local">
+        <view class="central">
+          <view class="coupon">
+
+          </view>
+        </view>
+      </view>
+
     </van-tab>
     <van-tab title="代使用">内容 2</van-tab>
     <van-tab title="已使用">内容 3</van-tab>

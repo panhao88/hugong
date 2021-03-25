@@ -314,6 +314,7 @@
 }
 .plGender{
   width: 200rpx;
+  margin-left: 10rpx;
   padding-left: 30rpx;
   font-size: 28rpx;
   color: #98989A;
@@ -330,4 +331,7 @@
 }
 .storage{
   margin-top: 30rpx;
+}
+.buootb{
+  height: 80rpx; 
 }

@@ -1,237 +1,242 @@
-<scroll-view scroll-y="true" style="height:{{height-70}}px">
-  <view class="localpl">
-    <!-- 轮播图 -->
-    <view class="wrap">
-      <!-- <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+<view class="localpl">
+  <!-- 轮播图 -->
+  <view class="wrap">
+    <!-- <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
       <swiper-item wx:for="{{list}}" wx:key="index">
         <image src="{{item.image}}" class="img-i"></image>
       </swiper-item>
     </swiper> -->
-      <image src="../../img/mipmap-mdpi/hugong.png" class="img-i"></image>
-    </view>
-    <view class="central">
-      <view class="region">
-        <view class="region-tow">
-          <view class="service">
-            <view class="service-zh">
-              <view class="Aunt_Zhang">张阿姨</view>
-              <view class="Serviceable">可服务</view>
-            </view>
-            <view class="good">最早可约17：00</view>
-          </view>
-          <view class="Gender">
-            <view class="mar-gin">性别：女</view>
-            <view class="mar-gin">年龄：41</view>
-            <view class="location">
-              <view>
-                <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
-              </view>
-              <view>蜀都中心一期</view>
-            </view>
-          </view>
-          <view class="authentication">
-            <view class="bor">平台认证</view>
-            <view class="bor">平台认证</view>
-            <view class="bor">平台认证</view>
-            <view class="bor">平台认证</view>
-          </view>
-          <view class="Years">
-            <view class="score">
-              <view class="cool">5.0</view>
-              <van-rate size="{{ 14 }}" color="#ee0a24" void-icon="star" />
-            </view>
-            <view class="score">
-              <view class="cool">10</view>
-             <view class="fu-color"> 服务人数</view>
-            </view>
-            <view class="score">
-              <view class="cool">10</view>
-             <view class="fu-color"> 从业年限</view>
-            </view>
-            <view class="score">
-              <view class="cool">9999+</view>
-              <view class="fu-color">用户评论</view>
-            </view>
-          </view>
-          <view class="bor-d"></view>
-          <view class="details">
-            本人从事配属行业10年
-            本人从事配属行业10年
-            本人从事配属行业10年
-            本人从事配属行业10年
-            本人从事配属行业10年
-            本人从事配属行业10年
-          </view>
-        </view>
-      </view>
-      <view class="Safety-certification">
-        <view class="guarantee">
-          <view class="security">安全保障</view>
-          <view class="Allcertifications">
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/pingtai.png" class="rz-tu"></image>
-              </view>
-              <view class="platform">平台认证</view>
-            </view>
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/shiming.png" class="rz-tu"></image>
-              </view>
-              <view class="platform">实名认证</view>
-            </view>
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/gongan.png" class="rz-tu"></image>
-              </view>
-              <view class="platform">公安联网</view>
-            </view>
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/tijian.png" class="rz-tu"></image>
-              </view>
-              <view class="platform">体检报告</view>
-            </view>
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/zhuanye.png" class="rz-tu"></image>
-              </view>
-              <view class="platform">专业证书</view>
-            </view>
-          </view>
-        </view>
-      </view>
-      <view class="Service-Items">
-        <view class="guarantee">
-          <view class="security">服务项目</view>
-          <view class="Allcertifications">
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/ji1.png" class="rz-tu-ren"></image>
-              </view>
-              <view class="pin-authentication">病人陪护</view>
-              <view class="three-hundred">300天/1月</view>
-            </view>
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/ji2.png" class="rz-tu-ren"></image>
-              </view>
-              <view class="pin-authentication">产妇陪护</view>
-              <view class="three-hundred">300天/1月</view>
-            </view>
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/ji3.png" class="rz-tu-ren"></image>
-              </view>
-              <view class="pin-authentication">老人陪护</view>
-              <view class="three-hundred">300天/1月</view>
-            </view>
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/ji4.png" class="rz-tu-ren"></image>
-              </view>
-              <view class="pin-authentication">月嫂陪护</view>
-              <view class="three-hundred">300天/1月</view>
-            </view>
-          </view>
-        </view>
-      </view>
-      <view>
-        <van-goods-action>
-          <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
-          <van-goods-action-button text="立即预约" bind:click="onClickButton" />
-        </van-goods-action>
-      </view>
-      <van-popup show="{{ show }}" position="bottom" custom-style="height: 90%;" bind:close="onClose">
-        <view class="local">
-          <view class="central-section">
-            <view class="fill-in">填写预约信息</view>
-            <view class="contacts">
-              <view class="contact" bindtap="goaddress">
-                <view class="Contact-address">请选择联系地址</view>
-                <view class="picture">
-                  <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
-                </view>
-              </view>
-              <view class="contact">
-                <view class="Contact-address">请选择联系地址</view>
-                <view class="picture">
-                  <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
-                </view>
-              </view>
-              <view class="contact">
-                <view class="Contact-address">请选择联系地址</view>
-                <view class="picture">
-                  <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
-                </view>
-              </view>
-            </view>
-            <view class="Servicetype">
-                <view class="service-sp">服务类型</view>
-                <view class="Escort-lp">
-                  <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
-                    <view class="yi-Escort">{{item.name}}</view>
-                  </view>
-                </view>
-              <view class="service-sp">
-                <view>服务项目</view>
-                <view class="Escort-lp">
-                  <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
-                    <view class="yi-Escort">{{item.name}}</view>
-                  </view>
-                </view>
-              </view>
-              <view class="service-sp">
-                <view>服务内容</view>
-                <view class="Escort-lp">
-                  <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
-                    <view class="yi-Escort">{{item.name}}</view>
-                  </view>
-                </view>
-              </view>
-            </view>
-          </view>
-        </view>
-        <van-goods-action>
-          <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
-          <van-goods-action-button text="立即预约" bind:click="onClickButton" />
-        </van-goods-action>
-      </van-popup>
-      <van-popup show="{{ showaddress }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
-        <view class="local">
-          <view class="central-section">
-            <van-button icon="plus" type="primary" bindtap="Newaddress">新增地址</van-button>
-          </view>
-        </view>
-      </van-popup>
-      <van-popup show="{{ keepaddress }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
-        <view class="local">
-          <view class="central-section">
-            <view>
-              <van-cell-group>
-                <van-field value="{{ value }}" placeholder="请输入联系人" />
-                <view class="radio">
-                  <view class="plGender">性别</view>
-                  <view class="radio-group">
-                    <van-radio-group value="{{ radio }}" bind:change="onChange">
-                      <view class="radioflex">
-                        <van-radio name="1" class="groun">男</van-radio>
-                        <van-radio name="2">女</van-radio>
-                      </view>
-                    </van-radio-group>
-                  </view>
-                </view>
-                <van-field value="{{ value }}" placeholder="请输入联系人" />
-                <van-field value="{{ value }}" placeholder="请选择" />
-                <van-field value="{{ value }}" placeholder="门牌号" />
-              </van-cell-group>
-            </view>
-            <view class="storage">
-              <van-button type="info" type="primary">保存地址</van-button>
-            </view>
-          </view>
-        </view>
-      </van-popup>
-    </view>
+    <image src="../../img/mipmap-mdpi/hugong.png" class="img-i"></image>
   </view>
-</scroll-view>
+  <view class="central">
+    <view class="region">
+      <view class="region-tow">
+        <view class="service">
+          <view class="service-zh">
+            <view class="Aunt_Zhang">张阿姨</view>
+            <view class="Serviceable">可服务</view>
+          </view>
+          <view class="good">最早可约17：00</view>
+        </view>
+        <view class="Gender">
+          <view class="mar-gin">性别：女</view>
+          <view class="mar-gin">年龄：41</view>
+          <view class="location">
+            <view>
+              <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+            </view>
+            <view>蜀都中心一期</view>
+          </view>
+        </view>
+        <view class="authentication">
+          <view class="bor">平台认证</view>
+          <view class="bor">平台认证</view>
+          <view class="bor">平台认证</view>
+          <view class="bor">平台认证</view>
+        </view>
+        <view class="Years">
+          <view class="score">
+            <view class="cool">5.0</view>
+            <van-rate size="{{ 14 }}" color="#ee0a24" void-icon="star" />
+          </view>
+          <view class="score">
+            <view class="cool">10</view>
+            <view class="fu-color"> 服务人数</view>
+          </view>
+          <view class="score">
+            <view class="cool">10</view>
+            <view class="fu-color"> 从业年限</view>
+          </view>
+          <view class="score">
+            <view class="cool">9999+</view>
+            <view class="fu-color">用户评论</view>
+          </view>
+        </view>
+        <view class="bor-d"></view>
+        <view class="details">
+          本人从事配属行业10年
+          本人从事配属行业10年
+          本人从事配属行业10年
+          本人从事配属行业10年
+          本人从事配属行业10年
+          本人从事配属行业10年
+        </view>
+      </view>
+    </view>
+    <view class="Safety-certification">
+      <view class="guarantee">
+        <view class="security">安全保障</view>
+        <view class="Allcertifications">
+          <view class="vertical">
+            <view>
+              <image src="../../img/mipmap-mdpi/pingtai.png" class="rz-tu"></image>
+            </view>
+            <view class="platform">平台认证</view>
+          </view>
+          <view class="vertical">
+            <view>
+              <image src="../../img/mipmap-mdpi/shiming.png" class="rz-tu"></image>
+            </view>
+            <view class="platform">实名认证</view>
+          </view>
+          <view class="vertical">
+            <view>
+              <image src="../../img/mipmap-mdpi/gongan.png" class="rz-tu"></image>
+            </view>
+            <view class="platform">公安联网</view>
+          </view>
+          <view class="vertical">
+            <view>
+              <image src="../../img/mipmap-mdpi/tijian.png" class="rz-tu"></image>
+            </view>
+            <view class="platform">体检报告</view>
+          </view>
+          <view class="vertical">
+            <view>
+              <image src="../../img/mipmap-mdpi/zhuanye.png" class="rz-tu"></image>
+            </view>
+            <view class="platform">专业证书</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="Service-Items">
+      <view class="guarantee">
+        <view class="security">服务项目</view>
+        <view class="Allcertifications">
+          <view class="vertical">
+            <view>
+              <image src="../../img/mipmap-mdpi/ji1.png" class="rz-tu-ren"></image>
+            </view>
+            <view class="pin-authentication">病人陪护</view>
+            <view class="three-hundred">300天/1月</view>
+          </view>
+          <view class="vertical">
+            <view>
+              <image src="../../img/mipmap-mdpi/ji2.png" class="rz-tu-ren"></image>
+            </view>
+            <view class="pin-authentication">产妇陪护</view>
+            <view class="three-hundred">300天/1月</view>
+          </view>
+          <view class="vertical">
+            <view>
+              <image src="../../img/mipmap-mdpi/ji3.png" class="rz-tu-ren"></image>
+            </view>
+            <view class="pin-authentication">老人陪护</view>
+            <view class="three-hundred">300天/1月</view>
+          </view>
+          <view class="vertical">
+            <view>
+              <image src="../../img/mipmap-mdpi/ji4.png" class="rz-tu-ren"></image>
+            </view>
+            <view class="pin-authentication">月嫂陪护</view>
+            <view class="three-hundred">300天/1月</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <van-goods-action>
+        <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
+        <van-goods-action-button text="立即预约" bind:click="onClickButton" />
+      </van-goods-action>
+    </view>
+    <van-popup show="{{ show }}" position="bottom" custom-style="height: 75%;" bind:close="onClose">
+      <view class="local">
+        <view class="central-section">
+          <view class="fill-in">填写预约信息</view>
+          <view class="contacts">
+            <view class="contact" bindtap="goaddress">
+              <view class="Contact-address">请选择联系地址</view>
+              <view class="picture">
+                <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
+              </view>
+            </view>
+            <view class="contact">
+              <view class="Contact-address">请选择联系地址</view>
+              <view class="picture">
+                <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
+              </view>
+            </view>
+            <view class="contact">
+              <view class="Contact-address">请选择联系地址</view>
+              <view class="picture">
+                <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
+              </view>
+            </view>
+          </view>
+          <view class="Servicetype">
+            <view class="service-sp">服务类型</view>
+            <view class="Escort-lp">
+              <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
+                <view class="yi-Escort">{{item.name}}</view>
+              </view>
+            </view>
+            <view class="service-sp">
+              <view>服务项目</view>
+              <view class="Escort-lp">
+                <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
+                  <view class="yi-Escort">{{item.name}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <van-goods-action>
+        <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
+        <van-goods-action-button text="立即预约" bind:click="onClickButton" />
+      </van-goods-action>
+    </van-popup>
+    <!-- 新增地址 -->
+    <van-popup show="{{ showaddress }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
+      <view class="local">
+        <view class="central-section">
+          <van-button icon="plus" type="primary" bindtap="Newaddress">新增地址</van-button>
+        </view>
+      </view>
+    </van-popup>
+    <!-- 服务地址 -->
+    <van-popup show="{{ Serviceaddress }}" position="bottom" custom-style="height: 90%;" bind:close="onClose">
+      <view>
+        <map longitude="{{marks[0].longitude}}" latitude="{{marks[0].latitude}}" style="width:100%;height:400px"
+          scale="20" markers="{{marks}}">
+        </map>
+      </view>
+    </van-popup>
+    <!-- 练习 -->
+    <page-container show="{{Shadow}}" custom-style="height:80%">
+      <view>1111</view>
+    </page-container>
+    <!-- 联系地址 -->
+    <van-popup show="{{ keepaddress }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
+      <view class="local">
+        <view class="central-section">
+          <view>
+            <van-cell-group>
+              <van-field value="{{ value }}" placeholder="请输入联系人" />
+              <view class="radio">
+                <view class="plGender">性别</view>
+                <view class="radio-group">
+                  <van-radio-group value="{{ radio }}" bind:change="onChange">
+                    <view class="radioflex">
+                      <van-radio name="1" class="groun">男</van-radio>
+                      <van-radio name="2">女</van-radio>
+                    </view>
+                  </van-radio-group>
+                </view>
+              </view>
+              <van-field value="{{ value }}" placeholder="请输入联系人" />
+              <van-cell title="服务地址" is-link value="请选择" bindtap="golocation" />
+              <van-field value="{{ value }}" placeholder="门牌号" />
+            </van-cell-group>
+          </view>
+          <view class="storage">
+            <van-button type="info" type="primary">保存地址</van-button>
+          </view>
+        </view>
+      </view>
+    </van-popup>
+  </view>
+  <view class="buootb"></view>
+</view>

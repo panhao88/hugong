@@ -41,19 +41,27 @@
 }
 
 .cor {
-  width: 100rpx;
-  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 22rpx;
   background: #61CF8CFF;
   border-radius: 20rpx;
   color: #ffff;
-  text-align: center;
-  padding: 6rpx;
+  padding: 8rpx 15rpx;
 }
-
+.cor1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22rpx;
+  background:#f0f0f0;
+  border-radius: 20rpx;
+  padding: 8rpx 15rpx;
+}
 .scroll-view-item_H {
   display: inline-block;
-  width: 20%;
+  margin:0 20rpx;
 }
 /* 热门护工 */
 .Popular-nurse {

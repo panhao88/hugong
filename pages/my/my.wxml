@@ -81,9 +81,12 @@
         </view>
       </view>
       <view class="Gongge">
-        <van-grid square>
-          <van-grid-item wx:for="{{gridtextlist}}" wx:key="index" text="{{item.text}}" icon="{{item.img}}"/>
-        </van-grid>
+        <view wx:for="{{gridtextlist}}" wx:key="index" class="yi-hospital">
+          <view class="ttex-p">
+            <view><image src="{{item.img}}" class="imgg"></image></view>
+            <view class="font-s">{{item.text}}</view>
+          </view>
+        </view>
       </view>
     </view>
     <view class="">

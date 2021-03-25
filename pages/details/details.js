@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    height:'',
     arr:[
       {
         name:"医院陪护",
@@ -31,24 +30,37 @@ Page({
         name:"医院陪护",
         id:6
       },
-
     ],
-   show:false,
-   showaddress:false,
-   keepaddress:false
+    marks:[
+      {
+        latitude: 22.773672,
+        longitude: 113.922775,
+        title:"嘉华光明校区",
+        iconPath:"../../image/定位.png",
+        width:30,
+        height:30
+      }
+    ],
+  show:false, //立即预约弹窗
+  Shadow:false,//原生遮罩层
+   showaddress:false, //新增地址
+   keepaddress:false, //联系地址弹窗
+   Serviceaddress:false //服务地址弹窗
   },
  
   // 弹出层展开影藏
   onClickButton(){
     this.setData({
-      show:true
+      // show:true
+      Shadow:true
     })
   },
   onClose(){
     this.setData({
       show:false,
       showaddress:false,
-      keepaddress:false
+      keepaddress:false,
+      Serviceaddress:false
     })
   },
   //新增地址弹窗
@@ -63,6 +75,31 @@ Page({
     this.setData({
       keepaddress:true,
       showaddress:false
+    })
+  },
+  //请选择服务地址
+  golocation(){
+    this.setData({
+      Serviceaddress:true,
+      keepaddress:false
+    })
+    var that=this;
+    wx.chooseLocation({
+      success: function(res) {
+        console.log(res);
+        that.setData({
+          marks: [
+            {
+              latitude: res.latitude,
+              longitude: res.longitude,
+              title: "嘉华光明校区",
+              iconPath: "../../image/定位.png",
+              width: 30,
+              height: 30
+            }
+          ]
+        })
+      },
     })
   },
   /**
@@ -83,14 +120,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-     let that = this
-      wx.getSystemInfo({
-        success(res) {
-         that.setData({
-           height:res.windowHeight
-         })
-        },
-      });
+   
   },
 
   /**

@@ -14,6 +14,7 @@ Component({
    */
   data: {
     flag: 0,
+    flagIndex:0
   },
   /**
    * 组件的方法列表

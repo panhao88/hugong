@@ -8,7 +8,9 @@
     "van-radio": "../../lib/vant/radio",
     "van-radio-group": "../../lib/vant/radio-group",
     "van-button": "../../lib/vant/button",
-    "van-field": "../../lib/vant/field"
+    "van-field": "../../lib/vant/field",
+    "van-cell": "../../lib/vant/cell",
+    "van-cell-group": "../../lib/vant/cell-group"
   },
   "navigationBarTitleText": "护工详情"
 }

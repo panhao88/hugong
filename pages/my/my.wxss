@@ -249,11 +249,27 @@
 
 .Gongge {
   width: 100%;
-  height: 300rpx;
+  flex-wrap: wrap;
+  display: flex;
 }
-
-
+.yi-hospital{
+  margin-top: 10rpx;
+}
+.ttex-p{
+  width: 178rpx;
+  height: 135rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.font-s{
+  font-size: 28rpx;
+}
 .grid-text {
   font-size: 28rpx;
   margin-top: 4rpx;
+}
+.imgg{
+  width: 80rpx;
+  height: 80rpx;
 }
