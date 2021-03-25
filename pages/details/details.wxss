@@ -1,0 +1,281 @@
+.local {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFAFF;
+}
+
+.central {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 60rpx;
+}
+
+.region {
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.region-tow {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  border-radius: 20rpx;
+  background: #F1F1F1;
+}
+
+.wrap {
+  width: 100%;
+  height: 750rpx;
+}
+
+.img-i {
+  width: 100%;
+  height: 750rpx !important;
+}
+
+.service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-zh {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.Aunt_Zhang {
+  font-weight: 600;
+  font-size: 34rpx;
+}
+
+.Serviceable {
+  width: 70rpx;
+  display: flex;
+  align-items: center;
+  background: #16D595;
+  border-radius: 20rpx;
+  color: #ffffff;
+  padding: 0 15rpx 0 15rpx;
+  margin-left: 30rpx;
+  font-size: 22rpx;
+}
+
+.good {
+  display: flex;
+  justify-content: flex-end;
+  background: #DFFBED;
+  font-size: 26rpx;
+  color: #8BD1A6;
+  padding: 0 0 0 20rpx;
+  border-radius: 20rpx 0 0 20rpx;
+}
+
+.Gender {
+  display: flex;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+
+.img-di {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.location {
+  display: flex;
+  margin-left: 30rpx;
+}
+
+.mar-gin {
+  margin-right: 30rpx;
+}
+
+.authentication {
+  display: flex;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+
+.bor {
+  border: black 1rpx solid;
+  color: #ffffff;
+  background: #16D595;
+  padding: 4rpx;
+  border: none;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+}
+
+.Years {
+  margin-top: 20rpx;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+
+.score {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bor-d {
+  border: solid 0.5rpx black;
+}
+
+/* 安全认证 */
+.Safety-certification {
+  width: 100%;
+  height: 230rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  background: #F1F1F1;
+}
+
+.guarantee {
+  display: flex;
+  flex-direction: column;
+}
+
+.security {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.Allcertifications {
+  display: flex;
+  justify-content: space-around;
+  font-size: 28rpx;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rz-tu {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 服务项目 */
+.Service-Items {
+  width: 100%;
+  height: 300rpx;
+  background: #F1F1F1;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+.van-button{
+  width: 100% !important;
+} 
+.van-button--danger{
+    background: #16D595 !important;
+}
+/* 预约信息 */
+.central-section{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+.fill-in{
+  padding: 10rpx;
+}
+.contacts{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 20rpx;
+  background: #FFFFFFFF;
+}
+.contact{
+  height: 100rpx;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.Contact-address{
+  width: 90%;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+.picture{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+.immm-g{
+  width: 30rpx;
+  height: 30rpx;
+}
+/* 服务类型 */
+.Servicetype{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+  background: #FFFFFFFF;
+}
+.service-sp{
+  padding: 5rpx;
+}
+.yi-hospital{
+  margin-top: 10rpx;
+  padding-left: 10rpx;
+}
+.Escort-lp{
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+}
+.yi-Escort{
+  width: 160rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #16D595;
+}
+/* 新增地址 */
+.van-button{
+  border-radius: 40rpx !important;
+}
+.radio{
+  width: 100%;
+  height: 88rpx;
+  background: #FFFFFF;
+  border-bottom: solid ghostwhite 0.1rpx;
+  display: flex;
+  align-items: center;
+}
+.radioflex{
+  display: flex;
+}
+.plGender{
+  width: 200rpx;
+  padding-left: 30rpx;
+  font-size: 28rpx;
+  color: #98989A;
+  display: flex;
+  align-items: center;
+}
+.groun{
+  padding-right: 80rpx;
+}
+.radio-group{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.storage{
+  margin-top: 30rpx;
+}

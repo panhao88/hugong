@@ -1,0 +1,270 @@
+/* pages/my/my.wxss */
+.top {
+  width: 100vw;
+  height: 100vh;
+  background: #FAFAFA;
+}
+
+.top-backorun {
+  width: 100vw;
+  height: 350rpx;
+  position: relative;
+  background-color: #83D5A3;
+}
+
+.Chat-settings {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+  color: #FFFFFF;
+}
+
+.icon-distance {
+  margin-right: 20rpx;
+}
+
+.portrait {
+  width: 400rpx;
+  height: 160rpx;
+  top: 80rpx;
+  left: 60rpx;
+  margin-top: 40rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+  display: flex;
+  position: absolute;
+}
+
+.circular {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #18B566;
+}
+
+.user-name {
+  margin-left: 50rpx;
+}
+
+.total {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  bottom: 90rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wallet {
+  width: 95%;
+  height: 140rpx;
+  border-radius: 15rpx;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Vertical-line {
+  width: 1rpx;
+  height: 60rpx;
+  background: #000;
+}
+
+.num-ber {
+  width: 160rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.num-color {
+  font-size: 35rpx;
+  font-weight: 600;
+  color: red;
+}
+
+.Service-person {
+  margin-top: 20rpx;
+  width: 95%;
+  height: 220rpx;
+  background: #FFFFFF;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-fuwu {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: red; */
+}
+
+.Service {
+  width: 180rpx;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.more {
+  width: 140rpx;
+  margin-right: 10rpx;
+  color: #9E9E9E;
+  font-size: 28rpx;
+}
+
+
+.Carousel {
+  width: 95%;
+  height: 120rpx;
+  background: red;
+}
+.img-i{
+  width: 100%;
+  height: 160rpx !important;
+}
+
+
+.order {
+  margin-top: 20rpx;
+  width: 95%;
+  height: 180rpx;
+  background: #FFFFFF;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-fuwu {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Service {
+  width: 180rpx;
+  margin-left: 20rpx;
+  font-weight: 700;
+}
+
+.more {
+  width: 140rpx;
+  margin-right: 10rpx;
+  font-size: 28rpx;
+  color: #9E9E9E;
+}
+
+
+.Order-management {
+  width: 95%;
+  height: 120rpx;
+}
+
+.sh-order-box {
+  height: 120rpx;
+  background: #fff;
+  display: flex;
+	align-items: center;
+}
+
+.order-box {
+  flex: 4;
+  display: flex;
+	align-items: center;
+}
+
+.all-order {
+  position: relative;
+}
+
+.cut-off--line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: (750rpx/5) - 15rpx;
+  width: 30rpx;
+  height: 136rpx;
+}
+
+
+.order-item {
+  flex: 1;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.item-box {
+  position: relative;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.order-img {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.item-title {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  line-height: 24rpx;
+  padding-top: 10rpx;
+}
+
+.tool {
+  margin-top: 20rpx;
+  width: 95%;
+  height: 360rpx;
+  background: #FFFFFF;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-tool {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mar-left {
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+
+.Gongge {
+  width: 100%;
+  height: 300rpx;
+}
+
+
+.grid-text {
+  font-size: 28rpx;
+  margin-top: 4rpx;
+}

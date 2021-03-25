@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-field": "../../lib/vant/field",
+    "van-button": "../../lib/vant/button"
+  }
+}

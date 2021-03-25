@@ -1,0 +1,46 @@
+<view class="local">
+  <view class="central">
+    <view>
+      <van-search shape="round" placeholder="请输入搜索关键词" bind:focus="goHhserch"/>
+    </view>
+    <view class="Carousel">
+      <image src="../../img/mipmap-mdpi/lunbotu.png" class="img-gg"></image>
+    </view>
+    <view class="Nursing-workers">
+      <view class="Hot" wx:for="{{list}}" wx:key="index" class="{{flag === index ? 'colore' : ''}}" bindtap="goto"
+        data-index="{{index}}">
+        <view class="tob-name">
+          <view class="">
+            {{item.name}}
+          </view>
+          <view wx:if="{{flag === index}}">
+            <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="tubiao-p"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="Popular-nurse">
+      <view class="service">
+        <view>
+          <view class="immage-mechanism"></view>
+        </view>
+      </view>
+      <view class="Aunt-Zhang">
+        <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
+        <view>
+          <van-rate value="{{ value }}" size="{{ 20 }}"  void-color="#eee" void-icon="star" /> 5.0
+        </view>
+        <view class="authentication">
+          <view class="Platform-certification">平台认证</view>
+          <view class="Platform-certification">病人陪护</view>
+          <view class="Platform-certification">产妇陪护</view>
+        </view>
+      </view>
+    </view>
+    <view class="bor-der"></view>
+    <view class="Service-Centre">
+      <view class="font-f">以服务1000人</view>
+      <view>蜀都中心一期-0.1km</view>
+    </view>
+  </view>
+</view>

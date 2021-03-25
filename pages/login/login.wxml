@@ -1,0 +1,81 @@
+<view class="container-top">
+  <view class="local">
+    <view class="tab">
+      <view class="tab-img">
+        <view bindtap="onLoginWay">登录</view>
+        <view>
+          <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="tubiao-p" wx:if="{{flag === 0}}"></image>
+        </view>
+      </view>
+      <view class="tab-img">
+        <view bindtap="onregister">注册</view>
+        <view>
+          <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="tubiao-p" wx:if="{{flag === 1}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="Input-box">
+      <!-- 登录 -->
+      <view wx:if="{{flag === 0}}">
+        <view class="box1">
+          <view class="box">
+            <view bindtap="goregion" class="region">+8633</view>
+            <image src="../../img/mipmap-mdpi/xiajiantou.png" class="xia-tou" bindtap="goregion"></image>
+            <view class="shu-x"></view>
+          </view>
+          <view> <input auto-focus placeholder="请输入手机号" class="iptutp" /></view>
+        </view>
+        <view>
+          <input auto-focus placeholder="请输入验证码" class="ipt" />
+        </view>
+        <view>
+          <input auto-focus placeholder="请输入邀请码" class="ipt" />
+        </view>
+        <view>
+          <button class="login-bu">立即登录</button>
+        </view>
+      </view>
+      <!-- 注册 -->
+      <view wx:if="{{flag === 1}}">
+        <view class="box1">
+          <view class="box">
+            <view bindtap="goregion" class="region">+8633</view>
+            <image src="../../img/mipmap-mdpi/xiajiantou.png" class="xia-tou" bindtap="goregion"></image>
+            <view class="shu-x"></view>
+          </view>
+          <view> <input auto-focus placeholder="请输入手机号" class="iptutp" /></view>
+        </view>
+        <view>
+          <input auto-focus placeholder="请输入密码" class="ipt" />
+        </view>
+        <view>
+          <input auto-focus placeholder="请输入验证码" class="ipt" />
+        </view>
+        <view>
+          <button class="login-bu">立即注册</button>
+        </view>
+      </view>
+    </view>
+    <view class="Forget-password">
+      <view bindtap="forget">忘记密码？</view>
+    </view>
+    <view>
+      <van-divider contentPosition="center">其他方式登录</van-divider>
+    </view>
+    <view class="mode">
+      <view>
+        <image src="../../img/mipmap-mdpi/weixin.png" class="WeChat"></image>
+      </view>
+    </view>
+    <view>
+      <van-popup show="{{ show }}" position="bottom" custom-style="height: 60%;" bind:close="onClose" />
+    </view>
+  </view>
+  <view class="agreement">
+    <view class="check">
+      <van-checkbox value="{{ checked }}" icon-size="35rpx"></van-checkbox>
+    </view>
+    <view>登录即同意帮帮陪护</view>
+    <view class="font-s">《用户协议》</view>和<view class="font-s">《隐私条款》</view>
+  </view>
+</view>

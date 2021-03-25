@@ -1,0 +1,16 @@
+/* pages/forget/forget.wxss */
+.local {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFAFF;
+}
+
+.central {
+  width: 95%;
+}
+.van-button{
+  width: 200rpx !important;
+}

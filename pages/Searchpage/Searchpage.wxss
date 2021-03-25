@@ -1,0 +1,156 @@
+.local {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFAFF;
+}
+
+.central {
+  width: 95%;
+}
+
+/* 护工 */
+.Popular-nurse {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  background: #F0F8FF;
+  border-radius: 20rpx;
+}
+
+.service {
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Aunt-Zhang {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+
+.hao-jj {
+  font-weight: 600;
+  letter-spacing: 5rpx;
+  color: #333333FF;
+}
+
+.font {
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.appointment {
+  width: 46%;
+  display: flex;
+  justify-content: flex-end;
+  background: #DFFBED;
+  color: #61CF8CFF;
+  border-radius: 20rpx 0 0 20rpx;
+  font-size: 28rpx;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 30rpx;
+  margin-top: 6rpx;
+  margin-bottom: 10rpx;
+}
+
+.brief-introduction {
+  font-size: 30rpx;
+  color: #999999FF;
+}
+
+.Platform-certification {
+  border: #BBBBBBFF 1rpx solid;
+  background: #61CF8CFF;
+  color: #F0F8FF;
+  padding: 1rpx 2rpx;
+  margin: 0 20rpx 0 0;
+  font-size: 25rpx;
+  border-radius: 8rpx;
+  border: none;
+}
+
+.authentication {
+  display: flex;
+  font-size: 30rpx;
+}
+
+.bor-der {
+  border: #EEEEEEFF 0.5rpx solid;
+  margin-top: 10rpx;
+}
+
+.Service-person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  padding: 10rpx 0 10rpx 0;
+  font-weight: 400;
+}
+
+.imm-age {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 医院 */
+.Huaxi {
+  display: flex;
+}
+
+.Grade {
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  background: #61CF8CFF;
+  border-radius: 10rpx;
+  padding: 0 16rpx 0 16rpx;
+  font-size: 25rpx;
+  color: #ffffff;
+}
+
+.img-gp {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.Line {
+  width: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vertical {
+  width: 2rpx;
+  height: 140rpx;
+  background: #EEEEEEFF;
+}
+
+.Century-City {
+  margin-top: 30rpx;
+}
+
+.phone {
+  width: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 疗养院 */

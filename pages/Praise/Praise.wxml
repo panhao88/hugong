@@ -1,0 +1,60 @@
+<!-- 用户好评详情 -->
+<view class="local">
+  <view class="central">
+    <view class="details">
+      <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" alt="" class="img-portrait"></image>
+      <view class="top">咖啡时光</view>
+      <view class="top">
+        <van-rate value="{{ value }}" size="{{ 18 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+      </view>
+    </view>
+    <view class="browse">
+      <view>2021-3-08</view>
+      <view class="Recent-browsing">400人浏览</view>
+    </view>
+    <view class="comment">
+      <view>
+        王阿姨非常的专业，服务态度好相应即使
+      </view>
+      <view class="Comment-picture">
+        <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="img-tu"></image>
+        <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="img-tu"></image>
+        <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="img-tu"></image>
+      </view>
+    </view>
+    <view class="bor-der"></view>
+    <view class="notes">
+      <view>选择了王阿姨的居家陪护</view>
+    </view>
+    <view class="Popular-nurse">
+      <view class="service">
+        <view>
+          <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+        </view>
+        <view>客服务</view>
+      </view>
+      <view class="Aunt-Zhang">
+        <view>张阿姨</view>
+        <view class="score">
+          <view>
+            <van-rate value="{{ value }}" size="{{ 18 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+          </view>
+          <view class="">最早可约3月1号</view>
+        </view>
+        <view class="authentication">
+          <view class="Platform-certification">平台认证</view>
+          <view class="Platform-certification">病人陪护</view>
+          <view class="Platform-certification">产妇陪护</view>
+        </view>
+        <view class="brief-introduction">
+          性格温柔，态度良好
+        </view>
+        <view class="bor-der"></view>
+        <view class="Service-person">
+          <view>以服务100人</view>
+          <view>蜀都中心一期</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

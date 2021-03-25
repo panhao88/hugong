@@ -1,0 +1,98 @@
+<view>
+  <view>
+    <van-search shape="round" placeholder="请输入搜索关键词" />
+  </view>
+  <view class="local">
+    <view class="central">
+      <!-- 护工 -->
+      <view class="Popular-nurse">
+        <view class="service">
+          <view>
+            <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+          </view>
+          <view class="Serviceable">可服务</view>
+        </view>
+        <view class="Aunt-Zhang">
+          <view class="font">张阿姨</view>
+          <view class="score">
+            <view>
+              <van-rate value="{{ value }}" size="{{ 18 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+            </view>
+            <view class="appointment">最早可约3月1号</view>
+          </view>
+          <view class="authentication">
+            <view class="Platform-certification">平台认证</view>
+            <view class="Platform-certification">病人陪护</view>
+            <view class="Platform-certification">产妇陪护</view>
+          </view>
+          <view class="brief-introduction">
+            性格温柔，态度良好
+          </view>
+          <view class="bor-der"></view>
+          <view class="Service-person">
+            <view>以服务100人</view>
+            <view>蜀都中心一期</view>
+          </view>
+        </view>
+      </view>
+      <!-- 医院 -->
+      <view>
+        <view class="Popular-nurse">
+          <view class="service">
+            <view>
+              <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+            </view>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="Huaxi">
+              <view class="font">四川大学华西医院</view>
+              <view class="Grade">三级甲等</view>
+            </view>
+            <view class="Century-City">
+              <view>
+                <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
+                世纪城蜀都中心-1km
+              </view>
+            </view>
+          </view>
+          <view class="Line">
+            <view class="vertical"></view>
+          </view>
+          <view class="phone">
+            <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 疗养院 -->
+      <view>
+        <view class="Popular-nurse">
+          <view class="service">
+            <view>
+              <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+            </view>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="Huaxi">
+              <view class="font">四川大学华西康养院</view>
+            </view>
+            <view>
+              <van-rate value="{{ value }}" size="{{ 18 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+            </view>
+            <view class="Century">
+              <view>
+                <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
+                世纪城蜀都中心-1km
+              </view>
+            </view>
+          </view>
+          <view class="Line">
+            <view class="vertical"></view>
+          </view>
+          <view class="phone">
+            <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

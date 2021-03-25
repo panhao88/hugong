@@ -1,0 +1,129 @@
+.container-top {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.local{
+  position: absolute;
+  top: 15%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tab{
+  width: 30%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.tab-img{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tubiao-p{
+  position: relative;
+  top: -15rpx;
+  width: 20rpx;
+  height: 20rpx;
+}
+.Input-box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.iptutp{
+  width: 450rpx;
+  height: 70rpx;
+  background-color: #ffffff;
+  border: solid #EEEEEEFF 1px;
+  margin-top: 20rpx;
+  border-radius:40rpx ;
+  color: #999999FF;
+  font-size: 28rpx;
+  padding-left: 170rpx;
+}
+.xia-tou{
+  width: 15rpx;
+  height: 15rpx;
+  padding-right: 20rpx;
+}
+.region{
+  width: 120rpx;
+  text-align: center;
+}
+.box{
+  position: absolute;
+  top: 116rpx;
+  display: flex;
+  font-size: 28rpx;
+  align-items: center;
+}
+.shu-x{
+  width: 4rpx;
+  height: 40rpx;
+  background: #61CF8CFF;
+}
+.ipt {
+  width: 600rpx;
+  height: 70rpx;
+  background-color: #ffffff;
+  border: solid #EEEEEEFF 1px;
+  margin-top: 20rpx;
+  border-radius:40rpx ;
+  color: #999999FF;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+.login-bu{
+  margin-top: 20rpx;
+  width: 600rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius:40rpx ;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 35rpx;
+}
+.Forget-password{
+  margin-top: 5rpx;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.mode{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.WeChat{
+  width: 80rpx;
+  height: 80rpx;
+}
+.check{
+  padding: 4rpx;
+}
+.agreement{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25rpx;
+  position: absolute;
+  bottom: 30rpx;
+}
+.font-s{
+  color: #61CF8CFF;
+}

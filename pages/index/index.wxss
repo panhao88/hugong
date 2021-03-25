@@ -1,0 +1,115 @@
+.local {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFAFF;
+}
+
+.central {
+  width: 95%;
+}
+
+.serch {
+  margin-bottom: 20rpx;
+}
+
+.wrap {
+  width: 100%;
+  height: 296rpx;
+  margin-bottom: 20rpx;
+}
+.img-i{
+  width: 100%;
+  height: 296rpx;
+}
+.Escort {
+  width: 100%;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hospital {
+  width: 48%;
+  height: 200rpx;
+  background: #FAFAFAFF;
+  border-radius: 20rpx;
+}
+.img-hospital{
+  width: 100%;
+  height: 100%;
+}
+
+.Sanatorium {
+  width: 48%;
+  height: 200rpx;
+  background: #FAFAFAFF;
+  border-radius: 20rpx;
+}
+
+.page-four {
+  width: 100%;
+  height: 488rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+}
+
+.four-upper {
+  height: 165rpx;
+  background-color: #16D595;
+  border-radius: 20rpx 20rpx 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.Home-care {
+  letter-spacing: 10rpx;
+  width: 280rpx;
+  height: 80rpx;
+  background: #FAFAFAFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.jia-wu{
+  height: 60rpx;
+  width: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-zi{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.img {
+  width: 210rpx;
+  height: 280rpx;
+  border-radius: 10rpx;
+}
+
+.Patient-escort {
+  position: relative;
+  bottom: 30rpx;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
+
+.picture {
+  width: 100%;
+  height: 180rpx;
+  border-radius: 20rpx;
+}
+.worry{
+  width: 100%;
+  height: 180rpx;
+}
+

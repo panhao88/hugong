@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-rate":"../../lib/vant/rate"
+  },
+  "navigationBarTitleText": "用户好评"
+}

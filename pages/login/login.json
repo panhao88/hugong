@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-divider":"../../lib/vant/divider",
+    "van-checkbox":"../../lib/vant/checkbox",
+    "van-popup": "../../lib/vant/popup"
+  }
+}

@@ -1,0 +1,50 @@
+<view class="local">
+  <view class="central">
+    <!-- 输入框 -->
+    <search bindtap="goserch"></search>
+    <!-- 轮播图 -->
+    <view class="wrap">
+      <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+        <swiper-item wx:for="{{list}}" wx:key="index">
+          <view>
+            <image src="{{item.image}}" mode="widthFix" class="img-i"></image>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-- 陪护 -->
+    <view class="Escort">
+      <view class="hospital">
+        <image src="../../img/mipmap-mdpi/332323.png" class="img-hospital" bindtap="goserch"></image>
+      </view>
+      <view class="Sanatorium">
+        <image src="../../img/mipmap-mdpi/liaoyangyuan.png" class="img-hospital" bindtap="goserch"></image>
+      </view>
+    </view>
+    <!-- 居家陪护 -->
+    <view class="page-four">
+      <view class="four-upper">
+        <view class="Home-care">
+          <view class="jia-wu">
+            <image src="../../img/mipmap-mdpi/矢量智能对象(13).png" class="f-zi"></image>
+          </view>
+          居家陪护
+        </view>
+      </view>
+      <view class="Patient-escort">
+        <!-- <view class="" wx:for="{{arr}}" wx:key="item">
+          <image src="item.image" mode="" class="img"></image>
+        </view> -->
+        <image src="../../img/mipmap-mdpi/bingren.png" class="img"></image>
+        <image src="../../img/mipmap-mdpi/chanfu.png" class="img"></image>
+        <image src="../../img/mipmap-mdpi/yuesao.png" class="img"></image>
+      </view>
+    </view>
+    <view class="picture">
+      <image src="../../img/mipmap-mdpi/zhanshitu.png" class="worry"></image>
+    </view>
+    <view>
+      <classification hugong="{{hugong}}"></classification>
+    </view>
+  </view>
+</view>

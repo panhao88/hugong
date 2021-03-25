@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-grid":"../../lib/vant/grid",
+    "van-grid-item":"../../lib/vant/grid-item"
+  }
+}

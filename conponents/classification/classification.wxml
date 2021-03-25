@@ -1,0 +1,111 @@
+<view class="Nursing-workers">
+  <view class="Hot" wx:for="{{hugong}}" wx:key="index" class="{{flag === index ? 'colore' : ''}}" bindtap="goto"
+    data-index="{{index}}">
+    <view class="tob-name">
+      <view class="">
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{flag === 0}}">
+  <view>
+    <scroll-view class="scroll-view_H" scroll-x="true">
+      <view id="demo1" class="scroll-view-item_H uni-bg-red cor">金牌月嫂</view>
+      <view id="demo2" class="scroll-view-item_H uni-bg-green">金牌保姆</view>
+      <view id="demo3" class="scroll-view-item_H uni-bg-blue">金牌护工</view>
+      <view id="demo3" class="scroll-view-item_H uni-bg-blue">金牌护工</view>
+      <view id="demo3" class="scroll-view-item_H uni-bg-blue">金牌护工</view>
+    </scroll-view>
+  </view>
+  <view class="Popular-nurse" bindtap="godetaild">
+    <view class="service">
+      <view>
+        <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+      </view>
+      <view class="Serviceable">可服务</view>
+    </view>
+    <view class="Aunt-Zhang">
+      <view class="font">张阿姨</view>
+      <view class="score">
+        <view>
+          <van-rate value="{{ value }}" size="{{ 18 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+        </view>
+        <view class="appointment">最早可约3月1号</view>
+      </view>
+      <view class="authentication">
+        <view class="Platform-certification">平台认证</view>
+        <view class="Platform-certification">病人陪护</view>
+        <view class="Platform-certification">产妇陪护</view>
+      </view>
+      <view class="brief-introduction">
+        性格温柔，态度良好
+      </view>
+      <view class="bor-der"></view>
+      <view class="Service-person">
+        <view>以服务100人</view>
+        <view>蜀都中心一期</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{flag === 1 }}">
+  <view>
+    <scroll-view class="scroll-view_H" scroll-x="true">
+      <view id="demo1" class="scroll-view-item_H uni-bg-red">1</view>
+      <view id="demo2" class="scroll-view-item_H uni-bg-green">2</view>
+      <view id="demo3" class="scroll-view-item_H uni-bg-blue">3</view>
+      <view id="demo3" class="scroll-view-item_H uni-bg-blue">4</view>
+    </scroll-view>
+  </view>
+  <view class="flag1">
+    <view class="Popular-nurse" bindtap="godetaild">
+      <view class="service">
+        <view>
+          <view class="immage-mechanism"></view>
+        </view>
+      </view>
+      <view class="Aunt-Zhang">
+        <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
+        <view>
+          <van-rate value="{{ value }}" size="{{ 20 }}" color="#ee0a24" void-color="#eee" void-icon="star" /> 5.0
+        </view>
+        <view class="authentication">
+          <view class="Platform-certification">平台认证</view>
+          <view class="Platform-certification">病人陪护</view>
+          <view class="Platform-certification">产妇陪护</view>
+        </view>
+      </view>
+    </view>
+    <view class="bor-der"></view>
+    <view class="Service-Centre">
+      <view class="font-f">以服务1000人</view>
+      <view>蜀都中心一期-0.1km</view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{flag === 2}}">
+  <view class="Popular-nurse">
+    <view class="Praise">
+      <view>
+        <image class="head-portrait"></image>
+      </view>
+    </view>
+    <view class="Aunt-Zhang" bindtap="Userpraise">
+      <view class="Coffee">
+        <view>咖啡时光</view>
+        <view>2021.8.20</view>
+      </view>
+      <view>
+        <van-rate value="{{ value }}" size="{{ 20 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+      </view>
+      <view>
+        王阿姨非常的专业，
+      </view>
+      <view class="major">
+        <image src="../../img/mipmap-mdpi/图层 10.png" class="img-aunt"></image>
+        王阿姨
+      </view>
+    </view>
+  </view>
+</view>
