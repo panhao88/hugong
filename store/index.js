@@ -9,3 +9,18 @@ export default{
     userid:''
   }
 }
+/* <view class="local">
+  <view class="central">
+
+  </view>
+</view> */
+// .local {
+//   width: 100vw;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   background: #FAFAFAFF;
+// }
+// .central {
+//   width: 95%;
+// }

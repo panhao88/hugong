@@ -1,0 +1,6 @@
+<view class="local">
+  <view class="central">
+    <van-cell title="在线消息" is-link icon="chat-o" bindtap="goonline"/>
+    <van-cell title="系统消息" is-link icon="volume-o" bindtap="gosystem"/>
+  </view>
+</view>

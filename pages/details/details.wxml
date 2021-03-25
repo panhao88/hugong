@@ -1,5 +1,5 @@
 <scroll-view scroll-y="true" style="height:{{height-70}}px">
-  <view class="local">
+  <view class="localpl">
     <!-- 轮播图 -->
     <view class="wrap">
       <!-- <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
@@ -7,7 +7,7 @@
         <image src="{{item.image}}" class="img-i"></image>
       </swiper-item>
     </swiper> -->
-      <image src="../../img/mipmap-mdpi/yuesao.png" class="img-i"></image>
+      <image src="../../img/mipmap-mdpi/hugong.png" class="img-i"></image>
     </view>
     <view class="central">
       <view class="region">
@@ -37,24 +37,29 @@
           </view>
           <view class="Years">
             <view class="score">
-              <view>5.0</view>
+              <view class="cool">5.0</view>
               <van-rate size="{{ 14 }}" color="#ee0a24" void-icon="star" />
             </view>
             <view class="score">
-              <view>10</view>
-              服务人数
+              <view class="cool">10</view>
+             <view class="fu-color"> 服务人数</view>
             </view>
             <view class="score">
-              <view>10</view>
-              从业年限
+              <view class="cool">10</view>
+             <view class="fu-color"> 从业年限</view>
             </view>
             <view class="score">
-              <view>9999+</view>
-              用户评论
+              <view class="cool">9999+</view>
+              <view class="fu-color">用户评论</view>
             </view>
           </view>
           <view class="bor-d"></view>
-          <view>
+          <view class="details">
+            本人从事配属行业10年
+            本人从事配属行业10年
+            本人从事配属行业10年
+            本人从事配属行业10年
+            本人从事配属行业10年
             本人从事配属行业10年
           </view>
         </view>
@@ -65,33 +70,33 @@
           <view class="Allcertifications">
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
+                <image src="../../img/mipmap-mdpi/pingtai.png" class="rz-tu"></image>
               </view>
-              <view>平台认证</view>
+              <view class="platform">平台认证</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
+                <image src="../../img/mipmap-mdpi/shiming.png" class="rz-tu"></image>
               </view>
-              <view>平台认证</view>
+              <view class="platform">实名认证</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
+                <image src="../../img/mipmap-mdpi/gongan.png" class="rz-tu"></image>
               </view>
-              <view>平台认证</view>
+              <view class="platform">公安联网</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
+                <image src="../../img/mipmap-mdpi/tijian.png" class="rz-tu"></image>
               </view>
-              <view>平台认证</view>
+              <view class="platform">体检报告</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
+                <image src="../../img/mipmap-mdpi/zhuanye.png" class="rz-tu"></image>
               </view>
-              <view>平台认证</view>
+              <view class="platform">专业证书</view>
             </view>
           </view>
         </view>
@@ -102,45 +107,38 @@
           <view class="Allcertifications">
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
+                <image src="../../img/mipmap-mdpi/ji1.png" class="rz-tu-ren"></image>
               </view>
-              <view>平台认证</view>
-              <view>平台认证</view>
+              <view class="pin-authentication">病人陪护</view>
+              <view class="three-hundred">300天/1月</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
+                <image src="../../img/mipmap-mdpi/ji2.png" class="rz-tu-ren"></image>
               </view>
-              <view>平台认证</view>
-              <view>平台认证</view>
+              <view class="pin-authentication">产妇陪护</view>
+              <view class="three-hundred">300天/1月</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
+                <image src="../../img/mipmap-mdpi/ji3.png" class="rz-tu-ren"></image>
               </view>
-              <view>平台认证</view>
-              <view>平台认证</view>
+              <view class="pin-authentication">老人陪护</view>
+              <view class="three-hundred">300天/1月</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
+                <image src="../../img/mipmap-mdpi/ji4.png" class="rz-tu-ren"></image>
               </view>
-              <view>平台认证</view>
-              <view>平台认证</view>
-            </view>
-            <view class="vertical">
-              <view>
-                <image src="../../img/mipmap-mdpi/矢量智能对象(12).png" class="rz-tu"></image>
-              </view>
-              <view>平台认证</view>
-              <view>平台认证</view>
+              <view class="pin-authentication">月嫂陪护</view>
+              <view class="three-hundred">300天/1月</view>
             </view>
           </view>
         </view>
       </view>
       <view>
         <van-goods-action>
-          <van-goods-action-icon icon="chat-o" text="收藏" bind:click="onClickIcon" />
+          <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
           <van-goods-action-button text="立即预约" bind:click="onClickButton" />
         </van-goods-action>
       </view>
@@ -195,7 +193,7 @@
           </view>
         </view>
         <van-goods-action>
-          <van-goods-action-icon icon="chat-o" text="收藏" bind:click="onClickIcon" />
+          <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
           <van-goods-action-button text="立即预约" bind:click="onClickButton" />
         </van-goods-action>
       </van-popup>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-field": "../../lib/vant/field",
+    "van-button": "../../lib/vant/button"
+  },
+  "navigationBarTitleText": "设置"
+}

@@ -4,7 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #FAFAFAFF;
+  background: #F5F5F5;
+}
+.localpl{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:#F5F5F5;
 }
 
 .central {
@@ -14,6 +21,7 @@
   align-items: center;
   position: relative;
   bottom: 60rpx;
+  background: #F5F5F5;
 }
 
 .region {
@@ -25,7 +33,7 @@
   padding-left: 20rpx;
   padding-right: 20rpx;
   border-radius: 20rpx;
-  background: #F1F1F1;
+  background: #FFFFFFFF;
 }
 
 .wrap {
@@ -51,14 +59,15 @@
 
 .Aunt_Zhang {
   font-weight: 600;
-  font-size: 34rpx;
+  font-size: 32rpx;
+  color: #333333FF;
 }
 
 .Serviceable {
   width: 70rpx;
   display: flex;
   align-items: center;
-  background: #16D595;
+  background: #61CF8CFF;
   border-radius: 20rpx;
   color: #ffffff;
   padding: 0 15rpx 0 15rpx;
@@ -69,10 +78,10 @@
 .good {
   display: flex;
   justify-content: flex-end;
-  background: #DFFBED;
-  font-size: 26rpx;
-  color: #8BD1A6;
-  padding: 0 0 0 20rpx;
+  background: #DFFBEAFF;
+  font-size: 20rpx;
+  color: #61CF8CFF;
+  padding: 5rpx 0   5rpx 20rpx;
   border-radius: 20rpx 0 0 20rpx;
 }
 
@@ -90,10 +99,14 @@
 .location {
   display: flex;
   margin-left: 30rpx;
+  color: #333333FF;
+  font-size: 24rpx;
 }
 
 .mar-gin {
   margin-right: 30rpx;
+  color: #333333FF;
+  font-size: 24rpx;
 }
 
 .authentication {
@@ -103,17 +116,30 @@
 }
 
 .bor {
+  width: 120rpx;
+  height: 40rpx;
   border: black 1rpx solid;
   color: #ffffff;
   background: #16D595;
-  padding: 4rpx;
+  font-size: 22rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 8rpx;
   margin-right: 10rpx;
 }
-
+.cool{
+  font-size: 32rpx;
+  font-weight: 530;
+  color: #333333FF;
+}
+.fu-color{
+  color: #999999FF;
+  font-size: 24rpx;
+}
 .Years {
-  margin-top: 20rpx;
+  margin-top: 12rpx;
   display: flex;
   font-size: 28rpx;
   justify-content: space-between;
@@ -128,16 +154,22 @@
 }
 
 .bor-d {
-  border: solid 0.5rpx black;
+  margin-top: 15rpx;
+  border: solid 0.5rpx #EEEEEEFF;
 }
-
+.details{
+  font-size: 24rpx;
+  font-weight: 540;
+  margin-top: 20rpx;
+  color: #999999FF;
+}
 /* 安全认证 */
 .Safety-certification {
   width: 100%;
   height: 230rpx;
   margin-top: 20rpx;
   border-radius: 10rpx;
-  background: #F1F1F1;
+  background: #FFFFFFFF;
 }
 
 .guarantee {
@@ -146,34 +178,54 @@
 }
 
 .security {
+  color: #333333FF;
+  font-size: 30rpx;
+  font-weight: 900;
+  letter-spacing:3rpx;
   height: 100rpx;
   display: flex;
   align-items: center;
   margin-left: 20rpx;
 }
-
+.rz-tu {
+  width: 50rpx;
+  height: 50rpx;
+}
+.rz-tu-ren{
+  width: 88rpx;
+  height: 88rpx;
+}
+.platform{
+  color: #999999FF;
+  font-size: 24rpx;
+}
+.pin-authentication{
+  font-size: 28rpx;
+  color: #333333FF;
+  font-weight: 600;
+}
+.three-hundred{
+  color: #FF5C5CFF;
+  font-size: 22rpx;
+}
 .Allcertifications {
   display: flex;
   justify-content: space-around;
   font-size: 28rpx;
 }
-
 .vertical {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.rz-tu {
-  width: 50rpx;
-  height: 50rpx;
-}
+
 
 /* 服务项目 */
 .Service-Items {
   width: 100%;
   height: 300rpx;
-  background: #F1F1F1;
+  background: #FFFFFFFF;
   margin-top: 20rpx;
   border-radius: 10rpx;
 }

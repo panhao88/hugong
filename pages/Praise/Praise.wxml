@@ -39,7 +39,7 @@
           <view>
             <van-rate value="{{ value }}" size="{{ 18 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
           </view>
-          <view class="">最早可约3月1号</view>
+          <view class="">最早约3月1号</view>
         </view>
         <view class="authentication">
           <view class="Platform-certification">平台认证</view>

@@ -1,17 +1,22 @@
 {
   "pages":[
-    "pages/details/details",
-    "pages/index/index",
-    "pages/login/login",
-   
-    "pages/Praise/Praise",
+    "pages/coupon/coupon",
+    "pages/my/my",
+    "pages/Withdrawal/Withdrawal",
+    "pages/wallet/wallet",
+    "pages/news/news",
+    "pages/online/online",
+    "pages/system/system",
+    "pages/setup/setup",
     "pages/healthy/healthy",
-     "pages/service/service",
     "pages/forget/forget",
-    "pages/Escort/Escort",
+    "pages/service/service",
+    "pages/Praise/Praise",
+    "pages/index/index",
     "pages/Searchpage/Searchpage",
-   
-    "pages/my/my"
+    "pages/details/details",
+    "pages/login/login",
+    "pages/Escort/Escort"
   ],
   "window":{
     "backgroundTextStyle":"light",

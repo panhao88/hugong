@@ -21,9 +21,8 @@
 }
 
 .icon {
-  width: 50rpx;
-  height: 50rpx;
-  color: #FFFFFF;
+  width: 40rpx;
+  height: 40rpx;
 }
 
 .icon-distance {
@@ -35,25 +34,58 @@
   height: 160rpx;
   top: 80rpx;
   left: 60rpx;
-  margin-top: 40rpx;
   font-size: 28rpx;
   font-weight: 500;
   color: #FFFFFF;
   display: flex;
   position: absolute;
 }
-
-.circular {
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 50%;
-  background-color: #18B566;
-}
-
 .user-name {
-  margin-left: 50rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
 }
-
+.num-color {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #FF6868FF;
+}
+.more {
+  width: 160rpx;
+  margin-right: 10rpx;
+  color: #9E9E9E;
+  font-size: 24rpx;
+  letter-spacing: 5rpx;
+}
+.Carousel {
+  width: 95%;
+  height: 198rpx;
+  background: red;
+}
+.Vertical-line {
+  width: 1rpx;
+  height: 60rpx;
+  background: #EDEBE7FF;
+}
+.Service {
+  width: 180rpx;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  color: #333333FF;
+}
+.wallet{
+  font-size: 28rpx;
+  color: #333333FF;
+}
+.circular {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.tou-x{
+  width: 120rpx;
+  border-radius: 50%;
+  height: 120rpx;
+}
 .total {
   width: 100vw;
   height: 100vh;
@@ -73,13 +105,6 @@
   justify-content: space-around;
   align-items: center;
 }
-
-.Vertical-line {
-  width: 1rpx;
-  height: 60rpx;
-  background: #000;
-}
-
 .num-ber {
   width: 160rpx;
   height: 100rpx;
@@ -87,17 +112,10 @@
   align-items: center;
   flex-direction: column;
 }
-
-.num-color {
-  font-size: 35rpx;
-  font-weight: 600;
-  color: red;
-}
-
 .Service-person {
   margin-top: 20rpx;
   width: 95%;
-  height: 220rpx;
+  height: 258rpx;
   background: #FFFFFF;
   border-radius: 15rpx;
   display: flex;
@@ -112,26 +130,6 @@
   justify-content: space-between;
   align-items: center;
   /* background: red; */
-}
-
-.Service {
-  width: 180rpx;
-  font-size: 32rpx;
-  margin-left: 20rpx;
-}
-
-.more {
-  width: 140rpx;
-  margin-right: 10rpx;
-  color: #9E9E9E;
-  font-size: 28rpx;
-}
-
-
-.Carousel {
-  width: 95%;
-  height: 120rpx;
-  background: red;
 }
 .img-i{
   width: 100%;
@@ -163,15 +161,6 @@
   margin-left: 20rpx;
   font-weight: 700;
 }
-
-.more {
-  width: 140rpx;
-  margin-right: 10rpx;
-  font-size: 28rpx;
-  color: #9E9E9E;
-}
-
-
 .Order-management {
   width: 95%;
   height: 120rpx;

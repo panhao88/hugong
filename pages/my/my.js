@@ -21,38 +21,99 @@ Page({
   orderNav: [{
       id: 1,
       title: '待付款',
-      img: 'https://shopro.7wpp.com/imgs/user/tab11.png',
+      img: '../../img/mipmap-mdpi/daifukuan.png',
       type: 'nopay'
     },
     {
     	id: 2,
     	title: '待服务',
-    	img: 'https://shopro.7wpp.com/imgs/user/tab11.png',
+      img: '../../img/mipmap-mdpi/daifuwu.png',
     	type: 'nosend'
     },
     {
       id: 3,
       title: '服务中',
-      img: 'https://shopro.7wpp.com/imgs/user/tab33.png',
+      img: '../../img/mipmap-mdpi/fuwuzhong.png',
       type: 'noget'
     },
     {
       id: 4,
       title: '待评价',
-      img: 'https://shopro.7wpp.com/imgs/user/tab44.png',
+      img: '../../img/mipmap-mdpi/daipingjia.png',
       type: 'nocomment'
     },
     {
       id: 4,
       title: '退款/拒单',
-      img: 'https://shopro.7wpp.com/imgs/user/tab44.png',
+      img: '../../img/mipmap-mdpi/tuikuan.png',
       type: 'nocomment'
     }
-  ]
+  ],
+  gridtextlist:[
+    {
+        text:"我的收藏",
+        icon:"n",
+        img:'../../img/mipmap-mdpi/shoucang.png'
+    },
+    {
+        text: "实名认证",
+        icon:"w",
+        img:'../../img/mipmap-mdpi/shimingrenzheng.png'
+    },
+    {
+        text:"邀请好友",
+        icon:"j",
+        img:'../../img/mipmap-mdpi/yaoqing.png'
+    },
+    {
+        text:"服务入驻",
+        icon:"g",
+        img:'../../img/mipmap-mdpi/ruzhu.png'
+    },
+    {
+        text:"地址管理",
+        icon:"h",
+        img:'../../img/mipmap-mdpi/dizhi.png'
+    },
+    {
+        text:"联系客服",
+        icon:"template",
+        img:'../../img/mipmap-mdpi/lianxi.png'
+    },
+    {
+        text:"隐私条款",
+        icon:"scoped",
+        img:'../../img/mipmap-mdpi/pingsi.png'
+    },
+    {
+        text:"更多服务",
+        icon:"sh",
+        img:'../../img/mipmap-mdpi/gengduo.png'
+    },   
+]
   },
-  gologin(){
+  // 退出登录
+  gosetup(){
     wx.navigateTo({
-      url: '/pages/login/login',
+      url: '/pages/setup/setup',
+    })
+  },
+  //去消息中心
+  gonews(){
+    wx.navigateTo({
+      url: '/pages/news/news',
+    })
+  },
+  //去钱包页
+  gowallet(){
+    wx.navigateTo({
+      url: '/pages/wallet/wallet',
+    })
+  },
+  //去优惠卷页
+  gocoupon(){
+    wx.navigateTo({
+      url: '/pages/coupon/coupon',
     })
   },
   /**

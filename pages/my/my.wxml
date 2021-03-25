@@ -2,28 +2,30 @@
   <view class="top-backorun">
     <view class="Chat-settings">
       <view class="icon-distance">
-        <image src="../../img/weibo.png" class="icon" mode=""></image>
+        <image src="../../img/mipmap-mdpi/liaotian.png" class="icon" mode="" bindtap="gonews"></image>
       </view>
       <view class="icon-distance">
-        <image src="../../img/weixin.png" class="icon" mode="" bindtap="gologin"></image>
+        <image src="../../img/mipmap-mdpi/shezhi.png" class="icon" mode="" bindtap="gosetup"></image>
       </view>
     </view>
     <view class="portrait">
-      <view class="circular">头像</view>
+      <view class="circular">
+        <image src="../../img/mipmap-mdpi/touxiang.png" class="tou-x" bindtap="gosetup"></image>
+      </view>
       <view class="user-name">
-        <view class="">咖啡时光</view>
-        <view class="">邀请码000222</view>
+        <view class="" bindtap="gosetup">咖啡时光</view>
+        <view class="" bindtap="gosetup">邀请码000222</view>
       </view>
     </view>
   </view>
   <view class="total">
     <view class="wallet">
-      <view class="num-ber">
+      <view class="num-ber" bindtap="gowallet">
         <view class="num-color">0.00</view>
-        <view class="">钱包</view>
+        <view class="wallet">钱包</view>
       </view>
       <view class="Vertical-line"></view>
-      <view class="num-ber">
+      <view class="num-ber" bindtap="gocoupon">
         <view class="num-color">0</view>
         <view class="">优惠卷</view>
       </view>
@@ -39,14 +41,13 @@
         </view>
       </view>
       <view class="Carousel">
-        <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}"
-          circular="{{true}}">
-          <swiper-item wx:for="{{list}}" wx:key="index">
-            <view>
-              <image src="{{item.image}}" mode="widthFix" class="img-i"></image>
-            </view>
-          </swiper-item>
-        </swiper>
+        <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+        <swiper-item wx:for="{{list}}" wx:key="index">
+          <view>
+            <image src="{{item.image}}" mode="widthFix" class="img-i"></image>
+          </view>
+        </swiper-item>
+      </swiper>
       </view>
     </view>
     <!-- 订单管理 -->
@@ -81,16 +82,7 @@
       </view>
       <view class="Gongge">
         <van-grid square>
-          <van-grid>
-            <van-grid-item icon="photo-o" text="我的收藏" />
-            <van-grid-item icon="photo-o" text="实名认证" />
-            <van-grid-item icon="photo-o" text="邀请好有" />
-            <van-grid-item icon="photo-o" text="服务入住" />
-            <van-grid-item icon="photo-o" text="地址管理" />
-            <van-grid-item icon="photo-o" text="联系客服" />
-            <van-grid-item icon="photo-o" text="隐私条款" />
-            <van-grid-item icon="photo-o" text="更多服务" />
-          </van-grid>
+          <van-grid-item wx:for="{{gridtextlist}}" wx:key="index" text="{{item.text}}" icon="{{item.img}}"/>
         </van-grid>
       </view>
     </view>

@@ -1,0 +1,123 @@
+.local {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFFFFFF;
+}
+
+.top {
+  width: 100%;
+  height: 480rpx;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: 480rpx;
+}
+
+.detailed {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: -40rpx;
+  background: #FFFFFFFF;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.Balance-details {
+  margin-top: 20rpx;
+  color: #333333FF;
+  font-size: 32rpx;
+  font-weight: 900;
+}
+
+.account {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.central {
+  width: 95%;
+}
+
+.customer {
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.custom {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.place {
+  font-size: 28rpx;
+  color: #333333FF;
+  font-weight: 900;
+}
+
+.timerr {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #999999FF;
+  font-weight: 800;
+}
+
+.cor {
+  color: #61CF8CFF;
+  font-weight: 800;
+  font-size: 28rpx;
+}
+
+.Balance {
+  color: #999999FF;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.bor-der {
+  border: solid #EEEEEEFF 0.5rpx;
+}
+/* 提现 */
+.tixian{
+  position: absolute;
+  width: 400rpx;
+  height: 400rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  top: 20rpx;
+}
+.element{
+font-size: 32rpx;
+color: #FFFFFFFF;
+font-weight: 700;
+}
+.front{
+  color: #FFFFFFFF;
+  font-size: 82rpx;
+}
+.Withdrawal{
+  width: 160rpx;
+  height: 56rpx;
+  background: #FFFFFFFF;
+  border-radius: 40rpx;
+  color: #85DAA8FF;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
