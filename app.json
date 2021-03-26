@@ -1,7 +1,19 @@
 {
   "pages":[
-    "pages/details/details",
+    "pages/order/order",
+    "pages/Orderdetails/Orderdetails",
+    "pages/Detaevaluate/Detaevaluate",
     "pages/my/my",
+    "pages/apply/apply",
+    "pages/Collection/Collection",
+    "pages/authentication/authentication",
+    "pages/invitation/invitation",
+    "pages/ServiceEntry/ServiceEntry",
+    "pages/address/address",
+    "pages/CustomerNervice/CustomerNervice",
+    "pages/Privacy/Privacy",
+    "pages/more/more",
+    "pages/details/details",
     "pages/index/index",
     "pages/coupon/coupon",
     "pages/Withdrawal/Withdrawal",
@@ -14,7 +26,6 @@
     "pages/forget/forget",
     "pages/service/service",
     "pages/Praise/Praise",
- 
     "pages/Searchpage/Searchpage",
     "pages/login/login",
     "pages/Escort/Escort"

@@ -59,7 +59,6 @@
 .Carousel {
   width: 95%;
   height: 198rpx;
-  background: red;
 }
 .Vertical-line {
   width: 1rpx;
@@ -129,7 +128,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: red; */
+  z-index: 999;
 }
 .img-i{
   width: 100%;
@@ -224,7 +223,7 @@
 .tool {
   margin-top: 20rpx;
   width: 95%;
-  height: 360rpx;
+  height: 400rpx;
   background: #FFFFFF;
   border-radius: 15rpx;
   display: flex;
@@ -251,6 +250,7 @@
   width: 100%;
   flex-wrap: wrap;
   display: flex;
+  margin-top: 20rpx;
 }
 .yi-hospital{
   margin-top: 10rpx;
@@ -263,13 +263,14 @@
   align-items: center;
 }
 .font-s{
-  font-size: 28rpx;
+  font-size: 23rpx;
+  color: #333333FF;
 }
 .grid-text {
   font-size: 28rpx;
   margin-top: 4rpx;
 }
 .imgg{
-  width: 80rpx;
-  height: 80rpx;
+  width: 88rpx;
+  height: 88rpx;
 }

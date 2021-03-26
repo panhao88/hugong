@@ -52,18 +52,18 @@
     </view>
     <!-- 订单管理 -->
     <view class="order">
-      <view class="top-fuwu">
-        <view class="Service">
+      <view class="top-fuwu" >
+        <view class="Service" bindtap="gotoorder">
           订单管理
         </view>
-        <view class="more">
+        <view class="more" bindtap="gotoorder">
           查看更多>
         </view>
       </view>
       <view class="Order-management">
         <view class="sh-order-box ">
           <view class="order-box">
-            <view class="order-item" wx:for="{{orderNav}}" wx:key="index">
+            <view class="order-item" wx:for="{{orderNav}}" wx:key="index" bindtap="goorder" data-id="{{item.id}}">
               <view class=" item-box">
                 <image class="order-img" src="{{item.img}}"></image>
                 <text class="item-title">{{ item.title }}</text>
@@ -76,13 +76,13 @@
     <!-- 工具与服务 -->
     <view class="tool">
       <view class="top-tool">
-        <view class="mar-left">
+        <view class="mar-left" >
           工具与服务
         </view>
       </view>
       <view class="Gongge">
-        <view wx:for="{{gridtextlist}}" wx:key="index" class="yi-hospital">
-          <view class="ttex-p">
+        <view wx:for="{{gridtextlist}}" wx:key="index" class="yi-hospital" bindtap="go" data-url="{{item.url}}">
+          <view class="ttex-p" >
             <view><image src="{{item.img}}" class="imgg"></image></view>
             <view class="font-s">{{item.text}}</view>
           </view>

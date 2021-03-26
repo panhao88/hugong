@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-rate":"../../lib/vant/rate",
+    "van-uploader": "../../lib/vant/uploader"
+  },
+  "navigationBarTitleText": "评价详情"
+}

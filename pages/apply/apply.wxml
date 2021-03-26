@@ -1,0 +1,59 @@
+<view class="local">
+  <view class="central">
+    <view class="rule">
+      <image src="../../img/mipmap-mdpi/tuikuanguize.png" class="img"></image>
+    </view>
+    <view class="backgroun">
+      <view class="Popular-nurse">
+        <view class="service">
+          <view>
+            <view class="immage-mechanism">
+              <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+            </view>
+          </view>
+        </view>
+        <view class="Aunt-Zhang">
+          <view class="hao-jj">医院陪护-老人陪护</view>
+          <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+          <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+        </view>
+      </view>
+      <view class="payment">
+        <view class="Totalprice">
+          <view>总价￥1500.00</view>
+          <view>优惠￥1500.00</view>
+          <view>实付款￥1500.00</view>
+        </view>
+      </view>
+      <view class="butto">
+        <view class="button-tow">
+          <view>
+            <view class="butto-delete">以服务3天</view>
+          </view>
+          <view>
+            <view class="butto-payment">可退2天</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="reason">
+      <van-cell-group>
+        <van-field value="{{ value }}" placeholder="请输入用户名" label="退款原因" input-align="right" />
+        <van-field value="{{ value }}" placeholder="请输入用户名" label="退款金额" input-align="right" />
+      </van-cell-group>
+    </view>
+    <view class="textar">
+      <view class="conts">
+        <textarea class="areas" placeholder='请描述你申请售后的具体原因' minlength="{{min}}" maxlength="{{max}}"
+          bindinput="inputs"></textarea>
+      </view>
+    </view>
+    <view class="picture">
+      <view>
+        <view class="updata">图片上传</view>
+        <view><van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" /></view>
+      </view>
+    </view>
+    <view class="m-bottom"></view>
+  </view>
+</view>

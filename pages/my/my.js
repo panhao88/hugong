@@ -43,7 +43,7 @@ Page({
       type: 'nocomment'
     },
     {
-      id: 4,
+      id: 5,
       title: '退款/拒单',
       img: '../../img/mipmap-mdpi/tuikuan.png',
       type: 'nocomment'
@@ -53,42 +53,50 @@ Page({
     {
         text:"我的收藏",
         icon:"n",
-        img:'../../img/mipmap-mdpi/shoucang.png'
+        img:'../../img/mipmap-mdpi/shoucang.png',
+        url:"/pages/Collection/Collection",
     },
     {
         text: "实名认证",
         icon:"w",
-        img:'../../img/mipmap-mdpi/shimingrenzheng.png'
+        img:'../../img/mipmap-mdpi/shimingrenzheng.png',
+        url:"/pages/authentication/authentication",
     },
     {
         text:"邀请好友",
         icon:"j",
-        img:'../../img/mipmap-mdpi/yaoqing.png'
+        img:'../../img/mipmap-mdpi/yaoqing.png',
+        url:"/pages/invitation/invitation",
     },
     {
         text:"服务入驻",
         icon:"g",
-        img:'../../img/mipmap-mdpi/ruzhu.png'
+        img:'../../img/mipmap-mdpi/ruzhu.png',
+        url:"/pages/ServiceEntry/ServiceEntry",
     },
     {
         text:"地址管理",
         icon:"h",
-        img:'../../img/mipmap-mdpi/dizhi.png'
+        img:'../../img/mipmap-mdpi/dizhi.png',
+        url:"/pages/address/address",
     },
     {
         text:"联系客服",
         icon:"template",
-        img:'../../img/mipmap-mdpi/lianxi.png'
+        img:'../../img/mipmap-mdpi/lianxi.png',
+        url:"/pages/CustomerNervice/CustomerNervice",
     },
     {
         text:"隐私条款",
         icon:"scoped",
-        img:'../../img/mipmap-mdpi/pingsi.png'
+        img:'../../img/mipmap-mdpi/pingsi.png',
+        url:"/pages/Privacy/Privacy",
     },
     {
         text:"更多服务",
         icon:"sh",
-        img:'../../img/mipmap-mdpi/gengduo.png'
+        img:'../../img/mipmap-mdpi/gengduo.png',
+        url:"/pages/more/more",
     },   
 ]
   },
@@ -114,6 +122,25 @@ Page({
   gocoupon(){
     wx.navigateTo({
       url: '/pages/coupon/coupon',
+    })
+  },
+  //工具服务
+  go(url){
+    let path = url.currentTarget.dataset.url
+   wx.navigateTo({
+     url: path
+   })
+  },
+  //去订单管理
+  goorder(id){
+    wx.navigateTo({
+      url: `/pages/order/order?id=${id.currentTarget.dataset.id}`,
+    })
+  },
+  gotoorder(){
+    console.log(111)
+    wx.navigateTo({
+      url: '/pages/order/order',
     })
   },
   /**

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-tab": "../../lib/vant/tab",
+    "van-tabs": "../../lib/vant/tabs",
+    "van-button": "../../lib/vant/button"
+  },
+  "navigationBarTitleText": "订单管理"
+}

@@ -1,0 +1,225 @@
+/* pages/order/order.wxss */
+.local {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFAFF;
+}
+
+.central {
+  width: 95%;
+}
+.van-tabs__line{
+  z-index: 0 !important;
+}
+/* 待付款 */
+.top {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 454rpx;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFFFF;
+  border-radius: 20rpx;
+}
+
+.Order-time {
+  height: 60rpx;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order {
+  color: #333333FF;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.Tobepaid {
+  color: #FF5C5CFF;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.bor {
+  border: 0.5rpx solid #EEEEEEFF;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.Popular-nurse {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  align-content: center;
+  background: #FFFFFFFF;
+  border-radius: 20rpx;
+}
+
+.service {
+  font-size: 30rpx;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.immage-mechanism {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+
+.Aunt-Zhang {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hao-jj {
+  font-weight: 800;
+  letter-spacing: 3rpx;
+  color: #333333FF;
+  font-size: 30rpx;
+}
+
+.service-time {
+  font-size: 24rpx;
+  color: #333333FF;
+  font-weight: 600;
+}
+
+.logo {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.payment {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.Totalprice {
+  width: 540rpx;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+  font-size: 20rpx;
+  color: #999999FF;
+  font-weight: 600;
+}
+
+.p-close {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.close {
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  width: 92%;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  background: #DFFBEAFF;
+}
+
+.order-din {
+  color: #61CF8CFF;
+  font-size: 24rpx;
+}
+
+.butto {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.butto-delete {
+  width: 140rpx;
+  height: 48rpx;
+  display: flex;
+  border-radius: 40rpx;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFFFF;
+  border: 0.5rpx solid #BBBBBBFF;
+  color: #BBBBBBFF;
+  font-size: 24rpx;
+}
+
+.butto-payment {
+  width: 140rpx !important;
+  height: 48rpx;
+  display: flex;
+  border-radius: 40rpx;
+  justify-content: center;
+  align-items: center;
+  background: #61CF8CFF;
+  color: #FFFFFFFF;
+  font-size: 24rpx;
+}
+.button-tow{
+  width: 50%;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* 待服务 */
+.top-service{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 395rpx;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFFFF;
+  border-radius: 20rpx;
+}
+.butto-service{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button-tow-service{
+  width: 20%;
+  color: #999999FF;
+  font-size: 24rpx;
+  display: flex;
+  margin-left: 20rpx;
+}
+.phone{
+  width: 100%;
+  display: flex;
+  background: #4C4C4C;
+  flex-direction: column;
+  align-items: center;
+}
+.dial{
+  width: 90%;
+  height: 100rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  color: #61CF8CFF;
+  background: #FFFFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.m-bottom{
+  height: 20rpx;
+}

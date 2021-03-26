@@ -1,0 +1,383 @@
+<view class="local">
+  <view class="central">
+    <view wx:if="{{flag === 1}}">
+      <view>
+        <view class="butto-b">14分59秒后关闭</view>
+      </view>
+      <view class="backgroun">
+        <view class="Popular-nurse">
+          <view class="service">
+            <view>
+              <view class="immage-mechanism">
+                <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+              </view>
+            </view>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="hao-jj">医院陪护-老人陪护</view>
+            <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+            <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+          </view>
+        </view>
+        <view class="butto">
+          <view class="button-tow">
+            <view>
+              <view class="butto-delete" bindtap="cancelorder">取消订单</view>
+            </view>
+            <view>
+              <view class="butto-payment">立即付款</view>
+            </view>
+          </view>
+        </view>
+        <view class="bor"></view>
+        <view class="Total-price">
+          <view class="total">
+            <view>总价</view>
+            <view>优惠</view>
+            <view>需付款</view>
+          </view>
+          <view class="Price">
+            <view>￥1500.00</view>
+            <view class="red-r">-￥100.00</view>
+            <view class="red-r">￥1400.00</view>
+          </view>
+        </view>
+      </view>
+      <view class="information">
+        <view>
+          <van-collapse value="{{ activeNames }}" bind:change="onChange">
+            <van-collapse-item title="联系人信息" name="1">
+              <view>
+                <view class="contacts">
+                  <view>小潘潘</view>
+                  <view>男</view>
+                  <view>18783399654</view>
+                </view>
+                <view class="MarquisWu">武侯区蜀都中心一期</view>
+                <view class="bor-d"></view>
+                <view class="serviceobject">服务对象</view>
+                <view class="contacts">
+                  <view>王桂香</view>
+                  <view>女</view>
+                  <view>68岁</view>
+                </view>
+                <view class="MarquisWu">常见病史:高血压、糖尿病</view>
+                <view class="MarquisWu">备注:需要喂饭、洗衣</view>
+                <view class="bor-d"></view>
+                <view class="serviceobject">服务内容</view>
+                <view>
+                  需要做饭、喂饭、洗衣服、擦身
+                </view>
+              </view>
+            </van-collapse-item>
+          </van-collapse>
+        </view>
+      </view>
+      <view class="ordder">
+        <van-collapse value="{{ activeNames }}" bind:change="onChange">
+          <van-collapse-item title="订单信息" name="2">
+            <view class="Total-state">
+              <view class="total">
+                <view>订单状态</view>
+                <view>订单编号</view>
+                <view>订单时间</view>
+              </view>
+              <view class="Price">
+                <view>待付款</view>
+                <view>12345678</view>
+                <view>2021-3-8</view>
+              </view>
+            </view>
+          </van-collapse-item>
+        </van-collapse>
+      </view>
+    </view>
+    <view wx:if="{{flag === 2}}">
+      <view class="backgroun">
+        <view class="Popular-nurse">
+          <view class="service">
+            <view>
+              <view class="immage-mechanism">
+                <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+              </view>
+            </view>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="hao-jj">医院陪护-老人陪护</view>
+            <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+            <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+          </view>
+        </view>
+        <view class="butto">
+          <view class="button-one">
+            <view>
+              <view class="butto-payment">在线沟通</view>
+            </view>
+            <view>
+              <view class="butto-delete" bindtap="goAftersales">申请售后</view>
+            </view>
+            <view>
+              <view class="butto-payment" bindtap="gocomplete">服务完成</view>
+            </view>
+          </view>
+        </view>
+        <view class="bor"></view>
+        <view class="Total-price">
+          <view class="total">
+            <view>总价</view>
+            <view>优惠</view>
+            <view>需付款</view>
+          </view>
+          <view class="Price">
+            <view>￥1500.00</view>
+            <view class="red-r">-￥100.00</view>
+            <view class="red-r">￥1400.00</view>
+          </view>
+        </view>
+      </view>
+      <view class="information">
+        <view>
+          <van-collapse value="{{ activeNames }}" bind:change="onChange">
+            <van-collapse-item title="联系人信息" name="1">
+              <view>
+                <view class="contacts">
+                  <view>小潘潘</view>
+                  <view>男</view>
+                  <view>18783399654</view>
+                </view>
+                <view class="MarquisWu">武侯区蜀都中心一期</view>
+              </view>
+            </van-collapse-item>
+          </van-collapse>
+        </view>
+      </view>
+      <view class="ordder">
+        <van-collapse value="{{ activeNames }}" bind:change="onChange">
+          <van-collapse-item title="订单信息" name="2">
+            <view class="Total-state">
+              <view class="total">
+                <view>订单状态</view>
+                <view>订单编号</view>
+                <view>下单时间</view>
+                <view>付款时间</view>
+                <view>服务开始时间</view>
+              </view>
+              <view class="Price">
+                <view>待服务</view>
+                <view>12345678</view>
+                <view>2021-3-8</view>
+                <view>2021-4-9</view>
+                <view>2021-4-9</view>
+              </view>
+            </view>
+          </van-collapse-item>
+        </van-collapse>
+        <view class="flag1">
+      <view class="Popular-nurse" bindtap="godetaild">
+        <view class="service">
+          <view>
+            <view class="immage-mechanism">
+              <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+            </view>
+          </view>
+        </view>
+        <view class="Aunt-Zhang">
+          <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
+          <view>
+            <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+          </view>
+          <view class="authentication">
+            <view class="Platform-certification">平台认证</view>
+            <view class="Platform-certification">病人陪护</view>
+            <view class="Platform-certification">产妇陪护</view>
+          </view>
+        </view>
+      </view>
+      <view class="bor-der"></view>
+      <view class="Service-Centre">
+        <view class="font-f">以服务1000人</view>
+        <view class="location">
+          <view>
+            <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+          </view>
+          <view>蜀都中心一期</view>
+        </view>
+      </view>
+    </view>
+      </view>
+    </view>
+    <view wx:if="{{flag === 3}}">
+      <view class="backgroun">
+        <view class="Popular-nurse">
+          <view class="service">
+            <view>
+              <view class="immage-mechanism">
+                <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+              </view>
+            </view>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="hao-jj">医院陪护-老人陪护</view>
+            <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+            <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+          </view>
+        </view>
+        <view class="butto">
+          <view class="button-one">
+            <view>
+              <view class="butto-payment">在线沟通</view>
+            </view>
+            <view>
+              <view class="butto-payment">拨打电话</view>
+            </view>
+            <view>
+              <view class="butto-delete" bindtap="goAftersales">申请售后</view>
+            </view>
+            <view>
+              <view class="butto-payment" bindtap="gocomplete">服务完成</view>
+            </view>
+          </view>
+        </view>
+        <view class="bor"></view>
+        <view class="Total-price">
+          <view class="total">
+            <view>总价</view>
+            <view>优惠</view>
+            <view>需付款</view>
+          </view>
+          <view class="Price">
+            <view>￥1500.00</view>
+            <view class="red-r">-￥100.00</view>
+            <view class="red-r">￥1400.00</view>
+          </view>
+        </view>
+      </view>
+      <view class="information">
+        <view>
+          <van-collapse value="{{ activeNames }}" bind:change="onChange">
+            <van-collapse-item title="联系人信息" name="1">
+              <view>
+                <view class="contacts">
+                  <view>小潘潘</view>
+                  <view>男</view>
+                  <view>18783399654</view>
+                </view>
+                <view class="MarquisWu">武侯区蜀都中心一期</view>
+              </view>
+            </van-collapse-item>
+          </van-collapse>
+        </view>
+      </view>
+      <view class="ordder">
+        <van-collapse value="{{ activeNames }}" bind:change="onChange">
+          <van-collapse-item title="订单信息" name="2">
+            <view class="Total-state">
+              <view class="total">
+                <view>订单状态</view>
+                <view>订单编号</view>
+                <view>下单时间</view>
+                <view>付款时间</view>
+                <view>服务开始时间</view>
+              </view>
+              <view class="Price">
+                <view>服务中</view>
+                <view>12345678</view>
+                <view>2021-3-8</view>
+                <view>2021-4-9</view>
+                <view>2021-4-9</view>
+              </view>
+            </view>
+          </van-collapse-item>
+        </van-collapse>
+      </view>
+    </view>
+    <view wx:if="{{flag === 4}}">
+      <view class="backgroun">
+        <view class="Popular-nurse">
+          <view class="service">
+            <view>
+              <view class="immage-mechanism">
+                <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+              </view>
+            </view>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="hao-jj">医院陪护-老人陪护</view>
+            <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+            <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+          </view>
+        </view>
+        <view class="butto">
+          <view class="button-one">
+            <view class="butto-payment">
+              <image src="../../img/mipmap-mdpi/weixin.png" class="w-img"></image>
+              <view>在线沟通</view>
+            </view>
+            <view class="butto-payment">
+              <image src="../../img/mipmap-mdpi/weixin.png" class="w-img"></image>
+              <view>拨打电话</view>
+            </view>
+            <view>
+              <view class="butto-delete" bindtap="goAftersales">申请售后</view>
+            </view>
+            <view>
+              <view class="butto-payment" bindtap="goevaluate">去评价</view>
+            </view>
+          </view>
+        </view>
+        <view class="bor"></view>
+        <view class="Total-price">
+          <view class="total">
+            <view>总价</view>
+            <view>优惠</view>
+            <view>需付款</view>
+          </view>
+          <view class="Price">
+            <view>￥1500.00</view>
+            <view class="red-r">-￥100.00</view>
+            <view class="red-r">￥1400.00</view>
+          </view>
+        </view>
+      </view>
+      <view class="information">
+        <view>
+          <van-collapse value="{{ activeNames }}" bind:change="onChange">
+            <van-collapse-item title="联系人信息" name="1">
+              <view>
+                <view class="contacts">
+                  <view>小潘潘</view>
+                  <view>男</view>
+                  <view>18783399654</view>
+                </view>
+                <view class="MarquisWu">武侯区蜀都中心一期</view>
+              </view>
+            </van-collapse-item>
+          </van-collapse>
+        </view>
+      </view>
+      <view class="ordder">
+        <van-collapse value="{{ activeNames }}" bind:change="onChange">
+          <van-collapse-item title="订单信息" name="2">
+            <view class="Total-state">
+              <view class="total">
+                <view>订单状态</view>
+                <view>订单编号</view>
+                <view>下单时间</view>
+                <view>付款时间</view>
+                <view>服务开始时间</view>
+              </view>
+              <view class="Price">
+                <view>服务中</view>
+                <view>12345678</view>
+                <view>2021-3-8</view>
+                <view>2021-4-9</view>
+                <view>2021-4-9</view>
+              </view>
+            </view>
+          </van-collapse-item>
+        </van-collapse>
+      </view>
+    </view>
+    <view class="m-bottom"></view>
+  </view>
+</view>

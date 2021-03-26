@@ -1,0 +1,531 @@
+<view>
+  <van-tabs title-active-color="#61CF8CFF" color="#61CF8CFF" swipe-threshold="6" active="{{identification}}"
+    ellipsis="{{false}}" bind:click="onClickp">
+    <van-tab title="全部">
+      <view class="local">
+        <view class="central">
+          <!-- 待付款 -->
+          <view class="top">
+            <view class="Order-time" bindtap="goorderdetails">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">待付款</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="goorderdetails">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>优惠￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="p-close">
+              <view class="close">
+                <view class="order-din">订单即将关闭,建议尽快付款</view>
+              </view>
+            </view>
+            <view class="butto">
+              <view class="button-tow">
+                <view>
+                  <view class="butto-delete">删除订单</view>
+                </view>
+                <view>
+                  <view class="butto-payment">立即付款</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 待服务 -->
+          <view class="top-service">
+            <view class="Order-time">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">待服务</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="godetaild">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>优惠￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="butto-service">
+              <view class="button-tow-service">
+                <view>更多</view>
+              </view>
+              <view>
+                <view class="butto-delete">在线沟通</view>
+              </view>
+              <view>
+                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+              </view>
+              <view>
+                <view class="butto-payment">立即付款</view>
+              </view>
+            </view>
+            <view class="bor-der"></view>
+          </view>
+          <!-- 服务中 -->
+          <view class="top">
+            <view class="Order-time">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">服务中</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="godetaild">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>优惠￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="butto-service">
+              <view class="button-tow-service">
+                <view>更多</view>
+              </view>
+              <view>
+                <view class="butto-delete">在线沟通</view>
+              </view>
+              <view>
+                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+              </view>
+              <view>
+                <view class="butto-payment">立即付款</view>
+              </view>
+            </view>
+            <view class="bor-der"></view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="待付款">
+      <view class="local">
+        <view class="central">
+          <view class="top">
+            <view class="Order-time" bindtap="goorderdetails">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">待付款</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="goorderdetails">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>优惠￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="p-close">
+              <view class="close">
+                <view class="order-din">订单即将关闭,建议尽快付款</view>
+              </view>
+            </view>
+            <view class="butto">
+              <view class="button-tow">
+                <view>
+                  <view class="butto-delete">删除订单</view>
+                </view>
+                <view>
+                  <view class="butto-payment">立即付款</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="待服务">
+      <!-- 待服务 -->
+      <view class="local">
+        <view class="central">
+          <view class="top-service">
+            <view class="Order-time" bindtap="goTobeserved">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">待服务</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="goTobeserved">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>优惠￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="butto-service">
+              <view class="button-tow-service">
+                <view>更多</view>
+              </view>
+              <view>
+                <view class="butto-delete">在线沟通</view>
+              </view>
+              <view>
+                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+              </view>
+              <view>
+                <view class="butto-payment">立即付款</view>
+              </view>
+            </view>
+            <view class="bor-der"></view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="服务中">
+      <!-- 服务中 -->
+      <view class="local">
+        <view class="central">
+          <view class="top">
+            <view class="Order-time" bindtap="goInservice">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid" bindtap="goInservice">服务中</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="goInservice">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>优惠￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="butto-service">
+              <view class="button-tow-service">
+                <view>更多</view>
+              </view>
+              <view>
+                <view class="butto-delete">在线沟通</view>
+              </view>
+              <view>
+                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+              </view>
+              <view>
+                <view class="butto-payment">立即付款</view>
+              </view>
+            </view>
+            <view class="bor-der"></view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="待评价">
+      <!-- 服务中 -->
+      <view class="local">
+        <view class="central">
+          <view class="top">
+            <view class="Order-time">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">待评价</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="godetaild">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>优惠￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="butto-service">
+              <view class="button-tow-service">
+                <view>更多</view>
+              </view>
+              <view>
+                <view class="butto-delete">在线沟通</view>
+              </view>
+              <view>
+                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+              </view>
+              <view>
+                <view class="butto-payment">立即付款</view>
+              </view>
+            </view>
+            <view class="bor-der"></view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="退款/拒单">
+      <!-- 退款成功 -->
+      <view class="local">
+        <view class="central">
+          <view class="top">
+            <view class="Order-time" bindtap="goorderdetails">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">退款成功</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="goorderdetails">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="butto">
+              <view class="button-tow">
+                <view>
+                  <view class="butto-delete">删除订单</view>
+                </view>
+                <view>
+                  <view class="butto-payment">立即付款</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 退款失败 -->
+          <view class="top">
+            <view class="Order-time" bindtap="goorderdetails">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">退款失败</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="goorderdetails">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="butto">
+              <view class="button-tow">
+                <view>
+                  <view class="butto-delete">删除订单</view>
+                </view>
+                <view>
+                  <view class="butto-payment">立即付款</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 退款中 -->
+          <view class="top">
+            <view class="Order-time" bindtap="goorderdetails">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">退款中</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="goorderdetails">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="butto">
+              <view class="button-tow">
+                <view>
+                  <view class="butto-delete">删除订单</view>
+                </view>
+                <view>
+                  <view class="butto-payment">立即付款</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 被拒单 -->
+          <view class="top">
+            <view class="Order-time" bindtap="goorderdetails">
+              <view class="order">
+                下单时间：2021.3.8
+              </view>
+              <view class="Tobepaid">被拒单</view>
+            </view>
+            <view class="bor"></view>
+            <view class="Popular-nurse" bindtap="goorderdetails">
+              <view class="service">
+                <view>
+                  <view class="immage-mechanism">
+                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  </view>
+                </view>
+              </view>
+              <view class="Aunt-Zhang">
+                <view class="hao-jj">医院陪护-老人陪护</view>
+                <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+                <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+              </view>
+            </view>
+            <view class="payment">
+              <view class="Totalprice">
+                <view>总价￥1500.00</view>
+                <view>实付款￥1500.00</view>
+              </view>
+            </view>
+            <view class="butto">
+              <view class="button-tow">
+                <view>
+                  <view class="butto-delete">删除订单</view>
+                </view>
+                <view>
+                  <view class="butto-payment">立即付款</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+  <view class="m-bottom"></view>
+  <view>
+    <page-container show="{{Shadow}}" custom-style="height:20%;" overlay-style="height:100%;">
+      <view class="phone">
+        <view class="dial">18783399654</view>
+        <view class="dial">拨打</view>
+      </view>
+    </page-container>
+  </view>
+</view>

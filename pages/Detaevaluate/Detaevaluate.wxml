@@ -1,0 +1,92 @@
+<view class="local">
+  <view class="central">
+    <view class="backgroun">
+      <view class="Popular-nurse">
+        <view class="service">
+          <view>
+            <view class="immage-mechanism">
+              <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+            </view>
+          </view>
+        </view>
+        <view class="Aunt-Zhang">
+          <view class="hao-jj">医院陪护-老人陪护</view>
+          <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+          <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+        </view>
+      </view>
+      <view class="payment">
+        <view class="Totalprice">
+          <view>总价￥1500.00</view>
+          <view>优惠￥1500.00</view>
+          <view>实付款￥1500.00</view>
+        </view>
+      </view>
+    </view>
+    <view class="reason">
+      <view class="comprehensive">综合评价</view>
+      <view>
+        <van-rate value="{{ value }}" size="{{ 25 }}" color="#ee0a24" void-color="#eee" void-icon="star"
+          bind:change="onChange" />
+      </view>
+    </view>
+    <view class="textar">
+      <view class="conts">
+        <textarea class="areas" placeholder='请输入评价内容' minlength="{{min}}" maxlength="{{max}}"
+          bindinput="inputs"></textarea>
+      </view>
+    </view>
+    <view class="picture">
+      <view>
+        <view class="updata">图片上传</view>
+        <view>
+          <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+        </view>
+      </view>
+    </view>
+    <view class="mechanism">所属机构</view>
+    <view class="flag1">
+      <view class="Popular-nurse" bindtap="godetaild">
+        <view class="service">
+          <view>
+            <view class="immage-mechanism">
+              <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+            </view>
+          </view>
+        </view>
+        <view class="Aunt-Zhang">
+          <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
+          <view>
+            <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+          </view>
+          <view class="authentication">
+            <view class="Platform-certification">平台认证</view>
+            <view class="Platform-certification">病人陪护</view>
+            <view class="Platform-certification">产妇陪护</view>
+          </view>
+        </view>
+      </view>
+      <view class="bor-der"></view>
+      <view class="Service-Centre">
+        <view class="font-f">以服务1000人</view>
+        <view class="location">
+          <view>
+            <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+          </view>
+          <view>蜀都中心一期</view>
+        </view>
+      </view>
+    </view>
+    <view class="reason">
+      <view class="comprehensive">综合评价</view>
+      <view>
+        <van-rate value="{{ value }}" size="{{ 25 }}" color="#ee0a24" void-color="#eee" void-icon="star"
+          bind:change="onChange" />
+      </view>
+    </view>
+    <view>
+      <button class="login-bu">提交评价</button>
+    </view>
+    <view class="m-bottom"></view>
+  </view>
+</view>

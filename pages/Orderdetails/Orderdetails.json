@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+  "van-collapse": "../../lib/vant/collapse",
+  "van-collapse-item": "../../lib/vant/collapse-item",
+  "van-dialog": "../../lib/vant/dialog",
+  "van-rate":"../../lib/vant/rate"
+  },
+  "navigationBarTitleText": "订单详情"
+}

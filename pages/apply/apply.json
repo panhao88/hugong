@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-field": "../../lib/vant/field",
+    "van-uploader": "../../lib/vant/uploader"
+  },
+  "navigationBarTitleText": "申请售后"
+}
