@@ -85,7 +85,7 @@
       </view>
     </view>
     <view>
-      <button class="login-bu">提交评价</button>
+      <button class="gin-bu">提交评价</button>
     </view>
     <view class="m-bottom"></view>
   </view>

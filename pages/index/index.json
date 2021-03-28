@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "classification":"../../conponents/classification/classification",
-    "search":"../../conponents/search/search",
+    "van-search": "../../lib/vant/search",
     "van-rate":"../../lib/vant/rate"
   }
 }

@@ -305,14 +305,14 @@
       <view class="local">
         <view class="central">
           <view class="top">
-            <view class="Order-time">
+            <view class="Order-time" bindtap="goTobeevaluated">
               <view class="order">
                 下单时间：2021.3.8
               </view>
               <view class="Tobepaid">待评价</view>
             </view>
             <view class="bor"></view>
-            <view class="Popular-nurse" bindtap="godetaild">
+            <view class="Popular-nurse" bindtap="goTobeevaluated">
               <view class="service">
                 <view>
                   <view class="immage-mechanism">

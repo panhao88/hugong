@@ -1,17 +1,17 @@
 .local {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFAFF;
+}
+
+.localpl {
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #F5F5F5;
-}
-.localpl{
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background:#F5F5F5;
 }
 
 .central {
@@ -81,7 +81,7 @@
   background: #DFFBEAFF;
   font-size: 20rpx;
   color: #61CF8CFF;
-  padding: 5rpx 0   5rpx 20rpx;
+  padding: 5rpx 0 5rpx 20rpx;
   border-radius: 20rpx 0 0 20rpx;
 }
 
@@ -94,6 +94,8 @@
 .img-di {
   width: 26rpx;
   height: 26rpx;
+  padding-top: 4rpx;
+  padding-right: 8rpx;
 }
 
 .location {
@@ -129,15 +131,18 @@
   border-radius: 8rpx;
   margin-right: 10rpx;
 }
-.cool{
+
+.cool {
   font-size: 32rpx;
   font-weight: 530;
   color: #333333FF;
 }
-.fu-color{
+
+.fu-color {
   color: #999999FF;
   font-size: 24rpx;
 }
+
 .Years {
   margin-top: 12rpx;
   display: flex;
@@ -157,12 +162,14 @@
   margin-top: 15rpx;
   border: solid 0.5rpx #EEEEEEFF;
 }
-.details{
+
+.details {
   font-size: 24rpx;
   font-weight: 540;
   margin-top: 20rpx;
   color: #999999FF;
 }
+
 /* 安全认证 */
 .Safety-certification {
   width: 100%;
@@ -181,38 +188,45 @@
   color: #333333FF;
   font-size: 30rpx;
   font-weight: 900;
-  letter-spacing:3rpx;
+  letter-spacing: 3rpx;
   height: 100rpx;
   display: flex;
   align-items: center;
   margin-left: 20rpx;
 }
+
 .rz-tu {
   width: 50rpx;
   height: 50rpx;
 }
-.rz-tu-ren{
+
+.rz-tu-ren {
   width: 88rpx;
   height: 88rpx;
 }
-.platform{
+
+.platform {
   color: #999999FF;
   font-size: 24rpx;
 }
-.pin-authentication{
+
+.pin-authentication {
   font-size: 28rpx;
   color: #333333FF;
   font-weight: 600;
 }
-.three-hundred{
+
+.three-hundred {
   color: #FF5C5CFF;
   font-size: 22rpx;
 }
+
 .Allcertifications {
   display: flex;
   justify-content: space-around;
   font-size: 28rpx;
 }
+
 .vertical {
   display: flex;
   flex-direction: column;
@@ -229,79 +243,95 @@
   margin-top: 20rpx;
   border-radius: 10rpx;
 }
-.van-button{
+
+.van-button {
   width: 100% !important;
-} 
-.van-button--danger{
-    background: #16D595 !important;
 }
+
+.van-button--danger {
+  background: #16D595 !important;
+}
+
 /* 预约信息 */
-.central-section{
+.central-section {
   width: 95%;
   display: flex;
   flex-direction: column;
 }
-.fill-in{
+
+.fill-in {
   padding: 10rpx;
 }
-.contacts{
+
+.contacts {
   width: 100%;
   height: 300rpx;
   border-radius: 20rpx;
   background: #FFFFFFFF;
 }
-.contact{
+
+.contact {
   height: 100rpx;
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
-.Contact-address{
+
+.Contact-address {
   width: 90%;
   font-size: 28rpx;
   padding-left: 20rpx;
 }
-.picture{
+
+.picture {
   width: 10%;
   display: flex;
   justify-content: center;
 }
-.immm-g{
+
+.immm-g {
   width: 30rpx;
   height: 30rpx;
 }
+
 /* 服务类型 */
-.Servicetype{
+.Servicetype {
   margin-top: 20rpx;
   width: 100%;
   height: 100%;
   border-radius: 20rpx;
   background: #FFFFFFFF;
 }
-.service-sp{
+
+.service-sp {
   padding: 5rpx;
 }
-.yi-hospital{
+
+.yi-hospital {
   margin-top: 10rpx;
   padding-left: 10rpx;
 }
-.Escort-lp{
+
+.Escort-lp {
   width: 100%;
   flex-wrap: wrap;
   display: flex;
 }
-.yi-Escort{
+
+.yi-Escort {
   width: 160rpx;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #16D595;
 }
+
 /* 新增地址 */
-.van-button{
+.van-button {
   border-radius: 40rpx !important;
 }
-.radio{
+
+.radio {
   width: 100%;
   height: 88rpx;
   background: #FFFFFF;
@@ -309,10 +339,12 @@
   display: flex;
   align-items: center;
 }
-.radioflex{
+
+.radioflex {
   display: flex;
 }
-.plGender{
+
+.plGender {
   width: 200rpx;
   margin-left: 10rpx;
   padding-left: 30rpx;
@@ -321,17 +353,270 @@
   display: flex;
   align-items: center;
 }
-.groun{
+
+.groun {
   padding-right: 80rpx;
 }
-.radio-group{
+
+.radio-group {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-.storage{
+
+.storage {
   margin-top: 30rpx;
 }
-.buootb{
-  height: 80rpx; 
+
+.buootb {
+  height: 80rpx;
+}
+
+/* 定位 */
+.topp {
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.box1 {
+  width: 90%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  background: #F1F1F1;
+  border-radius: 40rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.box2 {
+  position: absolute;
+  font-size: 30rpx;
+  left: 16rpx;
+}
+
+.box3 {
+  position: absolute;
+  left: 200rpx;
+}
+
+.van-search__content {
+  padding-left: 0 !important;
+  background: #F1F1F1 !important;
+}
+
+.van-search {
+  padding: 0 !important;
+}
+
+.img-dizhi {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+/* pages/shopMap/shopMap.wxss */
+@import "../../lib/css/iconfont.wxss";
+
+.mapp {
+  width: 100%;
+  height: 400rpx;
+}
+
+.current-site-icon {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.near-list {
+  width: 100%;
+  height: 650rpx;
+  box-sizing: border-box;
+}
+
+.near-item {
+  line-height: 40rpx;
+  padding: 30rpx 50rpx 30rpx 90rpx;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.current-site {
+  font-size: 40rpx;
+  color: #3095F9;
+  position: absolute;
+  top: 40rpx;
+  left: 30rpx;
+}
+
+.near-item .title {
+  color: #282828;
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.map-prompt {
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #707070;
+  text-align: center;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transform: translate(-50%, 0);
+}
+
+.div1 {
+  position: absolute;
+  left: 47.5%;
+  top: 39%;
+  width: 0;
+  height: 0;
+  border-width: 20rpx;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  line-height: 0;
+  font-size: 0;
+}
+
+.near-item .add {
+  color: #707070;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.add-item .title {
+  color: #282828;
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.near-item .title1 {
+  color: #3095F9;
+}
+
+.near-item .add1 {
+  color: #3095F9;
+}
+
+.reload {
+  width: 80rpx;
+  height: 80rpx;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+}
+
+.reload .center1 {
+  width: 30rpx;
+  height: 30rpx;
+  border: 1rpx solid #3095F9;
+  border-radius: 50%;
+  margin: 24rpx auto;
+}
+
+.reload .center2 {
+  width: 25rpx;
+  height: 25rpx;
+  background: #3095F9;
+  border-radius: 50%;
+  margin: 3rpx auto;
+}
+/* 城市列表 */
+ .cert{
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.box-xr{
+  width: 95%;
+  border-radius: 40rpx;
+  padding-left: 20rpx;
+  background: #F1F1F1;
+  font-size: 28rpx;
+}
+.list-city {
+  position: relative;
+}
+
+.py {
+  margin-top: 15rpx;
+  box-sizing: border-box;
+  font-size: 23rpx;
+  color: #aaa;
+  padding: 10rpx 25rpx;
+}
+
+.fullname {
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #555;
+  padding: 25rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.city-py {
+  position: fixed;
+  top: 65%;
+  right: 0;
+  margin-top: -360rpx;
+}
+.city-py view {
+  font-size: 25rpx;
+  width: 30rpx;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #555;
+  /* background: red; */
+}
+
+.showPy {
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  line-height: 150rpx;
+  text-align: center;
+  font-size: 80rpx;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  color: #333;
+  box-shadow: 0 0 150rpx rgba(0, 0, 0, 0.35);
+}
+
+.hot-city {
+  border: 1rpx solid #eee;
+  display: inline-block;
+  margin: 25rpx 0 0 25rpx;
+  padding: 10rpx 25rpx;
+  font-size: 25rpx;
 }

@@ -4,33 +4,35 @@ const app = getApp()
 
 Page({
   data: {
-  
+    Capital:"蜀都中心...",
     keyword: '遥看瀑布挂前川',
     list: [{
-        image: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
-        title: '昨夜星辰昨夜风，画楼西畔桂堂东'
+        image: '../../img/mipmap-mdpi/lun.png',
       },
       {
-        image: 'https://cdn.uviewui.com/uview/swiper/2.jpg',
-        title: '身无彩凤双飞翼，心有灵犀一点通'
+        image: '../../img/mipmap-mdpi/lun.png',
       },
-      {
-        image: 'https://cdn.uviewui.com/uview/swiper/3.jpg',
-        title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳'
-      }
     ],
     arr: [{
-        image: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
-        title: '昨夜星辰昨夜风，画楼西畔桂堂东'
+        imag: '../../img/mipmap-mdpi/bingren.png',
+        title:"专业培训",
+        icon:"../../img/mipmap-mdpi/qi.png",
       },
       {
-        image: 'https://cdn.uviewui.com/uview/swiper/2.jpg',
-        title: '身无彩凤双飞翼，心有灵犀一点通'
+        imag: '../../img/mipmap-mdpi/chanfu.png',
+        title:"服务认证",
+        icon:"../../img/mipmap-mdpi/qi.png",
       },
       {
-        image: 'https://cdn.uviewui.com/uview/swiper/3.jpg',
-        title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳'
-      }
+        imag: '../../img/mipmap-mdpi/yuesao.png',
+        title:"安全保障",
+        icon:"../../img/mipmap-mdpi/qi.png",
+      },
+      {
+        imag: '../../img/mipmap-mdpi/yuesao.png',
+        title:"专业培训",
+        icon:"../../img/mipmap-mdpi/qi.png",
+      },
     ],
     hugong: [{
       name: "热门护工",

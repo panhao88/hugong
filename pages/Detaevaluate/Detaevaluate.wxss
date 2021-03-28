@@ -32,6 +32,7 @@
 }
 
 .immage-mechanism {
+  padding-left: 15rpx;
   width: 120rpx;
   height: 120rpx;
   border-radius: 10rpx;
@@ -89,6 +90,7 @@
   border-radius: 20rpx;
 }
 .comprehensive{
+  padding-left: 15rpx;
     font-size: 32rpx;
     color: #333333;
     font-weight: 700;
@@ -280,9 +282,9 @@
   color: #333333;
   font-weight: 700;
 }
-.login-bu{
+.gin-bu{
   margin-top: 20rpx;
-  width: 600rpx !important;
+  width: 700rpx !important;
   height: 70rpx;
   background-color: #61CF8CFF;
   border-radius:40rpx ;

@@ -1,9 +1,11 @@
 {
   "pages":[
+    "pages/my/my",
+    "pages/details/details",
+    "pages/index/index",
     "pages/order/order",
     "pages/Orderdetails/Orderdetails",
     "pages/Detaevaluate/Detaevaluate",
-    "pages/my/my",
     "pages/apply/apply",
     "pages/Collection/Collection",
     "pages/authentication/authentication",
@@ -13,8 +15,6 @@
     "pages/CustomerNervice/CustomerNervice",
     "pages/Privacy/Privacy",
     "pages/more/more",
-    "pages/details/details",
-    "pages/index/index",
     "pages/coupon/coupon",
     "pages/Withdrawal/Withdrawal",
     "pages/wallet/wallet",

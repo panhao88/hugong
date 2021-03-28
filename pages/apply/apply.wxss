@@ -152,6 +152,16 @@
   color: #333333;
   font-weight: 900;
 }
+.Aftersales-bu{
+  margin-top: 20rpx;
+  width: 700rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius:40rpx ;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 35rpx;
+}
 .m-bottom{
   height: 20rpx;
 }

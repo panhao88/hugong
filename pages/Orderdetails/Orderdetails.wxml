@@ -223,7 +223,7 @@
           </view>
         </view>
         <view class="butto">
-          <view class="button-one">
+          <view class="button-three">
             <view>
               <view class="butto-payment">在线沟通</view>
             </view>
@@ -294,7 +294,7 @@
     <view wx:if="{{flag === 4}}">
       <view class="backgroun">
         <view class="Popular-nurse">
-          <view class="service">
+          <view class="service" >
             <view>
               <view class="immage-mechanism">
                 <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
@@ -308,7 +308,7 @@
           </view>
         </view>
         <view class="butto">
-          <view class="button-one">
+          <view class="button-three">
             <view class="butto-payment">
               <image src="../../img/mipmap-mdpi/weixin.png" class="w-img"></image>
               <view>在线沟通</view>
@@ -350,6 +350,20 @@
                   <view>18783399654</view>
                 </view>
                 <view class="MarquisWu">武侯区蜀都中心一期</view>
+                <view class="bor-d"></view>
+                <view class="serviceobject">服务对象</view>
+                <view class="contacts">
+                  <view>王桂香</view>
+                  <view>女</view>
+                  <view>68岁</view>
+                </view>
+                <view class="MarquisWu">常见病史:高血压、糖尿病</view>
+                <view class="MarquisWu">备注:需要喂饭、洗衣</view>
+                <view class="bor-d"></view>
+                <view class="serviceobject">服务内容</view>
+                <view>
+                  需要做饭、喂饭、洗衣服、擦身
+                </view>
               </view>
             </van-collapse-item>
           </van-collapse>

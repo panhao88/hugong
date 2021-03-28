@@ -33,6 +33,12 @@ Page({
       Shadow:true
     })
   },
+    //去待评价
+  goTobeevaluated(){
+    wx.navigateTo({
+      url: `/pages/Orderdetails/Orderdetails?ids=${this.data.id}`,
+    })
+  },
   //tabs点击事件
   onClickp(e){
     this.setData({

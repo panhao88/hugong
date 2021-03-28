@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "van-rate":"../../lib/vant/rate",
+    "van-search": "../../lib/vant/search",
     "van-goods-action":"../../lib/vant/goods-action",
     "van-goods-action-button":"../../lib/vant/goods-action-button",
     "van-goods-action-icon":"../../lib/vant/goods-action-icon",
@@ -10,7 +11,9 @@
     "van-button": "../../lib/vant/button",
     "van-field": "../../lib/vant/field",
     "van-cell": "../../lib/vant/cell",
-    "van-cell-group": "../../lib/vant/cell-group"
+    "van-cell-group": "../../lib/vant/cell-group",
+    "van-index-bar": "../../lib/vant/index-bar",
+  "van-index-anchor": "../../lib/vant/index-anchor"
   },
   "navigationBarTitleText": "护工详情"
 }

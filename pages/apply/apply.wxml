@@ -51,8 +51,13 @@
     <view class="picture">
       <view>
         <view class="updata">图片上传</view>
-        <view><van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" /></view>
+        <view>
+          <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+        </view>
       </view>
+    </view>
+    <view>
+      <button class="Aftersales-bu">提交申请</button>
     </view>
     <view class="m-bottom"></view>
   </view>

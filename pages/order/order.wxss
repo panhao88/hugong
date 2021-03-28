@@ -88,6 +88,7 @@
   letter-spacing: 3rpx;
   color: #333333FF;
   font-size: 30rpx;
+  font-family: PingFang-SC-Medium;
 }
 
 .service-time {
