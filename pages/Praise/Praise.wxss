@@ -23,10 +23,14 @@
 }
 .top{
   margin-left: 20rpx;
+  font-weight: 700;
+  font-size: 30rpx;
 }
 .browse{
   margin-top: 20rpx;
   display: flex;
+  font-size: 24rpx;
+  color: #999999;
 }
 .Recent-browsing{
   margin-left: 30rpx;
@@ -34,9 +38,16 @@
 .comment{
   margin-top: 20rpx;
 }
+.name-wang{
+  font-size: 26rpx;
+  color: #333333;
+  font-weight: 500;
+
+}
 .img-tu{
   width: 216rpx;
   height: 216rpx;
+  border-radius: 20rpx;
 }
 .Comment-picture{
   margin-top: 20rpx;
@@ -49,58 +60,164 @@
 }
 .notes{
   margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #999999;
 }
 /* 护工 */
-.Popular-nurse{
+.Popular-nurse {
   width: 100%;
   margin-top: 20rpx;
   display: flex;
   align-content: center;
-  background: gold;
+  background: #FFFFFFFF;
+  border-radius: 20rpx;
 }
-.service{
-  font-size: 30rpx;
 
+.service {
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
   width: 30%;
   display: flex;
   justify-content: center;
- align-items: center;
-  flex-direction: column; 
+  align-items: center;
+  flex-direction: column;
 }
-.Aunt-Zhang{
-  margin-left: 20rpx;
-  width: 100%;
 
-}
-.score{
-  display: flex;
-  justify-content: space-between;
+.Aunt-Zhang {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
   width: 100%;
+}
+.font {
   font-size: 30rpx;
+  font-weight: 600;
 }
-.brief-introduction{
-  font-size: 30rpx;
-}
-.Platform-certification{
-  border: black 1rpx solid;
-  padding: 1rpx 2rpx;
-  margin:0 20rpx 0 0;
-}
-.authentication{
+
+.Serviceable {
+  background: #61CF8C;
+  border-radius: 20rpx;
+  width: 120rpx;
+  height: 36rpx;
+  font-size: 22rpx;
   display: flex;
-  font-size: 30rpx;
-}
-.bor-der{
-  border: black 0.5rpx solid;
+  justify-content: center;
+  align-items: center;
+  color: #F0F8FF;
   margin-top: 10rpx;
 }
-.Service-person{
+
+.appointment {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20rpx 0 25rpx;
+  background: #DFFBEAFF;
+  color: #61CF8CFF;
+  border-radius: 20rpx 0 0 20rpx;
+  font-size: 20rpx;
+}
+
+.score {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   font-size: 30rpx;
-  padding: 10rpx 0 10rpx 0;
+  margin-top: 6rpx;
+  margin-bottom: 10rpx;
 }
-.imm-age{
-  width: 80rpx;
-  height: 80rpx;
+
+.wu-lin {
+  font-size: 26rpx;
+  color: #333333FF;
+}
+
+.brief-introduction {
+  margin-top: 15rpx;
+  font-size: 20rpx;
+  color: #999999FF;
+}
+
+.Platform-certification {
+  border: #BBBBBBFF 1rpx solid;
+  background: #61CF8CFF;
+  font-size: 18rpx;
+  color: #FFFFFFFF;
+  width: 100rpx;
+  height: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3rpx;
+  margin: 0 20rpx 0 0;
+  border-radius: 8rpx;
+  border: none;
+}
+
+.imm-age {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.authentication {
+  display: flex;
+}
+
+.bor-der {
+  border: #EEEEEEFF 0.1rpx solid;
+  margin-top: 10rpx;
+}
+
+.Service-person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  padding: 10rpx 0 10rpx 0;
+  font-weight: 400;
+  color: #333333FF;
+}
+.location {
+  display: flex;
+  margin-left: 30rpx;
+  color: #333333FF;
+  font-size: 24rpx;
+}
+.img-di {
+  width: 23rpx;
+  height: 23rpx;
+}
+/* 机构 */
+.immage-mechanism {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+.flag1 {
+  background: #FFFFFFFF;
+  border-radius: 20rpx ;
+  margin-bottom: 20rpx;
+}
+.hao-jj {
+  font-weight: 600;
+  letter-spacing: 3rpx;
+  color: #333333FF;
+  font-size: 30rpx;
+}
+.logo{
+  width: 120rpx;
+  height: 120rpx;
+}
+.Service-Centre {
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.font-f {
+  font-size: 24rpx;
+  color: #333333FF;
 }

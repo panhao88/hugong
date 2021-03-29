@@ -1,8 +1,9 @@
 {
   "pages":[
-    "pages/my/my",
     "pages/details/details",
     "pages/index/index",
+    "pages/Praise/Praise",
+    "pages/my/my",
     "pages/order/order",
     "pages/Orderdetails/Orderdetails",
     "pages/Detaevaluate/Detaevaluate",
@@ -25,7 +26,7 @@
     "pages/healthy/healthy",
     "pages/forget/forget",
     "pages/service/service",
-    "pages/Praise/Praise",
+    
     "pages/Searchpage/Searchpage",
     "pages/login/login",
     "pages/Escort/Escort"

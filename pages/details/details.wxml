@@ -1,12 +1,12 @@
 <view class="localpl">
   <!-- 轮播图 -->
   <view class="wrap">
-    <!-- <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+    <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}"
+      class="wrap">
       <swiper-item wx:for="{{list}}" wx:key="index">
-        <image src="{{item.image}}" class="img-i"></image>
+        <image src="{{item.img}}" class="img-i"></image>
       </swiper-item>
-    </swiper> -->
-    <image src="../../img/mipmap-mdpi/hugong.png" class="img-i"></image>
+    </swiper>
   </view>
   <view class="central">
     <view class="region">
@@ -141,6 +141,7 @@
         <van-goods-action-button text="立即预约" bind:click="onClickButton" />
       </van-goods-action>
     </view>
+    <!-- 填写预约信息 -->
     <van-popup show="{{ show }}" position="bottom" custom-style="height: 75%;" bind:close="onClose">
       <view class="local">
         <view class="central-section">
@@ -168,15 +169,15 @@
           <view class="Servicetype">
             <view class="service-sp">服务类型</view>
             <view class="Escort-lp">
-              <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
-                <view class="yi-Escort">{{item.name}}</view>
+              <view wx:for="{{arr}}" wx:key="index" class="yi-hospital">
+                <view class="{{colo === index ? 'red' : 'yi-Escort'}}">{{item.name}}</view>
               </view>
             </view>
             <view class="service-sp">
               <view>服务项目</view>
               <view class="Escort-lp">
                 <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
-                  <view class="yi-Escort">{{item.name}}</view>
+                  <view class="{{colo === index ? 'red' : 'yi-Escort'}}">{{item.name}}</view>
                 </view>
               </view>
             </view>
@@ -191,6 +192,13 @@
     <!-- 新增地址 -->
     <van-popup show="{{ showaddress }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
       <view class="local">
+        <view class="container">
+          <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}"
+            bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="index">
+            <view class="content">{{item.content}}</view>
+            <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+          </view>
+        </view>
         <view class="central-section">
           <van-button icon="plus" type="primary" bindtap="Newaddress">新增地址</van-button>
         </view>
@@ -210,21 +218,21 @@
         <view class="central-section">
           <view>
             <van-cell-group>
-              <van-field value="{{ value }}" placeholder="请输入联系人" />
+              <van-field value="{{ value }}" placeholder="请输入联系人" label="联系人" input-align="right" />
               <view class="radio">
                 <view class="plGender">性别</view>
                 <view class="radio-group">
                   <van-radio-group value="{{ radio }}" bind:change="onChange">
                     <view class="radioflex">
-                      <van-radio name="1" class="groun">男</van-radio>
-                      <van-radio name="2">女</van-radio>
+                      <van-radio name="1" icon-size="28rpx" class="groun" checked-color="#61CF8C">男</van-radio>
+                      <van-radio name="2" icon-size="28rpx" checked-color="#61CF8C">女</van-radio>
                     </view>
                   </van-radio-group>
                 </view>
               </view>
-              <van-field value="{{ value }}" placeholder="请输入联系人" />
-              <van-cell title="服务地址" is-link value="请选择" bindtap="golocation" />
-              <van-field value="{{ value }}" placeholder="门牌号" />
+              <van-field value="{{ value }}" placeholder="请输入联系人电话" label="联系电话" input-align="right" />
+              <van-cell title="服务地址" is-link value="请选择" bindtap="golocation" input-align="right" />
+              <van-field value="{{ value }}" placeholder="请输入门牌号" label="门牌号" input-align="right" />
             </van-cell-group>
           </view>
           <view class="storage">
@@ -238,12 +246,12 @@
       <view class="local">
         <!-- 输入框 -->
         <view class="topp">
-          <view class="box1">
-            <view class="box2">{{currentRegion.city}} <image src="../../img/mipmap-mdpi/dizhi.png" class="img-dizhi">
+          <view class="box-top">
+            <view class="box-ru">{{currentRegion.city}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi">
               </image>
             </view>
-            <view class="box3">
-              <van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="gosearch" />
+            <view class="box-three">
+              <van-search placeholder="请输入搜索关键词" bindtap="gosearch" />
             </view>
           </view>
         </view>
@@ -255,11 +263,11 @@
           <view class="map-prompt">{{currentRegion.street}}</view>
           <view class="div1"></view>
           <image class="current-site-icon" src="../../img/mipmap-mdpi/my_marker.png"></image>
-          <view class="reload" bindtap="reload">
-            <view class="center1">
-              <view class="center2"></view>
-            </view>
-          </view>
+          <cover-view class="reload" bindtap="reload">
+            <cover-view class="center1">
+              <cover-view class="center2"></cover-view>
+            </cover-view>
+          </cover-view>
         </map>
         <scroll-view class="near-list" scroll-y>
           <!--绑定回填事件-->
@@ -274,39 +282,65 @@
             </view>
           </view>
         </scroll-view>
+        <view class="bottom-box">
+          <button bindtap="selectedOk">确认地址</button>
+        </view>
       </view>
     </van-popup>
     <!-- 搜索地图 -->
     <van-popup show="{{ searchshow }}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
-      <scroll-view scroll-y="true" style="height:100%;" scroll-into-view="{{scrollTopId}}" scroll-with-animation="true"
-        enable-back-to-top="true">
-        <!-- 热门城市 -->
-        <view class='item'>
-            <view class='cert'>
-              <view class="box-xr">
-                <input type="text" placeholder="输入城市名进行搜索"/>
+      <view class='cert'>
+        <view class="img-age">
+          <image src="../../img/mipmap-mdpi/fanhui.png" class="img-fan" bindtap="preturn"></image>
+        </view>
+        <view class="imput">
+          <van-search value="{{ pavalue }}" placeholder="请输入搜索关键词" clearable="{{false}}" bind:change="getsuggest" />
+        </view>
+      </view>
+      <view wx:if="{{flag === true}}">
+        <scroll-view scroll-y="true" style="height:100%;" scroll-into-view="{{scrollTopId}}"
+          scroll-with-animation="true" enable-back-to-top="true">
+          <!-- 热门城市 -->
+          <view class='item'>
+            <view class='fullname'>
+              <image src="../../img/mipmap-mdpi/dingwei1.png" class="img-dingwei"></image> 当前定位城市：{{currentRegion.city}}
+            </view>
+            <view class='py' id="hot">热门城市</view>
+            <view class="fullname hot-city" wx:for="{{hotCityData}}" wx:key="key" data-fullname="{{item.fullname}}"
+              data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
+            </view>
+          </view>
+          <!-- 全部 -->
+          <view class='item' wx:for="{{cityData}}" wx:for-index="idx" wx:for-item="group" wx:key="key">
+            <view class='py' id="{{idx}}">{{idx}}</view>
+            <view class="fullname" wx:for="{{group}}" wx:key="key" data-fullname="{{item.fullname}}"
+              data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
+            </view>
+          </view>
+        </scroll-view>
+        <!-- 首字母 -->
+        <view class='city-py' bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
+          <view wx:for="{{_py}}" wx:key="key" bindtouchstart="getPy" bindtouchend="setPy" id="{{item}}">
+            <view class="{{item === PYcolor ? 'colour':''}}">
+              {{item == 'hot' ? "" : item}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{flag === false}}">
+        <view class="add-list-box">
+          <scroll-view class="add-list" scroll-y>
+            <view class="add-item" wx:for="{{suggestion}}" wx:key="index">
+              <!--绑定回填事件-->
+              <view bindtap="backfill" id="{{index}}" data-name="{{item.title}}">
+                <!--根据需求渲染相应数据-->
+                <!--渲染地址title-->
+                <view class="title">{{item.title}}</view>
+                <!--渲染详细地址-->
+                <view class="add">{{item.addr}}</view>
               </view>
             </view>
-          <view class='fullname'>当前定位城市：{{currentRegion.city}}</view>
-          <view class='py' id="hot">热门城市</view>
-          <view class="fullname hot-city" wx:for="{{hotCityData}}" wx:key="key" data-fullname="{{item.fullname}}"
-            data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
-          </view>
-        </view>
-        <!-- 全部 -->
-        <view class='item' wx:for="{{cityData}}" wx:for-index="idx" wx:for-item="group" wx:key="key">
-          <view class='py' id="{{idx}}">{{idx}}</view>
-          <view class="fullname" wx:for="{{group}}" wx:key="key" data-fullname="{{item.fullname}}"
-            data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
-          </view>
-        </view>
-
-      </scroll-view>
-
-      <!-- 首字母 -->
-      <view class='city-py' bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
-        <view wx:for="{{_py}}" wx:key="key" bindtouchstart="getPy" bindtouchend="setPy" id="{{item}}">
-          {{item == 'hot' ? "★" : item}}
+          </scroll-view>
         </view>
       </view>
     </van-popup>

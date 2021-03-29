@@ -106,10 +106,9 @@
 <view wx:if="{{flag === 1 }}">
   <view>
     <scroll-view class="scroll-view_H" scroll-x="true">
-      <view id="demo1" class="scroll-view-item_H uni-bg-red">1</view>
-      <view id="demo2" class="scroll-view-item_H uni-bg-green">2</view>
-      <view id="demo3" class="scroll-view-item_H uni-bg-blue">3</view>
-      <view id="demo3" class="scroll-view-item_H uni-bg-blue">4</view>
+      <view id="demo1"  class="scroll-view-item_H {{flagIndex==0 ? 'cor':'cor1'}}">医院陪护</view>
+      <view id="demo2"  class="scroll-view-item_H {{flagIndex==1 ? 'cor':'cor1'}}">康养院陪护</view>
+      <view id="demo3"  class="scroll-view-item_H {{flagIndex==1 ? 'cor':'cor1'}}">居家陪护</view>
     </scroll-view>
   </view>
   <!-- 热门机构1 -->

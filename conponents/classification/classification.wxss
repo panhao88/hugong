@@ -209,8 +209,10 @@
   height: 120rpx;
 }
 .Service-Centre {
+  height: 50rpx;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-left: 20rpx;
   margin-right: 20rpx;
 }

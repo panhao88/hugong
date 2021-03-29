@@ -13,15 +13,17 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .box-now{
-  width: 90% ;
+  width: 92% ;
   height: 80rpx;
   display: flex;
   align-items: center;
   background: #F1F1F1;
   border-radius: 40rpx;
   position: relative;
+  margin-top: 20rpx;
   margin-bottom: 20rpx;
 }
 .box-tow{
@@ -33,6 +35,10 @@
   position: absolute;
   left: 200rpx;
 }
+.weiimg{
+  width: 47rpx;
+  height: 48rpx;
+}
 .van-search__content{
   padding-left: 0 !important;
   width: 80% !important;
@@ -43,8 +49,8 @@
   width: 80% !important;
 }
 .img-dizhi{
-  width: 30rpx;
-  height: 30rpx;
+  width: 15rpx;
+  height: 15rpx;
 }
 .img-weixin{
   width: 65rpx;

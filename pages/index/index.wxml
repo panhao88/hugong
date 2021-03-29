@@ -3,11 +3,12 @@
     <!-- 输入框 -->
     <view class="top"> 
       <view class="box-now">
-        <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/dizhi.png" class="img-dizhi"></image></view>
+        <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi"></image></view>
         <view class="box-therr">
-          <van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+          <van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="goserch" />
         </view> 
       </view> 
+      <view><image src="../../img/mipmap-mdpi/shouwei.png" class="weiimg"></image></view>
     </view>
     <!-- 轮播图 -->
     <view class="wrap">
