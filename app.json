@@ -1,10 +1,10 @@
 {
   "pages":[
-     "pages/Collection/Collection",
+    "pages/index/index",
+    "pages/Collection/Collection",
     "pages/my/my",
     "pages/Serviceperson/Serviceperson",
     "pages/details/details",
-    "pages/index/index",
     "pages/Praise/Praise",
     "pages/order/order",
     "pages/Orderdetails/Orderdetails",

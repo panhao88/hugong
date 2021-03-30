@@ -11,7 +11,13 @@
         </view>
       </view>
     </view>
-    <scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
+    <van-swipe-cell right-width="{{ 65 }}">
+      <van-cell-group>
+        1111
+      </van-cell-group>
+      <view slot="right">删除</view>
+    </van-swipe-cell>
+    <!-- <scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
         <block wx:key="item" wx:for="{{data}}">
           <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove"
             bindtouchend="drawEnd" style="right:{{item.right}}rpx">
@@ -50,6 +56,6 @@
             <view class="remove" bindtap="delItem">删除 </view>
           </view>
         </block>
-      </scroll-view>
+      </scroll-view> -->
   </view>
 </view>

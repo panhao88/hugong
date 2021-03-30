@@ -303,43 +303,52 @@
     </van-popup>
     <!-- 搜索地图 -->
     <van-popup show="{{ searchshow }}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
-      <!-- <view class='cert'>
+      <view class='cert'>
         <view class="img-age">
           <image src="../../img/mipmap-mdpi/fanhui.png" class="img-fan" bindtap="preturn"></image>
         </view>
         <view class="imput">
           <van-search value="{{ pavalue }}" placeholder="请输入搜索关键词" clearable="{{false}}" bind:change="getsuggest" />
         </view>
-      </view> -->
-      <view class='list-city' hidden="{{!cityListShow}}">
-        <scroll-view scroll-y="true" style="height:100%;" scroll-into-view="{{scrollTopId}}"
-          scroll-with-animation="true" enable-back-to-top="true">
-          <view class='item'>
-            <view class='fullname'>当前定位城市：{{city}}</view>
+      </view>
+      <scroll-view scroll-y="true" scroll-into-view="{{scrollTopId}}" style="height:100%;" scroll-with-animation="true"
+        enable-back-to-top="true" wx:if="{{flag === true}}">
+        <view class='item'>
+          <view class='g-fullname'>当前定位城市：{{city}}</view>
+        </view>
+        <view class='item'>
+          <view class='py' id="hot">★ 热门城市</view>
+          <view class="fullname hot-city" wx:for="{{hotCityData}}" wx:key="key" data-fullname="{{item.fullname}}"
+            data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
           </view>
-          <!-- 热门城市 -->
-          <view class='item' style="padding-bottom:25rpx;">
-            <view class='py' id="hot">★ 热门城市</view>
-            <view class="fullname hot-city" wx:for="{{hotCityData}}" wx:key="key" data-fullname="{{item.fullname}}"
-              data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
-            </view>
+        </view>
+        <view class='item' wx:for="{{cityData}}" wx:for-index="idx" wx:for-item="group" wx:key="key">
+          <view class='py' id="{{idx}}">{{idx}}</view>
+          <view class="fullname" wx:for="{{group}}" wx:key="key" data-fullname="{{item.fullname}}"
+            data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
           </view>
-
-          <!-- 全部 -->
-          <view class='item' wx:for="{{cityData}}" wx:for-index="idx" wx:for-item="group" wx:key="key">
-            <view class='py' id="{{idx}}">{{idx}}</view>
-            <view class="fullname" wx:for="{{group}}" wx:key="key" data-fullname="{{item.fullname}}"
-              data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
-            </view>
-          </view>
-
-        </scroll-view>
-
-        <!-- 首字母 -->
-        <view class='city-py' bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
-          <view wx:for="{{_py}}" wx:key="key" bindtouchstart="getPy" bindtouchend="setPy" id="{{item}}">
+        </view>
+      </scroll-view>
+      <view class='city-py' bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove"
+        wx:if="{{flag === true}}">
+        <view wx:for="{{_py}}" wx:key="key" bindtouchstart="getPy" bindtouchend="setPy" id="{{item}}"  class="{{item === showPy ? 'colour':''}}">
             {{item == 'hot' ? "★" : item}}
-          </view>
+        </view>
+      </view>
+      <view wx:if="{{flag === false}}">
+        <view class="add-list-box">
+          <scroll-view class="add-list">
+            <view class="add-item" wx:for="{{suggestion}}" wx:key="index">
+              <!--绑定回填事件-->
+              <view bindtap="backfill" id="{{index}}" data-name="{{item.title}}">
+                <!--根据需求渲染相应数据-->
+                <!--渲染地址title-->
+                <view class="title">{{item.title}}</view>
+                <!--渲染详细地址-->
+                <view class="add">{{item.addr}}</view>
+              </view>
+            </view>
+          </scroll-view>
         </view>
       </view>
     </van-popup>

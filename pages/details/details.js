@@ -82,7 +82,6 @@ Page({
       return value;
     },
 
-    scrollTopId: '',
     pavalue: '', //搜索框输入内容
     radio: '1', //男女选择单选框
     colo: 0, //服务类型选择器 
@@ -98,7 +97,6 @@ Page({
     cityData: {},
     hotCityData: [],
     _py: ["hot", "A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "W", "X", "Y", "Z"],
-    hidden: true,
     showPy: '★',
     flag: true, //搜索条件判断
     //  map数据
@@ -362,25 +360,20 @@ Page({
   //获取文字信息
   getPy: function (e) {
     this.setData({
-      hidden: false,
       showPy: e.target.id,
     })
   },
 
   setPy: function (e) {
     this.setData({
-      hidden: true,
       scrollTopId: this.data.showPy
     })
-    console.log(this.data.scrollTopId)
   },
 
   //滑动选择城市
   tMove: function (e) {
-    console.log(e)
     var y = e.touches[0].clientY,
       offsettop = e.currentTarget.offsetTop;
-    console.log(offsettop)
     //判断选择区域,只有在选择区才会生效
     if (y > offsettop) {
       var num = parseInt((y - offsettop) / 12);
@@ -400,7 +393,6 @@ Page({
   //触发结束选择
   tEnd: function () {
     this.setData({
-      hidden: true,
       scrollTopId: this.data.showPy
     })
   },
