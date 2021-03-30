@@ -232,9 +232,6 @@
   flex-direction: column;
   align-items: center;
 }
-
-
-
 /* 服务项目 */
 .Service-Items {
   width: 100%;
@@ -254,6 +251,7 @@
 
 /* 预约信息 */
 .central-section {
+  margin-bottom: 20rpx;
   margin-top: 30rpx;
   width: 95%;
   display: flex;
@@ -307,9 +305,18 @@
 }
 
 .service-sp {
-  padding: 5rpx;
+  font-size: 28rpx;
+  padding: 15rpx;
+  font-weight: 600;
 }
-
+.textar{
+  width: 100%;
+  height: 400rpx;
+}
+.pltextarea{
+  width: 100%;
+  height: 400rpx;
+}
 .yi-hospital {
   margin-top: 10rpx;
   padding-left: 10rpx;
@@ -330,7 +337,8 @@
   font-size: 26rpx;
   padding: 10rpx 0 10rpx 0;
 }
-.red{
+
+.red {
   padding: 10rpx 0 10rpx 0;
   font-size: 26rpx;
   color: #61CF8C;
@@ -381,7 +389,8 @@
 }
 
 .storage {
-  margin-top: 30rpx;
+  margin-top: 20rpx;
+  background: #fff;
 }
 
 .buootb {
@@ -561,8 +570,9 @@
   border-radius: 50%;
   margin: 3rpx auto;
 }
+
 /* 城市列表 */
- .cert{
+/* .cert {
   margin-top: 20rpx;
   width: 100%;
   height: 64rpx;
@@ -570,22 +580,26 @@
   justify-content: space-between;
   align-items: center;
 }
-.img-age{
+
+.img-age {
   width: 10%;
   display: flex;
   justify-content: center;
 }
-.imput{
+
+.imput {
   width: 87%;
   margin-right: 20rpx;
   border-radius: 40rpx;
   padding-left: 20rpx;
   background: #F1F1F1;
 }
-.img-fan{
+
+.img-fan {
   height: 32rpx;
   width: 20rpx;
 }
+
 .list-city {
   position: relative;
 }
@@ -606,24 +620,76 @@
   border-bottom: 1rpx solid #eee;
   font-weight: 600;
 }
-.img-dingwei{
+
+.img-dingwei {
   width: 26rpx;
   height: 26rpx;
 }
+
 .city-py {
   position: fixed;
   top: 65%;
   right: 0;
   margin-top: -360rpx;
 }
-.city-py  {
+
+.city-py {
   font-size: 22rpx;
-  line-height: 12px;
+  line-height: 28rpx;
   text-align: center;
   color: #555;
 }
-.colour{
+
+.colour {
   color: #16D595;
+}
+
+.hot-city {
+  border: 1rpx solid #eee;
+  display: inline-block;
+  margin: 50rpx 0 0 50rpx;
+  padding: 10rpx 25rpx;
+  font-size: 25rpx;
+}
+
+.item {
+  width: 94%;
+} */
+
+.list-city {
+  position: relative;
+}
+
+.py {
+  box-sizing: border-box;
+  background: #eee;
+  font-size: 23rpx;
+  color: #aaa;
+  padding: 10rpx 25rpx;
+}
+
+.fullname {
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #555;
+  padding: 25rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.city-py {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin-top: -360rpx;
+}
+
+.city-py view {
+  font-size: 25rpx;
+  width: 60rpx;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #555;
 }
 
 .showPy {
@@ -648,13 +714,9 @@
 .hot-city {
   border: 1rpx solid #eee;
   display: inline-block;
-  margin: 50rpx 0 0 50rpx;
+  margin: 25rpx 0 0 25rpx;
   padding: 10rpx 25rpx;
   font-size: 25rpx;
-  background: #F5F5F5;
-}
-.item{
-  width: 94%;
 }
 /* 搜索列表内容 */
 .add-list-box {
@@ -666,16 +728,19 @@
   box-sizing: border-box;
   overflow: hidden;
 }
- .add-list {
+
+.add-list {
   width: 100%;
   height: 1000rpx;
 }
+
 .add-item {
   line-height: 40rpx;
   padding: 30rpx 50rpx;
   text-align: left;
   border-top: 1px solid #eee;
 }
+
 .add-item .title {
   color: #282828;
   font-size: 32rpx;
@@ -683,13 +748,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .add-item .add {
   color: #707070;
   font-size: 24rpx;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-} 
+}
+
 /* 按钮 */
 .bottom-box {
   width: 100%;
@@ -702,7 +769,8 @@
   z-index: 88;
   overflow: hidden;
 }
-.bottom-box button{
+
+.bottom-box button {
   width: 100%;
   height: 80rpx;
   line-height: 40rpx;
@@ -712,49 +780,93 @@
   font-size: 30rpx;
   border-radius: 40rpx;
 }
-/* 左划删除 */
-.container{
-  width:100%;
+
+/* 新增地址编辑 */
+.remarks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  padding: 5px;
+}
+.boplr{
+  padding-right: 30rpx;
+}
+.PVertical {
+  width: 1rpx;
+  height: 60rpx;
+  background: #EEEEEE;
+}
+.name{
+  padding-right: 20rpx;
+}
+.plcontent {
+  display: flex;
+  color: #999999;
+  font-size: 28rpx;
+  width: 40%;
+  padding-left: 24rpx;
+  align-items: center;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(180rpx);
+  transform: translateX(180rpx);
+}
+/* 联系地址左划删除 */
+.dele {
+  width: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  padding-bottom:10rpx;
-}
-.touch-item {
- font-size: 14px;
- display: flex;
- /* //均匀排布每个元素 */
- justify-content: space-between;
- border-bottom:1px solid #ccc;
- width: 100%;
- overflow: hidden;
-}
-.content {
- width: 100%;
- padding: 10px;
- line-height: 22px;
- margin-right:0;
- -webkit-transition: all 0.4s;
- transition: all 0.4s;
- -webkit-transform: translateX(90px);
- transform: translateX(90px);
- margin-left: -90px;
-}
-.del {
- background-color: #c00;
- width: 90px;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- color: #fff;
- -webkit-transform: translateX(90px);
- transform: translateX(90px);
- -webkit-transition: all 0.4s;
- transition: all 0.4s;
-}
-.touch-move-active .content,
-.touch-move-active .del {
- -webkit-transform: translateX(0);
- transform: translateX(0);
+  padding-bottom: 10rpx;
 }
 
+.touch-item {
+  font-size: 28rpx;
+  display: flex;
+  /* //均匀排布每个元素 */
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  line-height: 44rpx;
+  margin-right: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(180rpx);
+  transform: translateX(180rpx);
+  margin-left: -180rpx;
+}
+.del {
+  background-color: #FF2C2C;
+  font-size: 28rpx;
+  width: 240rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(90px);
+  transform: translateX(180rpx);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.touch-move-active .content,
+.touch-move-active .del,
+.touch-move-active .plcontent {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+/* 服务对象左划删除 */
+.touch-move-activeone .content,
+.touch-move-activeone .del,
+.touch-move-activeone .plcontent {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}

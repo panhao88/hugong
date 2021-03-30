@@ -36,23 +36,31 @@
         <view class="Service">
           常用服务人
         </view>
-        <view class="more">
+        <view class="more" bindtap="goCommonlyused">
           查看更多>
         </view>
       </view>
       <view class="Carousel">
-        <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
-        <swiper-item wx:for="{{list}}" wx:key="index">
-          <view>
-            <image src="{{item.image}}" mode="widthFix" class="img-i"></image>
-          </view>
-        </swiper-item>
-      </swiper>
+        <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}"
+          circular="{{true}}">
+          <swiper-item wx:for="{{list}}" wx:key="index">
+            <view class="lCarous">
+              <view class="im-age">
+                <image src="{{item.img}}" class="img-g"></image>
+              </view>
+              <view class="">
+                <view>{{item.title}} <image src="../../img/mipmap-mdpi/nv.png" class="img-nv"></image>
+                </view>
+                <view class="nama-age">{{item.age}}</view>
+              </view>
+            </view>
+          </swiper-item>
+        </swiper>
       </view>
     </view>
     <!-- 订单管理 -->
     <view class="order">
-      <view class="top-fuwu" >
+      <view class="top-fuwu">
         <view class="Service" bindtap="gotoorder">
           订单管理
         </view>
@@ -76,14 +84,16 @@
     <!-- 工具与服务 -->
     <view class="tool">
       <view class="top-tool">
-        <view class="mar-left" >
+        <view class="mar-left">
           工具与服务
         </view>
       </view>
       <view class="Gongge">
         <view wx:for="{{gridtextlist}}" wx:key="index" class="yi-hospital" bindtap="go" data-url="{{item.url}}">
-          <view class="ttex-p" >
-            <view><image src="{{item.img}}" class="imgg"></image></view>
+          <view class="ttex-p">
+            <view>
+              <image src="{{item.img}}" class="imgg"></image>
+            </view>
             <view class="font-s">{{item.text}}</view>
           </view>
         </view>

@@ -1,14 +1,16 @@
 {
   "pages":[
+     "pages/Collection/Collection",
+    "pages/my/my",
+    "pages/Serviceperson/Serviceperson",
     "pages/details/details",
     "pages/index/index",
     "pages/Praise/Praise",
-    "pages/my/my",
     "pages/order/order",
     "pages/Orderdetails/Orderdetails",
     "pages/Detaevaluate/Detaevaluate",
     "pages/apply/apply",
-    "pages/Collection/Collection",
+   
     "pages/authentication/authentication",
     "pages/invitation/invitation",
     "pages/ServiceEntry/ServiceEntry",

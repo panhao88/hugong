@@ -6,17 +6,23 @@ Page({
    */
   data: {
     list: [{
-      image: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
-      title: '昨夜星辰昨夜风，画楼西畔桂堂东'
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '王桂香',
+      age:48,
+      texy:"糖尿病"
     },
     {
-      image: 'https://cdn.uviewui.com/uview/swiper/2.jpg',
-      title: '身无彩凤双飞翼，心有灵犀一点通'
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '李富贵',
+      age:48,
+      texy:"糖尿病"
     },
     {
-      image: 'https://cdn.uviewui.com/uview/swiper/3.jpg',
-      title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳'
-    }
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '张三',
+      age:48,
+      texy:"糖尿病"
+    },
   ],
   orderNav: [{
       id: 1,
@@ -99,6 +105,12 @@ Page({
         url:"/pages/more/more",
     },   
 ]
+  },
+  //go常用服务人
+  goCommonlyused(){
+    wx.navigateTo({
+      url: '/pages/Serviceperson/Serviceperson',
+    })
   },
   // 退出登录
   gosetup(){

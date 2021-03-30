@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-swipe-cell": "../../lib/vant/swipe-cell"
+  },
+  "navigationBarTitleText": "我的收藏"
 }

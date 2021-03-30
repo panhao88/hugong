@@ -1,3 +1,55 @@
-<view>
-我的收藏
+<view class="local">
+  <view class="central">
+    <view class="Nursing-workers">
+      <view class="Hot" wx:for="{{hugong}}" wx:key="index" class="{{flag === index ? 'colore' : ''}}" bindtap="goto"
+        data-index="{{index}}">
+        <view class="tob-name">
+          {{item.name}}
+          <view wx:if="{{flag === index}}">
+            <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="tubiao-p"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
+        <block wx:key="item" wx:for="{{data}}">
+          <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove"
+            bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+            <view class="content">
+              <view wx:if="{{flag === 0}}">
+                <view class="Popular-nurse">
+                  <view class="service">
+                    <view>
+                      <image src="../../img/mipmap-mdpi/yuesao.png" class="imm-age"></image>
+                    </view>
+                  </view>
+                  <view>
+                    <view class="Aunt-Zhang">
+                      <view class="aunt">
+                        <view class="font">张阿姨</view>
+                        <view class="font"> 好评率:
+                          <view class="cor">98%</view>
+                        </view>
+                      </view>
+                      <view class="Gender">
+                        <view class="plage">{{item.Gender}}</view>
+                        <view class="plage">{{item.age}}岁</view>
+                        <view class="plage">从业年限{{item.Years}}年</view>
+                      </view>
+                      <view class="authentication">
+                        <view class="Platform-certification">平台认证</view>
+                        <view class="Platform-certification">病人陪护</view>
+                        <view class="Platform-certification">产妇陪护</view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="bor-der"></view>
+              </view>
+            </view>
+            <view class="remove" bindtap="delItem">删除 </view>
+          </view>
+        </block>
+      </scroll-view>
+  </view>
 </view>

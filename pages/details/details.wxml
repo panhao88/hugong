@@ -153,14 +153,14 @@
                 <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
               </view>
             </view>
-            <view class="contact">
-              <view class="Contact-address">请选择联系地址</view>
+            <view class="contact" bindtap="goobj">
+              <view class="Contact-address">请选择服务对象</view>
               <view class="picture">
                 <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
               </view>
             </view>
-            <view class="contact">
-              <view class="Contact-address">请选择联系地址</view>
+            <view class="contact" bindtap="gotime">
+              <view class="Contact-address">请选择服务时间</view>
               <view class="picture">
                 <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
               </view>
@@ -192,10 +192,24 @@
     <!-- 新增地址 -->
     <van-popup show="{{ showaddress }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
       <view class="local">
-        <view class="container">
+        <view class="dele">
           <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}"
             bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="index">
-            <view class="content">{{item.content}}</view>
+            <view class="remarks">
+              <view>
+                <view class="content">
+                  <view class="name">{{item.name}}</view>
+                  <view class="name">{{item.phone}}</view>
+                </view>
+                <view class="content">{{item.position}}</view>
+              </view>
+            </view>
+            <view class="plcontent">
+              <view class="boplr">
+                <view class="Vertical"></view>
+              </view>
+              <view bindtap="Newaddress">编辑</view>
+            </view>
             <view class="del" catchtap="del" data-index="{{index}}">删除</view>
           </view>
         </view>
@@ -289,27 +303,28 @@
     </van-popup>
     <!-- 搜索地图 -->
     <van-popup show="{{ searchshow }}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
-      <view class='cert'>
+      <!-- <view class='cert'>
         <view class="img-age">
           <image src="../../img/mipmap-mdpi/fanhui.png" class="img-fan" bindtap="preturn"></image>
         </view>
         <view class="imput">
           <van-search value="{{ pavalue }}" placeholder="请输入搜索关键词" clearable="{{false}}" bind:change="getsuggest" />
         </view>
-      </view>
-      <view wx:if="{{flag === true}}">
+      </view> -->
+      <view class='list-city' hidden="{{!cityListShow}}">
         <scroll-view scroll-y="true" style="height:100%;" scroll-into-view="{{scrollTopId}}"
           scroll-with-animation="true" enable-back-to-top="true">
-          <!-- 热门城市 -->
           <view class='item'>
-            <view class='fullname'>
-              <image src="../../img/mipmap-mdpi/dingwei1.png" class="img-dingwei"></image> 当前定位城市：{{currentRegion.city}}
-            </view>
-            <view class='py' id="hot">热门城市</view>
+            <view class='fullname'>当前定位城市：{{city}}</view>
+          </view>
+          <!-- 热门城市 -->
+          <view class='item' style="padding-bottom:25rpx;">
+            <view class='py' id="hot">★ 热门城市</view>
             <view class="fullname hot-city" wx:for="{{hotCityData}}" wx:key="key" data-fullname="{{item.fullname}}"
               data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
             </view>
           </view>
+
           <!-- 全部 -->
           <view class='item' wx:for="{{cityData}}" wx:for-index="idx" wx:for-item="group" wx:key="key">
             <view class='py' id="{{idx}}">{{idx}}</view>
@@ -317,32 +332,94 @@
               data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" bindtap='selectCity'>{{item.fullname}}
             </view>
           </view>
+
         </scroll-view>
+
         <!-- 首字母 -->
         <view class='city-py' bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
           <view wx:for="{{_py}}" wx:key="key" bindtouchstart="getPy" bindtouchend="setPy" id="{{item}}">
-            <view class="{{item === PYcolor ? 'colour':''}}">
-              {{item == 'hot' ? "" : item}}
-            </view>
+            {{item == 'hot' ? "★" : item}}
           </view>
         </view>
       </view>
-      <view wx:if="{{flag === false}}">
-        <view class="add-list-box">
-          <scroll-view class="add-list" scroll-y>
-            <view class="add-item" wx:for="{{suggestion}}" wx:key="index">
-              <!--绑定回填事件-->
-              <view bindtap="backfill" id="{{index}}" data-name="{{item.title}}">
-                <!--根据需求渲染相应数据-->
-                <!--渲染地址title-->
-                <view class="title">{{item.title}}</view>
-                <!--渲染详细地址-->
-                <view class="add">{{item.addr}}</view>
+    </van-popup>
+    <!-- 新增服务对象 -->
+    <van-popup show="{{showobj}}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
+      <view class="local">
+        <view class="dele">
+          <view class="touch-item {{item.isTouchMove ? 'touch-move-activeone' : ''}}" data-index="{{index}}"
+            bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{objdetail}}" wx:key="index">
+            <view class="remarks">
+              <view>
+                <view class="content">
+                  <view class="name">{{item.name}}</view>
+                  <view class="name">{{item.age}}</view>
+                  <view class="name">{{item.Gender}}</view>
+                </view>
+                <view class="content">{{item.remarks}}</view>
               </view>
             </view>
-          </scroll-view>
+            <view class="plcontent">
+              <view class="boplr">
+                <view class="PVertical"></view>
+              </view>
+              <view>编辑</view>
+            </view>
+            <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+          </view>
+        </view>
+        <view class="central-section">
+          <van-button icon="plus" type="primary" bindtap="goobjdetail">新增服务对象</van-button>
         </view>
       </view>
+    </van-popup>
+    <!-- 新增服务对象详情 -->
+    <van-popup show="{{objdetails}}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
+      <view class="local">
+        <view class="central-section">
+          <view>
+            <van-cell-group>
+              <van-field value="{{ value }}" placeholder="请输入联系人" label="联系人" input-align="right" />
+              <view class="radio">
+                <view class="plGender">性别</view>
+                <view class="radio-group">
+                  <van-radio-group value="{{ radio }}" bind:change="onChange">
+                    <view class="radioflex">
+                      <van-radio name="1" icon-size="28rpx" class="groun" checked-color="#61CF8C">男</van-radio>
+                      <van-radio name="2" icon-size="28rpx" checked-color="#61CF8C">女</van-radio>
+                    </view>
+                  </van-radio-group>
+                </view>
+              </view>
+              <van-field value="{{ value }}" placeholder="请输入服务对象年龄" label="年龄" input-align="right" />
+              <view class="Servicetype">
+                <view class="service-sp">常见病史</view>
+                <view class="Escort-lp">
+                  <view wx:for="{{arr}}" wx:key="index" class="yi-hospital">
+                    <view class="{{colo === index ? 'red' : 'yi-Escort'}}">{{item.name}}</view>
+                  </view>
+                </view>
+                <view class="service-sp">备注(选填)</view>
+                <view class="textar">
+                  <textarea style="background:#F7F4F8" class="pltextarea" />
+                  </view>
+              </view>
+            </van-cell-group>
+          </view>
+          <view class="storage">
+            <van-button type="info" type="primary">保存服务对象</van-button>
+          </view>
+        </view>
+      </view>
+    </van-popup>
+    <van-popup show="{{showtime}}" position="bottom" custom-style="height: 40%;" bind:close="onClose">
+      <van-datetime-picker
+  type="date"
+  value="{{ currentDate }}"
+  bind:input="onInput"
+  min-date="{{ minDate }}"
+  formatter="{{ formatter }}"
+/>
     </van-popup>
   </view>
   <view class="buootb"></view>

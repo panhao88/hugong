@@ -13,7 +13,9 @@
     "van-cell": "../../lib/vant/cell",
     "van-cell-group": "../../lib/vant/cell-group",
     "van-index-bar": "../../lib/vant/index-bar",
-  "van-index-anchor": "../../lib/vant/index-anchor"
+    "van-index-anchor": "../../lib/vant/index-anchor",
+    "van-icon": "../../lib/vant/icon",
+    "van-datetime-picker": "../../lib/vant/datetime-picker"
   },
   "navigationBarTitleText": "护工详情"
 }
