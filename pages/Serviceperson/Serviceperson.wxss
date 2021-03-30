@@ -1,0 +1,71 @@
+/* pages/Serviceperson/Serviceperson.wxss */
+.local {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFA;
+}
+.central {
+  width: 95%;
+}
+.lCarous{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  align-items: center;
+  /* background: #FFFFFF; */
+  /* background: red; */
+  /* justify-content: space-between; */
+}
+.img-nv{
+  width: 26rpx;
+  height: 26rpx;
+}
+.im-age{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+.img-g{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+}
+.nama-age{
+  margin-top: 10rpx;
+  padding: 2rpx;
+  border-radius: 40rpx;
+  font-size: 22rpx;
+  text-align: center;
+  background: #EEEEEE;
+  color: #999999;
+}
+.bor{
+  width: 100%;
+  background: #EEEEEE;
+  height: 0.5rpx;
+}
+.img-bianji{
+  width: 28rpx;
+  height: 28rpx;
+  padding-right: 15rpx;
+}
+.Vertical-line {
+  width: 1rpx;
+  height: 60rpx;
+  background: #EDEBE7FF;
+}
+.edit{
+  height: 90rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 28rpx;
+  color: #999999;
+}
+.tit-edit{
+  display: flex;
+  align-items: center;
+}

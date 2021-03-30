@@ -1,0 +1,26 @@
+<view class="local">
+  <view class="central">
+    <view class="lCarous">
+      <view class="im-age">
+        <image src="../../img/mipmap-mdpi/hugong.png" class="img-g"></image>
+      </view>
+      <view class="">
+        <view>王桂香 <image src="../../img/mipmap-mdpi/nv.png" class="img-nv"></image>
+        </view>
+        <view class="nama-age">48</view>
+      </view>
+    </view>
+    <view class="bor"></view>
+    <view class="edit">
+      <view class="tit-edit">
+        <image src="../../img/mipmap-mdpi/bianji.png" class="img-bianji"></image>
+        <view>编辑</view>
+      </view>
+      <view class="Vertical-line"></view>
+      <view class="tit-edit">
+        <image src="../../img/mipmap-mdpi/shanchu.png" class="img-bianji"></image>
+        <view bindtap="detale">删除</view>
+      </view>
+    </view>
+  </view>
+</view>
