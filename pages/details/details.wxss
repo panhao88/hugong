@@ -644,16 +644,16 @@
 
 .city-py {
   position: fixed;
-  top: 65%;
+  top: 62%;
   right: 0;
   margin-top: -360rpx;
 }
 
-.city-py  {
+.city-py {
   font-size: 25rpx;
   width: 40rpx;
   height: 12px;
-  line-height: 12px;
+  line-height: 32rpx;
   text-align: center;
   color: #555;
 }

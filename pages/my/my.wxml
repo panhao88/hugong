@@ -48,10 +48,14 @@
               <view class="im-age">
                 <image src="{{item.img}}" class="img-g"></image>
               </view>
-              <view class="">
+              <view class="tobi">
                 <view>{{item.title}} <image src="../../img/mipmap-mdpi/nv.png" class="img-nv"></image>
                 </view>
-                <view class="nama-age">{{item.age}}</view>
+                <view class="nama-age">
+                  <view class="mar-gin" wx:for="{{item.texy}}" wx:key="index" wx:for-item="newitem">
+                    <view class="item-a">{{newitem.category}}</view>
+                  </view>
+                </view>
               </view>
             </view>
           </swiper-item>

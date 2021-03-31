@@ -1,1 +1,37 @@
-/* pages/system/system.wxss */
+/* pages/online/online.wxss */
+.local {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFAFF;
+}
+
+.central {
+  width: 95%;
+  background: #fff;
+}
+.van-button{
+  width: 140rpx !important;
+  background: #FF2C2C;
+  color: #FAFAFAFF;
+}
+.separate{
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.A-Wang{
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.appetite{
+  color: #999999;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+.van-divider{
+  margin: 8rpx 0 !important;
+}

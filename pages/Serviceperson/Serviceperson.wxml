@@ -1,18 +1,24 @@
 <view class="local">
   <view class="central">
-    <view class="lCarous">
-      <view class="im-age">
-        <image src="../../img/mipmap-mdpi/hugong.png" class="img-g"></image>
-      </view>
-      <view class="">
-        <view>王桂香 <image src="../../img/mipmap-mdpi/nv.png" class="img-nv"></image>
+    <view wx:for="{{list}}" wx:key="index">
+      <view class="lCarous">
+        <view class="im-age">
+          <image src="{{item.img}}" class="img-g"></image>
         </view>
-        <view class="nama-age">48</view>
+        <view class="tobi">
+          <view>{{item.title}} <image src="../../img/mipmap-mdpi/nv.png" class="img-nv"></image>
+          </view>
+          <view class="nama">
+            <view class="mar-gin" wx:for="{{item.texy}}" wx:key="index" wx:for-item="newitem">
+              <view class="item-a">{{newitem.category}}</view>
+            </view>
+          </view>
+        </view>
       </view>
     </view>
     <view class="bor"></view>
     <view class="edit">
-      <view class="tit-edit">
+      <view class="tit-edit" bindtap="goeditService">
         <image src="../../img/mipmap-mdpi/bianji.png" class="img-bianji"></image>
         <view>编辑</view>
       </view>
@@ -21,6 +27,9 @@
         <image src="../../img/mipmap-mdpi/shanchu.png" class="img-bianji"></image>
         <view bindtap="detale">删除</view>
       </view>
+    </view>
+    <view class="immediately">
+     <button class="login-bu" bindtap="addService">+新增服务人</button>
     </view>
   </view>
 </view>

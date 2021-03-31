@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-radio": "../../lib/vant/radio",
+    "van-field": "../../lib/vant/field"
+  },
+  "navigationBarTitleText": "新增服务人"
+}

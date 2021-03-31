@@ -8,20 +8,41 @@ Page({
     list: [{
       img: '../../img/mipmap-mdpi/touxiang.png',
       title: '王桂香',
-      age:48,
-      texy:"糖尿病"
+      age:48555252,
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
     },
     {
       img: '../../img/mipmap-mdpi/touxiang.png',
       title: '李富贵',
       age:48,
-      texy:"糖尿病"
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
     },
     {
       img: '../../img/mipmap-mdpi/touxiang.png',
       title: '张三',
       age:48,
-      texy:"糖尿病"
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
     },
   ],
   orderNav: [{

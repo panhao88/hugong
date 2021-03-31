@@ -1,13 +1,17 @@
 /* pages/Serviceperson/Serviceperson.wxss */
 .local {
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #FAFAFA;
+  background:#FAFAFA;
 }
 .central {
+  margin-top: 20rpx;
   width: 95%;
+  border-radius: 20rpx;
+  background: #fff;
 }
 .lCarous{
   margin-top: 20rpx;
@@ -18,6 +22,25 @@
   /* background: #FFFFFF; */
   /* background: red; */
   /* justify-content: space-between; */
+}
+.tobi{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.nama{
+  display: flex;
+}
+.mar-gin{
+  margin-right: 20rpx;
+}
+.item-a{
+  margin-top: 10rpx;
+  padding: 3rpx 20rpx 3rpx 20rpx;
+  font-size: 28rpx;
+  border-radius: 20rpx;
+  background: #EEEEEE;
+  color: #999999;
 }
 .img-nv{
   width: 26rpx;
@@ -68,4 +91,22 @@
 .tit-edit{
   display: flex;
   align-items: center;
+}
+.immediately{
+  margin-bottom: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+.login-bu{
+  margin-top: 20rpx;
+  width: 600rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius:40rpx ;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 30rpx;
 }

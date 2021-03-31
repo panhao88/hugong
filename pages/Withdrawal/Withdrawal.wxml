@@ -1,3 +1,22 @@
-<view>
-  提现金额
+<view class="local">
+  <view class="central">
+    <view class="top">
+      <view class="money">提现金额</view>
+      <view class="t-money">
+        <view class="yang-money">￥</view>
+        <view class="ipt"><input type="text" placeholder="请输入金额" /></view>
+      </view>
+      <van-divider />
+      <view class="box-tow">
+        <view class="box-one">
+          <view>可提现金额200.00</view>
+          <view class="cor">全部提现</view>
+        </view>
+        <view>手续费0.01元</view>
+      </view>
+    </view>
+    <view>
+      <button class="money-from">提现</button>
+    </view>
+  </view>
 </view>

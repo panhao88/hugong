@@ -7,7 +7,7 @@
   <view class="tixian">
       <view class="element">余额(元)</view>
       <view class="front">200.00</view>
-      <view class="Withdrawal">提现</view>
+      <view class="Withdrawal" bindtap="goWithdrawal">提现</view>
     </view>
   <view class="detailed">
     <view class="central">

@@ -173,37 +173,37 @@
           </van-collapse-item>
         </van-collapse>
         <view class="flag1">
-      <view class="Popular-nurse" bindtap="godetaild">
-        <view class="service">
-          <view>
-            <view class="immage-mechanism">
-              <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+          <view class="Popular-nurse" bindtap="godetaild">
+            <view class="service">
+              <view>
+                <view class="immage-mechanism">
+                  <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                </view>
+              </view>
+            </view>
+            <view class="Aunt-Zhang">
+              <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
+              <view>
+                <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+              </view>
+              <view class="authentication">
+                <view class="Platform-certification">平台认证</view>
+                <view class="Platform-certification">病人陪护</view>
+                <view class="Platform-certification">产妇陪护</view>
+              </view>
+            </view>
+          </view>
+          <view class="bor-der"></view>
+          <view class="Service-Centre">
+            <view class="font-f">以服务1000人</view>
+            <view class="location">
+              <view>
+                <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+              </view>
+              <view>蜀都中心一期</view>
             </view>
           </view>
         </view>
-        <view class="Aunt-Zhang">
-          <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
-          <view>
-            <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
-          </view>
-          <view class="authentication">
-            <view class="Platform-certification">平台认证</view>
-            <view class="Platform-certification">病人陪护</view>
-            <view class="Platform-certification">产妇陪护</view>
-          </view>
-        </view>
-      </view>
-      <view class="bor-der"></view>
-      <view class="Service-Centre">
-        <view class="font-f">以服务1000人</view>
-        <view class="location">
-          <view>
-            <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
-          </view>
-          <view>蜀都中心一期</view>
-        </view>
-      </view>
-    </view>
       </view>
     </view>
     <view wx:if="{{flag === 3}}">
@@ -294,7 +294,7 @@
     <view wx:if="{{flag === 4}}">
       <view class="backgroun">
         <view class="Popular-nurse">
-          <view class="service" >
+          <view class="service">
             <view>
               <view class="immage-mechanism">
                 <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
@@ -390,6 +390,218 @@
             </view>
           </van-collapse-item>
         </van-collapse>
+      </view>
+    </view>
+    <view wx:if="{{flag === 5 && gito === 1}}">
+      <view class="top-success">
+        <view class="top-img">
+          <image src="../../img/mipmap-mdpi/chenggong.png" class="img-gou"></image>
+        </view>
+        <view class="retreat">
+          <view class="cor">退款成功</view>
+          <view class="cor-timer">2020-6-22</view>
+        </view>
+      </view>
+      <view class="sessuer-p">
+        <view class="Bisection">
+          <view class="imgnursing">
+            <image src="../../img/mipmap-mdpi/hugong.png" class="logo-img"></image>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="hao-jj">医院陪护-老人陪护</view>
+            <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+            <view class="service-time">服务护工:陈阿姨</view>
+          </view>
+        </view>
+        <view class="Totalprice">
+          <view class="Total-cor">总价￥1500.00</view>
+          <view class="real-cor">实付款￥1400.00</view>
+        </view>
+      </view>
+      <view class="Refund-information">
+        <view class="refund-pm">退款信息</view>
+        <view class="Total-state">
+          <view class="total">
+            <view>退款原因</view>
+            <view>退款金额</view>
+            <view>退款账户</view>
+            <view>申请时间</view>
+            <view>退款编号</view>
+          </view>
+          <view class="Price">
+            <view>已提前完成服务</view>
+            <view>￥600.00</view>
+            <view>退回余额</view>
+            <view>2021-4-9 12:30:12</view>
+            <view>1231552</view>
+          </view>
+        </view>
+        <view class="plimg">
+          <view>图片</view>
+          <view class="Patient-escort">
+            <view class="scorl">
+              <scroll-view class="scroll-view" scroll-x="true">
+                <view wx:for="{{arr}}" wx:key="index" class="scroll-item_H">
+                  <view class="p-x">
+                    <image src="{{item.imag}}" class="img-hua"></image>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{flag === 5 && gito === 2}}">
+      <view class="top-success">
+        <view class="top-img">
+          <image src="../../img/mipmap-mdpi/shibai.png" class="img-gou"></image>
+        </view>
+        <view class="retreat">
+          <view class="cor">退款失败</view>
+          <view class="cor-timer">2020-6-22</view>
+        </view>
+      </view>
+      <view class="sessuer-p">
+        <view class="Bisection">
+          <view class="imgnursing">
+            <image src="../../img/mipmap-mdpi/hugong.png" class="logo-img"></image>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="hao-jj">医院陪护-老人陪护</view>
+            <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+            <view class="service-time">服务护工:陈阿姨</view>
+          </view>
+        </view>
+        <view class="Totalprice">
+          <view class="Total-cor">总价￥1500.00</view>
+          <view class="real-cor">实付款￥1400.00</view>
+        </view>
+      </view>
+      <view class="Refund-information">
+        <view class="refund-pm">退款信息</view>
+        <view class="Total-state">
+          <view class="total">
+            <view>退款原因</view>
+            <view>退款金额</view>
+            <view>退款账户</view>
+            <view>申请时间</view>
+            <view>退款编号</view>
+          </view>
+          <view class="Price">
+            <view>已提前完成服务</view>
+            <view>￥600.00</view>
+            <view>退回余额</view>
+            <view>2021-4-9 12:30:12</view>
+            <view>1231552</view>
+          </view>
+        </view>
+        <view class="plimg">
+          <view>图片</view>
+          <view class="Patient-escort">
+            <view class="scorl">
+              <scroll-view class="scroll-view" scroll-x="true">
+                <view wx:for="{{arr}}" wx:key="index" class="scroll-item_H">
+                  <view class="p-x">
+                    <image src="{{item.imag}}" class="img-hua"></image>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="flag1">
+    <view class="Popular-nurse" bindtap="godetaild">
+      <view class="service">
+        <view>
+          <view class="immage-mechanism">
+            <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+          </view>
+        </view>
+      </view>
+      <view class="Aunt-Zhang">
+        <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
+        <view>
+          <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+        </view>
+        <view class="authentication">
+          <view class="Platform-certification">平台认证</view>
+          <view class="Platform-certification">病人陪护</view>
+          <view class="Platform-certification">产妇陪护</view>
+        </view>
+      </view>
+    </view>
+    <view class="bor-der"></view>
+    <view class="Service-Centre">
+      <view class="font-f">以服务1000人</view>
+      <view class="location">
+        <view>
+          <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+        </view>
+        <view>蜀都中心一期</view>
+      </view>
+    </view>
+  </view>
+    </view>
+    <view wx:if="{{flag === 5 && gito === 3}}">
+      <view class="top-success">
+        <view class="top-img">
+          <image src="../../img/mipmap-mdpi/deng.png" class="img-gou"></image>
+        </view>
+        <view class="retreat">
+          <view class="cor">退款中</view>
+          <view class="cor-timer">2020-6-22</view>
+        </view>
+      </view>
+      <view class="sessuer-p">
+        <view class="Bisection">
+          <view class="imgnursing">
+            <image src="../../img/mipmap-mdpi/hugong.png" class="logo-img"></image>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="hao-jj">医院陪护-老人陪护</view>
+            <view class="service-time">服务时间:2020-3-20 - 2021-3-21</view>
+            <view class="service-time">服务护工:陈阿姨</view>
+          </view>
+        </view>
+        <view class="Totalprice">
+          <view class="Total-cor">总价￥1500.00</view>
+          <view class="real-cor">实付款￥1400.00</view>
+        </view>
+      </view>
+      <view class="Refund-information">
+        <view class="refund-pm">退款信息</view>
+        <view class="Total-state">
+          <view class="total">
+            <view>退款原因</view>
+            <view>退款金额</view>
+            <view>退款账户</view>
+            <view>申请时间</view>
+            <view>退款编号</view>
+          </view>
+          <view class="Price">
+            <view>已提前完成服务</view>
+            <view>￥600.00</view>
+            <view>退回余额</view>
+            <view>2021-4-9 12:30:12</view>
+            <view>1231552</view>
+          </view>
+        </view>
+        <view class="plimg">
+          <view>图片</view>
+          <view class="Patient-escort">
+            <view class="scorl">
+              <scroll-view class="scroll-view" scroll-x="true">
+                <view wx:for="{{arr}}" wx:key="index" class="scroll-item_H">
+                  <view class="p-x">
+                    <image src="{{item.imag}}" class="img-hua"></image>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+          </view>
+        </view>
       </view>
     </view>
     <view class="m-bottom"></view>

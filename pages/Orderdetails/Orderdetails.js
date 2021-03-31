@@ -6,7 +6,29 @@ Page({
    */
   data: {
     activeNames: ['1','2'],
-    flag:1
+    flag:5,
+    gito:1,//退单拒单
+    arr: [{
+      imag: '../../img/mipmap-mdpi/bingren.png',
+      title:"专业培训",
+      icon:"../../img/mipmap-mdpi/qi.png",
+    },
+    {
+      imag: '../../img/mipmap-mdpi/chanfu.png',
+      title:"服务认证",
+      icon:"../../img/mipmap-mdpi/qi.png",
+    },
+    {
+      imag: '../../img/mipmap-mdpi/yuesao.png',
+      title:"安全保障",
+      icon:"../../img/mipmap-mdpi/qi.png",
+    },
+    {
+      imag: '../../img/mipmap-mdpi/yuesao.png',
+      title:"专业培训",
+      icon:"../../img/mipmap-mdpi/qi.png",
+    },
+  ],
   },
   //折叠面板
   onChange(e) {
@@ -63,6 +85,10 @@ Page({
     this.setData({
       flag:parseInt(options.ids)
     })
+    this.setData({
+      gito:parseInt(options.item)
+    })
+    console.log(this.data.gito)
   },
 
   /**

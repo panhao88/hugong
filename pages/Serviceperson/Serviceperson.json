@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-dialog": "../../lib/vant/dialog"
+    "van-dialog": "../../lib/vant/dialog",
+    "van-button": "../../lib/vant/button"
   },
   "navigationBarTitleText": "常用服务人"
 }

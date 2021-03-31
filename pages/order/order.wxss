@@ -9,6 +9,7 @@
 
 .central {
   width: 95%;
+  background: #FAFAFAFF;
 }
 .van-tabs__line{
   z-index: 0 !important;
@@ -17,13 +18,21 @@
 .top {
   margin-top: 20rpx;
   width: 100%;
-  height: 454rpx;
+  height: 446rpx;
   display: flex;
   flex-direction: column;
   background: #FFFFFFFF;
   border-radius: 20rpx;
 }
-
+.top-refund{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 380rpx;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFFFF;
+  border-radius: 20rpx;
+}
 .Order-time {
   height: 60rpx;
   align-items: center;
@@ -32,17 +41,15 @@
   display: flex;
   justify-content: space-between;
 }
-
+  .Tobepaid {
+  color: #FF5C5CFF;
+  font-size: 24rpx;
+  font-weight: 800;
+}
 .order {
   color: #333333FF;
   font-size: 24rpx;
   font-weight: 700;
-}
-
-.Tobepaid {
-  color: #FF5C5CFF;
-  font-size: 24rpx;
-  font-weight: 800;
 }
 
 .bor {
@@ -106,7 +113,6 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-
 }
 
 .Totalprice {
@@ -223,4 +229,5 @@
 }
 .m-bottom{
   height: 20rpx;
+  background: #FFFFFFFF;
 }

@@ -16,7 +16,7 @@
   align-items: center;
 }
 .box-now{
-  width: 92% ;
+  width: 90% ;
   height: 80rpx;
   display: flex;
   align-items: center;
@@ -30,14 +30,21 @@
   position: absolute;
   font-size: 30rpx;
   left: 16rpx;
+  top: 17rpx;
 }
 .box-therr{
   position: absolute;
   left: 200rpx;
 }
+.wei-icoc{
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .weiimg{
-  width: 47rpx;
-  height: 48rpx;
+  width: 52rpx;
+  height: 52rpx;
 }
 .van-search__content{
   padding-left: 0 !important;

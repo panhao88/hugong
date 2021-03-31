@@ -1,0 +1,34 @@
+<view class="local">
+  <view class="central">
+    <van-cell-group>
+      <van-field value="{{ value }}" placeholder="请输入姓名" label="姓名" input-align="right" />
+      <view class="radio">
+        <view class="plGender">性别</view>
+        <view class="radio-group">
+          <van-radio-group value="{{ radio }}" bind:change="onChange">
+            <view class="radioflex">
+              <van-radio name="1" icon-size="28rpx" class="groun" checked-color="#61CF8C">男</van-radio>
+              <van-radio name="2" icon-size="28rpx" checked-color="#61CF8C">女</van-radio>
+            </view>
+          </van-radio-group>
+        </view>
+      </view>
+      <van-field value="{{ value }}" placeholder="请输入服务对象年龄" label="年龄" input-align="right" />
+    </van-cell-group>
+    <view class="Servicetype">
+      <view class="service-sp">常见病史</view>
+      <view class="Escort-lp">
+        <view wx:for="{{arr}}" wx:key="index" class="yi-hospital">
+          <view class="{{colo === index ? 'red' : 'yi-Escort'}}">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="service-sp">备注(选填)</view>
+    <view class="textar">
+      <textarea style="background:#F7F4F8" class="pltextarea"  />
+    </view>
+    <view class="immediately">
+     <button class="login-bu" bindtap="addService">+保存服务人</button>
+    </view>
+  </view>
+</view>

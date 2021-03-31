@@ -331,8 +331,9 @@
       </scroll-view>
       <view class='city-py' bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove"
         wx:if="{{flag === true}}">
-        <view wx:for="{{_py}}" wx:key="key" bindtouchstart="getPy" bindtouchend="setPy" id="{{item}}"  class="{{item === showPy ? 'colour':''}}">
-            {{item == 'hot' ? "★" : item}}
+        <view wx:for="{{_py}}" wx:key="key" bindtouchstart="getPy" bindtouchend="setPy" id="{{item}}"
+          class="{{item === showPy ? 'colour':''}}">
+          {{item == 'hot' ? "★" : item}}
         </view>
       </view>
       <view wx:if="{{flag === false}}">

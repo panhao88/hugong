@@ -1,6 +1,9 @@
 {
   "usingComponents": {
-    "van-swipe-cell": "../../lib/vant/swipe-cell"
+    "van-swipe-cell": "../../lib/vant/swipe-cell",
+    "van-button": "../../lib/vant/button",
+    "van-divider": "../..//lib/vant/divider",
+    "van-rate": "../../lib/vant/rate"
   },
   "navigationBarTitleText": "我的收藏"
 }

@@ -5,8 +5,54 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list: [{
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '王桂香',
+      age:48555252,
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
+    },
+    {
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '李富贵',
+      age:48,
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
+    },
+    {
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '张三',
+      age:48,
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
+    },
+  ],
   },
+  //删除服务人
   detale(){
     wx.showModal({
       title: '提示',
@@ -18,6 +64,18 @@ Page({
           console.log('用户点击取消')
         }
       }
+    })
+  },
+  //新增服务人
+  addService(){
+    wx.navigateTo({
+      url: '/pages/addService/addService',
+    })
+  },
+  //编辑服务人
+  goeditService(){
+    wx.navigateTo({
+      url: '/pages/editService/editService',
     })
   },
   /**

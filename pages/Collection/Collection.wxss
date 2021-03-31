@@ -10,6 +10,12 @@
 .central {
   width: 95%;
 }
+.van-button {
+  width: 140rpx !important;
+  height: 176rpx !important;
+  background: #FF2C2C;
+  color: #FAFAFAFF;
+}
 .Nursing-workers {
   width: 100%;
   height: 60rpx;
@@ -43,40 +49,18 @@
   color: #61CF8Ced;
   font-size: 30rpx;
   font-weight: 600;
-}
-/* 左划删除 */
-.order-item {
-  margin-top: 20rpx;
-  height: 168rpx;
-  width: 100%;
-  display: flex;
-  position: relative;
-}
-
-.remove{  
-  width: 160rpx;  
-  height: 100%;  
-  background-color: red; 
-  color: white; 
-  position: absolute;  
-  top: 0;  
-  right: -160rpx;  
-  display: flex;  
-  justify-content: center;  
-  align-items: center;  
 }  
 /* 护工 */
 .Popular-nurse {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   background: #FFFFFFFF;
   border-radius: 20rpx;
 }
 
 .service {
   font-size: 30rpx;
-  width: 30%;
+  width: 20%;
   height: 168rpx;
   display: flex;
   justify-content: center;
@@ -108,7 +92,8 @@
   color: #EDBC55;
 }
 .aunt{
-  width: 545rpx;
+
+  width: 500rpx;
   display: flex;
   justify-content: space-between;
 }
@@ -136,7 +121,44 @@
 .authentication {
   display: flex;
 }
-
-.bor-der {
-  border: #EEEEEEFF 0.1rpx solid;
+.authenticationtop {
+  margin-top: 10rpx;
+  display: flex;
+}
+/* 机构 */
+.immage-mechanism {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+.flag1 {
+  background: #FFFFFFFF;
+  border-radius: 20rpx ;
+  margin-bottom: 20rpx;
+}
+.hao-jj {
+  font-weight: 600;
+  letter-spacing: 3rpx;
+  color: #333333FF;
+  font-size: 30rpx;
+}
+.logo{
+  width: 120rpx;
+  height: 120rpx;
+}
+.location {
+  display: flex;
+  color: #333333FF;
+  font-size: 24rpx;
+}
+.img-di {
+  width: 23rpx;
+  height: 23rpx;
+}
+.font-f {
+  font-size: 24rpx;
+  color: #333333FF;
+}
+.van-divider {
+  margin: 8rpx 0 !important;
 }

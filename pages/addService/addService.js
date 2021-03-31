@@ -1,17 +1,38 @@
-// pages/wallet/wallet.js
+// pages/addService/addService.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    arr: [{
+      name: "糖尿病",
+      id: 1
+    },
+    {
+      name: "高血压",
+      id: 2
+    },
+    {
+      name: "高血脂",
+      id: 3
+    },
+    {
+      name: "脑溢血",
+      id: 4
+    },
+    {
+      name: "心脏病",
+      id: 5
+    },
+    {
+      name: "脂肪肝",
+      id: 6
+    },
+  ],
+  colo: 0, 
+  },
 
-  },
-  goWithdrawal(){
-    wx.navigateTo({
-      url: '/pages/Withdrawal/Withdrawal',
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */

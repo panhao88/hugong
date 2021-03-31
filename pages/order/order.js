@@ -39,6 +39,28 @@ Page({
       url: `/pages/Orderdetails/Orderdetails?ids=${this.data.id}`,
     })
   },
+  //go退款成功
+  gosuccessrefundone(e){
+    let item = e.currentTarget.dataset.gito
+    wx.navigateTo({
+      url: `/pages/Orderdetails/Orderdetails?ids=${this.data.id}&item=${item}`,
+    })
+  },
+  //go退款失败
+  gosuccessrefundtow(e){
+    let item = e.currentTarget.dataset.gito
+    console.log(item)
+    wx.navigateTo({
+      url: `/pages/Orderdetails/Orderdetails?ids=${this.data.id}&item=${item}`,
+    })
+  },
+  //go退款中
+  goorderdetailstherr(e){
+    let item = e.currentTarget.dataset.gito
+    wx.navigateTo({
+      url: `/pages/Orderdetails/Orderdetails?ids=${this.data.id}&item=${item}`,
+    })
+  },
   //tabs点击事件
   onClickp(e){
     this.setData({
@@ -52,7 +74,6 @@ Page({
     this.setData({
       identification:parseInt(options.id)
     })
-    console.log(this.data.identification)
   },
 
   /**
