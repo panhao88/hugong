@@ -3,8 +3,14 @@
     <view>
       <van-search shape="round" placeholder="请输入搜索关键词" bind:focus="goHhserch" />
     </view>
-    <view class="Carousel">
-      <image src="../../img/mipmap-mdpi/lunbotu.png" class="img-gg"></image>
+    <view class="wrap">
+      <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+        <swiper-item wx:for="{{ppplist}}" wx:key="index">
+          <view>
+            <image src="{{item.image}}" mode="widthFix" class="img-i"></image>
+          </view>
+        </swiper-item>
+      </swiper>
     </view>
     <view class="Nursing-workers">
       <view class="Hot" wx:for="{{list}}" wx:key="index" class="{{flag === index ? 'colore' : ''}}" bindtap="goto"

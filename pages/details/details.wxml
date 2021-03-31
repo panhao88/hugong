@@ -29,10 +29,11 @@
           </view>
         </view>
         <view class="authentication">
-          <view class="bor">平台认证</view>
-          <view class="bor">平台认证</view>
-          <view class="bor">平台认证</view>
-          <view class="bor">平台认证</view>
+          <scroll-view class="scroll-view" scroll-x="true">
+            <view wx:for="{{arrli}}" wx:key="index" class="scroll-item_H">
+              <view class="bor">{{item.name}}</view>
+            </view>
+          </scroll-view>
         </view>
         <view class="Years">
           <view class="score">
@@ -53,13 +54,16 @@
           </view>
         </view>
         <view class="bor-d"></view>
-        <view class="details">
+        <view class="details" wx:if="{{boxshow}}">
           本人从事配属行业10年
           本人从事配属行业10年
           本人从事配属行业10年
           本人从事配属行业10年
           本人从事配属行业10年
           本人从事配属行业10年
+        </view>
+        <view class="shang">
+          <image src="../../img/mipmap-mdpi/shang.png" class="img-shang" bindtap="Negation"></image>
         </view>
       </view>
     </view>
@@ -135,6 +139,7 @@
         </view>
       </view>
     </view>
+    
     <view>
       <van-goods-action>
         <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />

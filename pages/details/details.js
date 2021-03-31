@@ -4,6 +4,33 @@ var qqmapsdk;
 var city = require('../../lib/city');
 Page({
   data: {
+    boxshow:true, //展开收缩
+    arrli:[
+      {
+        name:"平台认证",
+        id:1
+      },
+      {
+        name:"平台认证",
+        id:2
+      },
+      {
+        name:"平台认证",
+        id:3
+      },
+      {
+        name:"平台认证",
+        id:3
+      },
+      {
+        name:"平台认证",
+        id:3
+      },
+      {
+        name:"平台认证",
+        id:3
+      },
+    ],
     items: [{
         name: '王桂香',
         phone: "123456789",
@@ -196,6 +223,11 @@ Page({
     this.setData({
       searchshow: true,
       Shadow: false
+    })
+  },
+  Negation(){
+    this.setData({
+      boxshow:!this.data.boxshow
     })
   },
   //选择城市

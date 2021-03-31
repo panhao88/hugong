@@ -19,7 +19,14 @@ Page({
         name: "居家陪护",
         id: 3,
       }
-    ]
+    ],
+    ppplist: [{
+      image: '../../img/mipmap-mdpi/lun.png',
+    },
+    {
+      image: '../../img/mipmap-mdpi/lun.png',
+    },
+  ],
   },
   // 医院跳转
   goto(e){

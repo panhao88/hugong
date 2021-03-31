@@ -7,6 +7,7 @@ Component({
     hugong:{
       type:Array
     },
+   
   },
 
   /**
@@ -14,7 +15,33 @@ Component({
    */
   data: {
     flag: 0,
-    flagIndex:0
+    flagIndex:0,
+    arrli:[
+      {
+        name:"病人陪护",
+        id:1
+      },
+      {
+        name:"平台认证",
+        id:2
+      },
+      {
+        name:"产妇陪护",
+        id:3
+      },
+      {
+        name:"产妇陪护",
+        id:3
+      },
+      {
+        name:"产妇陪护",
+        id:3
+      },
+      {
+        name:"产妇陪护",
+        id:3
+      },
+    ]
   },
   /**
    * 组件的方法列表

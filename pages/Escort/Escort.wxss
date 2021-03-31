@@ -11,13 +11,14 @@
   width: 95%;
 }
 /* 轮播 */
-.Carousel{
+.wrap {
   width: 100%;
-  height: 300rpx;
+  height: 296rpx;
+  margin-bottom: 20rpx;
 }
-.img-gg{
+.img-i{
   width: 100%;
-  height: 300rpx;
+  height: 296rpx;
 }
 /* 医院陪护 */
 .flag1 {

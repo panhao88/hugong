@@ -1,5 +1,8 @@
 {
   "pages":[
+    "pages/details/details",
+    "pages/index/index",
+    "pages/authentication/authentication",
     "pages/my/my",
     "pages/order/order",
     "pages/addService/addService",
@@ -7,15 +10,15 @@
     "pages/Collection/Collection",
     "pages/Withdrawal/Withdrawal",
     "pages/wallet/wallet",
-    "pages/details/details",
-    "pages/index/index",
+   
+    
     "pages/Serviceperson/Serviceperson",
     "pages/Praise/Praise",
    
     "pages/Orderdetails/Orderdetails",
     "pages/Detaevaluate/Detaevaluate",
     "pages/apply/apply",
-    "pages/authentication/authentication",
+   
     "pages/invitation/invitation",
     "pages/ServiceEntry/ServiceEntry",
     "pages/address/address",

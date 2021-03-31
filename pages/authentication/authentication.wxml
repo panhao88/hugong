@@ -1,2 +1,10 @@
-<view>
-实名认证</view>
+<view class="local">
+  <view class="central">
+    <view class="Realname">实名认证</view>
+    <van-cell-group>
+      <van-field value="{{ value }}" placeholder="请输入用户名"  label="真实姓名" input-align="right"/>
+      <van-field value="{{ value }}" placeholder="请输入用户名"   label="身份证号" input-align="right"/>
+    </van-cell-group>
+    <view class="Realname">请拍摄并上传有效证件</view>
+  </view>
+</view>

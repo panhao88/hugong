@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-field": "../../lib/vant/field"
+  },
+  "navigationBarTitleText": "实名认证"
 }
