@@ -10,6 +10,47 @@
 .central {
   width: 95%;
 }
+/* 搜索框 */
+.top{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-now{
+  width: 100% ;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  background: #F1F1F1;
+  border-radius: 40rpx;
+  position: relative;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.img-dizhi{
+  width: 15rpx;
+  height: 15rpx;
+}
+.van-search__content{
+  padding-left: 0 !important;
+  width: 80% !important;
+  background: #F1F1F1 !important;
+}
+.van-search{
+  padding: 0 !important;
+  width: 80% !important;
+}
+.box-tow{
+  position: absolute;
+  font-size: 30rpx;
+  left: 16rpx;
+  top: 17rpx;
+}
+.box-therr{
+  position: absolute;
+  left: 200rpx;
+}
 /* 轮播 */
 .wrap {
   width: 100%;
@@ -46,7 +87,7 @@
 }
 .tubiao-p{
   position: relative;
-  top: -20rpx;
+  top: -15rpx;
   width: 20rpx;
   height: 20rpx;
 }

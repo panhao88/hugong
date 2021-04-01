@@ -1,7 +1,14 @@
 <view class="local">
   <view class="central">
-    <view>
-      <van-search shape="round" placeholder="请输入搜索关键词" bind:focus="goHhserch" />
+    <!-- 输入框 -->
+    <view class="top">
+      <view class="box-now">
+        <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi"></image>
+        </view>
+        <view class="box-therr">
+          <van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="goserch" />
+        </view>
+      </view>
     </view>
     <view class="wrap">
       <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">

@@ -1,24 +1,29 @@
-// pages/ServiceEntry/ServiceEntry.js
+// pages/mechanism/mechanism.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    show:true
+    list:[
+      {
+        title:"医院陪护",
+        name:"海量订单，收入丰富",
+        flag:false
+      },
+      {
+        title:"医院陪护",
+        name:"海量订单，收入丰富",
+        flag:false
+      },
+      {
+        title:"医院陪护",
+        name:"海量订单，收入丰富",
+        flag:false
+      },
+    ]
   },
-  //去陪护机构
-  gomechanism(){
-    wx.navigateTo({
-      url: '/pages/mechanism/mechanism',
-    })
-  },
-  //去兼职陪护人员
-  goparttimejob(){
-    wx.navigateTo({
-      url: '/pages/parttimejob/parttimejob',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,0 +1,71 @@
+<view class="local">
+  <view class="Realname">
+    <view class="padd">实名认证</view>
+  </view>
+  <view class="central">
+    <van-cell-group>
+      <van-field value="{{ value }}" placeholder="请填写你的真实姓名" label="姓名" input-align="right" />
+      <view class="radio">
+        <view class="plGender">性别</view>
+        <view class="radio-group">
+          <van-radio-group value="{{ radio }}" bind:change="onChange">
+            <view class="radioflex">
+              <van-radio name="1" icon-size="28rpx" class="groun" checked-color="#61CF8C">男</van-radio>
+              <van-radio name="2" icon-size="28rpx" checked-color="#61CF8C">女</van-radio>
+            </view>
+          </van-radio-group>
+        </view>
+      </view>
+      <van-field value="{{ value }}" placeholder="请填写你的真实年龄" label="年龄" input-align="right" />
+      <van-field value="{{ value }}" placeholder="请填写你的联系电话" label="联系电话" input-align="right" />
+      <van-field value="{{ value }}" placeholder="请填写你的身份证号" label="身份证号" input-align="right" />
+      <van-cell title="入驻城市" is-link value="请选择入驻城市" />
+      <van-cell title="入驻职业" is-link value="请选择入驻职业" />
+    </van-cell-group>
+  </view>
+  <view class="top-backgroun">
+    <view class="tow-back">
+      <view class="Realname">请拍摄并上传有效证件</view>
+      <view class="box">
+        <view class="box-img">
+          <view class="mar-img">
+            <image src="../../img/mipmap-mdpi/zheng.png" class="img"></image>
+          </view>
+          <view class="backgr">上传身份证正面</view>
+        </view>
+        <view class="box-img">
+          <view class="mar-img">
+            <image src="../../img/mipmap-mdpi/fan.png" class="img"></image>
+          </view>
+          <view class="backgr">上传身份证反面</view>
+        </view>
+      </view>
+      <view class="Realname">请拍摄并上传你的专业证书</view>
+      <view class="upload-one">
+        <view class="bor-jia">
+          <image src="../../img/mipmap-mdpi/jia.png" class="img-jia"></image>
+        </view>
+      </view>
+      <view class="Realname">请拍摄并上传你的体检报告</view>
+      <view class="upload-one">
+        <view class="bor-jia">
+          <image src="../../img/mipmap-mdpi/jia.png" class="img-jia"></image>
+        </view>
+      </view>
+    </view>
+    <view class="immediately">
+      <button class="login-bu" bindtap="Logout" bindtap="goSubmit">提交申请</button>
+    </view>
+  </view>
+  <van-popup show="{{Shadow}}"  overlay-style="height:100%;" position="bottom"
+    bind:click-overlay="goclose">
+    <view class="phone">
+      <view class="dial">
+        <view class="classification">普通陪护人员</view>
+        <van-divider />
+        <view class="classification">心理咨询师</view>
+      </view>
+      <view class="cancel">取消</view>
+    </view>
+  </van-popup>
+</view>

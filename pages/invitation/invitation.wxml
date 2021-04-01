@@ -1,3 +1,37 @@
-<view>
-邀请好友
+<view class="loace">
+  <view class="img-age">
+    <image src="../../img/mipmap-mdpi/yao.png" class="img"></image>
+    <view class="img-vie">
+      <image src="../../img/mipmap-mdpi/qian.png" class="img-qian"></image>
+    </view>
+      <view class="activity" bindtap="gorule">活动会规则</view>
+    <view class="invitation">
+      <view class="Invitationcode">你的邀请码</view>
+      <view class="gocode">
+        <view wx:for="{{arr}}" wx:key="index" class="gocode-mar">
+          <view class="arr-item">{{item}}</view>
+        </view>
+      </view>
+      <view class="Invite">邀请的好友也可在注册时直接填写邀请码</view>
+      <view class="QRcode">
+        <view>
+          <image src="../../img/mipmap-mdpi/erweima.png" class="towcode"></image>
+        </view>
+      </view>
+      <view class="myid">我的ID：123456</view>
+      <view class="immediately">
+        <button class="login-bu" bindtap="Logout">转发邀请好友</button>
+      </view>
+    </view>
+    <view class="Longpress">
+      <view class="one">
+        <view class="picture-one">1</view>
+        长按图片下载二维码，朋友扫码加入
+      </view>
+      <view class="one">
+        <view class="picture-one">2</view>
+        点击按钮邀请朋友进入页面，输入邀请码
+      </view>
+    </view>
+  </view>
 </view>

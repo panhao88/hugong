@@ -33,6 +33,12 @@ Page({
       Shadow:true
     })
   },
+    //关闭遮罩层
+    goclose(){
+      this.setData({
+        Shadow:false
+      })
+    },
     //去待评价
   goTobeevaluated(){
     wx.navigateTo({
@@ -67,6 +73,7 @@ Page({
       id:e.detail.index
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

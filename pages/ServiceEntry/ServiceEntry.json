@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-popup": "../../lib/vant/popup"
+  },
+  "navigationBarTitleText": "服务入驻"
 }

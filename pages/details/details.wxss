@@ -13,7 +13,41 @@
   align-items: center;
   background: #F5F5F5;
 }
-
+.shang-top{
+  width: 100%;
+  position: relative;
+  bottom: 60rpx;
+}
+.zhishitu{
+  width: 20rpx;
+  height: 20rpx;
+  
+}
+.image-icon{
+  position: absolute;
+  top: 60rpx;
+}
+.shang-updata{
+  height: 90rpx;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.updata{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.Healthcare{
+  width: 100%;
+  height: 1800rpx;
+  background: red;
+}
+.imgtext{
+  width: 100%;
+  height: 1800rpx;
+}
 .central {
   width: 95%;
   display: flex;
@@ -199,13 +233,17 @@
 }
 
 .security {
+  position: relative;
   color: #333333FF;
   font-size: 30rpx;
   font-weight: 900;
   letter-spacing: 3rpx;
   height: 100rpx;
   display: flex;
+  width: 20%;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-left: 20rpx;
 }
 
@@ -236,6 +274,7 @@
 }
 
 .Allcertifications {
+  margin-top: 10rpx;
   display: flex;
   justify-content: space-around;
   font-size: 28rpx;
@@ -408,7 +447,8 @@
 }
 
 .buootb {
-  height: 80rpx;
+  height: 100rpx;
+  background: red;
 }
 
 /* 定位 */

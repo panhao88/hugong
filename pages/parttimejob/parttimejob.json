@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-field": "../../lib/vant/field",
+    "van-radio": "../../lib/vant/radio",
+    "van-radio-group": "../../lib/vant/radio-group",
+    "van-cell": "../../lib/vant/cell",
+    "van-cell-group": "../../lib/vant/cell-group",
+    "van-popup": "../../lib/vant/popup",
+    "van-divider": "../../lib/vant/divider"
+  },
+  "navigationBarTitleText": "兼职陪护人员入驻"
+}

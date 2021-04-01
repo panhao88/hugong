@@ -1,26 +1,26 @@
 {
   "pages":[
-    "pages/details/details",
-    "pages/index/index",
-    "pages/authentication/authentication",
+    "pages/mechanism/mechanism",
+    "pages/ServiceEntry/ServiceEntry",
+    "pages/parttimejob/parttimejob",
     "pages/my/my",
+    "pages/service/service",
+    "pages/invitation/invitation",
+    "pages/Activityrules/Activityrules",
+    "pages/authentication/authentication",
+    "pages/index/index",
+    "pages/details/details",
     "pages/order/order",
     "pages/addService/addService",
     "pages/editService/editService",
     "pages/Collection/Collection",
     "pages/Withdrawal/Withdrawal",
     "pages/wallet/wallet",
-   
-    
     "pages/Serviceperson/Serviceperson",
     "pages/Praise/Praise",
-   
     "pages/Orderdetails/Orderdetails",
     "pages/Detaevaluate/Detaevaluate",
     "pages/apply/apply",
-   
-    "pages/invitation/invitation",
-    "pages/ServiceEntry/ServiceEntry",
     "pages/address/address",
     "pages/CustomerNervice/CustomerNervice",
     "pages/Privacy/Privacy",
@@ -32,8 +32,6 @@
     "pages/setup/setup",
     "pages/healthy/healthy",
     "pages/forget/forget",
-    "pages/service/service",
-    
     "pages/Searchpage/Searchpage",
     "pages/login/login",
     "pages/Escort/Escort"

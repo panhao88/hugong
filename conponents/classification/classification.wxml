@@ -12,12 +12,9 @@
 <view wx:if="{{flag === 0}}">
   <view>
     <scroll-view class="scroll-view_H" scroll-x="true">
-      <view id="demo1" class="scroll-view-item_H {{flagIndex==0 ? 'cor':'cor1'}}">金牌月嫂</view>
-      <view id="demo2" class="scroll-view-item_H  {{flagIndex==1 ? 'cor':'cor1'}}">金牌保姆</view>
-      <view id="demo3" class="scroll-view-item_H  {{flagIndex==2 ? 'cor':'cor1'}}">金牌护工</view>
-      <view id="demo3" class="scroll-view-item_H  {{flagIndex==3 ? 'cor':'cor1'}}">金牌护工</view>
-      <view id="demo3" class="scroll-view-item_H {{flagIndex==4 ? 'cor':'cor1'}}">金牌护工</view>
-      <view id="demo3" class="scroll-view-item_H {{flagIndex==5 ? 'cor':'cor1'}}">金牌护工</view>
+      <view wx:for="{{arr}}" wx:key="index"  class="scroll-view-item_H {{flagIndex===index ? 'cor':'cor1'}}" bindtap="Discoloration" data-index="{{index}}">
+        <view>{{item.title}}</view>
+      </view>
     </scroll-view>
   </view>
   <!-- 张阿姨1 -->
@@ -64,17 +61,6 @@
     </view>
   </view>
   <!-- 张阿姨2-->
-  <view>
-    <scroll-view class="scroll-view_H" scroll-x="true">
-      <view id="demo1" class="scroll-view-item_H {{flagIndex==0 ? 'cor':'cor1'}}">金牌月嫂</view>
-      <view id="demo2" class="scroll-view-item_H  {{flagIndex==1 ? 'cor':'cor1'}}">金牌保姆</view>
-      <view id="demo3" class="scroll-view-item_H  {{flagIndex==2 ? 'cor':'cor1'}}">金牌护工</view>
-      <view id="demo3" class="scroll-view-item_H  {{flagIndex==3 ? 'cor':'cor1'}}">金牌护工</view>
-      <view id="demo3" class="scroll-view-item_H {{flagIndex==4 ? 'cor':'cor1'}}">金牌护工</view>
-      <view id="demo3" class="scroll-view-item_H {{flagIndex==5 ? 'cor':'cor1'}}">金牌护工</view>
-    </scroll-view>
-  </view>
-  <!-- 张阿姨1 -->
   <view class="Popular-nurse" bindtap="godetaild">
     <view class="service">
       <view>

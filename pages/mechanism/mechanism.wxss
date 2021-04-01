@@ -1,0 +1,161 @@
+/* pages/parttimejob/parttimejob.wxss */
+.local {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFFFF;
+}
+
+.central {
+  width: 95%;
+}
+
+.Realname {
+  width: 100%;
+  font-size: 28rpx;
+  background: #FAFAFAFF;
+  color: #999999;
+  padding: 20rpx 0 20rpx 7rpx;
+}
+
+.padd {
+  padding: 10rpx 10rpx 10rpx 20rpx;
+}
+
+.van-cell {
+  padding: 20rpx 10rpx 20rpx 10rpx !important;
+  font-weight: 700 !important;
+  background-color: #FFFFFF !important;
+}
+.immediately {
+  margin-bottom: 20rpx;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+.login-bu {
+  margin-top: 20rpx;
+  width: 680rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius: 40rpx;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 28rpx;
+}
+.top-backgroun{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFFFF;
+}
+.tow-back{
+  width: 95%;
+  height: 100%;
+  background:#FFFFFF;
+}
+.upload-one{
+  width: 100%;
+  height: 240rpx;
+  display: flex;
+  align-items: center;
+}
+.bor-jia{
+  width: 216rpx;
+  height: 216rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: dashed #CCCCCC 0.5rpx;
+}
+.img-jia{
+  width: 80rpx;
+  height: 80rpx;
+}
+.phone{
+  width: 100%;
+  display: flex;
+  background: #4C4C4C;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dial{
+  font-weight: 500;
+  width: 90%;
+  border-radius: 10rpx;
+  color: #61CF8CFF;
+  background: #FFFFFFFF;
+}
+.classification{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.van-divider{
+  margin: 0 !important;
+}
+.cancel{
+  margin-top: 20rpx;
+  margin-bottom: 80rpx;
+  width: 90%;
+  font-weight: 500;
+  border-radius: 10rpx;
+  color: #61CF8CFF;
+  background: #FFFFFFFF;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tyep{
+  padding: 20rpx 0 20rpx 0;
+  color: #333333;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.Servicetype{
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+}
+.fle-x{
+  width: 220rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 120rpx;
+  border: solid 0.5rpx #61CF8C;
+  position: relative;
+}
+.font-s{
+  color: #333333;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+.font-z{
+  margin-top: 8rpx;
+  color: #999999;
+  font-size: 20rpx;
+  font-weight: 500;
+}
+.spacing{
+  margin-right: 12rpx;
+}
+.triangle{
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 0;
+  border-top: 40rpx solid red;
+  border-left: 40rpx solid transparent; 
+}

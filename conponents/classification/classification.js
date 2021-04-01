@@ -41,6 +41,32 @@ Component({
         name:"产妇陪护",
         id:3
       },
+    ],
+    arr:[
+      {
+        title:"金牌保姆",
+        id:0
+      },
+      {
+        title:"金牌护工",
+        id:1
+      },
+      {
+        title:"金牌保护",
+        id:2
+      },
+      {
+        title:"金牌保护",
+        id:3
+      },
+      {
+        title:"金牌保护",
+        id:4
+      },
+      {
+        title:"金牌保护",
+        id:5
+      },
     ]
   },
   /**
@@ -62,6 +88,11 @@ Component({
     godetaild(){
       wx.navigateTo({
         url: '/pages/details/details',
+      })
+    },
+    Discoloration(e){
+      this.setData({
+        flagIndex:e.currentTarget.dataset.index
       })
     }
   }

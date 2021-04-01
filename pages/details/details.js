@@ -5,6 +5,7 @@ var city = require('../../lib/city');
 Page({
   data: {
     boxshow:true, //展开收缩
+    picture:true,//图文
     arrli:[
       {
         name:"平台认证",
@@ -228,6 +229,12 @@ Page({
   Negation(){
     this.setData({
       boxshow:!this.data.boxshow
+    })
+  },
+  gopicture(){
+    console.log(111)
+    this.setData({
+      picture:!this.data.picture
     })
   },
   //选择城市

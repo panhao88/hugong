@@ -1,3 +1,15 @@
 <view>
-服务入驻
+  <van-popup show="{{show}}" position="bottom" custom-style="height: 40%;" bind:close="onClose">
+    <view class="identity">请选择你的身份</view>
+    <view class="img-branch">
+      <view class="mechanism" bindtap="gomechanism">
+        <image src="../../img/mipmap-mdpi/nanyi.png" class="img"></image>
+        <view class="mar-g">陪护机构</view>
+      </view>
+      <view class="mechanism" bindtap="goparttimejob">
+        <image src="../../img/mipmap-mdpi/nvyi.png" class="img"></image>
+        <view class="mar-g">兼职陪护人员</view>
+      </view>
+    </view>
+  </van-popup>
 </view>

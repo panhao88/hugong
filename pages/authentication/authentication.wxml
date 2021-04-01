@@ -2,9 +2,26 @@
   <view class="central">
     <view class="Realname">实名认证</view>
     <van-cell-group>
-      <van-field value="{{ value }}" placeholder="请输入用户名"  label="真实姓名" input-align="right"/>
-      <van-field value="{{ value }}" placeholder="请输入用户名"   label="身份证号" input-align="right"/>
+      <van-field value="{{ value }}" placeholder="请输入用户名" label="真实姓名" input-align="right" />
+      <van-field value="{{ value }}" placeholder="请输入用户名" label="身份证号" input-align="right" />
     </van-cell-group>
     <view class="Realname">请拍摄并上传有效证件</view>
+    <view class="box">
+      <view class="box-img">
+        <view class="mar-img">
+          <image src="../../img/mipmap-mdpi/zheng.png" class="img"></image>
+        </view>
+        <view class="backgr">上传身份证正面</view>
+      </view>
+      <view class="box-img">
+        <view class="mar-img">
+          <image src="../../img/mipmap-mdpi/fan.png" class="img"></image>
+        </view>
+        <view class="backgr">上传身份证反面</view>
+      </view>
+    </view>
+    <view class="immediately">
+      <button class="login-bu" bindtap="Logout">提交申请</button>
+    </view>
   </view>
 </view>

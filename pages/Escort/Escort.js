@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    Capital:"蜀都中心...",
     flag:0,
     list:[
       {

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-field": "../../lib/vant/field",
+    "van-cell": "../../lib/vant/cell",
+    "van-cell-group": "../../lib/vant/cell-group",
+    "van-popup": "../../lib/vant/popup"
+  },
+  "navigationBarTitleText": "培训机构入驻"
+}

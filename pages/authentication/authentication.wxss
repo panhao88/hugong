@@ -10,10 +10,68 @@
 .central {
   width: 95%;
 }
-.Realname{
-  font-size: 30rpx;
-  padding-left: 12rpx;
-}
 .van-cell{
   padding: 20rpx 10rpx 20rpx 10rpx !important;
+  font-weight: 700 !important;
+}
+.Realname{
+  font-size: 28rpx;
+  padding: 20rpx 0 20rpx 12rpx;
+  background: #FAFAFAFF;
+  color: #999999;
+}
+.img{
+  width: 243rpx;
+  height: 162rpx;
+}
+.box{
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-img{
+  width: 340rpx;
+  height: 279rpx;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: #E7F9EE;
+  position: relative;
+}
+.mar-img{
+  margin-bottom: 50rpx;
+}
+.backgr{
+  width: 100%;
+  height: 60rpx;
+  background: #61CF8C;
+  border-radius:0 0 20rpx 20rpx ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+.immediately{
+  margin-bottom: 20rpx;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+.login-bu{
+  margin-top: 20rpx;
+  width: 680rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius:40rpx ;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 28rpx;
 }

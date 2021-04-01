@@ -521,11 +521,11 @@
   </van-tabs>
   <view class="m-bottom"></view>
   <view>
-    <page-container show="{{Shadow}}" custom-style="height:20%;" overlay-style="height:100%;">
+    <van-popup show="{{Shadow}}" custom-style="height:20%;" overlay-style="height:100%;" position="bottom" bind:click-overlay="goclose">
       <view class="phone">
         <view class="dial">18783399654</view>
         <view class="dial">拨打</view>
       </view>
-    </page-container>
+    </van-popup>
   </view>
 </view>

@@ -1,1 +1,160 @@
 /* pages/invitation/invitation.wxss */
+.loace {
+  width: 100%;
+  height: 100vh;
+}
+
+.img-age {
+  width: 100%;
+  height: 1620rpx;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: 1620rpx;
+}
+
+.img-vie {
+  position: absolute;
+  width: 616rpx;
+  height: 207rpx;
+  top: 411rpx;
+  left: 42rpx;
+  z-index: 999;
+}
+
+.img-qian {
+  width: 616rpx;
+  height: 207rpx;
+
+}
+
+.invitation {
+  width: 640rpx;
+  height: 852rpx;
+  border-radius: 20rpx;
+  background: #ffffff;
+  position: absolute;
+  top: 522rpx;
+  left: 56rpx;
+}
+
+.Invitationcode {
+  width: 100%;
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50rpx;
+}
+
+.gocode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120rpx;
+}
+
+.gocode-mar {
+  margin-left: 20rpx;
+}
+
+.arr-item {
+  width: 56rpx;
+  height: 56rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EFEFEF;
+  color: #FF5C36;
+}
+.activity{
+  position: absolute;
+  right: 0;
+  top: 180rpx;
+  background: #FDE168;
+  color: #FF643B;
+  font-size: 22rpx;
+  padding: 8rpx 8rpx 8rpx 20rpx;
+  border-radius: 30rpx 0 0 30rpx;
+}
+.Invite {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color: #999999;
+}
+
+.QRcode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+  width: 100%;
+  height: 320rpx;
+}
+
+.towcode {
+  width: 320rpx;
+  height: 320rpx;
+}
+.myid{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color: #999999;
+  margin-top: 10rpx;
+  font-weight: 600;
+}
+.immediately {
+  margin-bottom: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-bu {
+  margin-top: 50rpx;
+  width: 540rpx !important;
+  height: 87rpx;
+  background-color: #FF5C36;
+  border-radius: 40rpx;
+  color: #ffffff;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Longpress{
+  position: absolute;
+  width: 600rpx;
+  height: 130rpx;
+  left: 72rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  bottom: 50rpx;
+  color: #FFFFFF;
+  font-size: 24rpx;
+}
+.one{
+  display: flex;
+}
+.picture-one{
+  width: 36rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20rpx;
+  height: 36rpx;
+  background: #FF7847;
+  border-radius: 50%;
+}

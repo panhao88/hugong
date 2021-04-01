@@ -1,24 +1,13 @@
-// pages/ServiceEntry/ServiceEntry.js
+// pages/Activityrules/Activityrules.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    show:true
+
   },
-  //去陪护机构
-  gomechanism(){
-    wx.navigateTo({
-      url: '/pages/mechanism/mechanism',
-    })
-  },
-  //去兼职陪护人员
-  goparttimejob(){
-    wx.navigateTo({
-      url: '/pages/parttimejob/parttimejob',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

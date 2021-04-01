@@ -1,22 +1,21 @@
-// pages/ServiceEntry/ServiceEntry.js
+// pages/parttimejob/parttimejob.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    show:true
+    Shadow: false, //遮罩层
   },
-  //去陪护机构
-  gomechanism(){
-    wx.navigateTo({
-      url: '/pages/mechanism/mechanism',
+  goSubmit() {
+    this.setData({
+      Shadow: true
     })
   },
-  //去兼职陪护人员
-  goparttimejob(){
-    wx.navigateTo({
-      url: '/pages/parttimejob/parttimejob',
+  //关闭遮罩层
+  goclose() {
+    this.setData({
+      Shadow: false
     })
   },
   /**

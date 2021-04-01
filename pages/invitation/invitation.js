@@ -5,9 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    arr:[
+      1,2,3,4,5,6
+    ]
   },
-
+  gorule(){
+    wx.navigateTo({
+      url: '/pages/Activityrules/Activityrules',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
