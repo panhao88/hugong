@@ -19,10 +19,22 @@
           <view class="fle-x">
             <view class="font-s">{{item.title}}</view>
             <view class="font-z">{{item.name}}</view>
-            <view class="triangle">√</view>
+            <view class="triangle active"></view>
           </view>
         </view>
       </view>
+      <van-divider />
+      <view class="tyep">服务类型(可多选)</view>
+      <view class="Servicetype">
+        <view wx:for="{{list}}" wx:key="index" class="spacing">
+          <view class="fle-x">
+            <view class="font-s">{{item.title}}</view>
+            <view class="font-z">{{item.name}}</view>
+            <view class="triangle active"></view>
+          </view>
+        </view>
+      </view>
+      <van-divider />
       <view class="Realname">请拍摄并上传你的专业证书</view>
       <view class="upload-one">
         <view class="bor-jia">
@@ -40,7 +52,7 @@
       <button class="login-bu" bindtap="Logout" bindtap="goSubmit">提交申请</button>
     </view>
   </view>
-  <van-popup show="{{Shadow}}"  overlay-style="height:100%;" position="bottom"
+  <!-- <van-popup show="{{Shadow}}"  overlay-style="height:100%;" position="bottom"
     bind:click-overlay="goclose">
     <view class="phone">
       <view class="dial">
@@ -50,5 +62,5 @@
       </view>
       <view class="cancel">取消</view>
     </view>
-  </van-popup>
+  </van-popup> -->
 </view>

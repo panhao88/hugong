@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/details/details",
     "pages/mechanism/mechanism",
     "pages/ServiceEntry/ServiceEntry",
     "pages/parttimejob/parttimejob",
@@ -9,7 +10,7 @@
     "pages/Activityrules/Activityrules",
     "pages/authentication/authentication",
     "pages/index/index",
-    "pages/details/details",
+    
     "pages/order/order",
     "pages/addService/addService",
     "pages/editService/editService",
