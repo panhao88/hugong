@@ -1,1 +1,46 @@
 /* pages/address/address.wxss */
+.local {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.central {
+  width: 95%;
+}
+
+.img-jucent {
+  width: 100%;
+  display: flex;
+  margin-top: 160rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+  font-size: 28rpx;
+}
+
+.img {
+  width: 360rpx;
+  height: 230rpx;
+}
+.immediately {
+  margin-bottom: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+.login-bu {
+  margin-top: 20rpx;
+  width: 240rpx !important;
+  height: 88rpx;
+  background-color: #61CF8CFF;
+  border-radius: 40rpx;
+  color: #ffffff;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+}

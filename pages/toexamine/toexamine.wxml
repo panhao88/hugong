@@ -1,0 +1,56 @@
+<view class="local">
+  <view class="Realname">
+    <view class="padd">机构信息</view>
+  </view>
+  <view class="central">
+    <van-field value="{{ value }}" placeholder="请填写机构真实名称" label="机构名称" input-align="right" />
+    <van-field value="{{ value }}" placeholder="请填写机构真实地址" label="地址" input-align="right" />
+    <van-field value="{{ value }}" placeholder="请填写你的真实姓名" label="联系人" input-align="right" />
+    <van-field value="{{ value }}" placeholder="请填写您的联系电话" label="联系电话" input-align="right" />
+    <van-field value="{{ value }}" placeholder="" label="入驻城市" input-align="right" />
+  </view>
+  <view class="top-backgroun">
+    <view class="tow-back">
+      <view class="Realname">营业执照</view>
+      <view class="upload-one">
+        <view class="bor-jia">
+          <image src="../../img/mipmap-mdpi/zhengshu.png" class="img-jia"></image>
+        </view>
+      </view>
+      <view class="Realname">机构专业证书</view>
+      <view class="upload-one">
+        <view class="bor-jia">
+          <image src="../../img/mipmap-mdpi/zhengshu.png" class="img-jia"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{flag === 1}}" class="wait">
+    <view>你的入驻审核正在审核,请耐心等候!</view>
+    <view class="img-examine">
+      <image src="../../img/mipmap-mdpi/shenghe.png" class="examine"></image>
+    </view>
+  </view>
+  <view wx:if="{{flag === 2}}" class="examinesuccess">
+    <view>恭喜你入驻审核成功</view>
+    <view class="account">
+      <view class="login-account">登录账号:xxxxxxxxx</view>
+      <view>登录账号:xxxxxxxxx</view>
+    </view>
+    <view class="cor">点击下载服务端APP:XXXXXXXXXX</view>
+    <view class="img-examine">
+      <image src="../../img/mipmap-mdpi/shengheyes.png" class="examine"></image>
+    </view>
+  </view>
+  <view wx:if="{{flag === 3}}" class="Auditfailed">
+    <view>很遗憾!你的入驻申请审核失败,</view>
+    <view>失败原因:营业执照上传不清晰</view>
+    <view>请重新上传</view>
+    <view class="immediately">
+      <button class="login-bu" bindtap="gotoexamine">提交审核</button>
+    </view>
+    <view class="imgplexamine">
+      <image src="../../img/mipmap-mdpi/shengheno.png" class="examine"></image>
+    </view>
+  </view>
+</view>

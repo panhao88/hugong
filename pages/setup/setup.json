@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "van-field": "../../lib/vant/field",
-    "van-button": "../../lib/vant/button"
+    "van-button": "../../lib/vant/button",
+    "van-cell": "../../lib/vant/cell",
+    "van-cell-group": "../../lib/vant/cell-group"
   },
   "navigationBarTitleText": "设置"
 }

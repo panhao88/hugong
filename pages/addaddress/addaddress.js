@@ -1,34 +1,13 @@
-// pages/mechanism/mechanism.js
+// pages/addaddress/addaddress.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:[
-      {
-        title:"医院陪护",
-        name:"海量订单，收入丰富",
-        flag:false
-      },
-      {
-        title:"医院陪护",
-        name:"海量订单，收入丰富",
-        flag:false
-      },
-      {
-        title:"医院陪护",
-        name:"海量订单，收入丰富",
-        flag:false
-      },
-    ],
+
   },
-  // 提交审核
-  gotoexamine(){
-    wx.navigateTo({
-      url: '/pages/toexamine/toexamine',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,0 +1,38 @@
+<view class="local">
+  <view class="central">
+    <van-swipe-cell right-width="{{ 65 }}">
+      <view class="tp-news">
+        <view class="separate">
+          <view class="level">
+            <view class="A-Wang">冯程程</view>
+            <view class="A-Wang">123456789</view>
+          </view>
+          <view class="appetite">武侯区蜀都中心</view>
+        </view>
+        <view class="boe-der"></view>
+        <view class="timer">编辑</view>
+        <van-divider />
+      </view>
+      <van-button type="danger" slot="right">删除</van-button>
+    </van-swipe-cell>
+    <view class="Range">以下地址不在服务区范围之内</view>
+    <van-swipe-cell right-width="{{ 65 }}">
+    <view class="tp-news">
+      <view class="tobapsa">
+        <view class="level">
+          <view class="B-Wang">冯程程</view>
+          <view class="B-Wang">123456789</view>
+        </view>
+        <view class="PY-appetite">新都区区蜀都中心</view>
+      </view>
+      <view class="boe-der"></view>
+      <view class="timer">编辑</view>
+      <van-divider />
+    </view>
+    <van-button type="danger" slot="right">删除</van-button>
+    </van-swipe-cell>
+    <view class="immediately">
+      <button class="login-bu" bindtap="gotoexamine" >+新增地址</button>
+    </view>
+  </view>
+</view>

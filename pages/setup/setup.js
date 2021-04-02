@@ -13,6 +13,12 @@ Page({
       url: '/pages/login/login',
     })
   },
+  //修改登录密码
+  modify(){
+    wx.navigateTo({
+      url: '/pages/forget/forget',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

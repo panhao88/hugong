@@ -1,115 +1,13 @@
-// pages/details/details.js
+// pages/Saveaddress/Saveaddress.js
 var QQMapWX = require('../../utils/qqmap-wx-jssdk1.2/qqmap-wx-jssdk.min.js');
 var qqmapsdk;
 var city = require('../../lib/city');
 Page({
-  data: {
-    boxshow:true, //展开收缩
-    picture:true,//图文
-    arrli:[
-      {
-        name:"平台认证",
-        id:1
-      },
-      {
-        name:"平台认证",
-        id:2
-      },
-      {
-        name:"平台认证",
-        id:3
-      },
-      {
-        name:"平台认证",
-        id:3
-      },
-      {
-        name:"平台认证",
-        id:3
-      },
-      {
-        name:"平台认证",
-        id:3
-      },
-    ],
-    items: [{
-        name: '王桂香',
-        phone: "123456789",
-        position: "武侯区新希望大厦",
-      },
-      {
-        name: '王桂香',
-        phone: "123456789",
-        position: "武侯区新希望大厦",
-      },
-      {
-        name: '王桂香',
-        phone: "123456789",
-        position: "武侯区新希望大厦",
-      },
-    ],
-    objdetail: [{
-        name: '王桂香',
-        age: 68,
-        Gender: "女",
-        remarks: "需要做饭，糖尿病"
-      },
-      {
-        name: '王桂香',
-        age: 68,
-        Gender: "女",
-        remarks: "需要做饭，糖尿病"
-      }
-    ],
-    startX: 0, //开始坐标
-    startY: 0,
-    arr: [{
-        name: "医院陪护",
-        id: 1
-      },
-      {
-        name: "医院陪护",
-        id: 2
-      },
-      {
-        name: "医院陪护",
-        id: 3
-      },
-      {
-        name: "医院陪护",
-        id: 4
-      },
-      {
-        name: "医院陪护",
-        id: 5
-      },
-      {
-        name: "医院陪护",
-        id: 6
-      },
-    ],
-    list: [{
-        img: '../../img/mipmap-mdpi/hugong.png'
-      },
-      {
-        img: '../../img/mipmap-mdpi/hugong.png'
-      },
-      {
-        img: '../../img/mipmap-mdpi/hugong.png'
-      },
-    ],
-    // 选择服务时间年月日
-    currentDate: new Date().getTime(),
-    minDate: new Date().getTime(),
-    formatter(type, value) {
-      if (type === 'year') {
-        return `${value}年`;
-      } else if (type === 'month') {
-        return `${value}月`;
-      }
-      return value;
-    },
 
+  /**
+   * 页面的初始数据
+   */
+  data: {
     pavalue: '', //搜索框输入内容
     radio: '1', //男女选择单选框
     colo: 0, //服务类型选择器 
@@ -145,145 +43,125 @@ Page({
     defaultKeyword: '房产小区',
     keyword: ''
   },
-  // 弹出预约信息
-  onClickButton() {
-    this.setData({
-      show: true,
-    })
-  },
-  //选择联系地址弹窗
-  goaddress() {
-    this.setData({
-      showaddress: true,
-      show: false
-    })
-  },
-  // 新增联系地址弹窗
-  Newaddress() {
-    this.setData({
-      keepaddress: true,
-      showaddress: false
-    })
-  },
-  //男女选择
-  onChange(e) {
-    let rad = e.detail
-    this.setData({
-      radio: rad
+  //go新增地址
+  gonewaddress() {
+    wx.navigateTo({
+      url: '/pages/addaddress/addaddress',
     })
   },
   //请选择服务地址
   golocation() {
     this.setData({
       Shadow: true,
-      keepaddress: false
     })
   },
-  //返回地图列表
+    //跳转搜索地图
+    gosearch() {
+      this.setData({
+        searchshow: true,
+        Shadow: false
+      })
+    },
+     //返回地图列表
   preturn() {
     this.setData({
       searchshow: false,
       Shadow: true
     })
   },
-  //新增服务对象
-  goobj() {
-    this.setData({
-      showobj: true
-    })
-  },
-  //新增服务对象详情
-  goobjdetail() {
-    this.setData({
-      objdetails: true
-    })
-  },
-  //选择服务时间
-  gotime() {
-    this.setData({
-      showtime: true
-    })
-  },
   //点击遮罩层阴影关闭
   onClose() {
     this.setData({
-      show: false,
-      showaddress: false,
-      keepaddress: false,
-      Serviceaddress: false,
       Shadow: false,
       searchshow: false,
-      showobj: false,
-      showaddress: false,
-      objdetails: false,
-      showtime: false
     })
   },
-  //跳转搜索地图
-  gosearch() {
-    this.setData({
-      searchshow: true,
-      Shadow: false
-    })
-  },
-  Negation(){
-    this.setData({
-      boxshow:!this.data.boxshow
-    })
-  },
-  gopicture(){
-    console.log(111)
-    this.setData({
-      picture:!this.data.picture
-    })
-  },
-  //选择城市
-  selectCity: function (e) {
-    var dataset = e.currentTarget.dataset.fullname;
-    this.setData({
-      pavalue: dataset
-    })
-    var _this = this;
-    var keyword = e.currentTarget.dataset.fullname;
-    //调用关键词提示接口
-    qqmapsdk.getSuggestion({
-      //获取输入框值并设置keyword参数
-      keyword: keyword, //用户输入的关键词，可设置固定值,如keyword:'KFC'
-      location: _this.data.latitude + ',' + _this.data.longitude,
-      page_size: 20,
-      page_index: 1,
-      //region:'北京', //设置城市名，限制关键词所示的地域范围，非必填参数
-      success: function (res) { //搜索成功后的回调
-        //console.log(res);
-        var sug = [];
-        for (var i = 0; i < res.data.length; i++) {
-          sug.push({ // 获取返回结果，放到sug数组中
-            title: res.data[i].title,
-            id: res.data[i].id,
-            addr: res.data[i].address,
-            province: res.data[i].province,
-            city: res.data[i].city,
-            district: res.data[i].district,
-            latitude: res.data[i].location.lat,
-            longitude: res.data[i].location.lng
+    //获取文字信息
+    getPy: function (e) {
+      this.setData({
+        showPy: e.target.id,
+      })
+    },
+  
+    setPy: function (e) {
+      this.setData({
+        scrollTopId: this.data.showPy
+      })
+    },
+  
+    //滑动选择城市
+    tMove: function (e) {
+      var y = e.touches[0].clientY,
+        offsettop = e.currentTarget.offsetTop;
+      //判断选择区域,只有在选择区才会生效
+      if (y > offsettop) {
+        var num = parseInt((y - offsettop) / 12);
+        this.setData({
+          showPy: this.data._py[num]
+        })
+      };
+    },
+  
+    //触发全部开始选择
+    tStart: function () {
+      this.setData({
+        hidden: false
+      })
+    },
+  
+    //触发结束选择
+    tEnd: function () {
+      this.setData({
+        scrollTopId: this.data.showPy
+      })
+    },
+    //选择城市
+    selectCity: function (e) {
+      var dataset = e.currentTarget.dataset.fullname;
+      this.setData({
+        pavalue: dataset
+      })
+      var _this = this;
+      var keyword = e.currentTarget.dataset.fullname;
+      //调用关键词提示接口
+      qqmapsdk.getSuggestion({
+        //获取输入框值并设置keyword参数
+        keyword: keyword, //用户输入的关键词，可设置固定值,如keyword:'KFC'
+        location: _this.data.latitude + ',' + _this.data.longitude,
+        page_size: 20,
+        page_index: 1,
+        //region:'北京', //设置城市名，限制关键词所示的地域范围，非必填参数
+        success: function (res) { //搜索成功后的回调
+          //console.log(res);
+          var sug = [];
+          for (var i = 0; i < res.data.length; i++) {
+            sug.push({ // 获取返回结果，放到sug数组中
+              title: res.data[i].title,
+              id: res.data[i].id,
+              addr: res.data[i].address,
+              province: res.data[i].province,
+              city: res.data[i].city,
+              district: res.data[i].district,
+              latitude: res.data[i].location.lat,
+              longitude: res.data[i].location.lng
+            });
+          }
+          _this.setData({ //设置suggestion属性，将关键词搜索结果以列表形式展示
+            suggestion: sug,
+            nearList: sug,
+            keyword: keyword,
+            flag: false
           });
+        },
+        fail: function (error) {
+          //console.error(error);
+        },
+        complete: function (res) {
+          //console.log(res);
         }
-        _this.setData({ //设置suggestion属性，将关键词搜索结果以列表形式展示
-          suggestion: sug,
-          nearList: sug,
-          keyword: keyword,
-          flag: false
-        });
-      },
-      fail: function (error) {
-        //console.error(error);
-      },
-      complete: function (res) {
-        //console.log(res);
-      }
-    });
-  },
-  //根据关键词搜索匹配位置
+      });
+    },
+      //根据关键词搜索匹配位置
   getsuggest: function (e) {
     if (e.detail !== '') {
       var _this = this;
@@ -374,84 +252,6 @@ Page({
       }
     });
   },
-  //点击选择搜索结果
-  backfill: function (e) {
-    var id = e.currentTarget.id;
-    let name = e.currentTarget.dataset.name;
-    for (var i = 0; i < this.data.suggestion.length; i++) {
-      if (i == id) {
-        //console.log(this.data.suggestion[i])
-        this.setData({
-          centerData: this.data.suggestion[i],
-          searchshow: false,
-          Shadow: true,
-          pavalue: '',
-          flag: true,
-          latitude: this.data.suggestion[i].latitude,
-          longitude: this.data.suggestion[i].longitude
-        });
-        this.nearby_search();
-        return;
-        //console.log(this.data.centerData)
-      }
-    }
-  },
-  //获取文字信息
-  getPy: function (e) {
-    this.setData({
-      showPy: e.target.id,
-    })
-  },
-
-  setPy: function (e) {
-    this.setData({
-      scrollTopId: this.data.showPy
-    })
-  },
-
-  //滑动选择城市
-  tMove: function (e) {
-    var y = e.touches[0].clientY,
-      offsettop = e.currentTarget.offsetTop;
-    //判断选择区域,只有在选择区才会生效
-    if (y > offsettop) {
-      var num = parseInt((y - offsettop) / 12);
-      this.setData({
-        showPy: this.data._py[num]
-      })
-    };
-  },
-
-  //触发全部开始选择
-  tStart: function () {
-    this.setData({
-      hidden: false
-    })
-  },
-
-  //触发结束选择
-  tEnd: function () {
-    this.setData({
-      scrollTopId: this.data.showPy
-    })
-  },
-  //监听拖动地图，拖动结束根据中心点更新页面
-  mapChange: function (e) {
-    let self = this;
-    if (e.type == 'end' && (e.causedBy == 'scale' || e.causedBy == 'drag')) {
-      self.mapCtx.getCenterLocation({
-        success: function (res) {
-          //console.log(res)
-          self.setData({
-            nearList: [],
-            latitude: res.latitude,
-            longitude: res.longitude,
-          })
-          self.nearby_search();
-        }
-      })
-    }
-  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -518,6 +318,45 @@ Page({
       hotCityData: city.hot
     });
   },
+  //监听拖动地图，拖动结束根据中心点更新页面
+  mapChange: function (e) {
+    let self = this;
+    if (e.type == 'end' && (e.causedBy == 'scale' || e.causedBy == 'drag')) {
+      self.mapCtx.getCenterLocation({
+        success: function (res) {
+          //console.log(res)
+          self.setData({
+            nearList: [],
+            latitude: res.latitude,
+            longitude: res.longitude,
+          })
+          self.nearby_search();
+        }
+      })
+    }
+  },
+   //点击选择搜索结果
+   backfill: function (e) {
+    var id = e.currentTarget.id;
+    let name = e.currentTarget.dataset.name;
+    for (var i = 0; i < this.data.suggestion.length; i++) {
+      if (i == id) {
+        //console.log(this.data.suggestion[i])
+        this.setData({
+          centerData: this.data.suggestion[i],
+          searchshow: false,
+          Shadow: true,
+          pavalue: '',
+          flag: true,
+          latitude: this.data.suggestion[i].latitude,
+          longitude: this.data.suggestion[i].longitude
+        });
+        this.nearby_search();
+        return;
+        //console.log(this.data.centerData)
+      }
+    }
+  },
   //重新定位
   reload: function () {
     this.onLoad();
@@ -568,10 +407,7 @@ Page({
       }
     }
   },
-  selectedOk: function () {
-    console.log(this.data.centerData)
-  },
-  /*
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
@@ -582,7 +418,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let self = this;
+
   },
 
   /**

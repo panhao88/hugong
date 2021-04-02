@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-field": "../../lib/vant/field",
+    "van-cell": "../../lib/vant/cell",
+    "van-cell-group": "../../lib/vant/cell-group",
+    "van-popup": "../../lib/vant/popup",
+    "van-search": "../../lib/vant/search",
+    "van-radio": "../../lib/vant/radio",
+    "van-button": "../../lib/vant/button",
+    "van-radio-group": "../../lib/vant/radio-group"
+  },
+  "navigationBarTitleText": "地址管理"
+}

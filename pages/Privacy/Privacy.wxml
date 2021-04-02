@@ -1,3 +1,5 @@
-<view>
-  隐私条款
+<view class="local">
+  <view class="central">
+    <image src="../../img/mipmap-mdpi/yingsi.png" class="img"></image>
+  </view>
 </view>

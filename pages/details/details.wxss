@@ -513,7 +513,7 @@
 
 .near-list {
   width: 100%;
-  height: 650rpx;
+  height: 500rpx;
   box-sizing: border-box;
 }
 

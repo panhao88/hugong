@@ -162,14 +162,6 @@
   align-items: center;
 }
 
-.top-fuwu {
-  width: 100%;
-  height: 60rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 999;
-}
 .img-i{
   width: 100%;
   height: 160rpx !important;
@@ -313,4 +305,23 @@
 .imgg{
   width: 88rpx;
   height: 88rpx;
+}
+.phone{
+  width: 100%;
+  display: flex;
+  background: #4C4C4C;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+.dial{
+  width: 90%;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  color: #61CF8CFF;
+  background: #FFFFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

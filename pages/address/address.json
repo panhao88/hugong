@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "van-swipe-cell": "../../lib/vant/swipe-cell"
-  }
+   
+  },
+  "navigationBarTitleText": "地址管理"
 }

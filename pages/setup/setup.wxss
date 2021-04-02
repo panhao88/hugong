@@ -11,15 +11,24 @@
 }
 .top{
   width: 100%;
-  height: 180rpx;
+  height: 220rpx;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: #ffffff;
+  justify-content: center;
+}
+.box{
+  position: relative;
+  right: 28rpx;
+  top: 32rpx;
 }
 .img{
   width: 120rpx;
   height: 120rpx;
+  border-radius: 50%;
+}
+.img-xiang{
+  width: 28rpx;
+  height: 28rpx;
 }
 .immediately{
   margin-bottom: 20rpx;

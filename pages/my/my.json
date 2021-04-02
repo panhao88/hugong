@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-   
-  }
+    "van-popup": "../../lib/vant/popup"
+  },
+  "navigationBarTitleText": "我的"
 }

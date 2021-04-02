@@ -7,10 +7,10 @@ Page({
     Capital:"蜀都中心...",
     keyword: '遥看瀑布挂前川',
     list: [{
-        image: '../../img/mipmap-mdpi/lun.png',
+        image: '../../img/mipmap-mdpi/lunbotu.png',
       },
       {
-        image: '../../img/mipmap-mdpi/lun.png',
+        image: '../../img/mipmap-mdpi/lunbotu.png',
       },
     ],
     arr: [{
