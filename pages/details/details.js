@@ -36,16 +36,19 @@ Page({
         name: '王桂香',
         phone: "123456789",
         position: "武侯区新希望大厦",
+        remarks:"糖尿病，高血压"
       },
       {
         name: '王桂香',
         phone: "123456789",
         position: "武侯区新希望大厦",
+        remarks:"糖尿病，高血压"
       },
       {
         name: '王桂香',
         phone: "123456789",
         position: "武侯区新希望大厦",
+        remarks:"糖尿病，高血压"
       },
     ],
     objdetail: [{
@@ -87,6 +90,19 @@ Page({
         name: "医院陪护",
         id: 6
       },
+      {
+        name: "医院陪护",
+        id: 6
+      },
+      {
+        name: "医院陪护",
+        id: 6
+      },
+      {
+        name: "医院陪护",
+        id: 6
+      },
+
     ],
     list: [{
         img: '../../img/mipmap-mdpi/hugong.png'
@@ -163,6 +179,12 @@ Page({
     this.setData({
       keepaddress: true,
       showaddress: false
+    })
+  },
+  //立即预约支付
+  goConfirmorder(){
+    wx.navigateTo({
+      url: '/pages/Confirmorder/Confirmorder',
     })
   },
   //男女选择

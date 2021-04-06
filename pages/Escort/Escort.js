@@ -22,10 +22,10 @@ Page({
       }
     ],
     ppplist: [{
-      image: '../../img/mipmap-mdpi/lun.png',
+      image: '../../img/mipmap-mdpi/lunbotu.png',
     },
     {
-      image: '../../img/mipmap-mdpi/lun.png',
+      image: '../../img/mipmap-mdpi/lunbotu.png',
     },
   ],
   },

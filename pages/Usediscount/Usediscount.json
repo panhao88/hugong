@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-checkbox": "../../lib/vant/checkbox",
+  "van-checkbox-group": "../../lib/vant/checkbox-group"
+  },
+  "navigationBarTitleText": "使用优惠卷"
+}

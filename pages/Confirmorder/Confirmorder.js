@@ -1,4 +1,4 @@
-// pages/Searchpage/Searchpage.js
+// pages/Confirmorder/Confirmorder.js
 Page({
 
   /**
@@ -7,10 +7,10 @@ Page({
   data: {
 
   },
-  //去医院详情
-  goHospitaldetails(){
+  //去优惠卷页面
+  Gotodiscount(){
     wx.navigateTo({
-      url: '/pages/Hospitaldetails/Hospitaldetails',
+      url: '/pages/Usediscount/Usediscount',
     })
   },
   /**

@@ -1,14 +1,17 @@
 <view class="local">
   <view class="central">
     <!-- 输入框 -->
-    <view class="top"> 
+    <view class="top">
       <view class="box-now">
-        <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi"></image></view>
+        <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi"></image>
+        </view>
         <view class="box-therr">
           <van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="goserch" />
-        </view> 
-      </view> 
-      <view class="wei-icoc"><image src="../../img/mipmap-mdpi/shouwei.png" class="weiimg"></image></view>
+        </view>
+      </view>
+      <view class="wei-icoc">
+        <image src="../../img/mipmap-mdpi/shouwei.png" class="weiimg"></image>
+      </view>
     </view>
     <!-- 轮播图 -->
     <view class="wrap">
@@ -23,10 +26,20 @@
     <!-- 陪护 -->
     <view class="Escort">
       <view class="hospital">
-        <image src="../../img/mipmap-mdpi/yi.png" class="img-hospital" bindtap="goserch"></image>
+        <image src="../../img/mipmap-mdpi/yiyuan.png" class="img-hospital" bindtap="goserch"></image>
+        <view class="Hospital-escort" bindtap="goserch">
+          <view class="hospitalone">医院陪护</view>
+          <view class="hospitaltow">限时优惠</view>
+          <view class="hospitaltherr">立即预约</view>
+        </view>
       </view>
       <view class="Sanatorium">
-        <image src="../../img/mipmap-mdpi/kang.png" class="img-hospital" bindtap="goserch"></image>
+        <image src="../../img/mipmap-mdpi/liaoyangyuan.png" class="img-hospital" bindtap="goserch"></image>
+        <view class="Hospital-escort" bindtap="goserch">
+          <view class="hospitalone">康养院陪护</view>
+          <view class="hospitaltow">限时优惠</view>
+          <view class="makeltherr">立即预约</view>
+        </view>
       </view>
     </view>
     <!-- 居家陪护 -->
@@ -44,6 +57,10 @@
           <scroll-view class="scroll-view" scroll-x="true">
             <view wx:for="{{arr}}" wx:key="index" class="scroll-item_H">
               <view class="p-x">
+                <view class="nana-tit">
+                  <view style="color:{{item.color}}" class="itemnane">{{item.name}}</view>
+                  <view class="pop">{{item.pop}}</view>
+                </view>
                 <image src="{{item.imag}}" class="img"></image>
                 <view class="fon-tit">
                   <view>

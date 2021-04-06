@@ -17,21 +17,33 @@ Page({
         imag: '../../img/mipmap-mdpi/bingren.png',
         title:"专业培训",
         icon:"../../img/mipmap-mdpi/qi.png",
+        name:"病人陪护",
+        pop:"以服务29.9万人",
+        color:"#61CF8C"
       },
       {
         imag: '../../img/mipmap-mdpi/chanfu.png',
         title:"服务认证",
         icon:"../../img/mipmap-mdpi/qi.png",
+        name:"产妇陪护",
+        pop:"以服务29.9万人",
+        color:"#60AAE5"
       },
       {
         imag: '../../img/mipmap-mdpi/yuesao.png',
         title:"安全保障",
         icon:"../../img/mipmap-mdpi/qi.png",
+        name:"月嫂陪护",
+        pop:"以服务29.9万人",
+        color:"#FFB85D"
       },
       {
         imag: '../../img/mipmap-mdpi/yuesao.png',
         title:"专业培训",
         icon:"../../img/mipmap-mdpi/qi.png",
+        name:"病人陪护",
+        pop:"以服务29.9万人",
+        color:"#FFB85D"
       },
     ],
     hugong: [{

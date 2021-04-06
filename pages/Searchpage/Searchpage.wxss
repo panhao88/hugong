@@ -137,6 +137,9 @@
   width: 23rpx;
   height: 23rpx;
 }
+.PhaseI{
+ padding-left: 12rpx;
+}
 /* 机构 */
 .immage-mechanism {
   width: 120rpx;
@@ -191,7 +194,7 @@
 
 .img-gp {
   width: 22rpx;
-  height: 26rpx;
+  height: 23rpx;
 }
 
 .Line {
@@ -209,13 +212,18 @@
 .Century-City {
   margin-top: 30rpx;
   font-size: 24rpx;
+  display: flex;
 }
-
+.CapitalShu{
+  padding-left: 15rpx;
+}
 .phone {
   width: 180rpx;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-/* 疗养院 */
+.img-pnone{
+  width: 30rpx;
+  height: 36rpx;
+}

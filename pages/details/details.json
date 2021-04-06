@@ -15,7 +15,8 @@
     "van-index-bar": "../../lib/vant/index-bar",
     "van-index-anchor": "../../lib/vant/index-anchor",
     "van-icon": "../../lib/vant/icon",
-    "van-datetime-picker": "../../lib/vant/datetime-picker"
+    "van-datetime-picker": "../../lib/vant/datetime-picker",
+    "van-swipe-cell": "../../lib/vant/swipe-cell"
   },
   "navigationBarTitleText": "护工详情"
 }

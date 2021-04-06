@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-cell": "../../lib/vant/cell",
+    "van-cell-group": "../../lib/vant/cell-group",
+    "van-divider": "../../lib/vant/divider"
+  },
+  "navigationBarTitleText": "确认订单"
+}

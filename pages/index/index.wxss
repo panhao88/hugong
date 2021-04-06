@@ -87,17 +87,56 @@
   height: 200rpx;
   background: #FAFAFAFF;
   border-radius: 20rpx;
+  position: relative;
 }
 .img-hospital{
   width: 100%;
   height: 100%;
 }
-
+.Hospital-escort{
+  position: absolute;
+  top: 36rpx;
+  left: 28rpx;
+}
+.hospitalone{
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: 800;
+}
+.hospitaltow{
+  color: #999999;
+  font-size: 26rpx;
+}
+.hospitaltherr{
+  color: #59ADF8;
+  font-size: 20rpx;
+  width: 96rpx;
+  height: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B2DBFB;
+  margin-top: 32rpx;
+  border-radius: 12rpx;
+}
+.makeltherr{
+  color: #4EB276;
+  font-size: 20rpx;
+  width: 96rpx;
+  height: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #A5E8CA;
+  margin-top: 32rpx;
+  border-radius: 12rpx;
+}
 .Sanatorium {
   width: 48%;
   height: 200rpx;
   background: #FAFAFAFF;
   border-radius: 20rpx;
+  position: relative;
 }
 
 .page-four {
@@ -144,8 +183,26 @@
   width: 210rpx;
   height: 280rpx;
   border-radius: 10rpx;
+  position: relative;
 }
-
+.nana-tit{
+  width: 210rpx;
+  top: 18rpx;
+  position: absolute;
+  font-size: 28rpx;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.itemnane{
+  font-weight: 700;
+  font-size: 28rpx;
+}
+.pop{
+  color: #999999;
+  font-size: 20rpx;
+}
 .Patient-escort {
   width: 100%;
   display: flex;
@@ -172,6 +229,7 @@
   width: 30rpx;
   height: 30rpx;
   padding-right:15rpx ;
+  padding-top: 4rpx;
 }
 /* 横向滚动 */
 .scroll-view {

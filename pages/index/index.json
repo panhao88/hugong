@@ -2,6 +2,7 @@
   "usingComponents": {
     "classification":"../../conponents/classification/classification",
     "van-search": "../../lib/vant/search",
-    "van-rate":"../../lib/vant/rate"
+    "van-rate":"../../lib/vant/rate",
+    "van-icon": "../../lib/vant/icon"
   }
 }

@@ -1,0 +1,56 @@
+<view class="local">
+  <view class="central">
+    <view class="available">
+      <view class="volume">可用优惠卷</view>
+      <view class="tow">2张</view>
+    </view>
+    <view class="newpeople">
+      <view>
+        <image src="../../img/mipmap-mdpi/juxing.png" class="img"></image>
+      </view>
+      <view class="Discount">
+        <view class="y-money">
+          <view>￥</view>
+          <view class="font-s">100</view>
+        </view>
+        <view>满1000元使用</view>
+      </view>
+      <view class="peopleright">
+        <view class="font-asize">100元新人优惠卷</view>
+        <view class="font-bsize">新用户专享满减优惠卷,每次仅限使用一张</view>
+      </view>
+      <view class="termofvalidity">
+        <view>有效期至2020-03-12 23:59</view>
+      </view>
+      <view class="pcheckbox">
+        <van-checkbox value="{{ checked }}" checked-color="#07c160" bind:change="onChange"></van-checkbox>
+      </view>
+    </view>
+    <!-- 灰色优惠卷 -->
+    <view class="newpeople">
+      <view>
+        <image src="../../img/mipmap-mdpi/hui.png" class="img"></image>
+      </view>
+      <view class="Discount">
+        <view class="y-money">
+          <view>￥</view>
+          <view class="font-s">100</view>
+        </view>
+        <view>满1000元使用</view>
+      </view>
+      <view class="peopleright">
+        <view class="font-asize">100元新人优惠卷</view>
+        <view class="font-bsize">新用户专享满减优惠卷,每次仅限使用一张</view>
+      </view>
+      <view class="termofvalidity">
+        <view>有效期至2020-03-12 23:59</view>
+      </view>
+      <view class="pcheckbox">
+        <van-checkbox value="{{ checked }}" checked-color="#07c160" bind:change="onChange"></van-checkbox>
+      </view>
+    </view>
+    <view class="immediately">
+      <button class="login-bu" bindtap="gonewaddress">不使用优惠卷</button>
+    </view>
+  </view>
+</view>

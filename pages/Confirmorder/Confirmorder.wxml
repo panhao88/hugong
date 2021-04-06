@@ -1,0 +1,91 @@
+<view class="local">
+  <view class="central">
+    <view class="backgroun">
+      <view class="servic">
+        <view>
+          <view class="immage-mechanism">
+            <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+          </view>
+        </view>
+      </view>
+      <view class="Aunt-Zhang">
+        <view class="hao-jj">医院陪护-老人陪护</view>
+        <view class="service-time">
+          <view>服务时间:2020-3-20 - 2021-3-21</view>
+          <view>
+            <image src="../../img/mipmap-mdpi/xiangyou.png" class="img-age"></image>
+          </view>
+        </view>
+        <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
+      </view>
+    </view>
+    <view class="contacts">
+      <view class="separate-pl">
+        <view class="contacts-pl">联系人</view>
+        <view class="separate">
+          <view class="level">
+            <view class="A-Wang">冯程程</view>
+            <view class="A-Wang">123456789</view>
+          </view>
+          <view class="appetite">武侯区蜀都中心</view>
+        </view>
+        <view>
+          <view>
+            <image src="../../img/mipmap-mdpi/xiangyou.png" class="img"></image>
+          </view>
+        </view>
+      </view>
+      <van-divider />
+      <view class="separate-pl">
+        <view class="contacts-pl">服务对象</view>
+        <view class="separate">
+          <view class="level">
+            <view class="A-Wang">冯程程</view>
+            <view class="A-Wang">123456789</view>
+          </view>
+          <view class="appetite">高血压高血压高血压高血压高血压高血压高血压</view>
+        </view>
+        <view>
+          <view>
+            <image src="../../img/mipmap-mdpi/xiangyou.png" class="img"></image>
+          </view>
+        </view>
+      </view>
+      <van-divider />
+      <view class="separate-pl">
+        <view class="contacts-pl">服务时间</view>
+        <view class="intotal">
+          <view>2021-3-12 - 2021-4-12 共5天</view>
+        </view>
+        <view>
+          <image src="../../img/mipmap-mdpi/xiangyou.png" class="img"></image>
+        </view>
+      </view>
+    </view>
+    <view class="Discount">
+      <view class="Total-price">
+        <view class="Price-pl">服务总价</view>
+        <view class="price-mn">￥1500.00</view>
+      </view>
+      <view class="bor-der"></view>
+      <view class="Total-price" bindtap="Gotodiscount">
+        <view class="Price-pl">优惠卷</view>
+        <view class="price-mn">共4张,三张可用</view>
+      </view>
+    </view>
+    <view class="service-sp">
+      <view class="textar">
+        <textarea class="pltextarea" placeholder="备注" />
+        </view>
+    </view>
+  </view>
+  <view class="gopayment">
+    <view class="A-gopayment">
+      <view class="font-lp">待支付</view>
+      <view class="font-tg">￥1500.00</view>
+    </view>
+    <view>
+      <button class="Pay-immediately" >立即预约</button>
+    </view>
+  </view>
+</view>

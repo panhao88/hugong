@@ -3,16 +3,138 @@
     <van-tab title="待领取">
       <view class="local">
         <view class="central">
-          <view class="coupon">
-
+          <view class="newpeople">
+            <view>
+              <image src="../../img/mipmap-mdpi/juxing.png" class="img"></image>
+            </view>
+            <view class="Discount">
+              <view class="y-money">
+                <view>￥</view>
+                <view class="font-s">100</view>
+              </view>
+              <view>满1000元使用</view>
+            </view>
+            <view class="peopleright">
+              <view class="font-asize">100元新人优惠卷</view>
+              <view class="font-bsize">新用户专享满减优惠卷,每次仅限使用一张</view>
+            </view>
+            <view class="termofvalidity">
+              <view>有效期至2020-03-12 23:59</view>
+            </view>
+            <view class="pcheckbox">
+              <view class="receive">立即领取</view>
+            </view>
+          </view>
+          <!-- 即将过期 -->
+          <view class="newpeople">
+            <view>
+              <image src="../../img/mipmap-mdpi/juxing.png" class="img"></image>
+            </view>
+            <view class="Discount">
+              <view class="y-money">
+                <view>￥</view>
+                <view class="font-s">100</view>
+              </view>
+              <view>满1000元使用</view>
+            </view>
+            <view class="peopleright">
+              <view class="font-asize">100元新人优惠卷</view>
+              <view class="font-bsize">新用户专享满减优惠卷,每次仅限使用一张</view>
+            </view>
+            <view class="termofvalidity">
+              <view>有效期至2020-03-12 23:59</view>
+              <view class="soon">即将过期</view>
+            </view>
+            <view class="pcheckbox">
+              <view class="receive">立即领取</view>
+            </view>
           </view>
         </view>
       </view>
-
     </van-tab>
-    <van-tab title="代使用">内容 2</van-tab>
-    <van-tab title="已使用">内容 3</van-tab>
-    <van-tab title="已过期">内容 4</van-tab>
+    <van-tab title="待使用">
+      <view class="local">
+        <view class="central">
+          <view class="newpeople">
+            <view>
+              <image src="../../img/mipmap-mdpi/juxing.png" class="img"></image>
+            </view>
+            <view class="Discount">
+              <view class="y-money">
+                <view>￥</view>
+                <view class="font-s">100</view>
+              </view>
+              <view>满1000元使用</view>
+            </view>
+            <view class="peopleright">
+              <view class="font-asize">100元新人优惠卷</view>
+              <view class="font-bsize">新用户专享满减优惠卷,每次仅限使用一张</view>
+            </view>
+            <view class="termofvalidity">
+              <view>有效期至2020-03-12 23:59</view>
+            </view>
+            <view class="pcheckbox">
+              <view class="receive">立即使用</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="已使用">
+      <view class="local">
+        <view class="central">
+          <view class="newpeople">
+            <view>
+              <image src="../../img/mipmap-mdpi/hui.png" class="img"></image>
+            </view>
+            <view class="Volumeexpired">
+              <view class="y-money">
+                <view>￥</view>
+                <view class="font-s">100</view>
+              </view>
+              <view>满1000元使用</view>
+            </view>
+            <view class="peopleright">
+              <view class="font-asize">100元新人优惠卷</view>
+              <view class="font-bsize">新用户专享满减优惠卷,每次仅限使用一张</view>
+            </view>
+            <view class="termofvalidity">
+              <view>有效期至2020-03-12 23:59</view>
+            </view>
+            <view class="pcheckbox">
+              <view class="Used">已使用</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="已过期">
+       <view class="local">
+        <view class="central">
+          <view class="newpeople">
+            <view>
+              <image src="../../img/mipmap-mdpi/hui.png" class="img"></image>
+            </view>
+            <view class="Volumeexpired">
+              <view class="y-money">
+                <view>￥</view>
+                <view class="font-s">100</view>
+              </view>
+              <view>满1000元使用</view>
+            </view>
+            <view class="peopleright">
+              <view class="font-asize">100元新人优惠卷</view>
+              <view class="font-bsize">新用户专享满减优惠卷,每次仅限使用一张</view>
+            </view>
+            <view class="termofvalidity">
+              <view>有效期至2020-03-12 23:59</view>
+            </view>
+            <view class="pcheckbox">
+              <view class="Used">已过期</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-tab>
   </van-tabs>
-
 </view>

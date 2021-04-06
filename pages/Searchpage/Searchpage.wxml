@@ -40,45 +40,45 @@
               <view>
                 <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
               </view>
-              <view>蜀都中心一期</view>
+              <view class="PhaseI">蜀都中心一期</view>
             </view>
           </view>
         </view>
       </view>
       <!-- 机构 -->
       <!-- 热门机构1 -->
-  <view class="flag1">
-    <view class="Popular-nurse" bindtap="godetaild">
-      <view class="service">
-        <view>
-          <view class="immage-mechanism">
-            <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+      <view class="flag1">
+        <view class="Popular-nurse" bindtap="godetaild">
+          <view class="service">
+            <view>
+              <view class="immage-mechanism">
+                <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+              </view>
+            </view>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
+            <view>
+              <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+            </view>
+            <view class="authentication">
+              <view class="Platform-certification">平台认证</view>
+              <view class="Platform-certification">病人陪护</view>
+              <view class="Platform-certification">产妇陪护</view>
+            </view>
+          </view>
+        </view>
+        <view class="bor-der"></view>
+        <view class="Service-Centre">
+          <view class="font-f">以服务1000人</view>
+          <view class="location">
+            <view>
+              <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+            </view>
+            <view class="PhaseI">蜀都中心一期</view>
           </view>
         </view>
       </view>
-      <view class="Aunt-Zhang">
-        <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
-        <view>
-          <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
-        </view>
-        <view class="authentication">
-          <view class="Platform-certification">平台认证</view>
-          <view class="Platform-certification">病人陪护</view>
-          <view class="Platform-certification">产妇陪护</view>
-        </view>
-      </view>
-    </view>
-    <view class="bor-der"></view>
-    <view class="Service-Centre">
-      <view class="font-f">以服务1000人</view>
-      <view class="location">
-        <view>
-          <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
-        </view>
-        <view>蜀都中心一期</view>
-      </view>
-    </view>
-  </view>
       <!-- 医院 -->
       <view>
         <view class="Popular-nurse">
@@ -87,7 +87,7 @@
               <image src="../../img/mipmap-mdpi/yiyuansousuo.png" class="imm-age"></image>
             </view>
           </view>
-          <view class="Aunt-Zhang">
+          <view class="Aunt-Zhang" bindtap="goHospitaldetails">
             <view class="Huaxi">
               <view class="font">四川大学华西医院</view>
               <view class="Grade">三级甲等</view>
@@ -95,15 +95,15 @@
             <view class="Century-City">
               <view>
                 <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
-                世纪城蜀都中心-1km
               </view>
+              <view class="CapitalShu">世纪城蜀都中心-1km</view>
             </view>
           </view>
           <view class="Line">
             <view class="vertical"></view>
           </view>
           <view class="phone">
-            <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
+            <image src="../../img/mipmap-mdpi/dianhua.png" class="img-pnone"></image>
           </view>
         </view>
       </view>
@@ -122,15 +122,15 @@
             <view class="Century-City">
               <view>
                 <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
-                世纪城蜀都中心-1km
               </view>
+              <view class="CapitalShu">世纪城蜀都中心-1km</view>
             </view>
           </view>
           <view class="Line">
             <view class="vertical"></view>
           </view>
           <view class="phone">
-            <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
+            <image src="../../img/mipmap-mdpi/dianhua.png" class="img-pnone"></image>
           </view>
         </view>
       </view>

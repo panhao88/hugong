@@ -1,4 +1,4 @@
-// pages/Searchpage/Searchpage.js
+// pages/Usediscount/Usediscount.js
 Page({
 
   /**
@@ -7,12 +7,7 @@ Page({
   data: {
 
   },
-  //去医院详情
-  goHospitaldetails(){
-    wx.navigateTo({
-      url: '/pages/Hospitaldetails/Hospitaldetails',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

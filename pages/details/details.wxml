@@ -70,8 +70,10 @@
     <view class="Safety-certification">
       <view class="guarantee">
         <view class="security">
-          <view >安全保障</view>
-          <view class="image-icon"><image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image></view>
+          <view>安全保障</view>
+          <view class="image-icon">
+            <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image>
+          </view>
         </view>
         <view class="Allcertifications">
           <view class="vertical">
@@ -110,8 +112,10 @@
     <view class="Service-Items">
       <view class="guarantee">
         <view class="security">
-          <view >服务项目</view>
-          <view class="image-icon"><image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image></view>
+          <view>服务项目</view>
+          <view class="image-icon">
+            <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image>
+          </view>
         </view>
         <view class="Allcertifications">
           <view class="vertical">
@@ -188,37 +192,36 @@
           </view>
         </view>
       </view>
-      <van-goods-action>
-        <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
-        <van-goods-action-button text="立即预约" bind:click="onClickButton" />
-      </van-goods-action>
+      <view class="gopayment">
+        <view class="A-gopayment">
+          <view class="font-lp">待支付</view>
+          <view class="font-tg">￥1500.00</view>
+        </view>
+        <view>
+          <button class="Pay-immediately" bindtap="goConfirmorder">立即预约</button>
+        </view>
+      </view>
     </van-popup>
     <!-- 新增地址 -->
     <van-popup show="{{ showaddress }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
-      <view class="local">
-        <view class="dele">
-          <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}"
-            bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="index">
-            <view class="remarks">
-              <view>
-                <view class="content">
-                  <view class="name">{{item.name}}</view>
-                  <view class="name">{{item.phone}}</view>
-                </view>
-                <view class="content">{{item.position}}</view>
+      <view class="background-color">
+        <van-swipe-cell right-width="{{ 65 }}" wx:for="{{items}}" wx:key="index">
+          <view class="tp-news">
+            <view class="separate">
+              <view class="level">
+                <view class="A-Wang">{{item.name}}</view>
+                <view class="A-Wang">{{item.phone}}</view>
               </view>
+              <view class="appetite">{{item.position}}</view>
             </view>
-            <view class="plcontent">
-              <view class="boplr">
-                <view class="Vertical"></view>
-              </view>
-              <view bindtap="Newaddress">编辑</view>
-            </view>
-            <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+            <view class="boe-der"></view>
+            <view class="timer">编辑</view>
+            <van-divider />
           </view>
-        </view>
-        <view class="central-section">
-          <van-button icon="plus" type="primary" bindtap="Newaddress">新增地址</van-button>
+          <van-button type="danger" slot="right">删除</van-button>
+        </van-swipe-cell>
+        <view class="immediately">
+          <button class="login-bu" bindtap="gotoexamine" bindtap="Newaddress">+新增地址</button>
         </view>
       </view>
     </van-popup>
@@ -253,8 +256,8 @@
               <van-field value="{{ value }}" placeholder="请输入门牌号" label="门牌号" input-align="right" />
             </van-cell-group>
           </view>
-          <view class="storage">
-            <van-button type="info" type="primary">保存地址</van-button>
+          <view class="immediately">
+            <button class="login-bu" bindtap="gotoexamine">保存地址</button>
           </view>
         </view>
       </view>
@@ -359,31 +362,24 @@
     </van-popup>
     <!-- 新增服务对象 -->
     <van-popup show="{{showobj}}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
-      <view class="local">
-        <view class="dele">
-          <view class="touch-item {{item.isTouchMove ? 'touch-move-activeone' : ''}}" data-index="{{index}}"
-            bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{objdetail}}" wx:key="index">
-            <view class="remarks">
-              <view>
-                <view class="content">
-                  <view class="name">{{item.name}}</view>
-                  <view class="name">{{item.age}}</view>
-                  <view class="name">{{item.Gender}}</view>
-                </view>
-                <view class="content">{{item.remarks}}</view>
+      <view class="background-color">
+        <van-swipe-cell right-width="{{ 65 }}" wx:for="{{items}}" wx:key="index">
+          <view class="tp-news">
+            <view class="separate">
+              <view class="level">
+                <view class="A-Wang">{{item.name}}</view>
+                <view class="A-Wang">{{item.phone}}</view>
               </view>
+              <view class="appetite">{{item.remarks}}</view>
             </view>
-            <view class="plcontent">
-              <view class="boplr">
-                <view class="PVertical"></view>
-              </view>
-              <view>编辑</view>
-            </view>
-            <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+            <view class="boe-der"></view>
+            <view class="timer">编辑</view>
+            <van-divider />
           </view>
-        </view>
-        <view class="central-section">
-          <van-button icon="plus" type="primary" bindtap="goobjdetail">新增服务对象</van-button>
+          <van-button type="danger" slot="right">删除</van-button>
+        </van-swipe-cell>
+        <view class="immediately">
+          <button class="login-bu" bindtap="gotoexamine" bindtap="goobjdetail">+新增服务对象</button>
         </view>
       </view>
     </van-popup>
@@ -420,9 +416,9 @@
               </view>
             </van-cell-group>
           </view>
-          <view class="storage">
-            <van-button type="info" type="primary">保存服务对象</van-button>
-          </view>
+          <view class="immediately">
+        <button class="login-bu" bindtap="gotoexamine" >保存服务对象</button>
+      </view>
         </view>
       </view>
     </van-popup>
@@ -441,7 +437,7 @@
   </view>
     <van-goods-action>
       <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
-      <van-goods-action-button text="立即预约" bind:click="onClickButton" />
+      <button class="appointment-now" bindtap="onClickButton" >立即预约</button>
     </van-goods-action>
   <view class="buootb"></view>
 </view>
