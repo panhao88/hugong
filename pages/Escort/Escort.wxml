@@ -33,7 +33,7 @@
       </view>
     </view>
     <view class="flag1">
-      <view class="Popular-nurse" bindtap="godetaild">
+      <view class="Popular-nurse" bindtap="gomechanismdetaild">
         <view class="service">
           <view>
             <view class="immage-mechanism">

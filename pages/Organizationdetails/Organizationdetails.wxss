@@ -1,0 +1,401 @@
+.local {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFAFF;
+}
+
+.localpl {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F5F5F5;
+}
+.shang-top{
+  width: 100%;
+  position: relative;
+  bottom: 60rpx;
+}
+.zhishitu{
+  width: 20rpx;
+  height: 20rpx;
+  
+}
+.image-icon{
+  position: absolute;
+  top: 60rpx;
+}
+.shang-updata{
+  height: 90rpx;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.updata{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.Healthcare{
+  width: 100%;
+  height: 1800rpx;
+}
+.imgtext{
+  width: 100%;
+  height: 1800rpx;
+}
+.central {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 60rpx;
+  background: #F5F5F5;
+}
+.scroll-item_H{
+  display: inline-block;
+}
+.scroll-view{
+  white-space: nowrap;
+}
+.region {
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.region-tow {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  border-radius: 20rpx;
+  background: #FFFFFFFF;
+}
+.shang{
+  height: 60rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.img-shang{
+  width: 20rpx;
+  height: 20rpx;
+}
+.wrap {
+  width: 100%;
+  height: 750rpx;
+}
+
+.img-i {
+  width: 100%;
+  height: 750rpx !important;
+}
+
+.service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-zh {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.Aunt_Zhang {
+  font-weight: 600;
+  font-size: 32rpx;
+  color: #333333FF;
+}
+
+.Gender {
+  display: flex;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+
+.img-di {
+  width: 26rpx;
+  height: 26rpx;
+  padding-top: 4rpx;
+  padding-right: 8rpx;
+}
+
+.location {
+  display: flex;
+  color: #333333FF;
+  font-size: 24rpx;
+}
+.authentication {
+  display: flex;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+
+.bor {
+  width: 120rpx;
+  height: 40rpx;
+  border: black 1rpx solid;
+  color: #ffffff;
+  background: #16D595;
+  font-size: 22rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+}
+
+.cool {
+  font-size: 32rpx;
+  font-weight: 530;
+  color: #333333FF;
+}
+
+.fu-color {
+  color: #999999FF;
+  font-size: 24rpx;
+}
+
+.Years {
+  margin-top: 12rpx;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+
+.score {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bor-d {
+  margin-top: 15rpx;
+  border: solid 0.5rpx #EEEEEEFF;
+}
+
+.details {
+  font-size: 24rpx;
+  font-weight: 540;
+  margin-top: 20rpx;
+  color: #999999FF;
+}
+
+/* 安全认证 */
+.Safety-certification {
+  width: 100%;
+  height: 230rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  background: #FFFFFFFF;
+}
+
+.guarantee {
+  display: flex;
+  flex-direction: column;
+}
+.top-bo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #999999;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}
+.security {
+  position: relative;
+  color: #333333FF;
+  font-size: 30rpx;
+  font-weight: 900;
+  letter-spacing: 3rpx;
+  height: 100rpx;
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 20rpx;
+}
+.plsecurity{
+  position: relative;
+  color: #333333FF;
+  font-size: 30rpx;
+  font-weight: 900;
+  letter-spacing: 3rpx;
+  height: 100rpx;
+  display: flex;
+  width: 24%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 20rpx;
+}
+
+.rz-tu {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.rz-tu-ren {
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.platform {
+  color: #999999FF;
+  font-size: 24rpx;
+}
+
+.pin-authentication {
+  font-size: 28rpx;
+  color: #333333FF;
+  font-weight: 600;
+}
+
+.three-hundred {
+  color: #FF5C5CFF;
+  font-size: 22rpx;
+}
+
+.Allcertifications {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-around;
+  font-size: 28rpx;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 服务项目 */
+.Service-Items {
+  width: 100%;
+  height: 300rpx;
+  background: #FFFFFFFF;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+.Service-pl{
+  width: 100%;
+  height: 563rpx;
+  background: #FFFFFFFF;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+.immediately {
+  margin-bottom: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+.login-bu {
+  margin-top: 20rpx;
+  width: 680rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius: 40rpx;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 28rpx;
+}
+.background-color{
+  background: #FAFAFA;
+}
+/* 横向滚动 */
+.scroll-view {
+  white-space: nowrap;
+}
+.scroll-item_H {
+  display: inline-block;
+  margin: 0 10rpx 0 3rpx;
+}
+
+.img-a{
+  width: 314rpx;
+  height: 420rpx;
+  border-radius: 14rpx;
+
+}
+.Platform-certification {
+  font-size: 18rpx;
+  color: #EEEEEE;
+  letter-spacing: 3rpx;
+  border-radius: 8rpx;
+}
+.bor-de{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28rpx;
+  width: 100rpx;
+  border: #EEEEEE 1rpx solid;
+  color: #999999;
+}
+.aunt{
+  width: 314rpx;
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.Aunt-Wang{
+  color: #333333;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+.img{
+  width: 314rpx;
+  height: 280rpx;
+}
+.shang-top{
+  width: 100%;
+}
+.buootb {
+  height: 100rpx;
+}
+
+.shang-updata{
+  height: 90rpx;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.img-shang{
+  width: 20rpx;
+  height: 20rpx;
+}
+.updata{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.Healthcare{
+  width: 100%;
+  height: 1800rpx;
+}
+.imgtext{
+  width: 100%;
+  height: 1800rpx;
+}
+.appointment-now{
+  width: 400rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius: 40rpx;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 28rpx;
+}
+
+

@@ -5,9 +5,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    flag:0,
+    hugong: [{
+      name: "推荐护工",
+      id: 1,
+    },
+    {
+      name: "推荐机构",
+      id: 2,
+    },
+  ],
+  arrli:[
+    {
+      name:"病人陪护",
+      id:1
+    },
+    {
+      name:"平台认证",
+      id:2
+    },
+    {
+      name:"产妇陪护",
+      id:3
+    },
+    {
+      name:"产妇陪护",
+      id:3
+    },
+    {
+      name:"产妇陪护",
+      id:3
+    },
+    {
+      name:"产妇陪护",
+      id:3
+    },
+  ],
   },
-
+  goto(e) {
+    this.setData({
+      flag:e.currentTarget.dataset.index
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

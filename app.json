@@ -1,8 +1,10 @@
 {
   "pages":[
+    "pages/index/index",
+    "pages/Organizationdetails/Organizationdetails",
+    "pages/Escort/Escort",
     "pages/Searchpage/Searchpage",
     "pages/Hospitaldetails/Hospitaldetails",
-    "pages/index/index",
     "pages/coupon/coupon",
     "pages/my/my",
     "pages/Usediscount/Usediscount",
@@ -38,8 +40,7 @@
     "pages/setup/setup",
     "pages/healthy/healthy",
     "pages/forget/forget",
-    "pages/login/login",
-    "pages/Escort/Escort"
+    "pages/login/login"    
   ],
   "window":{
     "backgroundTextStyle":"light",

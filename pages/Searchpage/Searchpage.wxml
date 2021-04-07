@@ -96,7 +96,8 @@
               <view>
                 <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
               </view>
-              <view class="CapitalShu">世纪城蜀都中心-1km</view>
+              <view class="CapitalShu">世纪城蜀都中心-</view>
+              <view class="Kilometer">0.1km</view>
             </view>
           </view>
           <view class="Line">
@@ -123,7 +124,8 @@
               <view>
                 <image src="../../img/mipmap-mdpi/dingwei.png" class="img-gp"></image>
               </view>
-              <view class="CapitalShu">世纪城蜀都中心-1km</view>
+              <view class="CapitalShu">世纪城蜀都中心-</view>
+              <view class="Kilometer">0.1km</view>
             </view>
           </view>
           <view class="Line">

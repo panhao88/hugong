@@ -13,11 +13,6 @@
   align-items: center;
   background: #F5F5F5;
 }
-.shang-top{
-  width: 100%;
-  position: relative;
-  bottom: 60rpx;
-}
 .zhishitu{
   width: 20rpx;
   height: 20rpx;
@@ -26,6 +21,11 @@
 .image-icon{
   position: absolute;
   top: 60rpx;
+}
+.shang-top{
+  width: 100%;
+  position: relative;
+  bottom: 60rpx;
 }
 .shang-updata{
   height: 90rpx;
@@ -128,8 +128,9 @@
   background: #DFFBEAFF;
   font-size: 20rpx;
   color: #61CF8CFF;
-  padding: 5rpx 0 5rpx 20rpx;
+  padding: 5rpx 20rpx 5rpx 20rpx;
   border-radius: 20rpx 0 0 20rpx;
+  margin-right: -20rpx;
 }
 
 .Gender {

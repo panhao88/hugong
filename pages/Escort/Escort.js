@@ -35,9 +35,10 @@ Page({
       flag:e.currentTarget.dataset.index
     })
   },
-  // 去搜索页
-  goHhserch(e){
-    console.log(e)
+  gomechanismdetaild(){
+    wx.navigateTo({
+      url: '/pages/Organizationdetails/Organizationdetails',
+    })
   },
   /**
    * 生命周期函数--监听页面加载

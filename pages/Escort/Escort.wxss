@@ -66,7 +66,8 @@
   height: 220rpx;
   background: #FFFFFFFF;
   border-radius: 20rpx ;
-  margin-bottom: 20rpx;
+  margin-bottom: 6rpx;
+  margin-top: 40rpx;
 }
 .logo{
   width: 120rpx;
@@ -78,7 +79,6 @@
   display: flex;
   font-size: 30rpx;
   margin-top: 20rpx;
-  margin-bottom: 10rpx;
 }
 .colore {
   font-size: 34rpx;
@@ -105,7 +105,7 @@
 }
 .bor-der {
   border: #EEEEEEFF 0.1rpx solid;
-  margin-top: 10rpx;
+  margin-top: 6rpx;
 }
 .img-di {
   width: 23rpx;
@@ -121,7 +121,7 @@
 .service {
   font-size: 30rpx;
   margin-top: 20rpx;
-  margin-bottom: 20rpx;
+  margin-bottom: 10rpx;
   width: 30%;
   display: flex;
   justify-content: center;
@@ -211,7 +211,7 @@
 
 .bor-der {
   border: #EEEEEEFF 0.1rpx solid;
-  margin-top: 10rpx;
+  margin-top: 6rpx;
 }
 
 .Service-person {
@@ -242,7 +242,7 @@
 }
 .bor-der{
   border: #EEEEEEFF 0.5rpx solid;
-  margin-top: 10rpx;
+  margin-top: 6rpx;
 }
 .immage-mechanism{
   width: 120rpx;
@@ -257,7 +257,7 @@
   font-size: 24rpx;
 }
 .Service-Centre {
-  height: 40rpx;
+  height: 50rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
