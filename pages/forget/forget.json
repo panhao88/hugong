@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "van-field": "../../lib/vant/field",
-    "van-button": "../../lib/vant/button"
+    "van-button": "../../lib/vant/button",
+    "van-divider": "../../lib/vant/divider"
   }
 }

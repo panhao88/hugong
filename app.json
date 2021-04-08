@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/healthy/healthy",
     "pages/index/index",
     "pages/Organizationdetails/Organizationdetails",
     "pages/Escort/Escort",
@@ -38,7 +39,6 @@
     "pages/online/online",
     "pages/system/system",
     "pages/setup/setup",
-    "pages/healthy/healthy",
     "pages/forget/forget",
     "pages/login/login"    
   ],

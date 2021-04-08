@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-checkbox": "../../lib/vant/checkbox",
+  "van-checkbox-group": "../../lib/vant/checkbox-group"
+  }
 }

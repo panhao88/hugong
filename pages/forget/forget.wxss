@@ -14,3 +14,9 @@
 .van-button{
   width: 200rpx !important;
 }
+.van-divider{
+  margin: 0 !important;
+}
+.van-cell{
+  padding: 20rpx !important;
+}

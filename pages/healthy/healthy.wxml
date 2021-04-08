@@ -1,2 +1,279 @@
-<!--pages/healthy/healthy.wxml-->
-<text>健康知识</text>
+<view class="Box">
+  <view style="margin-bottom:150rpx;">
+    <scroll-view scroll-y class='scroll-view'>
+      <!-- 当前月 -->
+      <view class='calendar'>
+        <view class="level">
+          <view class='year_month'> {{thisYear}}年{{thisMonth}}月</view>
+          <view>
+            <van-checkbox value="{{ checked }}" checked-color="#07c160" bind:change="onChange" icon-size="35rpx">
+              选择整月
+            </van-checkbox>
+          </view>
+        </view>
+        <view class='week'>
+          <text class='saturday'>日</text>
+          <text>一</text>
+          <text>二</text>
+          <text>三</text>
+          <text>四</text>
+          <text>五</text>
+          <text class='sunday'>六</text>
+        </view>
+        <block wx:for="{{thisMonthArr}}" wx:key="index">
+          <view class='week'>
+            <text
+              class="saturday {{item[0]['isToday'] == true ? 'now' : ''}} {{item[0]['date'] < today ? 'disabled' : ''}} {{item[0]['state']==true?'selected':''}} {{item[0]['isToday'] == false ? 'aaaa' : ''}} {{item[0]['date'] == '' ? 'empty' : ''}}"
+              data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+              data-date="{{item[0]['date'] < today ? '' :item[0]['date']}}" data-key='{{index}}' data-keyitem='0'
+              bindtap="select_date">{{item[0]['date']}}</text>
+            <text
+              class="{{item[1]['isToday'] == true ? 'now' : ''}} {{item[1]['date'] < today ? 'disabled' : ''}} {{item[1]['state']==true?'selected':''}}  {{item[1]['isToday'] == false ? 'aaaa' : ''}} {{item[1]['date'] == '' ? 'empty' : ''}} "
+              data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+              data-date="{{item[1]['date'] < today ? '' :item[1]['date']}}" data-key='{{index}}' data-keyitem='1'
+              bindtap="select_date">{{item[1]['date']}}</text>
+            <text
+              class="{{item[2]['isToday'] == true ? 'now' : ''}} {{item[2]['date'] < today ? 'disabled' : ''}} {{item[2]['state']==true?'selected':''}}  {{item[2]['isToday'] == false ? 'aaaa' : ''}} {{item[2]['date'] == '' ? 'empty' : ''}} "
+              data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+              data-date="{{item[2]['date'] < today ? '' :item[2]['date']}}" data-key='{{index}}' data-keyitem='2'
+              bindtap="select_date">{{item[2]['date']}}</text>
+            <text
+              class="{{item[3]['isToday'] == true ? 'now' : ''}} {{item[3]['date'] < today ? 'disabled' : ''}} {{item[3]['state']==true?'selected':''}}  {{item[3]['isToday'] == false ? 'aaaa' : ''}} {{item[3]['date'] == '' ? 'empty' : ''}} "
+              data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+              data-date="{{item[3]['date'] < today ? '' :item[3]['date']}}" data-key='{{index}}' data-keyitem='3'
+              bindtap="select_date">{{item[3]['date']}}</text>
+            <text
+              class="{{item[4]['isToday'] == true ? 'now' : ''}} {{item[4]['date'] < today ? 'disabled' : ''}} {{item[4]['state']==true?'selected':''}}  {{item[4]['isToday'] == false ? 'aaaa' : ''}} {{item[4]['date'] == '' ? 'empty' : ''}} "
+              data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+              data-date="{{item[4]['date'] < today ? '' :item[4]['date']}}" data-key='{{index}}' data-keyitem='4'
+              bindtap="select_date">{{item[4]['date']}}</text>
+            <text
+              class="{{item[5]['isToday'] == true ? 'now' : ''}} {{item[5]['date'] < today ? 'disabled' : ''}} {{item[5]['state']==true?'selected':''}}  {{item[5]['isToday'] == false ? 'aaaa' : ''}} {{item[5]['date'] == '' ? 'empty' : ''}} "
+              data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+              data-date="{{item[5]['date'] < today ? '' :item[5]['date']}}" data-key='{{index}}' data-keyitem='5'
+              bindtap="select_date">{{item[5]['date']}}</text>
+            <text
+              class="sunday {{item[6]['isToday'] == true ? 'now' : ''}} {{item[6]['date'] < today ? 'disabled' : ''}} {{item[6]['state']==true?'selected':''}}  {{item[6]['isToday'] == false ? 'aaaa' : ''}} {{item[6]['date'] == '' ? 'empty' : ''}} "
+              data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+              data-date="{{item[6]['date'] < today ? '' :item[6]['date']}}" data-key='{{index}}' data-keyitem='6'
+              bindtap="select_date">{{item[6]['date']}}</text>
+          </view>
+        </block>
+      </view>
+      <!-- 下一月 -->
+      <view class='calendar'>
+        <view class='year_month'>
+          <text class='year'>{{nextYear}}年</text>
+          <text class='month'>{{nextMonth}}月</text>
+        </view>
+        <view class='week'>
+          <text class='saturday'>日</text>
+          <text>一</text>
+          <text>二</text>
+          <text>三</text>
+          <text>四</text>
+          <text>五</text>
+          <text class='sunday'>六</text>
+        </view>
+        <block wx:for="{{nextMonthArr}}" wx:key="index">
+          <view class='week'>
+            <text class="saturday {{item[0]['state']==true?'selected':''}}" data-month='nextMonth'
+              data-Year="{{nextYear}}" data-Month1="{{nextMonth}}" data-date="{{item[0]['date']}}" data-key='{{index}}'
+              data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+            <text class="{{item[1]['state']==true?'selected':''}}" data-month='nextMonth' data-Year="{{nextYear}}"
+              data-Month1="{{nextMonth}}" data-date="{{item[1]['date']}}" data-key='{{index}}' data-keyitem='1'
+              bindtap="select_date">{{item[1]['date']}}</text>
+            <text class="{{item[2]['state']==true?'selected':''}}" data-month='nextMonth' data-Year="{{nextYear}}"
+              data-Month1="{{nextMonth}}" data-date="{{item[2]['date']}}" data-key='{{index}}' data-keyitem='2'
+              bindtap="select_date">{{item[2]['date']}}</text>
+            <text class="{{item[3]['state']==true?'selected':''}}" data-month='nextMonth' data-Year="{{nextYear}}"
+              data-Month1="{{nextMonth}}" data-date="{{item[3]['date']}}" data-key='{{index}}' data-keyitem='3'
+              bindtap="select_date">{{item[3]['date']}}</text>
+            <text class="{{item[4]['state']==true?'selected':''}}" data-month='nextMonth' data-Year="{{nextYear}}"
+              data-Month1="{{nextMonth}}" data-date="{{item[4]['date']}}" data-key='{{index}}' data-keyitem='4'
+              bindtap="select_date">{{item[4]['date']}}</text>
+            <text class="{{item[5]['state']==true?'selected':''}}" data-month='nextMonth' data-Year="{{nextYear}}"
+              data-Month1="{{nextMonth}}" data-date="{{item[5]['date']}}" data-key='{{index}}' data-keyitem='5'
+              bindtap="select_date">{{item[5]['date']}}</text>
+            <text class="sunday {{item[6]['state']==true?'selected':''}}" data-month='nextMonth'
+              data-Year="{{nextYear}}" data-Month1="{{nextMonth}}" data-date="{{item[6]['date']}}" data-key='{{index}}'
+              data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text>
+          </view>
+        </block>
+      </view>
+      <!-- 下二月 -->
+      <view class='calendar'>
+        <view class='year_month'>
+          <text class='year'>{{next2Year}}年</text>
+          <text class='month'>{{next2Month}}月</text>
+        </view>
+        <view class='week'>
+          <text class='saturday'>日</text>
+          <text>一</text>
+          <text>二</text>
+          <text>三</text>
+          <text>四</text>
+          <text>五</text>
+          <text class='sunday'>六</text>
+        </view>
+        <block wx:for="{{next2MonthArr}}" wx:key="index">
+          <view class='week'>
+            <text class="saturday {{item[0]['state']==true?'selected':''}}" data-month='next2Month'
+              data-Year="{{next2Year}}" data-Month1="{{next2Month}}" data-date="{{item[0]['date']}}"
+              data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+            <text class="{{item[1]['state']==true?'selected':''}}" data-month='next2Month' data-Year="{{next2Year}}"
+              data-Month1="{{next2Month}}" data-date="{{item[1]['date']}}" data-key='{{index}}' data-keyitem='1'
+              bindtap="select_date">{{item[1]['date']}}</text>
+            <text class="{{item[2]['state']==true?'selected':''}}" data-month='next2Month' data-Year="{{next2Year}}"
+              data-Month1="{{next2Month}}" data-date="{{item[2]['date']}}" data-key='{{index}}' data-keyitem='2'
+              bindtap="select_date">{{item[2]['date']}}</text>
+            <text class="{{item[3]['state']==true?'selected':''}}" data-month='next2Month' data-Year="{{next2Year}}"
+              data-Month1="{{next2Month}}" data-date="{{item[3]['date']}}" data-key='{{index}}' data-keyitem='3'
+              bindtap="select_date">{{item[3]['date']}}</text>
+            <text class="{{item[4]['state']==true?'selected':''}}" data-month='next2Month' data-Year="{{next2Year}}"
+              data-Month1="{{next2Month}}" data-date="{{item[4]['date']}}" data-key='{{index}}' data-keyitem='4'
+              bindtap="select_date">{{item[4]['date']}}</text>
+            <text class="{{item[5]['state']==true?'selected':''}}" data-month='next2Month' data-Year="{{next2Year}}"
+              data-Month1="{{next2Month}}" data-date="{{item[5]['date']}}" data-key='{{index}}' data-keyitem='5'
+              bindtap="select_date">{{item[5]['date']}}</text>
+            <text class="sunday {{item[6]['state']==true?'selected':''}}" data-month='next2Month'
+              data-Year="{{next2Year}}" data-Month1="{{next2Month}}" data-date="{{item[6]['date']}}"
+              data-key='{{index}}' data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text>
+          </view>
+        </block>
+      </view>
+
+      <!-- 下三月 -->
+      <view class='calendar'>
+        <view class='year_month'>
+          <text class='year'>{{next3Year}}年</text>
+          <text class='month'>{{next3Month}}月</text>
+        </view>
+        <view class='week'>
+          <text class='saturday'>日</text>
+          <text>一</text>
+          <text>二</text>
+          <text>三</text>
+          <text>四</text>
+          <text>五</text>
+          <text class='sunday'>六</text>
+        </view>
+        <block wx:for="{{next3MonthArr}}" wx:key="index">
+          <view class='week'>
+            <text class="saturday {{item[0]['state']==true?'selected':''}}" data-month='next3Month'
+              data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[0]['date']}}"
+              data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+            <text class="{{item[1]['state']==true?'selected':''}}" data-month='next3Month' data-Year="{{next3Year}}"
+              data-Month1="{{next3Month}}" data-date="{{item[1]['date']}}" data-key='{{index}}' data-keyitem='1'
+              bindtap="select_date">{{item[1]['date']}}</text>
+            <text class="{{item[2]['state']==true?'selected':''}}" data-month='next3Month' data-Year="{{next3Year}}"
+              data-Month1="{{next3Month}}" data-date="{{item[2]['date']}}" data-key='{{index}}' data-keyitem='2'
+              bindtap="select_date">{{item[2]['date']}}</text>
+            <text class="{{item[3]['state']==true?'selected':''}}" data-month='next3Month' data-Year="{{next3Year}}"
+              data-Month1="{{next3Month}}" data-date="{{item[3]['date']}}" data-key='{{index}}' data-keyitem='3'
+              bindtap="select_date">{{item[3]['date']}}</text>
+            <text class="{{item[4]['state']==true?'selected':''}}" data-month='next3Month' data-Year="{{next3Year}}"
+              data-Month1="{{next3Month}}" data-date="{{item[4]['date']}}" data-key='{{index}}' data-keyitem='4'
+              bindtap="select_date">{{item[4]['date']}}</text>
+            <text class="{{item[5]['state']==true?'selected':''}}" data-month='next3Month' data-Year="{{next3Year}}"
+              data-Month1="{{next3Month}}" data-date="{{item[5]['date']}}" data-key='{{index}}' data-keyitem='5'
+              bindtap="select_date">{{item[5]['date']}}</text>
+            <text class="sunday {{item[6]['state']==true?'selected':''}}" data-month='next3Month'
+              data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[6]['date']}}"
+              data-key='{{index}}' data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text>
+          </view>
+        </block>
+      </view>
+
+      <!-- 下四月 -->
+      <view class='calendar'>
+        <view class='year_month'>
+          <text class='year'>{{next4Year}}年</text>
+          <text class='month'>{{next4Month}}月</text>
+        </view>
+        <view class='week'>
+          <text class='saturday'>日</text>
+          <text>一</text>
+          <text>二</text>
+          <text>三</text>
+          <text>四</text>
+          <text>五</text>
+          <text class='sunday'>六</text>
+        </view>
+        <block wx:for="{{next4MonthArr}}" wx:key="index">
+          <view class='week'>
+            <text class="saturday {{item[0]['state']==true?'selected':''}}" data-month='next4Month'
+              data-Year="{{next4Year}}" data-Month1="{{next4Month}}" data-date="{{item[0]['date']}}"
+              data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+            <text class="{{item[1]['state']==true?'selected':''}}" data-month='next4Month' data-Year="{{next4Year}}"
+              data-Month1="{{next4Month}}" data-date="{{item[1]['date']}}" data-key='{{index}}' data-keyitem='1'
+              bindtap="select_date">{{item[1]['date']}}</text>
+            <text class="{{item[2]['state']==true?'selected':''}}" data-month='next4Month' data-Year="{{next4Year}}"
+              data-Month1="{{next4Month}}" data-date="{{item[2]['date']}}" data-key='{{index}}' data-keyitem='2'
+              bindtap="select_date">{{item[2]['date']}}</text>
+            <text class="{{item[3]['state']==true?'selected':''}}" data-month='next4Month' data-Year="{{next4Year}}"
+              data-Month1="{{next4Month}}" data-date="{{item[3]['date']}}" data-key='{{index}}' data-keyitem='3'
+              bindtap="select_date">{{item[3]['date']}}</text>
+            <text class="{{item[4]['state']==true?'selected':''}}" data-month='next4Month' data-Year="{{next4Year}}"
+              data-Month1="{{next4Month}}" data-date="{{item[4]['date']}}" data-key='{{index}}' data-keyitem='4'
+              bindtap="select_date">{{item[4]['date']}}</text>
+            <text class="{{item[5]['state']==true?'selected':''}}" data-month='next4Month' data-Year="{{next4Year}}"
+              data-Month1="{{next4Month}}" data-date="{{item[5]['date']}}" data-key='{{index}}' data-keyitem='5'
+              bindtap="select_date">{{item[5]['date']}}</text>
+            <text class="sunday {{item[6]['state']==true?'selected':''}}" data-month='next4Month'
+              data-Year="{{next4Year}}" data-Month1="{{next4Month}}" data-date="{{item[6]['date']}}"
+              data-key='{{index}}' data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text>
+          </view>
+        </block>
+      </view>
+
+      <!-- 下五月 -->
+      <view class='calendar'>
+        <view class='year_month'>
+          <text class='year'>{{next5Year}}年</text>
+          <text class='month'>{{next5Month}}月</text>
+        </view>
+        <view class='week'>
+          <text class='saturday'>日</text>
+          <text>一</text>
+          <text>二</text>
+          <text>三</text>
+          <text>四</text>
+          <text>五</text>
+          <text class='sunday'>六</text>
+        </view>
+        <block wx:for="{{next5MonthArr}}" wx:key="index">
+          <view class='week'>
+            <text class="saturday {{item[0]['state']==true?'selected':''}}" data-Year="{{next5Year}}"
+              data-Month1="{{next5Month}}" data-date="{{item[0]['date']}}" data-key='{{index}}' data-keyitem='0'
+              bindtap="select_date">{{item[0]['date']}}</text>
+            <text class="{{item[1]['state']==true?'selected':''}}" data-Year="{{next5Year}}"
+              data-Month1="{{next5Month}}" data-date="{{item[1]['date']}}" data-key='{{index}}' data-keyitem='1'
+              bindtap="select_date">{{item[1]['date']}}</text>
+            <text class="{{item[2]['state']==true?'selected':''}}" data-Year="{{next5Year}}"
+              data-Month1="{{next5Month}}" data-date="{{item[2]['date']}}" data-key='{{index}}' data-keyitem='2'
+              bindtap="select_date">{{item[2]['date']}}</text>
+            <text class="{{item[3]['state']==true?'selected':''}}" data-Year="{{next5Year}}"
+              data-Month1="{{next5Month}}" data-date="{{item[3]['date']}}" data-key='{{index}}' data-keyitem='3'
+              bindtap="select_date">{{item[3]['date']}}</text>
+            <text class="{{item[4]['state']==true?'selected':''}}" data-Year="{{next5Year}}"
+              data-Month1="{{next5Month}}" data-date="{{item[4]['date']}}" data-key='{{index}}' data-keyitem='4'
+              bindtap="select_date">{{item[4]['date']}}</text>
+            <text class="{{item[5]['state']==true?'selected':''}}" data-Year="{{next5Year}}"
+              data-Month1="{{next5Month}}" data-date="{{item[5]['date']}}" data-key='{{index}}' data-keyitem='5'
+              bindtap="select_date">{{item[5]['date']}}</text>
+            <text class="sunday {{item[6]['state']==true?'selected':''}}" data-Year="{{next5Year}}"
+              data-Month1="{{next5Month}}" data-date="{{item[6]['date']}}" data-key='{{index}}' data-keyitem='6'
+              bindtap="select_date">{{item[6]['date']}}</text>
+          </view>
+        </block>
+      </view>
+
+    </scroll-view>
+  </view>
+  <view class="btnBox">
+    <button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="onConfirm">
+      确定
+    </button>
+  </view>
+</view>

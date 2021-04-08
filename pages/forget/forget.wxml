@@ -3,14 +3,13 @@
   <view class="central">
     <van-cell-group>
       <van-field placeholder="请输入手机号" clearable="true" />
-      <van-field center clearable placeholder="短信验证码" border="{{ false }}" clearable="true">
-        <van-button slot="button" size="mini" type="primary">
+      <van-field center clearable placeholder="短信验证码"  clearable="true">
+        <van-button slot="button" size="small" type="primary">
           发送验证码
         </van-button>
       </van-field>
-      <van-field value="{{ pwd}}" placeholder="请输入密码" border="{{ false }}" clearable class="form-input-item"
-        password="{{passwordShow}}" icon="{{ passwordShow ? 'closed-eye' : 'eye-o' }}"
-        bind:click-icon="onClickIcon" />
+      <van-field value="{{ pwd}}" placeholder="请输入密码"  clearable class="form-input-item"
+        password="{{passwordShow}}" icon="{{ passwordShow ? 'closed-eye' : 'eye-o' }}" bind:click-icon="onClickIcon" />
     </van-cell-group>
   </view>
 </view>
