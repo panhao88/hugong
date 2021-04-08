@@ -27,50 +27,31 @@ Page({
     next6MonthArr: []
   },
   onChange(e) {
-    this.setData({
-      checked: !this.data.checked
-    })
+
     console.log(this.data.today)
     let arr = this.data.thisMonthArr
+    let tempArr = []
     arr.map(item => {
         // if (item[0]['date'] >= this.data.today) {
         //   item[0]['state'] = true
         // }
+        let tempA = [] 
+        item.map(item1=>{
+          if(item1.date!=='' && item1.date >= this.data.today)
+          {
+            item1.state = true
+          }
+          tempA.push(item1)
+        })
+        tempArr.push(tempA)
     })
-      // if (item[0]['date'] >= this.data.today) {
-      //   item[0]['state'] = true
-        // item[1]['state'] = true
-        // item[2]['state'] = true
-        // item[3]['state'] = true
-        // item[4]['state'] = true
-        // item[5]['state'] = true
-        // item[6]['state'] = true
-      // }
-      // this.setData({
-      //   thisMonthArr:arr
-      // })
-      // if(item[0]['date'] >= this.data.today){
-      //   item[0]['state'] = true
-      // }
-      // if(item[1]['date'] >= this.data.today){
-      //   item[1]['state'] = true
-      // }
-      // if(item[2]['date'] >= this.data.today){
-      //   item[2]['state'] = true
-      // }
-      // if(item[3]['date'] >= this.data.today){
-      //   item[3]['state'] = true
-      // }
-      // if(item[4]['date'] >= this.data.today){
-      //   item[4]['state'] = true
-      // }
-      // if(item[5]['date'] >= this.data.today){
-      //   item[5]['state'] = true
-      // }
-      // if(item[6]['date'] >= this.data.today){
-      //   item[6]['state'] = true
-      // }
-    console.log(this.data.thisMonthArr, "111")
+    console.log(arr , '22')
+    console.log(tempArr,'1')
+    this.setData({
+      checked: !this.data.checked,
+      thisMonthArr: tempArr
+    })
+    // console.log(this.data.thisMonthArr, "111")
   },
   /**
    * 生命周期函数--监听页面加载
