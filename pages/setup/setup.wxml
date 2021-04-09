@@ -10,7 +10,8 @@
       <van-cell-group>
         <van-field value="{{ username3 }}" label="用户名" placeholder="请输入用户名" input-align="right" />
         <van-field value="{{ phone }}" label="手机号" placeholder="请输入手机号" input-align="right" clearable="true" />
-        <van-field value="{{ phone }}" label="生日" input-align="right" right-icon="arrow" />
+        <!-- <van-field value="{{ phone }}" label="生日" input-align="right" right-icon="arrow" bindtap="cliinput" /> -->
+        <van-cell title="生日" is-link bindtap="cliinput" />
         <van-cell title="修改登录密码" is-link bind:click="modify" />
         <van-cell title="关于我们" is-link />
         <van-cell title="常见问题" is-link />
@@ -21,5 +22,26 @@
     <view class="immediately">
       <button class="login-bu" bindtap="Logout">退出登录</button>
     </view>
+    <van-popup show="{{ show }}" position="bottom" custom-style="height: 36%;" bind:close="onClose">
+
+      <view class="choice">
+        <view class="cancel">取消</view>
+        <view>选择时间</view>
+      </view>
+      <view class="birthBox">
+        <picker-view wx:if="{{years.length>0 && months.length>0 && days.length>0}}"
+          style="width: 100%; height: 400rpx;margin-top:80rpx" value="{{value}}" bindchange="bindChange">
+          <picker-view-column class="column">
+            <view wx:for="{{years}}" wx:key="index" class="timer">{{item}}年</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{months}}" wx:key="index" class="timer">{{item}}月</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{days}}" wx:key="index" class="timer">{{item}}日</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+    </van-popup>
   </view>
 </view>

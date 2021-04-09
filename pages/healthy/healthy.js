@@ -27,30 +27,59 @@ Page({
     next6MonthArr: []
   },
   onChange(e) {
-
-    console.log(this.data.today)
+    console.log(e)
     let arr = this.data.thisMonthArr
     let tempArr = []
-    arr.map(item => {
-        // if (item[0]['date'] >= this.data.today) {
-        //   item[0]['state'] = true
-        // }
-        let tempA = [] 
-        item.map(item1=>{
-          if(item1.date!=='' && item1.date >= this.data.today)
-          {
+    let appdate = []
+    let checkedMonth = ''
+    let checkedDate = ''
+    if (e.currentTarget.dataset.month1 < 10) {
+      checkedMonth = '0' + e.currentTarget.dataset.month1.toString()
+    } else {
+      checkedMonth = e.currentTarget.dataset.month1.toString()
+    }
+    if (this.data.checked === false) {
+      arr.map(item => {
+        let tempA = []
+        let date1 = []
+        item.map(item1 => {
+          if (item1.date !== '' && item1.date >= this.data.today) {
             item1.state = true
+            var typedate = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
+          }
+          tempA.push(item1)
+          date1.push(typedate)
+        })
+        tempArr.push(tempA)
+        appdate.push(date1)
+      })
+      let convert = appdate.flat();
+      convert = convert.filter((item) => {
+        return item !== undefined
+      })
+      this.setData({
+        checked: !this.data.checked,
+        thisMonthArr: tempArr,
+        date: convert
+      })
+      console.log(this.data.date, "hhh")
+    } else {
+      arr.map(item => {
+        let tempA = []
+        item.map(item1 => {
+          if (item1.date !== '' && item1.date >= this.data.today) {
+            item1.state = false
           }
           tempA.push(item1)
         })
         tempArr.push(tempA)
-    })
-    console.log(arr , '22')
-    console.log(tempArr,'1')
-    this.setData({
-      checked: !this.data.checked,
-      thisMonthArr: tempArr
-    })
+      })
+      this.setData({
+        checked: !this.data.checked,
+        thisMonthArr: tempArr,
+        date: []
+      })
+    }
     // console.log(this.data.thisMonthArr, "111")
   },
   /**
@@ -70,9 +99,6 @@ Page({
     var next3MonthArr = this.getDateArr(nextM3_start);
     var next4MonthArr = this.getDateArr(nextM4_start);
     var next5MonthArr = this.getDateArr(nextM5_start);
-    console.log(nextM_start)
-    console.log(nextM2_start)
-
     this.setData({
       thisYear: new Date().getFullYear(),
       thisMonth: new Date().getMonth() + 1,
@@ -140,14 +166,14 @@ Page({
     //切换选中状态
     if (that[index][item].state == true) {
       that[index][item].state = false;
-      console.log('取消')
       // 删除取消的日期
       var index = date1.indexOf(data1);
+      console.log(index)
       date1.splice(index, 1)
       this.setData({
         date: date1
       })
-      console.log(this.data.date)
+      console.log(this.data.date,"取消")
     } else if (that[index][item].state == false) {
       that[index][item].state = true;
       console.log('选中')
@@ -195,6 +221,7 @@ Page({
   //根据指定年月获得当月日历数组
   getDateArr(date) {
     //根据指定年月
+
     //var myDate = new Date();
     var myDate = date;
     var thisYear = myDate.getFullYear(); //获取完整的年份

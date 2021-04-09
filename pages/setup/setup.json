@@ -3,7 +3,10 @@
     "van-field": "../../lib/vant/field",
     "van-button": "../../lib/vant/button",
     "van-cell": "../../lib/vant/cell",
-    "van-cell-group": "../../lib/vant/cell-group"
+    "van-cell-group": "../../lib/vant/cell-group",
+    "van-popup": "../../lib/vant/popup",
+    "van-datetime-picker": "../../lib/vant/datetime-picker",
+    "van-divider": "../../lib/vant/divider"
   },
   "navigationBarTitleText": "设置"
 }

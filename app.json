@@ -1,7 +1,9 @@
 {
   "pages":[
-    "pages/healthy/healthy",
     "pages/index/index",
+    "pages/setup/setup",
+    "pages/details/details",
+    "pages/healthy/healthy",
     "pages/Organizationdetails/Organizationdetails",
     "pages/Escort/Escort",
     "pages/Searchpage/Searchpage",
@@ -10,7 +12,6 @@
     "pages/my/my",
     "pages/Usediscount/Usediscount",
     "pages/Confirmorder/Confirmorder",
-    "pages/details/details",
     "pages/address/address",
     "pages/Saveaddress/Saveaddress",
     "pages/addaddress/addaddress",
@@ -38,7 +39,6 @@
     "pages/news/news",
     "pages/online/online",
     "pages/system/system",
-    "pages/setup/setup",
     "pages/forget/forget",
     "pages/login/login"    
   ],
