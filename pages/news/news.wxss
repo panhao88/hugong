@@ -9,3 +9,28 @@
 .central {
   width: 95%;
 }
+.img{
+  width: 64rpx;
+  height: 64rpx;
+}
+.image{
+  width: 64rpx;
+  height: 64rpx;
+  position: relative;
+}
+.on-line{
+  display: flex;
+  align-items: center;
+}
+.news{
+  padding-left: 20rpx;
+}
+.garden{
+  top: 5rpx;
+  right: 4rpx;
+  position: absolute;
+  width: 12rpx;
+  height: 12rpx;
+  background: #FF3636;
+  border-radius: 50%;
+}

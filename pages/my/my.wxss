@@ -105,12 +105,6 @@
   height: 60rpx;
   background: #EDEBE7FF;
 }
-.Service {
-  width: 180rpx;
-  font-size: 32rpx;
-  margin-left: 20rpx;
-  color: #333333FF;
-}
 .wallet{
   font-size: 28rpx;
   color: #333333FF;
@@ -177,6 +171,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 .top-fuwu {
@@ -317,7 +312,7 @@
 .dial{
   width: 90%;
   height: 80rpx;
-  margin-bottom: 20rpx;
+  margin-bottom: 30rpx;
   border-radius: 20rpx;
   color: #61CF8CFF;
   background: #FFFFFFFF;

@@ -4,51 +4,50 @@ var qqmapsdk;
 var city = require('../../lib/city');
 Page({
   data: {
-    boxshow:true, //展开收缩
-    picture:true,//图文
-    arrli:[
-      {
-        name:"平台认证",
-        id:1
+    boxshow: true, //展开收缩
+    picture: true, //图文
+    arrli: [{
+        name: "平台认证",
+        id: 1
       },
       {
-        name:"平台认证",
-        id:2
+        name: "平台认证",
+        id: 2
       },
       {
-        name:"平台认证",
-        id:3
+        name: "平台认证",
+        id: 3
       },
       {
-        name:"平台认证",
-        id:3
+        name: "平台认证",
+        id: 3
       },
       {
-        name:"平台认证",
-        id:3
+        name: "平台认证",
+        id: 3
       },
       {
-        name:"平台认证",
-        id:3
+        name: "平台认证",
+        id: 3
       },
     ],
     items: [{
         name: '王桂香',
         phone: "123456789",
         position: "武侯区新希望大厦",
-        remarks:"糖尿病，高血压"
+        remarks: "糖尿病，高血压"
       },
       {
         name: '王桂香',
         phone: "123456789",
         position: "武侯区新希望大厦",
-        remarks:"糖尿病，高血压"
+        remarks: "糖尿病，高血压"
       },
       {
         name: '王桂香',
         phone: "123456789",
         position: "武侯区新希望大厦",
-        remarks:"糖尿病，高血压"
+        remarks: "糖尿病，高血压"
       },
     ],
     objdetail: [{
@@ -149,11 +148,11 @@ Page({
     defaultKeyword: '房产小区',
     keyword: '',
     checked: false, //时间
-    checkedNext:false,
-    checkedNexttwo:false,
-    checkedNextthree:false,
-    checkedNextfour:false,
-    checkedNextfive:false,
+    checkedNext: false,
+    checkedNexttwo: false,
+    checkedNextthree: false,
+    checkedNextfour: false,
+    checkedNextfive: false,
     SessionId: '',
     date: [],
     thisYear: '',
@@ -196,7 +195,7 @@ Page({
           let typedate = ''
           if (item1.date !== '' && item1.date >= this.data.today) {
             item1.state = true
-             typedate = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
+            typedate = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
           }
           tempA.push(item1)
           date1.push(typedate)
@@ -208,6 +207,7 @@ Page({
       convert = convert.filter((item) => {
         return item !== ''
       })
+      console.log(convert)
       this.data.date.push(convert)
       this.setData({
         checked: !this.data.checked,
@@ -215,6 +215,9 @@ Page({
       })
       console.log(this.data.date, "hhh")
     } else {
+      let timestamp = Date.parse(new Date());
+      let date = new Date(timestamp);
+      let M = (date.getMonth() + 1 < 10 ? '' + (date.getMonth() + 1) : date.getMonth() + 1);
       arr.map(item => {
         let tempA = []
         item.map(item1 => {
@@ -225,16 +228,18 @@ Page({
         })
         tempArr.push(tempA)
       })
+      if(M == this.data.thisMonth){
+        this.data.date.pop()
+      }
       this.setData({
         checked: !this.data.checked,
         thisMonthArr: tempArr,
-        
       })
+      console.log(this.data.date, "111")
     }
-    // console.log(this.data.thisMonthArr, "111")
   },
   //下一月时间
-  onChangenext(e){
+  onChangenext(e) {
     let arr = this.data.nextMonthArr
     let tempArr = []
     let appdate = []
@@ -250,10 +255,10 @@ Page({
         let tempA = []
         let date1 = []
         item.map(item1 => {
-          let typedate= ''
+          let typedate = ''
           if (item1.date !== '' && item1.date >= 1) {
             item1.state = true
-             typedate = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
+            typedate = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
           }
           tempA.push(item1)
           date1.push(typedate)
@@ -309,7 +314,7 @@ Page({
     })
   },
   //立即预约支付
-  goConfirmorder(){
+  goConfirmorder() {
     wx.navigateTo({
       url: '/pages/Confirmorder/Confirmorder',
     })
@@ -351,7 +356,7 @@ Page({
   gotime() {
     this.setData({
       showtime: true,
-      show:false
+      show: false
     })
   },
   //点击遮罩层阴影关闭
@@ -376,15 +381,15 @@ Page({
       Shadow: false
     })
   },
-  Negation(){
+  Negation() {
     this.setData({
-      boxshow:!this.data.boxshow
+      boxshow: !this.data.boxshow
     })
   },
-  gopicture(){
+  gopicture() {
     console.log(111)
     this.setData({
-      picture:!this.data.picture
+      picture: !this.data.picture
     })
   },
   //选择城市
@@ -606,44 +611,44 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     //初始化日历数据
-     var nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月
-     var nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下二个月
-     var nextM3_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 3)); //下三个月
-     var nextM4_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 4)); //下四个月
-     var nextM5_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 5)); //下五个月
- 
-     var thisMonthArr = this.getDateArr(new Date());
-     var nextMonthArr = this.getDateArr(nextM_start);
-     var next2MonthArr = this.getDateArr(nextM2_start);
-     var next3MonthArr = this.getDateArr(nextM3_start);
-     var next4MonthArr = this.getDateArr(nextM4_start);
-     var next5MonthArr = this.getDateArr(nextM5_start);
-     this.setData({
-       thisYear: new Date().getFullYear(),
-       thisMonth: new Date().getMonth() + 1,
-       thisMonthArr: thisMonthArr,
- 
-       nextYear: nextM_start.getFullYear(),
-       nextMonth: nextM_start.getMonth() + 1,
-       nextMonthArr: nextMonthArr,
- 
-       next2Year: nextM2_start.getFullYear(),
-       next2Month: nextM2_start.getMonth() + 1,
-       next2MonthArr: next2MonthArr,
- 
-       next3Year: nextM3_start.getFullYear(),
-       next3Month: nextM3_start.getMonth() + 1,
-       next3MonthArr: next3MonthArr,
- 
-       next4Year: nextM4_start.getFullYear(),
-       next4Month: nextM4_start.getMonth() + 1,
-       next4MonthArr: next4MonthArr,
- 
-       next5Year: nextM5_start.getFullYear(),
-       next5Month: nextM5_start.getMonth() + 1,
-       next5MonthArr: next5MonthArr,
-     })
+    //初始化日历数据
+    var nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月
+    var nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下二个月
+    var nextM3_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 3)); //下三个月
+    var nextM4_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 4)); //下四个月
+    var nextM5_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 5)); //下五个月
+
+    var thisMonthArr = this.getDateArr(new Date());
+    var nextMonthArr = this.getDateArr(nextM_start);
+    var next2MonthArr = this.getDateArr(nextM2_start);
+    var next3MonthArr = this.getDateArr(nextM3_start);
+    var next4MonthArr = this.getDateArr(nextM4_start);
+    var next5MonthArr = this.getDateArr(nextM5_start);
+    this.setData({
+      thisYear: new Date().getFullYear(),
+      thisMonth: new Date().getMonth() + 1,
+      thisMonthArr: thisMonthArr,
+
+      nextYear: nextM_start.getFullYear(),
+      nextMonth: nextM_start.getMonth() + 1,
+      nextMonthArr: nextMonthArr,
+
+      next2Year: nextM2_start.getFullYear(),
+      next2Month: nextM2_start.getMonth() + 1,
+      next2MonthArr: next2MonthArr,
+
+      next3Year: nextM3_start.getFullYear(),
+      next3Month: nextM3_start.getMonth() + 1,
+      next3MonthArr: next3MonthArr,
+
+      next4Year: nextM4_start.getFullYear(),
+      next4Month: nextM4_start.getMonth() + 1,
+      next4MonthArr: next4MonthArr,
+
+      next5Year: nextM5_start.getFullYear(),
+      next5Month: nextM5_start.getMonth() + 1,
+      next5MonthArr: next5MonthArr,
+    })
     let self = this;
     self.mapCtx = wx.createMapContext('myMap')
     // 实例化API核心类
@@ -707,8 +712,8 @@ Page({
     });
   },
   select_date: function (e) {
-    console.log(e, "111")
     let date1 = this.data.date
+    console.log(data1)
     let checkedMonth = ''
     let checkedDate = ''
     if (e.currentTarget.dataset.month1 < 10) {
@@ -748,14 +753,14 @@ Page({
       that[index][item].state = false;
       // 删除取消的日期
       var index = date1.indexOf(data1);
-      if(index ===  -1){
+      if (index === -1) {
         index = 0
       }
       date1.splice(index, 1)
       this.setData({
         date: date1
       })
-      console.log(this.data.date,"取消")
+      console.log(this.data.date, "取消")
     } else if (that[index][item].state == false) {
       that[index][item].state = true;
       console.log('选中')
@@ -766,7 +771,7 @@ Page({
       })
       console.log(this.data.date, "hhh")
     }
-    //console.log(that);
+    // console.log(that);
     //根据月份设置数据
     if (month == 'thisMonth') {
       this.setData({
@@ -794,69 +799,69 @@ Page({
       });
     }
   },
-    //根据指定年月获得当月天数
-    mGetDate(year, month) {
-      var d = new Date(year, month, 0);
-      return d.getDate();
-    },
-    //根据指定年月获得当月日历数组
-    getDateArr(date) {
-      //根据指定年月
-  
-      //var myDate = new Date();
-      var myDate = date;
-      var thisYear = myDate.getFullYear(); //获取完整的年份
-      var thisMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
-      var firstDay = new Date(thisYear + ',' + thisMonth + ',01').getDay(); //本月第一天星期几,0表示星期天
-      var nowDay = myDate.getDate(); // 今天是几号
-      var monthNum = this.mGetDate(thisYear, thisMonth); //本月多少天
-  
-      var monthArray = [];
-      var week = 1; //第一周
-      var oneDay = '';
-      var isToday = false;
-      monthArray[week] = new Array(); //声明本周的二维数组
-  
-      //循环当月的每一天
-      for (var k = 1; k <= monthNum; k++) {
-        isToday = false;
-        //组装当前日期
-        oneDay = thisYear + ',' + thisMonth + ',' + k;
-        var witchDay = new Date(oneDay).getDay(); //当前是星期几
-        //如果当期循环日期为今天
-        if (k == nowDay) {
-          isToday = true;
-        }
-        //如果是第一周
-        if (week == 1) {
-          //判断当前日期是否是本月第一天
-          if (k == 1) {
-            //第一天之前的日期补为空
-            for (var a = 0; a < firstDay; a++) {
-              monthArray[week][a] = {
-                date: '',
-                isToday: isToday,
-                state: false
-              };
-            }
+  //根据指定年月获得当月天数
+  mGetDate(year, month) {
+    var d = new Date(year, month, 0);
+    return d.getDate();
+  },
+  //根据指定年月获得当月日历数组
+  getDateArr(date) {
+    //根据指定年月
+
+    //var myDate = new Date();
+    var myDate = date;
+    var thisYear = myDate.getFullYear(); //获取完整的年份
+    var thisMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
+    var firstDay = new Date(thisYear + ',' + thisMonth + ',01').getDay(); //本月第一天星期几,0表示星期天
+    var nowDay = myDate.getDate(); // 今天是几号
+    var monthNum = this.mGetDate(thisYear, thisMonth); //本月多少天
+
+    var monthArray = [];
+    var week = 1; //第一周
+    var oneDay = '';
+    var isToday = false;
+    monthArray[week] = new Array(); //声明本周的二维数组
+
+    //循环当月的每一天
+    for (var k = 1; k <= monthNum; k++) {
+      isToday = false;
+      //组装当前日期
+      oneDay = thisYear + ',' + thisMonth + ',' + k;
+      var witchDay = new Date(oneDay).getDay(); //当前是星期几
+      //如果当期循环日期为今天
+      if (k == nowDay) {
+        isToday = true;
+      }
+      //如果是第一周
+      if (week == 1) {
+        //判断当前日期是否是本月第一天
+        if (k == 1) {
+          //第一天之前的日期补为空
+          for (var a = 0; a < firstDay; a++) {
+            monthArray[week][a] = {
+              date: '',
+              isToday: isToday,
+              state: false
+            };
           }
         }
-        monthArray[week][witchDay] = {
-          date: k,
-          isToday: isToday,
-          state: false
-        };
-  
-        //如果已经是周六，切换到下一周
-        if (witchDay == 6) {
-          week++;
-          monthArray[week] = new Array(); //声明本周的二维数组
-        }
       }
-      monthArray.splice(0, 1); //删除下标为0的空元素
-      //console.log(monthArray);
-      return monthArray;
-    },
+      monthArray[week][witchDay] = {
+        date: k,
+        isToday: isToday,
+        state: false
+      };
+
+      //如果已经是周六，切换到下一周
+      if (witchDay == 6) {
+        week++;
+        monthArray[week] = new Array(); //声明本周的二维数组
+      }
+    }
+    monthArray.splice(0, 1); //删除下标为0的空元素
+    //console.log(monthArray);
+    return monthArray;
+  },
   //重新定位
   reload: function () {
     this.onLoad();

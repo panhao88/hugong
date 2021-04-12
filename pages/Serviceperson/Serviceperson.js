@@ -50,6 +50,101 @@ Page({
         },
       ]
     },
+    {
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '李富贵',
+      age:48,
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
+    },
+    {
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '李富贵',
+      age:48,
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
+    },
+    {
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '李富贵',
+      age:48,
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
+    },
+    {
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '李富贵',
+      age:48,
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
+    },
+    {
+      img: '../../img/mipmap-mdpi/touxiang.png',
+      title: '李富贵',
+      age:48,
+      texy:[
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+        {
+          category:"糖尿病"
+        },
+      ]
+    },
   ],
   },
   //删除服务人

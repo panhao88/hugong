@@ -4,6 +4,21 @@
       <view class="tp-news">
         <view class="tp-img">
           <image src="../../img/mipmap-mdpi/hugong.png" class="img"></image>
+          <view class="number">9</view>
+        </view>
+        <view class="separate">
+          <view class="A-Wang">王阿姨</view>
+          <view class="appetite">早上胃口不好，中午再看看情况早上胃口不好，中午再看看情况</view>
+        </view>
+        <view class="timer">9.50</view>
+        <van-divider />
+      </view>
+      <van-button type="danger" slot="right">删除</van-button>
+    </van-swipe-cell>
+    <van-swipe-cell right-width="{{ 65 }}">
+      <view class="tp-news">
+        <view class="tp-img">
+          <image src="../../img/mipmap-mdpi/hugong.png" class="img"></image>
         </view>
         <view class="separate">
           <view class="A-Wang">王阿姨</view>

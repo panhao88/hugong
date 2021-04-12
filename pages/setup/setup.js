@@ -25,7 +25,7 @@ let setDate = function (year, month, day, _th) {
   let dayIdx = 0
 
   // 重新设置年份列表
-  for (let i = 1950; i <= nowYear; i++) {
+  for (let i = 1900; i <= nowYear; i++) {
     years.push(i)
   }
   years.map((v, idx) => {
@@ -76,6 +76,17 @@ Page({
     month: nowMonth,
     day: nowDay,
     value: [9999, 1, 1]
+  },
+  //取消
+  gocancel(){
+    this.setData({
+      show:false
+    })
+  },
+  oncancel(){
+    this.setData({
+      show:false
+    })
   },
   //退出登录
   Logout() {

@@ -1,6 +1,21 @@
-<view class="local">
-  <view class="central">
-    <van-cell title="在线消息" is-link icon="chat-o" bindtap="goonline"/>
-    <van-cell title="系统消息" is-link icon="volume-o" bindtap="gosystem"/>
+<van-cell is-link bindtap="goonline">
+  <view slot="title">
+    <view class="on-line">
+      <view class="image">
+        <image src="../../img/mipmap-mdpi/xiaowei.png" class="img"></image>
+        <view class="garden"></view>
+      </view>
+      <view class="news">在线消息</view>
+    </view>
   </view>
-</view>
+</van-cell>
+<van-cell  is-link bindtap="gosystem">
+  <view slot="title">
+    <view class="on-line">
+      <view class="image">
+        <image src="../../img/mipmap-mdpi/xiaoling.png" class="img"></image>
+      </view>
+      <view class="news">系统消息</view>
+    </view>
+  </view>
+</van-cell>

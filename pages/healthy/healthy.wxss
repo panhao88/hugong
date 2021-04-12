@@ -1,105 +1,24 @@
-/* pages/setCalendar/setCalendar.ttss */
-.Box {
-  position: relative;
-}
-.calendar {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-.level{
-  height: 80rpx;
-  padding-left: 20rpx;
-  padding-right: 20rpx;
-  justify-content: space-between;
-  align-items: center;
+.parentstyle {
   display: flex;
-  font-size: 26rpx;
-  background:#ececec;
-  font-weight: 700;
-}
-.calendar .week {
-  width: 98%;
-  margin: 0 auto;
-  height: auto;
-  overflow: hidden;
-}
-.calendar .week text{
-  width: 60rpx;
-  margin: 0 auto;
-  text-align: center;
-  height: 60rpx;
-  border-radius: 50%;
-  margin: 22rpx;
-  font-size: 36rpx;
-  display: flex;
-  float: left;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border-bottom: #FFFFFF 1px solid;
-  box-sizing: border-box;
-}
-.calendar .week .saturday {
-  color: #000;
-}
-.calendar .week .sunday {
-  color: #000;
-}
-/* 当天的时间 */
-.calendar .week .now {
-  border:none;
-  background: #F5F5F5;
-  color: #888888;
-  border-radius: 50%;
-  box-sizing: border-box;
-}
-/* 选中的时间 */
-.calendar .week .selected {
-  border:none;
-  background: #61CF8C !important;
-  color: #FFFFFF !important;
-  border-radius: 50%;
-  box-sizing: border-box;
-}
-/* 过去时间 */
-.calendar .week .disabled {
-  border:none;
-  background: #F5F5F5;
-  text-decoration:line-through;
-  border: #FFFFFF 1px solid;
-  color: #888888;
-  box-sizing: border-box;
-}
-/* 为空白时间 */
-.calendar .week .empty {
-  border:none;
-  /* background: #F5F5F5; */
-  background: #FFFFFF !important;
-  box-sizing: border-box;
-}
-/* 有天数的背景 */
-.calendar .week .aaaa {
-  border:none;
-  /* background: #F5F5F5; */
-  background: #F5F5F5;
-  border: #FFFFFF 1px solid;
-  color: #888888;
-  box-sizing: border-box;
-}
-.btnBox {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #e0e0e0;
+  margin: 30rpx 38px;
+  padding: 20rpx;
 }
 
-.btn {
-  width: 680rpx;
-  height: 80rpx;
-  margin: 20rpx auto;
-  border-radius: 40rpx;
-  background: #dd434b;
+.parentstyle .imageStyle {
+  width: 41rpx;
+  height: 41rpx;
+  margin-right: 20rpx;
 }
+
+.parentstyle .centerStyle {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+

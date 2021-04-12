@@ -50,10 +50,10 @@
 }
 .birthBox{
   width: 100%;
-  height: 400rpx;
 }
-.timer{
+view.timer{
   text-align: center;
+  line-height: 60rpx;
 }
 .van-popup {
   border-radius: 20rpx 20rpx 0 0;
@@ -68,3 +68,13 @@
   color: #333333;
   font-weight: 700;
 }
+.cancel{
+  position: absolute;
+  left: 20rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+.van-divider{
+  margin: 0 0 32rpx 0 !important;
+}
+

@@ -174,13 +174,12 @@ Page({
     })
   },
   //取消遮罩层
-  gocancel(){
+  goclose(){
     this.setData({
       Shadow: false
     })
   },
   gotoorder() {
-    console.log(111)
     wx.navigateTo({
       url: '/pages/order/order',
     })

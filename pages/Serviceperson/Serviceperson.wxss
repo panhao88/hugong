@@ -1,17 +1,22 @@
 /* pages/Serviceperson/Serviceperson.wxss */
 .local {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background:#FAFAFA;
 }
 .central {
-  margin-top: 20rpx;
   width: 95%;
+  height: 100%;
+  background:#FAFAFA;
+}
+.people{
+  margin-top: 20rpx;
   border-radius: 20rpx;
-  background: #fff;
+  height: 250rpx;
+  background: #ffffff;
 }
 .lCarous{
   margin-top: 20rpx;
@@ -19,9 +24,6 @@
   height: 160rpx;
   display: flex;
   align-items: center;
-  /* background: #FFFFFF; */
-  /* background: red; */
-  /* justify-content: space-between; */
 }
 .tobi{
   width: 100%;
@@ -93,15 +95,16 @@
   align-items: center;
 }
 .immediately{
-  margin-bottom: 20rpx;
-  width: 100%;
+  width: 95%;
+  background:#FAFAFA;
+  height: 100rpx;
   display: flex;
   justify-content: center;
-  position: absolute;
+  align-items: center;
+  position: fixed;
   bottom: 0;
 }
 .login-bu{
-  margin-top: 20rpx;
   width: 600rpx !important;
   height: 70rpx;
   background-color: #61CF8CFF;
@@ -109,4 +112,7 @@
   color: #ffffff;
   line-height: 35rpx;
   font-size: 30rpx;
+}
+.bottom{
+  height: 110rpx;
 }

@@ -94,14 +94,18 @@
 }
 .textar{
   width: 100%;
-  height: 400rpx;
+  height: 240rpx;
   display: flex;
   justify-content: center;
   margin-bottom: 120rpx;
 }
 .pltextarea{
   width: 95%;
-  height: 400rpx;
+  height: 240rpx;
+  padding: 10rpx 0 0 10rpx;
+  color: #333333;
+  font-weight: 600;
+  font-size: 26rpx;
 }
 .img{
   width: 100rpx;
@@ -126,7 +130,7 @@
 }
 .immediately{
   margin-bottom: 20rpx;
-  width: 100%;
+  width: 95%;
   background: #fff;
   z-index: 999;
   display: flex;

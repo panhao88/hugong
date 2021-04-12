@@ -107,7 +107,7 @@
       bind:click-overlay="goclose">
       <view class="phone">
         <view class="dial">18783399654</view>
-        <view class="dial" bindtap="gocancel">取消</view>
+        <view class="dial" bindtap="goclose">取消</view>
       </view>
     </van-popup>
   </view>

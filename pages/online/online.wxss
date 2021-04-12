@@ -31,10 +31,26 @@
   justify-content: flex-end;
   color: #999999;
 }
-
-.tp-img {
-  width: 15%;
+.number{
+  top: 0;
+  right: 6rpx;
+  position: absolute;
+  width: 24rpx;
+  height: 24rpx;
+  background: #FF3636;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 16rpx;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tp-img {
+  position: relative;
+  width: 90rpx;
+  height: 64rpx;
+  display: flex;
+  margin-right: 10rpx;
   justify-content: center;
   align-items: center;
 }

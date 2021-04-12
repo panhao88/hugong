@@ -3,5 +3,6 @@
     "van-field": "../../lib/vant/field",
     "van-button": "../../lib/vant/button",
     "van-divider": "../../lib/vant/divider"
-  }
+  },
+  "navigationBarTitleText": "修改登录密码"
 }

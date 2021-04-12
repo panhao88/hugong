@@ -1,15 +1,17 @@
 {
   "pages":[
-    "pages/index/index",
+    "pages/my/my",
+    "pages/login/login",
+    "pages/healthy/healthy",
+    "pages/online/online",
     "pages/setup/setup",
     "pages/details/details",
-    "pages/healthy/healthy",
+    "pages/index/index",
     "pages/Organizationdetails/Organizationdetails",
     "pages/Escort/Escort",
     "pages/Searchpage/Searchpage",
     "pages/Hospitaldetails/Hospitaldetails",
     "pages/coupon/coupon",
-    "pages/my/my",
     "pages/Usediscount/Usediscount",
     "pages/Confirmorder/Confirmorder",
     "pages/address/address",
@@ -37,10 +39,8 @@
     "pages/Privacy/Privacy",
     "pages/more/more",
     "pages/news/news",
-    "pages/online/online",
     "pages/system/system",
-    "pages/forget/forget",
-    "pages/login/login"    
+    "pages/forget/forget"
   ],
   "window":{
     "backgroundTextStyle":"light",

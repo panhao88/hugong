@@ -1,4 +1,5 @@
 // pages/login/login.js
+var country = require('../../lib/country');
 Page({
 
   /**
@@ -6,33 +7,64 @@ Page({
    */
   data: {
     show: false,
-    flag:0
+    flag: 0,
+    defaultType: true,
+    passwordType: true,
+    listitem:country.list,
+    phonetittle:'+86',
   },
   // 弹窗开关
-  goregion(){
-    this.setData({ show: true });
+  goregion() {
+    this.setData({
+      show: true
+    });
   },
-  onClose(){
-    this.setData({ show: false });
+  onClose() {
+    this.setData({
+      show: false
+    });
+  },
+  gocancel(){
+    this.setData({
+      show:false
+    })
   },
   // 手机登录,密码登录切换
   onLoginWay() {
-    this.setData({ flag:0 });
+    this.setData({
+      flag: 0
+    });
   },
-  onregister(){
-    this.setData({ flag:1 });
+  onregister() {
+    this.setData({
+      flag: 1
+    });
   },
   //忘记密码
-  forget(){
+  forget() {
     wx.navigateTo({
       url: '/pages/forget/forget',
     })
   },
+  eyeStatus () {
+    this.data.defaultType = !this.data.defaultType
+    this.data.passwordType = !this.data.passwordType
+    this.setData({
+      defaultType: this.data.defaultType,
+      passwordType: this.data.passwordType
+    })
+  },
+ phone(e){
+   this.setData({
+    phonetittle:e.currentTarget.dataset.item.code,
+    show:false
+   })
+ },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+  
   },
 
   /**
