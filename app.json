@@ -1,11 +1,11 @@
 {
   "pages":[
+    "pages/details/details",
     "pages/my/my",
     "pages/login/login",
     "pages/healthy/healthy",
     "pages/online/online",
     "pages/setup/setup",
-    "pages/details/details",
     "pages/index/index",
     "pages/Organizationdetails/Organizationdetails",
     "pages/Escort/Escort",

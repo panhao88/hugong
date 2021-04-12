@@ -208,7 +208,7 @@ Page({
         return item !== ''
       })
       console.log(convert)
-      this.data.date.push(convert)
+      this.data.date = this.data.date.concat(convert)
       this.setData({
         checked: !this.data.checked,
         thisMonthArr: tempArr,
@@ -270,7 +270,7 @@ Page({
       convert = convert.filter((item) => {
         return item !== ''
       })
-      this.data.date.push(convert)
+     this.data.date = this.data.date.concat(convert)
       this.setData({
         checkedNext: !this.data.checkedNext,
         nextMonthArr: tempArr,
