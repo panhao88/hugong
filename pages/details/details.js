@@ -173,7 +173,7 @@ Page({
     next4MonthArr: [],
     next5Year: '',
     next5Month: '',
-    next6MonthArr: []
+    next6MonthArr: [],
   },
   // 当前月全选时间
   goonange(e) {
@@ -192,10 +192,14 @@ Page({
         let tempA = []
         let date1 = []
         item.map(item1 => {
-          let typedate = ''
+          let typedate = {
+            date:'',
+            month:''
+          }
           if (item1.date !== '' && item1.date >= this.data.today) {
             item1.state = true
-            typedate = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
+            typedate.date = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
+            typedate.month = checkedMonth
           }
           tempA.push(item1)
           date1.push(typedate)
@@ -205,60 +209,64 @@ Page({
       })
       let convert = appdate.flat();
       convert = convert.filter((item) => {
-        return item !== ''
+        return item.date !== ''
       })
-      console.log(convert)
       this.data.date = this.data.date.concat(convert)
+      // let add = this.data.date
+      //  this.data.date = add.filter((item, index, arr) => {
+      //   return arr.indexOf(item) == index
+      // })
       this.setData({
         checked: !this.data.checked,
         thisMonthArr: tempArr,
       })
-      console.log(this.data.date, "hhh")
+      console.log(this.data.date, "全部选中")
     } else {
-      let timestamp = Date.parse(new Date());
-      let date = new Date(timestamp);
-      let M = (date.getMonth() + 1 < 10 ? '' + (date.getMonth() + 1) : date.getMonth() + 1);
       arr.map(item => {
         let tempA = []
         item.map(item1 => {
           if (item1.date !== '' && item1.date >= this.data.today) {
             item1.state = false
-          }
+          }  
           tempA.push(item1)
         })
         tempArr.push(tempA)
       })
-      if(M == this.data.thisMonth){
-        this.data.date.pop()
-      }
+      this.data.date = this.data.date.filter(item => {
+        return item.month !== checkedMonth
+      })
       this.setData({
         checked: !this.data.checked,
         thisMonthArr: tempArr,
       })
-      console.log(this.data.date, "111")
+      console.log(this.data.date, "全部取消")
     }
   },
   //下一月时间
-  onChangenext(e) {
+  onChangenext(e) {                                
     let arr = this.data.nextMonthArr
     let tempArr = []
     let appdate = []
-    let checkedMonth = ''
+    let nextMonth = ''
     let checkedDate = ''
     if (e.currentTarget.dataset.month1 < 10) {
-      checkedMonth = '0' + e.currentTarget.dataset.month1.toString()
+      nextMonth = '0' + e.currentTarget.dataset.month1.toString()
     } else {
-      checkedMonth = e.currentTarget.dataset.month1.toString()
+      nextMonth = e.currentTarget.dataset.month1.toString()
     }
     if (this.data.checkedNext === false) {
       arr.map(item => {
         let tempA = []
         let date1 = []
         item.map(item1 => {
-          let typedate = ''
+          let typedate = {
+            date:'',
+            month:''
+          }
           if (item1.date !== '' && item1.date >= 1) {
             item1.state = true
-            typedate = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
+            typedate.date = e.currentTarget.dataset.year + nextMonth + checkedDate + item1.date
+            typedate.month = nextMonth
           }
           tempA.push(item1)
           date1.push(typedate)
@@ -268,29 +276,33 @@ Page({
       })
       let convert = appdate.flat();
       convert = convert.filter((item) => {
-        return item !== ''
+        return item.date !== ''
       })
-     this.data.date = this.data.date.concat(convert)
+      this.data.date = this.data.date.concat(convert)
       this.setData({
         checkedNext: !this.data.checkedNext,
         nextMonthArr: tempArr,
       })
-      console.log(this.data.date, "hhh")
+      console.log(this.data.date, "全部选中")
     } else {
       arr.map(item => {
         let tempA = []
         item.map(item1 => {
           if (item1.date !== '' && item1.date >= 1) {
             item1.state = false
-          }
+          } 
           tempA.push(item1)
         })
         tempArr.push(tempA)
+      })
+      this.data.date = this.data.date.filter(item => {
+        return item.month !== nextMonth
       })
       this.setData({
         checkedNext: !this.data.checkedNext,
         nextMonthArr: tempArr,
       })
+      console.log(this.data.date, "全部取消")
     }
   },
   // 弹出预约信息
@@ -607,6 +619,21 @@ Page({
       })
     }
   },
+  // getMonthLastDateFn() {
+  //   let dateStr = this.data.lastday; //需要获取此月最后一天的日期
+  //   let dateObj = new Date(dateStr);
+  //   let nextMonth = dateObj.getMonth() + 1; //0-11，下一个月
+  //   //设置当前日期为下个月的1号
+  //   dateObj.setMonth(nextMonth);
+  //   dateObj.setDate(1); //1-31
+
+  //   let nextMonthFirstDayTime = dateObj.getTime(); //下个月一号对应毫秒
+
+  //   let theMonthLastDayTime = nextMonthFirstDayTime - 24 * 60 * 60 * 1000; //下个月一号减去一天，正好是这个月最后一天
+
+  //   let theMonthDay = (new Date(theMonthLastDayTime)).getDate();
+  //   return theMonthDay;
+  // },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -712,8 +739,8 @@ Page({
     });
   },
   select_date: function (e) {
+    console.log(e)
     let date1 = this.data.date
-    console.log(data1)
     let checkedMonth = ''
     let checkedDate = ''
     if (e.currentTarget.dataset.month1 < 10) {
@@ -726,7 +753,12 @@ Page({
     } else {
       checkedDate = e.currentTarget.dataset.date.toString()
     }
-    let data1 = e.currentTarget.dataset.year.toString() + checkedMonth + checkedDate
+    let typedate = {
+      date:'',
+      month:''
+    }
+    typedate.date = e.currentTarget.dataset.year + checkedMonth + checkedDate 
+    typedate.month = checkedMonth
     //如果点击项为空百项目，不继续执行
     var date = e.currentTarget.dataset.date;
     if (date == '' || date <= 0) {
@@ -753,9 +785,6 @@ Page({
       that[index][item].state = false;
       // 删除取消的日期
       var index = date1.indexOf(data1);
-      if (index === -1) {
-        index = 0
-      }
       date1.splice(index, 1)
       this.setData({
         date: date1
@@ -763,13 +792,9 @@ Page({
       console.log(this.data.date, "取消")
     } else if (that[index][item].state == false) {
       that[index][item].state = true;
-      console.log('选中')
       // 悬着的日期增加
-      date1.push(data1)
-      this.setData({
-        date: date1
-      })
-      console.log(this.data.date, "hhh")
+      this.data.date.push(typedate)
+      console.log(this.data.date, "选中")
     }
     // console.log(that);
     //根据月份设置数据

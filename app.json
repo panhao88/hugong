@@ -1,12 +1,12 @@
 {
   "pages":[
     "pages/details/details",
+    "pages/index/index",
     "pages/my/my",
     "pages/login/login",
     "pages/healthy/healthy",
     "pages/online/online",
     "pages/setup/setup",
-    "pages/index/index",
     "pages/Organizationdetails/Organizationdetails",
     "pages/Escort/Escort",
     "pages/Searchpage/Searchpage",
@@ -49,8 +49,11 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
+    "custom": true,
     "color": "#ccc",
     "selectedColor": "#16D595",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -83,6 +86,11 @@
         "selectedIconPath": "img/mipmap-mdpi/wode(2).png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于寻找附近的检测点"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

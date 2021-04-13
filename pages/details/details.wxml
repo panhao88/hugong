@@ -505,7 +505,7 @@
         <view class="pddlevel">
           <view class='year_month'> {{nextYear}}年{{nextMonth}}月</view>
           <view>
-            <van-checkbox value="{{ checkedNext }}" checked-color="#07c160" bind:change="onChangenext" icon-size="35rpx"  data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}">
+            <van-checkbox value="{{ checkedNext }}" checked-color="#07c160" bind:change="onChangenext" icon-size="35rpx"  data-month='nextMonth' data-Year="{{nextYear}}" data-Month1="{{nextMonth}}">
               选择整月
             </van-checkbox>
           </view>
