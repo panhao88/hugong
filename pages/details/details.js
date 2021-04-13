@@ -193,8 +193,8 @@ Page({
         let date1 = []
         item.map(item1 => {
           let typedate = {
-            date:'',
-            month:''
+            date: '',
+            month: ''
           }
           if (item1.date !== '' && item1.date >= this.data.today) {
             item1.state = true
@@ -208,17 +208,24 @@ Page({
         appdate.push(date1)
       })
       let convert = appdate.flat();
+      // 去空
       convert = convert.filter((item) => {
         return item.date !== ''
       })
+      // 拼接选中月
       this.data.date = this.data.date.concat(convert)
-      // let add = this.data.date
-      //  this.data.date = add.filter((item, index, arr) => {
-      //   return arr.indexOf(item) == index
-      // })
+      // 去重
+      let add = this.data.date
+      let hash = {};
+      let data2 = add.reduce((preVal, curVal) => {
+        hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+        return preVal
+      }, [])
+      // console.log(data2, "data2")
       this.setData({
         checked: !this.data.checked,
         thisMonthArr: tempArr,
+        date: data2
       })
       console.log(this.data.date, "全部选中")
     } else {
@@ -227,7 +234,7 @@ Page({
         item.map(item1 => {
           if (item1.date !== '' && item1.date >= this.data.today) {
             item1.state = false
-          }  
+          }
           tempA.push(item1)
         })
         tempArr.push(tempA)
@@ -243,7 +250,7 @@ Page({
     }
   },
   //下一月时间
-  onChangenext(e) {                                
+  onChangenext(e) {
     let arr = this.data.nextMonthArr
     let tempArr = []
     let appdate = []
@@ -260,8 +267,8 @@ Page({
         let date1 = []
         item.map(item1 => {
           let typedate = {
-            date:'',
-            month:''
+            date: '',
+            month: ''
           }
           if (item1.date !== '' && item1.date >= 1) {
             item1.state = true
@@ -290,7 +297,7 @@ Page({
         item.map(item1 => {
           if (item1.date !== '' && item1.date >= 1) {
             item1.state = false
-          } 
+          }
           tempA.push(item1)
         })
         tempArr.push(tempA)
@@ -739,7 +746,6 @@ Page({
     });
   },
   select_date: function (e) {
-    console.log(e)
     let date1 = this.data.date
     let checkedMonth = ''
     let checkedDate = ''
@@ -754,10 +760,10 @@ Page({
       checkedDate = e.currentTarget.dataset.date.toString()
     }
     let typedate = {
-      date:'',
-      month:''
+      date: '',
+      month: ''
     }
-    typedate.date = e.currentTarget.dataset.year + checkedMonth + checkedDate 
+    typedate.date = e.currentTarget.dataset.year + checkedMonth + checkedDate
     typedate.month = checkedMonth
     //如果点击项为空百项目，不继续执行
     var date = e.currentTarget.dataset.date;
@@ -783,13 +789,29 @@ Page({
     //切换选中状态
     if (that[index][item].state == true) {
       that[index][item].state = false;
+      let today = e.currentTarget.dataset.year + checkedMonth + checkedDate
+       let add = this.data.date
+        this.data.date = add.filter((item,index) => {
+         return item.date !== today
+       })
+       console.log(this.data.date,"date")
+      // console.log(today)
       // 删除取消的日期
-      var index = date1.indexOf(data1);
-      date1.splice(index, 1)
-      this.setData({
-        date: date1
-      })
-      console.log(this.data.date, "取消")
+      // var index = date1.indexOf(data1);
+      // date1.splice(index, 1)
+      // this.setData({
+      //   date: date1
+      // })
+      // console.log(this.data.date, "取消")
+      // let add = this.data.date
+      // let hash = {};
+      // let data2 = add.reduce((preVal, curVal) => {
+      //   hash[curVal.date] ? "" : hash[curVal.date] = true && preVal.push(curVal);
+      //   console.log(preVal,curVal)
+      //   return preVal
+      // }, [])
+      // this.data.date=data2
+      // console.log(this.data.date,"this.data.date")
     } else if (that[index][item].state == false) {
       that[index][item].state = true;
       // 悬着的日期增加

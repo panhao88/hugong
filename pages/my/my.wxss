@@ -186,6 +186,7 @@
   width: 180rpx;
   margin-left: 20rpx;
   font-weight: 700;
+  font-size: 32rpx;
 }
 .Order-management {
   width: 95%;
