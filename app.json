@@ -1,5 +1,10 @@
 {
-  "pages":[
+  "pages": [
+    "pages/index/index",
+    "pages/details/details",
+    "pages/Hospitaldetails/Hospitaldetails",
+    "pages/Manynurses/Manynurses",
+    "pages/Multiagency/Multiagency",
     "pages/Searchpage/Searchpage",
     "pages/my/my",
     "pages/Withdrawal/Withdrawal",
@@ -7,15 +12,12 @@
     "pages/bankcard/bankcard",
     "pages/wallet/wallet",
     "pages/Saveaddress/Saveaddress",
-    "pages/details/details",
-    "pages/index/index",
     "pages/login/login",
     "pages/healthy/healthy",
     "pages/online/online",
     "pages/setup/setup",
     "pages/Organizationdetails/Organizationdetails",
     "pages/Escort/Escort",
-    "pages/Hospitaldetails/Hospitaldetails",
     "pages/coupon/coupon",
     "pages/Usediscount/Usediscount",
     "pages/Confirmorder/Confirmorder",
@@ -44,11 +46,11 @@
     "pages/system/system",
     "pages/forget/forget"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "custom": true,

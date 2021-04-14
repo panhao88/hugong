@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-divider": "../../lib/vant/divider",
+    "van-rate":"../../lib/vant/rate"
+  },
+  "navigationBarTitleText": "全部机构"
+}

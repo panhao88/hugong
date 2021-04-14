@@ -7,27 +7,19 @@ Page({
     boxshow: true, //展开收缩
     picture: true, //图文
     arrli: [{
-        name: "平台认证",
+        name: "医院陪护",
         id: 1
       },
       {
-        name: "平台认证",
+        name: "康养院陪护",
         id: 2
       },
       {
-        name: "平台认证",
+        name: "居家陪护",
         id: 3
       },
       {
-        name: "平台认证",
-        id: 3
-      },
-      {
-        name: "平台认证",
-        id: 3
-      },
-      {
-        name: "平台认证",
+        name: "心理陪护",
         id: 3
       },
     ],
@@ -66,42 +58,21 @@ Page({
     startX: 0, //开始坐标
     startY: 0,
     arr: [{
-        name: "医院陪护",
+        name: "老人陪护",
         id: 1
       },
       {
-        name: "医院陪护",
+        name: "病人陪护",
         id: 2
       },
       {
-        name: "医院陪护",
+        name: "月嫂陪护",
         id: 3
       },
       {
-        name: "医院陪护",
+        name: "产妇陪护",
         id: 4
       },
-      {
-        name: "医院陪护",
-        id: 5
-      },
-      {
-        name: "医院陪护",
-        id: 6
-      },
-      {
-        name: "医院陪护",
-        id: 6
-      },
-      {
-        name: "医院陪护",
-        id: 6
-      },
-      {
-        name: "医院陪护",
-        id: 6
-      },
-
     ],
     list: [{
         img: '../../img/mipmap-mdpi/hugong.png'
@@ -800,13 +771,15 @@ Page({
   //新增服务对象
   goobj() {
     this.setData({
-      showobj: true
+      showobj: true,
+      show:false
     })
   },
   //新增服务对象详情
   goobjdetail() {
     this.setData({
-      objdetails: true
+      showobj: false,
+      objdetails: true,
     })
   },
   //选择服务时间

@@ -1,0 +1,109 @@
+.local {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFAFF;
+}
+
+.central {
+  width: 95%;
+  height: 100%;
+}
+/* 热门机构 */
+.service {
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.Aunt-Zhang {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  width: 100%;
+}
+.authentication {
+  margin-top: 8rpx;
+  width: 100%;
+  display: flex;
+}
+.Platform-certification {
+  border: #BBBBBBFF 1rpx solid;
+  background: #61CF8CFF;
+  font-size: 18rpx;
+  color: #FFFFFFFF;
+  width: 100rpx;
+  height: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3rpx;
+  margin: 0 18rpx 0 0;
+  border-radius: 8rpx;
+  border: none;
+}
+.bor-der {
+  border: #EEEEEEFF 0.1rpx solid;
+  margin-top: 10rpx;
+}
+.location {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  color: #333333FF;
+  font-size: 24rpx;
+}
+.PhaseI{
+  padding-left: 8rpx;
+ }
+ .Kilometer{
+  color: #61CF8C;
+}
+.img-di {
+  width: 30rpx;
+  height: 30rpx;
+}
+.Popular-nurse {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  align-content: center;
+  background: #FFFFFFFF;
+  border-radius: 20rpx;
+}
+.immage-mechanism {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+.flag1 {
+  background: #FFFFFFFF;
+  border-radius: 20rpx ;
+  margin-bottom: 20rpx;
+}
+.hao-jj {
+  font-weight: 600;
+  letter-spacing: 3rpx;
+  color: #333333FF;
+  font-size: 30rpx;
+}
+.logo{
+  width: 120rpx;
+  height: 120rpx;
+}
+.Service-Centre {
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.font-f {
+  font-size: 24rpx;
+  color: #333333FF;
+}

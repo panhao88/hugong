@@ -5,47 +5,70 @@ Page({
    * 页面的初始数据
    */
   data: {
-    flag:0,
+    flag: 0,
     hugong: [{
-      name: "推荐护工",
-      id: 1,
-    },
-    {
-      name: "推荐机构",
-      id: 2,
-    },
-  ],
-  arrli:[
-    {
-      name:"病人陪护",
-      id:1
-    },
-    {
-      name:"平台认证",
-      id:2
-    },
-    {
-      name:"产妇陪护",
-      id:3
-    },
-    {
-      name:"产妇陪护",
-      id:3
-    },
-    {
-      name:"产妇陪护",
-      id:3
-    },
-    {
-      name:"产妇陪护",
-      id:3
-    },
-  ],
+        name: "推荐护工",
+        id: 1,
+      },
+      {
+        name: "推荐机构",
+        id: 2,
+      },
+    ],
+    arrli: [{
+        name: "病人陪护",
+        id: 1
+      },
+      {
+        name: "平台认证",
+        id: 2
+      },
+      {
+        name: "产妇陪护",
+        id: 3
+      },
+      {
+        name: "产妇陪护",
+        id: 3
+      },
+      {
+        name: "产妇陪护",
+        id: 3
+      },
+      {
+        name: "产妇陪护",
+        id: 3
+      },
+    ],
   },
   goto(e) {
     this.setData({
-      flag:e.currentTarget.dataset.index
+      flag: e.currentTarget.dataset.index
     })
+  },
+  //去护工详情页
+  godetaild() {
+    wx.navigateTo({
+      url: '/pages/details/details',
+    })
+  },
+  //去机构详情页
+  goorgandetail() {
+    wx.navigateTo({
+      url: '/pages/Organizationdetails/Organizationdetails',
+    })
+  },
+  //查看全部
+  goViewall() {
+    if (this.data.flag === 0) {
+      wx.navigateTo({
+        url: '/pages/Manynurses/Manynurses',
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/Multiagency/Multiagency',
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

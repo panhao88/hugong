@@ -194,20 +194,20 @@
 }
 
 .img-gp {
-  width: 22rpx;
-  height: 23rpx;
+  width: 30rpx;
+  height: 30rpx;
 }
 
 .Line {
-  width: 10rpx;
+  width: 20rpx;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .vertical {
-  width: 2rpx;
+  width: 5rpx;
   height: 140rpx;
-  background: #EEEEEEFF;
+  background: #EEEEEE;
 }
 
 .Century-City {
@@ -228,7 +228,7 @@
   justify-content: center;
 }
 .img-pnone{
-  width: 30rpx;
+  width: 40rpx;
   height: 36rpx;
 }
 .plphone{

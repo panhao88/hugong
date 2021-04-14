@@ -66,10 +66,10 @@
           </view>
         </view>
       </view>
-      <view class="Viewall">查看全部></view>
+      <view class="Viewall" bindtap="goViewall">查看全部></view>
     </view>
     <!-- 张阿姨1 -->
-    <view class="Popular-nurse" wx:if="{{flag === 0}}">
+    <view class="Popular-nurse" wx:if="{{flag === 0}}" bindtap="godetaild">
       <view class="service">
         <view>
           <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
@@ -80,7 +80,7 @@
         <view class="font">张阿姨</view>
         <view class="score">
           <view class="wu-lin">
-            <van-rate value="{{ value }}" size="{{ 13 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+            <van-rate value="{{ value }}" size="{{ 13 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
           </view>
           <view class="appointment">最早可约3月1号</view>
         </view>
@@ -112,7 +112,7 @@
         </view>
       </view>
     </view>
-    <view wx:if="{{flag === 1}}">
+    <view wx:if="{{flag === 1}}" bindtap="goorgandetail">
       <view class="flag1">
         <view class="Popular-nurse" >
           <view class="service">
@@ -125,7 +125,7 @@
           <view class="Aunt-Zhang">
             <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
             <view>
-              <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+              <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
             </view>
             <view class="authentication">
               <view class="Platform-certification">平台认证</view>

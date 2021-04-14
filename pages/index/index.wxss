@@ -249,6 +249,7 @@
   height: 180rpx;
 }
 .bottom{
-  height: 130rpx;
+  height: 160rpx;
+  background: red;
 }
 

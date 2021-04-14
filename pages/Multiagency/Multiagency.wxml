@@ -1,0 +1,37 @@
+<view class="local">
+  <view class="central">
+    <view class="flag1" bindtap="goorgandetail">
+      <view class="Popular-nurse">
+        <view class="service">
+          <view>
+            <view class="immage-mechanism">
+              <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+            </view>
+          </view>
+        </view>
+        <view class="Aunt-Zhang">
+          <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
+          <view>
+            <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
+          </view>
+          <view class="authentication">
+            <view class="Platform-certification">平台认证</view>
+            <view class="Platform-certification">病人陪护</view>
+            <view class="Platform-certification">产妇陪护</view>
+          </view>
+        </view>
+      </view>
+      <view class="bor-der"></view>
+      <view class="Service-Centre">
+        <view class="font-f">以服务1000人</view>
+        <view class="location">
+          <view>
+            <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+          </view>
+          <view class="PhaseI">蜀都中心一期-</view>
+          <view class="Kilometer">0.1km</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

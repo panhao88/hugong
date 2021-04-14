@@ -157,6 +157,7 @@
           <view class="contacts">
             <view class="contact" bindtap="goaddress">
               <view class="Contact-address">请选择联系地址</view>
+              <view>1111</view>
               <view class="picture">
                 <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
               </view>
@@ -177,18 +178,16 @@
           <view class="Servicetype">
             <view class="service-sp">服务类型</view>
             <view class="Escort-lp">
-              <view wx:for="{{arr}}" wx:key="index" class="yi-hospital">
+              <view wx:for="{{arrli}}" wx:key="index" class="yi-hospital">
                 <view class="{{colo === index ? 'red' : 'yi-Escort'}}">{{item.name}}</view>
               </view>
             </view>
-            <view class="service-sp">
-              <view>服务项目</view>
+            <view class="service-sp">服务项目</view>
               <view class="Escort-lp">
                 <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
                   <view class="{{colo === index ? 'red' : 'yi-Escort'}}">{{item.name}}</view>
                 </view>
               </view>
-            </view>
           </view>
         </view>
       </view>
@@ -237,7 +236,6 @@
     <van-popup show="{{ keepaddress }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
       <view class="local">
         <view class="central-section">
-          <view>
             <van-cell-group>
               <van-field value="{{ value }}" placeholder="请输入联系人" label="联系人" input-align="right" />
               <view class="radio">
@@ -259,7 +257,6 @@
           <view class="immediately">
             <button class="login-bu" bindtap="gotoexamine">保存地址</button>
           </view>
-        </view>
       </view>
     </van-popup>
     <!-- 地图 -->

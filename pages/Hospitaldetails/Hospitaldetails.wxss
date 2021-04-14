@@ -20,20 +20,12 @@
   background: #FFFFFFFF;
   border-radius: 20rpx;
 }
-.Popular-nurse {
-  width: 100%;
-  display: flex;
-  align-content: center;
-}
-
 .service {
   font-size: 30rpx;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
   width: 30%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 .imm-age {
@@ -80,8 +72,8 @@
 }
 
 .img-gp {
-  width: 22rpx;
-  height: 23rpx;
+  width: 30rpx;
+  height: 30rpx;
 }
 .Line {
   width: 10rpx;
@@ -90,12 +82,12 @@
   justify-content: center;
 }
 .vertical {
-  width: 2rpx;
+  width: 3rpx;
   height: 60rpx;
-  background: #EEEEEEFF;
+  background: #EEEEEE;
 }
 .img-pnone{
-  width: 30rpx;
+  width: 40rpx;
   height: 36rpx;
 }
 
@@ -192,7 +184,6 @@
 .Aunt {
   margin-top: 20rpx;
   margin-left: 20rpx;
-  margin-bottom: 20rpx;
   width: 80%;
 }
 .font {
@@ -300,12 +291,12 @@
 .PhaseI{
   padding-left: 8rpx;
  }
-.img-di {
-  width: 23rpx;
-  height: 23rpx;
-}
-.Kilometer{
+ .Kilometer{
   color: #61CF8C;
+}
+.img-di {
+  width: 30rpx;
+  height: 30rpx;
 }
 /* 热门机构 */
 .immage-mechanism {
