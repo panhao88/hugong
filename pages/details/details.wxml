@@ -511,13 +511,13 @@
           </view>
         </view>
         <view class='week'>
-          <text class='saturday'>日</text>
-          <text>一</text>
-          <text>二</text>
-          <text>三</text>
-          <text>四</text>
-          <text>五</text>
-          <text class='sunday'>六</text>
+          <text class='saturday'>周日</text>
+          <text>周一</text>
+          <text>周二</text>
+          <text>周三</text>
+          <text>周四</text>
+          <text>周五</text>
+          <text class='sunday'>周六</text>
         </view>
         <block wx:for="{{nextMonthArr}}" wx:key="index">
           <view class='week'>
@@ -550,19 +550,19 @@
         <view class="pddlevel">
           <view class='year_month'> {{next2Year}}年{{next2Month}}月</view>
           <view>
-            <van-checkbox value="{{ checkedNexttwo }}" checked-color="#07c160" bind:change="onChange" icon-size="35rpx"  data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}">
+            <van-checkbox value="{{ checkedNexttwo }}" checked-color="#07c160" bind:change="onChangetow" icon-size="35rpx"  data-month='next2Month' data-Year="{{next2Year}}" data-Month1="{{next2Month}}">
               选择整月
             </van-checkbox>
           </view>
         </view>
         <view class='week'>
-          <text class='saturday'>日</text>
-          <text>一</text>
-          <text>二</text>
-          <text>三</text>
-          <text>四</text>
-          <text>五</text>
-          <text class='sunday'>六</text>
+          <text class='saturday'>周日</text>
+          <text>周一</text>
+          <text>周二</text>
+          <text>周三</text>
+          <text>周四</text>
+          <text>周五</text>
+          <text class='sunday'>周六</text>
         </view>
         <block wx:for="{{next2MonthArr}}" wx:key="index">
           <view class='week'>
@@ -596,19 +596,19 @@
         <view class="pddlevel">
           <view class='year_month'> {{next3Year}}年{{next3Month}}月</view>
           <view>
-            <van-checkbox value="{{ checkedNextthree }}" checked-color="#07c160" bind:change="onChange" icon-size="35rpx"  data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}">
+            <van-checkbox value="{{ checkedNextthree }}" checked-color="#07c160" bind:change="onChangetherr" icon-size="35rpx"  data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}">
               选择整月
             </van-checkbox>
           </view>
         </view>
         <view class='week'>
-          <text class='saturday'>日</text>
-          <text>一</text>
-          <text>二</text>
-          <text>三</text>
-          <text>四</text>
-          <text>五</text>
-          <text class='sunday'>六</text>
+          <text class='saturday'>周日</text>
+          <text>周一</text>
+          <text>周二</text>
+          <text>周三</text>
+          <text>周四</text>
+          <text>周五</text>
+          <text class='sunday'>周六</text>
         </view>
         <block wx:for="{{next3MonthArr}}" wx:key="index">
           <view class='week'>
@@ -642,19 +642,19 @@
         <view class="pddlevel">
           <view class='year_month'> {{next4Year}}年{{next4Month}}月</view>
           <view>
-            <van-checkbox value="{{ checkedNextfour }}" checked-color="#07c160" bind:change="onChange" icon-size="35rpx"  data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}">
+            <van-checkbox value="{{ checkedNextfour }}" checked-color="#07c160" bind:change="onChangefour" icon-size="35rpx"  data-month='next4Month' data-Year="{{next4Year}}" data-Month1="{{next4Month}}">
               选择整月
             </van-checkbox>
           </view>
         </view>
         <view class='week'>
-          <text class='saturday'>日</text>
-          <text>一</text>
-          <text>二</text>
-          <text>三</text>
-          <text>四</text>
-          <text>五</text>
-          <text class='sunday'>六</text>
+          <text class='saturday'>周日</text>
+          <text>周一</text>
+          <text>周二</text>
+          <text>周三</text>
+          <text>周四</text>
+          <text>周五</text>
+          <text class='sunday'>周六</text>
         </view>
         <block wx:for="{{next4MonthArr}}" wx:key="index">
           <view class='week'>
@@ -688,19 +688,19 @@
         <view class="pddlevel">
           <view class='year_month'> {{next5Year}}年{{next5Month}}月</view>
           <view>
-            <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChange" icon-size="35rpx"  data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}">
+            <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChangefive" icon-size="35rpx"  data-month='thisMonth' data-Year="{{next5Year}}" data-Month1="{{next5Month}}">
               选择整月
             </van-checkbox>
           </view>
         </view>
         <view class='week'>
-          <text class='saturday'>日</text>
-          <text>一</text>
-          <text>二</text>
-          <text>三</text>
-          <text>四</text>
-          <text>五</text>
-          <text class='sunday'>六</text>
+          <text class='saturday'>周日</text>
+          <text>周一</text>
+          <text>周二</text>
+          <text>周三</text>
+          <text>周四</text>
+          <text>周五</text>
+          <text class='sunday'>周六</text>
         </view>
         <block wx:for="{{next5MonthArr}}" wx:key="index">
           <view class='week'>

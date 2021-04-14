@@ -1,0 +1,90 @@
+/* pages/bankcard/bankcard.wxss */
+.local {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:#FAFAFA;
+}
+.central {
+  width: 95%;
+  height: 100%;
+}
+.immediately{
+  width: 95%;
+  background:#FAFAFA;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+.login-bu{
+  width: 600rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius:40rpx ;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 30rpx;
+}
+.img{
+  width: 100%;
+  height: 240rpx;
+}
+.businesscircles{
+  position: relative;
+}
+.gongicon{
+  width: 70rpx;
+  height: 70rpx;
+}
+.box{
+  top: 40rpx;
+  left: 40rpx;
+  position: absolute;
+}
+.work{
+  letter-spacing: 5rpx;
+  width: 235rpx;
+  height: 76rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.savings{
+  height: 70rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.font-work{
+  font-size: 32rpx;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.font-Storage{
+  color: #EEEEEE;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+.Cardnumber{
+  position: absolute;
+  top: 160rpx;
+  left: 40rpx;
+  display: flex;
+  width: 70%;
+  height: 50rpx;
+  justify-content: space-between;
+  align-content: center;
+}
+.fontStar{
+  margin-top: 8rpx;
+  font-size: 48rpx;
+  color: #FFFFFF;
+}
+.fontnumber{
+  font-size: 48rpx;
+  color: #FFFFFF;
+}

@@ -1,6 +1,6 @@
 .local {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +9,7 @@
 
 .central {
   width: 95%;
+  height: 100%;
 }
 
 /* 护工 */
@@ -229,4 +230,23 @@
 .img-pnone{
   width: 30rpx;
   height: 36rpx;
+}
+.plphone{
+  width: 100%;
+  display: flex;
+  background: #4C4C4C;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+.dial{
+  width: 90%;
+  height: 80rpx;
+  margin-bottom: 30rpx;
+  border-radius: 20rpx;
+  color: #61CF8CFF;
+  background: #FFFFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

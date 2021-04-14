@@ -198,7 +198,6 @@
   </view>
   <van-goods-action>
     <van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
-    <van-goods-action-icon icon="phone-o" text="联系商家" bind:click="onClickIcon" />
     <button class="appointment-now">立即预约</button>
   </van-goods-action>
   <view class="buootb"></view>

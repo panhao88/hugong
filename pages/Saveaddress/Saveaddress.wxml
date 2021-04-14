@@ -30,11 +30,12 @@
     <!-- 输入框 -->
     <view class="topp">
       <view class="box-top">
-        <view class="box-ru">{{currentRegion.city}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi">
+        <view class="box-ru" bindtap="gosearch">{{currentRegion.city}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi" >
           </image>
         </view>
         <view class="box-three">
-          <van-search placeholder="请输入搜索关键词" bindtap="gosearch" />
+          <view class="box-sou"><image src="../../img/mipmap-mdpi/sousuo.png" class="souimg"></image></view>
+         <view> <input placeholder="请输入搜索关键词" bindtap="gosearch" /></view>
         </view>
       </view>
     </view>
@@ -42,7 +43,7 @@
   <view wx:if="{{!addListShow && !chooseCity}}">
     <!--地图容器-->
     <map id="myMap" class="mapp" longitude="{{longitude}}" latitude="{{latitude}}" scale="14"
-      bindregionchange="mapChange">
+      bindregionchange="mapChange" >
       <view class="map-prompt">{{currentRegion.street}}</view>
       <view class="div1"></view>
       <image class="current-site-icon" src="../../img/mipmap-mdpi/my_marker.png"></image>
@@ -65,8 +66,8 @@
         </view>
       </view>
     </scroll-view>
-    <view class="bottom-box">
-      <button bindtap="selectedOk">确认地址</button>
+    <view class="plimmediately">
+      <button bindtap="selectedOk" class="lobu">确认地址</button>
     </view>
   </view>
 </van-popup>
@@ -77,7 +78,7 @@
       <image src="../../img/mipmap-mdpi/fanhui.png" class="img-fan" bindtap="preturn"></image>
     </view>
     <view class="imput">
-      <van-search value="{{ pavalue }}" placeholder="请输入搜索关键词" clearable="{{false}}" bind:change="getsuggest" />
+      <van-search value="{{ pavalue }}" placeholder="请输入搜索关键词" clearable="{{false}}" bind:change="getsuggest" clearable="true" class="inpt"/>
     </view>
   </view>
   <scroll-view scroll-y="true" scroll-into-view="{{scrollTopId}}" style="height:100%;" scroll-with-animation="true"

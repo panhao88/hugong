@@ -26,9 +26,18 @@
 }
 
 .icon-distance {
-  margin-right: 20rpx;
+  margin-right: 30rpx;
+  position: relative;
 }
-
+.garden{
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 12rpx;
+  height: 12rpx;
+  background: #FF3636;
+  border-radius: 50%;
+}
 .portrait {
   width: 400rpx;
   height: 160rpx;

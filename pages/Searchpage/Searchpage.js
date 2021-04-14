@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    Shadow:false
   },
   //去医院详情
   goHospitaldetails(){
@@ -13,6 +13,19 @@ Page({
       url: '/pages/Hospitaldetails/Hospitaldetails',
     })
   },
+    //取消遮罩层
+    goclose(){
+      this.setData({
+        Shadow: false
+      })
+    },
+    //拨打电话
+    gophone(){
+      console.log(11)
+      this.setData({
+        Shadow:true
+      })
+    },
   /**
    * 生命周期函数--监听页面加载
    */

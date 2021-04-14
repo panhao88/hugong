@@ -16,7 +16,66 @@
       </view>
     </view>
     <view>
-      <button class="money-from">提现</button>
+      <button class="money-from" bindtap="goWithdrawal">提现</button>
     </view>
   </view>
 </view>
+<van-popup show="{{ show }}" position="bottom" custom-style="height: 50%;" bind:close="onClose"
+  bind:click-overlay="goshoufalse" round="true">
+  <view class="local">
+    <view class="central">
+      <view class="choice">
+        <view class="cancel" bindtap="gocancel">
+          <image src="../../img/mipmap-mdpi/quxiao.png" class="img" bindtap="goshoufalse"></image>
+        </view>
+        <view class="Choosetime">选择到账信息</view>
+      </view>
+      <view class="bord"></view>
+      <view class="branch">
+        <view class="card">
+          <view>
+            <image src="../../img/mipmap-mdpi/gongshangicon.png" class="gonicon"></image>
+          </view>
+          <view class="bank">工商银行</view>
+          <view>储蓄卡(1234)</view>
+          <view></view>
+        </view>
+        <view>
+          <van-checkbox value="{{ checked }}" bind:change="onChange"></van-checkbox>
+        </view>
+      </view>
+      <van-divider />
+      <view class="branch">
+        <view class="card">
+          <view>
+            <image src="../../img/mipmap-mdpi/gongshangicon.png" class="gonicon"></image>
+          </view>
+          <view class="bank">工商银行</view>
+          <view>储蓄卡(1234)</view>
+          <view></view>
+        </view>
+        <view>
+          <van-checkbox value="{{ checked }}" bind:change="onChange"></van-checkbox>
+        </view>
+      </view>
+      <van-divider />
+      <view class="branch">
+        <view class="card">
+          <view>
+            <image src="../../img/mipmap-mdpi/qianbao1.png" class="Arrivalicon"></image>
+          </view>
+          <view class="bank">使用新到账信息</view>
+          <view></view>
+          <view></view>
+        </view>
+        <view>
+          <image src="../../img/mipmap-mdpi/youjiantou.png" class="youicon"></image>
+        </view>
+      </view>
+      <view class="bottom"></view>
+      <view class="immediately">
+        <button class="login-bu" bindtap="addbankcard">确认</button>
+      </view>
+    </view>
+  </view>
+</van-popup>

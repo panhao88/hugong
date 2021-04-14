@@ -1,7 +1,10 @@
 {
   "usingComponents": {
     "van-divider": "../..//lib/vant/divider",
-    "van-button": "../../lib/vant/button"
+    "van-button": "../../lib/vant/button",
+    "van-popup": "../../lib/vant/popup",
+    "van-checkbox": "../../lib/vant/checkbox",
+    "van-checkbox-group": "../../lib/vant/checkbox-group"
   },
   "navigationBarTitleText": "我的钱包"
 }

@@ -80,5 +80,6 @@
     <view>
       <classification hugong="{{hugong}}"></classification>
     </view>
+    <view class="bottom"></view>
   </view>
 </view>

@@ -3,6 +3,7 @@
     <view class="Chat-settings">
       <view class="icon-distance">
         <image src="../../img/mipmap-mdpi/liaotian.png" class="icon" mode="" bindtap="gonews"></image>
+        <view class="garden"></view>
       </view>
       <view class="icon-distance">
         <image src="../../img/mipmap-mdpi/shezhi.png" class="icon" mode="" bindtap="gosetup"></image>

@@ -90,6 +90,23 @@
 .bor-der {
   border: solid #EEEEEEFF 0.5rpx;
 }
+.bankcard{
+  position: absolute;
+  display: flex;
+  right: 20rpx;
+  top: 50rpx;
+  color: #FFFFFFFF;
+  font-weight: 600;
+  font-size: 30rpx;
+}
+.card{
+  margin-left: 8rpx;
+}
+.imgqian{
+  width: 34rpx;
+  height: 34rpx;
+  color: #FFFFFFFF;
+}
 /* 提现 */
 .tixian{
   position: absolute;

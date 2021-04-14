@@ -1,0 +1,27 @@
+<view class="local">
+  <view class="central">
+    <view class="businesscircles">
+      <image src="../../img/mipmap-mdpi/gongshang.png" class="img"></image>
+      <view class="box">
+        <view class="work">
+          <view>
+            <image src="../../img/mipmap-mdpi/gongshangicon.png" class="gongicon"></image>
+          </view>
+          <view class="savings">
+            <view class="font-work">工商银行</view>
+            <view class="font-Storage">储蓄卡</view>
+          </view>
+        </view>
+      </view>
+      <view class="Cardnumber">
+        <view class="fontStar">****</view>
+        <view class="fontStar">****</view>
+        <view class="fontStar">****</view>
+        <view class="fontnumber">1334</view>
+      </view>
+    </view>
+    <view class="immediately">
+      <button class="login-bu" bindtap="addbankcard">添加银行卡</button>
+    </view>
+  </view>
+</view>

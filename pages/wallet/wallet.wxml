@@ -4,11 +4,15 @@
       <image src="../../img/mipmap-mdpi/qianbaobeijing.png" class="img"></image>
     </view>
   </view>
+  <view class="bankcard" bindtap="gobankcard">
+    <image src="../../img/mipmap-mdpi/qianbao.png" class="imgqian"></image>
+    <view class="card">银行卡</view>
+  </view>
   <view class="tixian">
-      <view class="element">余额(元)</view>
-      <view class="front">200.00</view>
-      <view class="Withdrawal" bindtap="goWithdrawal">提现</view>
-    </view>
+    <view class="element">余额(元)</view>
+    <view class="front">200.00</view>
+    <view class="Withdrawal" bindtap="goWithdrawal">提现</view>
+  </view>
   <view class="detailed">
     <view class="central">
       <view class="Balance-details">余额明细</view>

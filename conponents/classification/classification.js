@@ -84,10 +84,16 @@ Component({
         url: '/pages/Praise/Praise',
       })
     },
-    //去详情页
+    //去护工详情页
     godetaild(){
       wx.navigateTo({
         url: '/pages/details/details',
+      })
+    },
+    //去机构详情页
+    goorgandetail(){
+      wx.navigateTo({
+        url: '/pages/Organizationdetails/Organizationdetails',
       })
     },
     Discoloration(e){

@@ -1,0 +1,13 @@
+<view class="local">
+  <view class="central">
+    <view class="binding">请绑定持卡人本人的银行卡</view>
+    <van-cell-group>
+      <van-field value="{{ value }}" placeholder="请输入持卡人姓名"  label="持卡人"  input-align="right" bind:change="onChange" />
+      <van-field value="{{ value }}" placeholder="请输入卡号" label="卡号"  input-align="right" bind:change="onChange" />
+      <van-field value="{{ value }}" placeholder="请输入开户行" label="开户行"  input-align="right" bind:change="onChange" />
+    </van-cell-group>
+    <view class="immediately">
+      <button class="login-bu" bindtap="addbankcard">保存</button>
+    </view>
+  </view>
+</view>

@@ -114,7 +114,7 @@
   </view>
   <!-- 热门机构1 -->
   <view class="flag1">
-    <view class="Popular-nurse" bindtap="godetaild">
+    <view class="Popular-nurse" bindtap="goorgandetail">
       <view class="service">
         <view>
           <view class="immage-mechanism">
@@ -147,7 +147,7 @@
   </view>
   <!-- 热门机构2 -->
   <view class="flag1">
-    <view class="Popular-nurse" bindtap="godetaild">
+    <view class="Popular-nurse" bindtap="goorgandetail">
       <view class="service">
         <view>
           <view class="immage-mechanism">

@@ -85,5 +85,5 @@
 }
 
 .van-divider {
-  margin: 8rpx 0 !important;
+  margin: 1rpx 5rpx !important;
 }

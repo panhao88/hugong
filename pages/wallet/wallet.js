@@ -12,6 +12,12 @@ Page({
       url: '/pages/Withdrawal/Withdrawal',
     })
   },
+  // 去银行卡
+  gobankcard(){
+    wx.navigateTo({
+      url: '/pages/bankcard/bankcard',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

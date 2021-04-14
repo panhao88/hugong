@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-field": "../../lib/vant/field"
+  },
+  "navigationBarTitleText": "添加银行卡"
+}

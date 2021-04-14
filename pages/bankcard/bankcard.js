@@ -1,22 +1,16 @@
-// pages/Withdrawal/Withdrawal.js
+// pages/bankcard/bankcard.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    show:false
+
   },
-  //提现
-  goWithdrawal(){
-    this.setData({
-      show:true
-    })
-  },
-  //点击遮罩层关闭
-  goshoufalse(){
-    this.setData({
-      show:false
+  //添加银行卡
+  addbankcard(){
+    wx.navigateTo({
+      url: '/pages/addbankcard/addbankcard',
     })
   },
   /**

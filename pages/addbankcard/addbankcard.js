@@ -1,24 +1,13 @@
-// pages/Withdrawal/Withdrawal.js
+// pages/addbankcard/addbankcard.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    show:false
+
   },
-  //提现
-  goWithdrawal(){
-    this.setData({
-      show:true
-    })
-  },
-  //点击遮罩层关闭
-  goshoufalse(){
-    this.setData({
-      show:false
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

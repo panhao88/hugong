@@ -389,7 +389,7 @@
   height: 1800rpx;
 }
 .appointment-now{
-  width: 400rpx !important;
+  width: 600rpx !important;
   height: 70rpx;
   background-color: #61CF8CFF;
   border-radius: 40rpx;
