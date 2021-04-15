@@ -1,19 +1,19 @@
 <view class="local">
   <view class="central">
-    <view class="Popular-nurse" bindtap="godetaild">
+    <view class="Popular-nurse" bindtap="godetaild" wx:for="{{list}}" wx:key="index">
       <view class="service">
         <view>
-          <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+          <image src="{{item.img}}" class="imm-age"></image>
         </view>
-        <view class="Serviceable">可服务</view>
+        <view class="Serviceable">{{item.fuwu}}</view>
       </view>
       <view class="Aunt">
-        <view class="font">张阿姨</view>
+        <view class="font">{{item.name}}</view>
         <view class="score">
           <view class="wu-lin">
             <van-rate value="{{ value }}" size="{{ 13 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
           </view>
-          <view class="appointment">最早可约3月1号</view>
+          <view class="appointment">{{item.zuizao}}</view>
         </view>
         <view class="authentication">
           <scroll-view class="scroll-view" scroll-x="true">
@@ -32,13 +32,13 @@
         </view>
         <view class="bor-der"></view>
         <view class="Service-person">
-          <view>以服务100人</view>
+          <view>{{item.yi}}</view>
           <view class="location">
             <view>
-              <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+              <image src="{{item.dingwei}}" class="img-di"></image>
             </view>
-            <view class="PhaseI">蜀都中心一期-</view>
-            <view class="Kilometer">0.1km</view>
+            <view class="PhaseI">{{item.weizhi}}-</view>
+            <view class="Kilometer">{{item.qianmi}}</view>
           </view>
         </view>
       </view>

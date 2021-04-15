@@ -67,6 +67,67 @@ Component({
         title:"金牌保护",
         id:5
       },
+    ],
+    list:[
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+    ],
+    jigou:[
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期"
+      },
     ]
   },
   /**

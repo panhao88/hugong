@@ -1,7 +1,6 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-
 Page({
   data: {
     Capital:"蜀都中心...",

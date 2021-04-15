@@ -5,7 +5,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    arr:[
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km",
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+    ]
   },
    //去机构详情页
    goorgandetail(){

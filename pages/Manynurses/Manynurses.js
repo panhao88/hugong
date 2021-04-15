@@ -31,6 +31,58 @@ Page({
         id:3
       },
     ],
+    list:[
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        fuwu:"可服务",
+        name:"张阿姨",
+        zuizao:"最早可约3月1号",
+        yi:"以服务100人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+    ],
   },
     //去护工详情页
     godetaild(){
