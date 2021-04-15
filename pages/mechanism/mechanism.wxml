@@ -48,7 +48,7 @@
         </view>
       </view>
     </view>
-    <view class="immediately">
+    <view class="fixed-bottom">
       <button class="login-bu" bindtap="gotoexamine" >提交审核</button>
     </view>
   </view>

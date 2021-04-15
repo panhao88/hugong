@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom:calc(80rpx + var(--iphonex-fix-bottom));
   background: #FAFAFAFF;
 }
 .central-section {
@@ -63,7 +64,7 @@
 }
 /* 服务地址 */
 .topp {
-  margin-top: 20rpx;
+  margin-top: 10rpx;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -77,7 +78,7 @@
   background: #F1F1F1;
   border-radius: 40rpx;
   position: relative;
-  margin-bottom: 20rpx;
+  margin-bottom: 10rpx;
 }
 .van-search__content {
   padding-left: 0 !important;
@@ -121,7 +122,7 @@
 @import "../../lib/css/iconfont.wxss";
 .mapp {
   width: 100%;
-  height: 400rpx;
+  height: 500rpx;
 }
 .map-prompt {
   width: 300rpx;
@@ -187,14 +188,17 @@
   border-radius: 50%;
   margin: 3rpx auto;
 }
+.middle{
+  padding-bottom:calc(80rpx + var(--iphonex-fix-bottom));
+}
 .near-list {
   width: 100%;
-  height:500rpx;
+  height:780rpx;
   box-sizing: border-box;
 }
 .near-item {
   line-height: 40rpx;
-  padding: 30rpx 50rpx 30rpx 90rpx;
+  padding: 20rpx 50rpx 20rpx 90rpx;
   text-align: left;
   border-bottom: 1px solid #eee;
   position: relative;
@@ -236,15 +240,14 @@
 .near-item .add1 {
   color: #3095F9;
 }
-.plimmediately{
-  width: 100%;
-  background:#FAFAFA;
-  height: 80rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.fixed-bottom {
   position: fixed;
   bottom: 0;
+  padding-bottom: var(--iphonex-fix-bottom);
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  /* 设置背景色以透出页面内容 */
 }
 .lobu{
   width: 600rpx !important;

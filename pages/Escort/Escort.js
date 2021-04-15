@@ -5,10 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    Capital:"蜀都中心...",
-    flag:0,
-    list:[
-      {
+    Capital: "蜀都中心...",
+    flag: 0,
+    list: [{
         name: "医院陪护",
         id: 1,
       },
@@ -22,22 +21,23 @@ Page({
       }
     ],
     ppplist: [{
-      image: '../../img/mipmap-mdpi/lunbotu.png',
-    },
-    {
-      image: '../../img/mipmap-mdpi/lunbotu.png',
-    },
-  ],
+        image: '../../img/mipmap-mdpi/lunbotu.png',
+      },
+      {
+        image: '../../img/mipmap-mdpi/lunbotu.png',
+      },
+    ],
   },
   // 医院跳转
-  goto(e){
+  goto(e) {
     this.setData({
-      flag:e.currentTarget.dataset.index
+      flag: e.currentTarget.dataset.index
     })
   },
-  gomechanismdetaild(){
+  gomechanismdetaild() {
+    let id = 0
     wx.navigateTo({
-      url: '/pages/Organizationdetails/Organizationdetails',
+      url: `/pages/details/details?id=${id}`,
     })
   },
   /**
@@ -54,7 +54,7 @@ Page({
 
   },
 
-    /**
+  /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {

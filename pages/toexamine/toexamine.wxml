@@ -46,7 +46,7 @@
     <view>很遗憾!你的入驻申请审核失败,</view>
     <view>失败原因:营业执照上传不清晰</view>
     <view>请重新上传</view>
-    <view class="immediately">
+    <view class="fixed-bottom">
       <button class="login-bu" bindtap="gotoexamine">提交审核</button>
     </view>
     <view class="imgplexamine">

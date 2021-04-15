@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom:calc(80rpx + var(--iphonex-fix-bottom));
   background: #FFFFFF;
 }
 
@@ -105,17 +106,16 @@
   bottom: 0;
 }
 
-.immediately {
-  margin-bottom: 20rpx;
-  width: 95%;
-  display: flex;
-  justify-content: center;
-  position: relative;
+.fixed-bottom {
+  position: fixed;
   bottom: 0;
+  padding-bottom: var(--iphonex-fix-bottom);
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  /* 设置背景色以透出页面内容 */
 }
-
 .login-bu {
-  margin-top: 20rpx;
   width: 680rpx !important;
   height: 70rpx;
   background-color: #61CF8CFF;

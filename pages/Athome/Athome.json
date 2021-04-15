@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-search": "../../lib/vant/search",
+    "van-rate":"../../lib/vant/rate"
+  },
+  "navigationBarTitleText": "居家陪护"
+}

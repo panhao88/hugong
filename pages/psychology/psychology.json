@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-search": "../../lib/vant/search",
+    "van-divider": "../../lib/vant/divider",
+    "van-rate":"../../lib/vant/rate"
+  },
+  "navigationBarTitleText": "心理咨询"
+}

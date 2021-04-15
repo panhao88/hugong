@@ -4,6 +4,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom:calc(80rpx + var(--iphonex-fix-bottom));
   align-items: center;
 }
 
@@ -109,15 +110,14 @@
 .card{
   display: flex;
 }
-.immediately{
-  width: 95%;
-  height: 100rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.fixed-bottom {
   position: fixed;
   bottom: 0;
+  padding-bottom: var(--iphonex-fix-bottom);
+  left: 0;
+  width: 100%;
   background: #FFFFFF;
+  /* 设置背景色以透出页面内容 */
 }
 .login-bu{
   width: 600rpx !important;

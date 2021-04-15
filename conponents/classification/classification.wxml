@@ -55,7 +55,8 @@
           <view>
             <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
           </view>
-          <view>蜀都中心一期</view>
+          <view class="PhaseI">蜀都中心一期-</view>
+            <view class="Kilometer">0.1km</view>
         </view>
       </view>
     </view>
@@ -98,7 +99,8 @@
           <view>
             <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
           </view>
-          <view>蜀都中心一期</view>
+          <view class="PhaseI">蜀都中心一期-</view>
+          <view class="Kilometer">0.1km</view>
         </view>
       </view>
     </view>
@@ -141,7 +143,8 @@
         <view>
           <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
         </view>
-        <view>蜀都中心一期</view>
+        <view class="PhaseI">蜀都中心一期-</view>
+          <view class="Kilometer">0.1km</view>
       </view>
     </view>
   </view>
@@ -174,7 +177,8 @@
         <view>
           <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
         </view>
-        <view>蜀都中心一期</view>
+        <view class="PhaseI">蜀都中心一期-</view>
+          <view class="Kilometer">0.1km</view>
       </view>
     </view>
   </view>

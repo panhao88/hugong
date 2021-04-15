@@ -30,14 +30,6 @@
   width: 28rpx;
   height: 28rpx;
 }
-.immediately{
-  margin-bottom: 30rpx;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-}
 .login-bu{
   margin-top: 20rpx;
   width: 600rpx !important;
@@ -76,5 +68,14 @@ view.timer{
 }
 .van-divider{
   margin: 0 0 32rpx 0 !important;
+}
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: var(--iphonex-fix-bottom);
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  /* 设置背景色以透出页面内容 */
 }
 

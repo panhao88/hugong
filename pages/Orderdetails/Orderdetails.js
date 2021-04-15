@@ -88,7 +88,6 @@ Page({
     this.setData({
       gito:parseInt(options.item)
     })
-    console.log(this.data.gito)
   },
 
   /**

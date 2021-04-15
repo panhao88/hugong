@@ -5,38 +5,45 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background:#FAFAFA;
+  background: #FAFAFA;
 }
+
 .central {
   width: 95%;
   height: 100%;
-  background:#FAFAFA;
+  background: #FAFAFA;
 }
-.people{
+
+.people {
   margin-top: 20rpx;
   border-radius: 20rpx;
   height: 250rpx;
   background: #ffffff;
 }
-.lCarous{
+
+.lCarous {
   margin-top: 20rpx;
   width: 100%;
   height: 160rpx;
   display: flex;
   align-items: center;
 }
-.tobi{
+
+.tobi {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.nama{
+
+.nama {
   display: flex;
 }
-.mar-gin{
+
+.mar-gin {
   margin-right: 20rpx;
 }
-.item-a{
+
+.item-a {
   margin-top: 10rpx;
   padding: 3rpx 20rpx 3rpx 20rpx;
   font-size: 28rpx;
@@ -44,21 +51,25 @@
   background: #EEEEEE;
   color: #999999;
 }
-.img-nv{
+
+.img-nv {
   width: 26rpx;
   height: 26rpx;
 }
-.im-age{
+
+.im-age {
   width: 20%;
   display: flex;
   justify-content: center;
 }
-.img-g{
+
+.img-g {
   width: 88rpx;
   height: 88rpx;
   border-radius: 50%;
 }
-.nama-age{
+
+.nama-age {
   margin-top: 10rpx;
   padding: 2rpx;
   border-radius: 40rpx;
@@ -67,22 +78,26 @@
   background: #EEEEEE;
   color: #999999;
 }
-.bor{
+
+.bor {
   width: 100%;
   background: #EEEEEE;
   height: 0.5rpx;
 }
-.img-bianji{
+
+.img-bianji {
   width: 28rpx;
   height: 28rpx;
   padding-right: 15rpx;
 }
+
 .Vertical-line {
   width: 1rpx;
   height: 60rpx;
   background: #EDEBE7FF;
 }
-.edit{
+
+.edit {
   height: 90rpx;
   display: flex;
   justify-content: space-around;
@@ -90,13 +105,15 @@
   font-size: 28rpx;
   color: #999999;
 }
-.tit-edit{
+
+.tit-edit {
   display: flex;
   align-items: center;
 }
-.immediately{
+
+.immediately {
   width: 95%;
-  background:#FAFAFA;
+  background: #FAFAFA;
   height: 100rpx;
   display: flex;
   justify-content: center;
@@ -104,15 +121,22 @@
   position: fixed;
   bottom: 0;
 }
-.login-bu{
+
+.login-bu {
   width: 600rpx !important;
   height: 70rpx;
   background-color: #61CF8CFF;
-  border-radius:40rpx ;
+  border-radius: 40rpx;
   color: #ffffff;
   line-height: 35rpx;
   font-size: 30rpx;
 }
-.bottom{
-  height: 110rpx;
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: var(--iphonex-fix-bottom);
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  /* 设置背景色以透出页面内容 */
 }

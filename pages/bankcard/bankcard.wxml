@@ -20,7 +20,7 @@
         <view class="fontnumber">1334</view>
       </view>
     </view>
-    <view class="immediately">
+    <view class="fixed-bottom">
       <button class="login-bu" bindtap="addbankcard">添加银行卡</button>
     </view>
   </view>

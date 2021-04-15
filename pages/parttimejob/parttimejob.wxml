@@ -53,7 +53,7 @@
         </view>
       </view>
     </view>
-    <view class="immediately">
+    <view class="fixed-bottom">
       <button class="login-bu" bindtap="Logout" bindtap="goSubmit">提交申请</button>
     </view>
   </view>

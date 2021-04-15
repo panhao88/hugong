@@ -13,40 +13,48 @@
   align-items: center;
   background: #F5F5F5;
 }
-.zhishitu{
+
+.zhishitu {
   width: 20rpx;
   height: 20rpx;
-  
+
 }
-.image-icon{
+
+.image-icon {
   position: absolute;
   top: 60rpx;
 }
-.shang-top{
+
+.shang-top {
   width: 100%;
   position: relative;
   bottom: 60rpx;
 }
-.shang-updata{
+
+.shang-updata {
   height: 90rpx;
   align-items: center;
   flex-direction: column;
   display: flex;
   justify-content: center;
 }
-.updata{
+
+.updata {
   margin-top: 10rpx;
   font-size: 24rpx;
   color: #999999;
 }
-.Healthcare{
+
+.Healthcare {
   width: 100%;
   height: 1800rpx;
 }
-.imgtext{
+
+.imgtext {
   width: 100%;
   height: 1800rpx;
 }
+
 .central {
   width: 95%;
   display: flex;
@@ -56,12 +64,15 @@
   bottom: 60rpx;
   background: #F5F5F5;
 }
-.scroll-item_H{
+
+.scroll-item_Hkl {
   display: inline-block;
 }
-.scroll-view{
+
+/* .scroll-view {
   white-space: nowrap;
-}
+} */
+
 .region {
   width: 100%;
   border-radius: 20rpx;
@@ -73,16 +84,19 @@
   border-radius: 20rpx;
   background: #FFFFFFFF;
 }
-.shang{
+
+.shang {
   height: 60rpx;
   align-items: center;
   display: flex;
   justify-content: center;
 }
-.img-shang{
+
+.img-shang {
   width: 20rpx;
   height: 20rpx;
 }
+
 .wrap {
   width: 100%;
   height: 750rpx;
@@ -205,7 +219,50 @@
   justify-content: center;
   flex-direction: column;
 }
+.img{
+  width: 314rpx;
+  height: 280rpx;
+}
+.top-bo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #999999;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}
+.plsecurity{
+  position: relative;
+  color: #333333FF;
+  font-size: 30rpx;
+  font-weight: 900;
+  letter-spacing: 3rpx;
+  height: 100rpx;
+  display: flex;
+  width: 24%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 20rpx;
+}
+.aunt{
+  width: 314rpx;
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.Aunt-Wang{
+  color: #333333;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+/* 横向滚动 */
 
+.scroll-item_H {
+  display: inline-block;
+  margin: 0 10rpx 0 3rpx;
+}
 .bor-d {
   margin-top: 15rpx;
   border: solid 0.5rpx #EEEEEEFF;
@@ -272,30 +329,13 @@
   color: #FF5C5CFF;
   font-size: 22rpx;
 }
-
-.Allcertifications {
-  margin-top: 10rpx;
-  display: flex;
-  justify-content: space-around;
-  font-size: 28rpx;
-}
-
-.vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* 服务项目 */
-.Service-Items {
+/* 全部护工 */
+.Service-pl{
   width: 100%;
-  height: 300rpx;
+  height: 563rpx;
   background: #FFFFFFFF;
   margin-top: 20rpx;
   border-radius: 10rpx;
-}
-
-.van-button {
-  width: 100% !important;
 }
 .immediately {
   margin-bottom: 20rpx;
@@ -318,6 +358,82 @@
 .background-color{
   background: #FAFAFA;
 }
+/* 横向滚动 */
+.scroll-view {
+  white-space: nowrap;
+}
+.img-a{
+  width: 314rpx;
+  height: 420rpx;
+  border-radius: 14rpx;
+
+}
+.Platform-certification {
+  font-size: 18rpx;
+  color: #EEEEEE;
+  letter-spacing: 3rpx;
+  border-radius: 8rpx;
+}
+.bor-de{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28rpx;
+  width: 100rpx;
+  border: #EEEEEE 1rpx solid;
+  color: #999999;
+}
+.Allcertifications {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-around;
+  font-size: 28rpx;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 服务项目 */
+.Service-Items {
+  width: 100%;
+  height: 300rpx;
+  background: #FFFFFFFF;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+
+.van-button {
+  width: 100% !important;
+  height: 120rpx !important;
+}
+
+.immediately {
+  margin-bottom: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+
+.login-bu {
+  margin-top: 20rpx;
+  width: 680rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius: 40rpx;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 28rpx;
+}
+
+.background-color {
+  background: #FAFAFA;
+}
+
 /* 预约信息 */
 .central-section {
   margin-bottom: 20rpx;
@@ -335,20 +451,47 @@
 
 .contacts {
   width: 100%;
-  height: 300rpx;
+  height: 350rpx;
   border-radius: 20rpx;
   background: #FFFFFFFF;
 }
 
 .contact {
+  margin-top: 10rpx;
   height: 100rpx;
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
+.Verticalmiddle {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.paddim{
+  padding-right: 20rpx;
+}
+.lastname {
+  display: flex;
+  font-size: 30rpx;
+}
+
+.addPlace {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.commontimer{
+  font-weight: 550;
+  color: #61CF8C;
+  font-size: 26rpx;
+}
 .Contact-address {
-  width: 90%;
+  width: 30%;
   font-size: 28rpx;
   padding-left: 20rpx;
 }
@@ -378,19 +521,23 @@
   padding: 15rpx 0 18rpx 0;
   font-weight: 600;
 }
-.textar{
+
+.textar {
   width: 100%;
   height: 400rpx;
 }
-.pltextarea{
+
+.pltextarea {
   width: 100%;
   height: 400rpx;
   border-radius: 5rpx;
 }
+
 .yi-hospital {
   margin-top: 10rpx;
   padding-left: 10rpx;
 }
+
 .Escort-lp {
   width: 100%;
   flex-wrap: wrap;
@@ -663,6 +810,7 @@
   height: 32rpx;
   width: 20rpx;
 }
+
 .py {
   margin-top: 15rpx;
   box-sizing: border-box;
@@ -670,6 +818,7 @@
   color: #aaa;
   padding: 10rpx 25rpx;
 }
+
 .img-dingwei {
   width: 26rpx;
   height: 26rpx;
@@ -683,6 +832,7 @@
 .item {
   width: 94%;
 }
+
 .py {
   box-sizing: border-box;
   background: #eee;
@@ -690,13 +840,15 @@
   color: #aaa;
   padding: 10rpx 25rpx;
 }
-.g-fullname{
+
+.g-fullname {
   box-sizing: border-box;
   font-size: 30rpx;
   color: #555;
   padding: 18rpx;
   border-bottom: 1rpx solid #eee;
 }
+
 .fullname {
   box-sizing: border-box;
   font-size: 30rpx;
@@ -720,6 +872,7 @@
   text-align: center;
   color: #555;
 }
+
 .hot-city {
   border: 1rpx solid #eee;
   display: inline-block;
@@ -727,6 +880,7 @@
   padding: 10rpx 25rpx;
   font-size: 25rpx;
 }
+
 /* 搜索列表内容 */
 .add-list-box {
   width: 100%;
@@ -790,14 +944,16 @@
   border-radius: 40rpx;
 }
 
-.boplr{
+.boplr {
   padding-right: 30rpx;
 }
+
 .PVertical {
   width: 1rpx;
   height: 60rpx;
   background: #EEEEEE;
 }
+
 /* 新增地址 */
 /* pages/online/online.wxss */
 
@@ -816,11 +972,13 @@
   justify-content: flex-end;
   color: #999999;
 }
-.boe-der{
+
+.boe-der {
   width: 1rpx;
   height: 60rpx;
   background: #EEEEEE;
 }
+
 .separate {
   width: 80%;
   height: 80rpx;
@@ -849,17 +1007,20 @@
 .van-divider {
   margin: 8rpx 0 !important;
 }
-.level{
+
+.level {
   display: flex;
   padding-left: 20rpx;
 }
-.Range{
+
+.Range {
   background: #FAFAFA;
   color: #333333;
   font-size: 24rpx;
   padding: 25rpx 0 25rpx 0;
 }
-.PY-appetite{
+
+.PY-appetite {
   color: #999999;
   font-size: 28rpx;
   font-weight: 600;
@@ -867,13 +1028,15 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .van-buttom {
   width: 140rpx !important;
   height: 120rpx !important;
   background: #FF2C2C;
   color: #FAFAFAFF;
 }
-.appointment-now{
+
+.appointment-now {
   width: 600rpx !important;
   height: 70rpx;
   background-color: #61CF8CFF;
@@ -882,7 +1045,8 @@
   line-height: 35rpx;
   font-size: 28rpx;
 }
-.Pay-immediately{
+
+.Pay-immediately {
   width: 300rpx !important;
   height: 70rpx;
   background-color: #61CF8CFF;
@@ -891,7 +1055,8 @@
   line-height: 35rpx;
   font-size: 28rpx;
 }
-.gopayment{
+
+.gopayment {
   width: 100%;
   height: 100rpx;
   background: #FFFFFF;
@@ -901,32 +1066,38 @@
   justify-content: space-around;
   align-items: center;
 }
-.A-gopayment{
+
+.A-gopayment {
   display: flex;
   align-items: center;
 }
-.font-lp{
+
+.font-lp {
   color: #333333;
   font-size: 24rpx;
   font-weight: 600;
 }
-.font-tg{
+
+.font-tg {
   color: #FF5C5C;
   font-size: 32rpx;
   font-weight: 700;
 }
+
 /* 选择时间 */
 /* pages/setCalendar/setCalendar.ttss */
 .plBox {
   position: relative;
 }
+
 .calendar {
   width: 100%;
   height: auto;
   overflow: hidden;
   box-sizing: border-box;
 }
-.choice{
+
+.choice {
   width: 100%;
   height: 80rpx;
   display: flex;
@@ -936,7 +1107,8 @@
   color: #333333;
   font-weight: 600;
 }
-.pddlevel{
+
+.pddlevel {
   height: 80rpx;
   padding-left: 20rpx;
   padding-right: 20rpx;
@@ -944,16 +1116,18 @@
   align-items: center;
   display: flex;
   font-size: 26rpx;
-  background:#ececec;
+  background: #ececec;
   font-weight: 700;
 }
+
 .calendar .week {
   width: 98%;
   margin: 0 auto;
   height: auto;
   overflow: hidden;
 }
-.calendar .week text{
+
+.calendar .week text {
   width: 60rpx;
   margin: 0 auto;
   text-align: center;
@@ -971,53 +1145,61 @@
   border-bottom: #FFFFFF 1px solid;
   box-sizing: border-box;
 }
+
 .calendar .week .saturday {
   color: #000;
 }
+
 .calendar .week .sunday {
   color: #000;
 }
+
 /* 当天的时间 */
 .calendar .week .now {
-  border:none;
+  border: none;
   background: #F5F5F5;
   color: #888888;
   border-radius: 50%;
   box-sizing: border-box;
 }
+
 /* 选中的时间 */
 .calendar .week .selected {
-  border:none;
+  border: none;
   background: #61CF8C !important;
   color: #FFFFFF !important;
   border-radius: 50%;
   box-sizing: border-box;
 }
+
 /* 过去时间 */
 .calendar .week .disabled {
-  border:none;
+  border: none;
   background: #F5F5F5;
-  text-decoration:line-through;
+  text-decoration: line-through;
   border: #FFFFFF 1px solid;
   color: #888888;
   box-sizing: border-box;
 }
+
 /* 为空白时间 */
 .calendar .week .empty {
-  border:none;
+  border: none;
   /* background: #F5F5F5; */
   background: #FFFFFF !important;
   box-sizing: border-box;
 }
+
 /* 有天数的背景 */
 .calendar .week .aaaa {
-  border:none;
+  border: none;
   /* background: #F5F5F5; */
   background: #F5F5F5;
   border: #FFFFFF 1px solid;
   color: #888888;
   box-sizing: border-box;
 }
+
 .btnBox {
   position: fixed;
   bottom: 0;
@@ -1034,5 +1216,102 @@
   border-radius: 40rpx;
   background: #dd434b;
 }
+/* 热门机构 */
+.plservice {
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.Aunt-Zhang {
+  margin-top: 20rpx;
+  width: 100%;
+}
+.tication {
+  margin-top: 8rpx;
+  width: 100%;
+  display: flex;
+}
+.Poplatform-pcertification {
+  border: #BBBBBBFF 1rpx solid;
+  background: #61CF8CFF;
+  font-size: 18rpx;
+  color: #FFFFFFFF;
+  width: 100rpx;
+  height: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3rpx;
+  margin: 0 18rpx 0 0;
+  border-radius: 8rpx;
+  border: none;
+}
+.bor-der {
+  border: #EEEEEEFF 0.1rpx solid;
+  margin-top: 10rpx;
+}
+.plglocation {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  color: #333333FF;
+  font-size: 24rpx;
+}
+.PhaseI{
+  padding-left: 8rpx;
+ }
+ .Kilometer{
+  color: #61CF8C;
+}
+.plimg-di {
+  width: 30rpx;
+  height: 30rpx;
+}
+.ServiceplkItems{
+  width: 100%;
+  height: 330rpx;
+  background: #FFFFFFFF;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+.Popular-nurse {
+  width: 100%;
+  /* margin-top: 20rpx; */
+  display: flex;
+  align-content: center;
+  background: #FFFFFFFF;
+  border-radius: 20rpx;
+}
+.immage-mechanism {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+.hao-jj {
+  font-weight: 600;
+  letter-spacing: 3rpx;
+  color: #333333FF;
+  font-size: 30rpx;
+}
+.logo{
+  width: 120rpx;
+  height: 120rpx;
+}
+.Service-Centre {
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
 
-
+.font-f {
+  font-size: 24rpx;
+  color: #333333FF;
+}

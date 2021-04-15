@@ -4,6 +4,7 @@ var qqmapsdk;
 var city = require('../../lib/city');
 Page({
   data: {
+    arrid:0,
     boxshow: true, //展开收缩
     picture: true, //图文
     arrli: [{
@@ -84,6 +85,39 @@ Page({
         img: '../../img/mipmap-mdpi/hugong.png'
       },
     ],
+    arrpp: [{
+      imag: '../../img/mipmap-mdpi/bingren.png',
+      title:"专业培训",
+      icon:"../../img/mipmap-mdpi/qi.png",
+      name:"病人陪护",
+      pop:"以服务29.9万人",
+      color:"#61CF8C"
+    },
+    {
+      imag: '../../img/mipmap-mdpi/chanfu.png',
+      title:"服务认证",
+      icon:"../../img/mipmap-mdpi/qi.png",
+      name:"产妇陪护",
+      pop:"以服务29.9万人",
+      color:"#60AAE5"
+    },
+    {
+      imag: '../../img/mipmap-mdpi/yuesao.png',
+      title:"安全保障",
+      icon:"../../img/mipmap-mdpi/qi.png",
+      name:"月嫂陪护",
+      pop:"以服务29.9万人",
+      color:"#FFB85D"
+    },
+    {
+      imag: '../../img/mipmap-mdpi/yuesao.png',
+      title:"专业培训",
+      icon:"../../img/mipmap-mdpi/qi.png",
+      name:"病人陪护",
+      pop:"以服务29.9万人",
+      color:"#FFB85D"
+    },
+  ],
     pavalue: '', //搜索框输入内容
     radio: '1', //男女选择单选框
     colo: 0, //服务类型选择器 
@@ -1042,6 +1076,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let id = parseInt(options.id)
+    this.setData({
+      arrid:id
+    })
     //初始化日历数据
     var nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月
     var nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下二个月

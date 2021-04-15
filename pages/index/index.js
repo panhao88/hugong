@@ -65,6 +65,18 @@ Page({
       url: '/pages/Searchpage/Searchpage',
     })
   },
+  //去居家陪护
+  goAthome(){
+    wx.navigateTo({
+      url: '/pages/Athome/Athome',
+    })
+  },
+  //去心理咨询
+  gopsychology(){
+    wx.navigateTo({
+      url: '/pages/psychology/psychology',
+    })
+  },
   // 事件处理函数
   bindViewTap() {
    

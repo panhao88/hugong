@@ -85,7 +85,7 @@
       <view class="font-tg">￥1500.00</view>
     </view>
     <view>
-      <button class="Pay-immediately" >立即预约</button>
+      <button class="Pay-immediately" >立即支付</button>
     </view>
   </view>
 </view>

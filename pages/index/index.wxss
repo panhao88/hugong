@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
   background: #FAFAFAFF;
+    /* 应用安全边距，因为有悬浮按钮，应加上按钮高度 */
+    padding-bottom: calc(90rpx + var(--iphonex-fix-bottom));
 }
 
 .central {
@@ -36,6 +38,10 @@
   position: absolute;
   left: 200rpx;
 }
+.img-dizhi{
+  width: 15rpx;
+  height: 15rpx;
+}
 .wei-icoc{
   width: 10%;
   display: flex;
@@ -54,10 +60,6 @@
 .van-search{
   padding: 0 !important;
   width: 80% !important;
-}
-.img-dizhi{
-  width: 15rpx;
-  height: 15rpx;
 }
 .img-weixin{
   width: 65rpx;
@@ -247,9 +249,5 @@
 .worry{
   width: 100%;
   height: 180rpx;
-}
-.bottom{
-  height: 160rpx;
-  background: red;
 }
 

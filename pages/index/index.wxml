@@ -44,8 +44,8 @@
     </view>
     <!-- 居家陪护 -->
     <view class="page-four">
-      <view class="four-upper">
-        <view class="Home-care">
+      <view class="four-upper" >
+        <view class="Home-care" bindtap="goAthome">
           <view class="jia-wu">
             <image src="../../img/mipmap-mdpi/shouye(2).png" class="f-zi"></image>
           </view>
@@ -75,11 +75,10 @@
       </view>
     </view>
     <view class="picture">
-      <image src="../../img/mipmap-mdpi/zhanshitu.png" class="worry"></image>
+      <image src="../../img/mipmap-mdpi/zhanshitu.png" class="worry" bindtap="gopsychology"></image>
     </view>
     <view>
       <classification hugong="{{hugong}}"></classification>
     </view>
-    <view class="bottom"></view>
   </view>
 </view>

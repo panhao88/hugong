@@ -5,21 +5,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom:calc(70rpx + var(--iphonex-fix-bottom));
   background:#FAFAFA;
 }
 .central {
   width: 95%;
   height: 100%;
-}
-.immediately{
-  width: 95%;
-  background:#FAFAFA;
-  height: 100rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
 }
 .login-bu{
   width: 600rpx !important;
@@ -87,4 +78,13 @@
 .fontnumber{
   font-size: 48rpx;
   color: #FFFFFF;
+}
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: var(--iphonex-fix-bottom);
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  /* 设置背景色以透出页面内容 */
 }

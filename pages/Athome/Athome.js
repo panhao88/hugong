@@ -1,4 +1,4 @@
-// pages/Hospitaldetails/Hospitaldetails.js
+// pages/Athome/Athome.js
 Page({
 
   /**
@@ -6,6 +6,7 @@ Page({
    */
   data: {
     flag: 0,
+    flagIndex: 0,
     hugong: [{
         name: "推荐护工",
         id: 1,
@@ -40,36 +41,49 @@ Page({
         id: 3
       },
     ],
+    arr: [{
+        title: "金牌保姆",
+        id: 0
+      },
+      {
+        title: "金牌护工",
+        id: 1
+      },
+      {
+        title: "金牌保护",
+        id: 2
+      },
+      {
+        title: "金牌保护",
+        id: 3
+      },
+      {
+        title: "金牌保护",
+        id: 4
+      },
+      {
+        title: "金牌保护",
+        id: 5
+      },
+    ]
   },
   goto(e) {
     this.setData({
       flag: e.currentTarget.dataset.index
     })
   },
-  //去护工详情页
+  //去护工详情
   godetaild() {
     wx.navigateTo({
       url: '/pages/details/details',
     })
   },
-  //去机构详情页
+  //去机构详情
   goorgandetail() {
     let id = 0
     wx.navigateTo({
       url: `/pages/details/details?id=${id}`,
     })
-  },
-  //查看全部
-  goViewall() {
-    if (this.data.flag === 0) {
-      wx.navigateTo({
-        url: '/pages/Manynurses/Manynurses',
-      })
-    } else {
-      wx.navigateTo({
-        url: '/pages/Multiagency/Multiagency',
-      })
-    }
   },
   /**
    * 生命周期函数--监听页面加载

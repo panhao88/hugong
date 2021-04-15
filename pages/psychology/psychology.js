@@ -1,43 +1,50 @@
-// pages/Hospitaldetails/Hospitaldetails.js
+// pages/psychology/psychology.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    Capital: "蜀都中心...",
+    keyword: '遥看瀑布挂前川',
     flag: 0,
     hugong: [{
-        name: "推荐护工",
+        name: "推荐护师",
         id: 1,
       },
       {
-        name: "推荐机构",
+        name: "距离优先",
         id: 2,
       },
+      {
+        name: "评价最高",
+        id: 3,
+      },
     ],
-    arrli: [{
-        name: "病人陪护",
-        id: 1
+    arrli:[
+      {
+        name:"病人陪护",
+        id:1
       },
       {
-        name: "平台认证",
-        id: 2
+        name:"平台认证",
+        id:2
       },
       {
-        name: "产妇陪护",
-        id: 3
+        name:"产妇陪护",
+        id:3
       },
       {
-        name: "产妇陪护",
-        id: 3
+        name:"产妇陪护",
+        id:3
       },
       {
-        name: "产妇陪护",
-        id: 3
+        name:"产妇陪护",
+        id:3
       },
       {
-        name: "产妇陪护",
-        id: 3
+        name:"产妇陪护",
+        id:3
       },
     ],
   },
@@ -46,30 +53,12 @@ Page({
       flag: e.currentTarget.dataset.index
     })
   },
-  //去护工详情页
-  godetaild() {
-    wx.navigateTo({
-      url: '/pages/details/details',
-    })
-  },
-  //去机构详情页
-  goorgandetail() {
-    let id = 0
+  //去详情
+  godetails(){
+    let id = 1
     wx.navigateTo({
       url: `/pages/details/details?id=${id}`,
     })
-  },
-  //查看全部
-  goViewall() {
-    if (this.data.flag === 0) {
-      wx.navigateTo({
-        url: '/pages/Manynurses/Manynurses',
-      })
-    } else {
-      wx.navigateTo({
-        url: '/pages/Multiagency/Multiagency',
-      })
-    }
   },
   /**
    * 生命周期函数--监听页面加载

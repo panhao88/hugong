@@ -20,7 +20,7 @@
         <view class="backgr">上传身份证反面</view>
       </view>
     </view>
-    <view class="immediately">
+    <view class="fixed-bottom">
       <button class="login-bu" bindtap="Logout">提交申请</button>
     </view>
   </view>

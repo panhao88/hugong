@@ -73,7 +73,7 @@
         </view>
       </view>
       <view class="bottom"></view>
-      <view class="immediately">
+      <view class="fixed-bottom">
         <button class="login-bu" bindtap="addbankcard">确认</button>
       </view>
     </view>

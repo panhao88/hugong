@@ -9,8 +9,9 @@ Page({
   },
    //去机构详情页
    goorgandetail(){
+    let id = 0
     wx.navigateTo({
-      url: '/pages/Organizationdetails/Organizationdetails',
+      url: `/pages/details/details?id=${id}`,
     })
   },
   /**

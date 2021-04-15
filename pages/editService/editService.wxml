@@ -33,7 +33,7 @@
     <view class="textar">
       <textarea style="background:#F7F4F8" class="pltextarea" placeholder="列：需要居家陪护、做饭、清理" />
       </view>
-    <view class="immediately">
+    <view class="fixed-bottom">
      <button class="login-bu" bindtap="addService">+保存服务人</button>
     </view>
   </view>

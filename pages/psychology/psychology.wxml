@@ -1,0 +1,116 @@
+<view class="local">
+  <view class="central">
+    <!-- 输入框 -->
+    <view class="top">
+      <view class="box-now">
+        <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi"></image>
+        </view>
+        <view class="box-therr">
+          <van-search value="{{ value }}" placeholder="请输入搜索关键词"   />
+        </view>
+      </view>
+    </view>
+    <van-divider />
+    <view class="Nursing-workers">
+      <view class="Hot" wx:for="{{hugong}}" wx:key="index" class="{{flag === index ? 'colore' : ''}}"
+        data-index="{{index}}">
+        <view class="tob-name">
+          {{item.name}}
+          <view wx:if="{{flag === index}}">
+            <view class="border-b"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{flag === 0}}">
+      <!-- 张阿姨1 -->
+      <view class="Popular-nurse" bindtap="godetails">
+        <view class="service">
+          <view>
+            <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+          </view>
+          <view class="Serviceable">可服务</view>
+        </view>
+        <view class="Aunt-Zhang">
+          <view class="font">张阿姨</view>
+          <view class="score">
+            <view class="wu-lin">
+              <van-rate value="{{ value }}" size="{{ 13 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+            </view>
+            <view class="appointment">最早可约3月1号</view>
+          </view>
+          <view class="authentication">
+            <scroll-view class="scroll-view" scroll-x="true">
+              <view wx:for="{{arrli}}" wx:key="index" class="scroll-item_H">
+                <view class="Platform-certification">{{item.name}}</view>
+              </view>
+            </scroll-view>
+          </view>
+          <view class="brief-introduction">
+            性格温柔，态度良好
+            性格温柔，态度良好
+            性格温柔，态度良好
+            性格温柔，态度良好
+            性格温柔，态度良好
+            性格温柔，态度良好
+          </view>
+          <view class="bor-der"></view>
+          <view class="Service-person">
+            <view>以服务100人</view>
+            <view class="location">
+              <view>
+                <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+              </view>
+              <view class="PhaseI">蜀都中心一期-</view>
+          <view class="Kilometer">0.1km</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 张阿姨1 -->
+      <view class="Popular-nurse">
+        <view class="service">
+          <view>
+            <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+          </view>
+          <view class="Serviceable">可服务</view>
+        </view>
+        <view class="Aunt-Zhang">
+          <view class="font">张阿姨</view>
+          <view class="score">
+            <view class="wu-lin">
+              <van-rate value="{{ value }}" size="{{ 13 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+            </view>
+            <view class="appointment">最早可约3月1号</view>
+          </view>
+          <view class="authentication">
+            <scroll-view class="scroll-view" scroll-x="true">
+              <view wx:for="{{arrli}}" wx:key="index" class="scroll-item_H">
+                <view class="Platform-certification">{{item.name}}</view>
+              </view>
+            </scroll-view>
+          </view>
+          <view class="brief-introduction">
+            性格温柔，态度良好
+            性格温柔，态度良好
+            性格温柔，态度良好
+            性格温柔，态度良好
+            性格温柔，态度良好
+            性格温柔，态度良好
+          </view>
+          <view class="bor-der"></view>
+          <view class="Service-person">
+            <view>以服务100人</view>
+            <view class="location">
+              <view>
+                <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+              </view>
+              <view class="PhaseI">蜀都中心一期-</view>
+          <view class="Kilometer">0.1km</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

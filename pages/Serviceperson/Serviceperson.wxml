@@ -30,8 +30,7 @@
         </view>
       </view>
     </view>
-    <view class="bottom"></view>
-    <view class="immediately">
+    <view class="fixed-bottom">
       <button class="login-bu" bindtap="addService">+新增服务人</button>
     </view>
   </view>

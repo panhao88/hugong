@@ -30,7 +30,7 @@
         </view>
         <view class="authentication">
           <scroll-view class="scroll-view" scroll-x="true">
-            <view wx:for="{{arrli}}" wx:key="index" class="scroll-item_H">
+            <view wx:for="{{arrli}}" wx:key="index" class="scroll-item_Hkl">
               <view class="bor">{{item.name}}</view>
             </view>
           </scroll-view>
@@ -149,6 +149,88 @@
         </view>
       </view>
     </view>
+    <view class="Service-pl" wx:if="{{arrid === 0}}">
+      <view class="guarantee">
+        <view class="top-bo">
+          <view class="plsecurity">
+            <view>护工(200)</view>
+            <view class="image-icon">
+              <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image>
+            </view>
+          </view>
+          <view>查看全部></view>
+        </view>
+        <view>
+          <scroll-view class="scroll-view" scroll-x="true">
+            <view wx:for="{{arrpp}}" wx:key="index" class="scroll-item_H">
+              <view class="img-a">
+                <view>
+                  <image src="{{item.imag}}" class="img"></image>
+                </view>
+                <view class="aunt">
+                  <view class="Aunt-Wang">王阿姨</view>
+                  <view>
+                    <van-rate value="{{ value }}" size="{{ 14 }}" color="#FCC954" void-color="#eee" void-icon="star"
+                      bind:change="onChange" />5.0
+                  </view>
+                  <view>
+                    <scroll-view class="scroll-view" scroll-x="true">
+                      <view wx:for="{{arrli}}" wx:key="index" class="scroll-item_H">
+                        <view class="Platform-certification">
+                          <view class="bor-de">{{item.name}}</view>
+                        </view>
+                      </view>
+                    </scroll-view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+    <view class="ServiceplkItems" wx:if="{{arrid === 1}}">
+      <view class="guarantee">
+        <view class="security">
+          <view>所属机构</view>
+          <view class="image-icon">
+            <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image>
+          </view>
+        </view>
+        <view class="Popular-nurse">
+          <view class="plservice">
+            <view>
+              <view class="immage-mechanism">
+                <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+              </view>
+            </view>
+          </view>
+          <view class="Aunt-Zhang">
+            <view class="hao-jj">成都好姐姐陪护服务有限公司</view>
+            <view>
+              <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star"
+                disabled />
+            </view>
+            <view class="tication">
+              <view class="Poplatform-pcertification">平台认证</view>
+              <view class="Poplatform-pcertification">病人陪护</view>
+              <view class="Poplatform-pcertification">产妇陪护</view>
+            </view>
+          </view>
+        </view>
+        <view class="bor-der"></view>
+        <view class="Service-Centre">
+          <view class="font-f">以服务1000人</view>
+          <view class="plglocation">
+            <view>
+              <image src="../../img/mipmap-mdpi/dingwei.png" class="plimg-di"></image>
+            </view>
+            <view class="PhaseI">蜀都中心一期-</view>
+            <view class="Kilometer">0.1km</view>
+          </view>
+        </view>
+      </view>
+    </view>
     <!-- 填写预约信息 -->
     <van-popup show="{{ show }}" position="bottom" custom-style="height: 75%;" bind:close="onClose">
       <view class="local">
@@ -157,19 +239,37 @@
           <view class="contacts">
             <view class="contact" bindtap="goaddress">
               <view class="Contact-address">请选择联系地址</view>
-              <view>1111</view>
+              <view class="Verticalmiddle">
+                <view class="lastname">
+                  <view class="paddim">冯程程</view>
+                  <view class="paddim">女</view>
+                  <view class="paddim">123456789</view>
+                </view>
+                <view class="addPlace">武侯区蜀都中心新希望大厦3号楼</view>
+              </view>
               <view class="picture">
                 <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
               </view>
             </view>
+            <van-divider />
             <view class="contact" bindtap="goobj">
               <view class="Contact-address">请选择服务对象</view>
+              <view class="Verticalmiddle">
+                <view class="lastname">
+                  <view class="paddim">王桂香</view>
+                  <view class="paddim">女</view>
+                  <view class="paddim">66岁</view>
+                </view>
+                <view class="addPlace">高血压,糖尿病</view>
+              </view>
               <view class="picture">
                 <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
               </view>
             </view>
+            <van-divider />
             <view class="contact" bindtap="gotime">
               <view class="Contact-address">请选择服务时间</view>
+              <view class="commontimer">2021-3-10-2022-4-10　共5天</view>
               <view class="picture">
                 <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
               </view>
@@ -183,11 +283,11 @@
               </view>
             </view>
             <view class="service-sp">服务项目</view>
-              <view class="Escort-lp">
-                <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
-                  <view class="{{colo === index ? 'red' : 'yi-Escort'}}">{{item.name}}</view>
-                </view>
+            <view class="Escort-lp">
+              <view wx:for="{{arr}}" wx:key="item" class="yi-hospital">
+                <view class="{{colo === index ? 'red' : 'yi-Escort'}}">{{item.name}}</view>
               </view>
+            </view>
           </view>
         </view>
       </view>
@@ -236,27 +336,27 @@
     <van-popup show="{{ keepaddress }}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
       <view class="local">
         <view class="central-section">
-            <van-cell-group>
-              <van-field value="{{ value }}" placeholder="请输入联系人" label="联系人" input-align="right" />
-              <view class="radio">
-                <view class="plGender">性别</view>
-                <view class="radio-group">
-                  <van-radio-group value="{{ radio }}" bind:change="onChange">
-                    <view class="radioflex">
-                      <van-radio name="1" icon-size="28rpx" class="groun" checked-color="#61CF8C">男</van-radio>
-                      <van-radio name="2" icon-size="28rpx" checked-color="#61CF8C">女</van-radio>
-                    </view>
-                  </van-radio-group>
-                </view>
+          <van-cell-group>
+            <van-field value="{{ value }}" placeholder="请输入联系人" label="联系人" input-align="right" />
+            <view class="radio">
+              <view class="plGender">性别</view>
+              <view class="radio-group">
+                <van-radio-group value="{{ radio }}" bind:change="onChange">
+                  <view class="radioflex">
+                    <van-radio name="1" icon-size="28rpx" class="groun" checked-color="#61CF8C">男</van-radio>
+                    <van-radio name="2" icon-size="28rpx" checked-color="#61CF8C">女</van-radio>
+                  </view>
+                </van-radio-group>
               </view>
-              <van-field value="{{ value }}" placeholder="请输入联系人电话" label="联系电话" input-align="right" />
-              <van-cell title="服务地址" is-link value="请选择" bindtap="golocation" input-align="right" />
-              <van-field value="{{ value }}" placeholder="请输入门牌号" label="门牌号" input-align="right" />
-            </van-cell-group>
-          </view>
-          <view class="immediately">
-            <button class="login-bu" bindtap="gotoexamine">保存地址</button>
-          </view>
+            </view>
+            <van-field value="{{ value }}" placeholder="请输入联系人电话" label="联系电话" input-align="right" />
+            <van-cell title="服务地址" is-link value="请选择" bindtap="golocation" input-align="right" />
+            <van-field value="{{ value }}" placeholder="请输入门牌号" label="门牌号" input-align="right" />
+          </van-cell-group>
+        </view>
+        <view class="immediately">
+          <button class="login-bu" bindtap="gotoexamine">保存地址</button>
+        </view>
       </view>
     </van-popup>
     <!-- 地图 -->
