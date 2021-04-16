@@ -50,14 +50,12 @@ page{
   background: #FFFFFFFF;
   border-radius: 20rpx;
 }
-.serviceaunt{
+.service {
   font-size: 30rpx;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
-  width: 20%;
+  margin-top: 26rpx;
+  width: 30%;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 .imm-age {
@@ -183,7 +181,7 @@ page{
   background: #FFFFFFFF;
   border-radius: 20rpx;
 } */
-.service {
+.mechservicoe {
   font-size: 30rpx;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
@@ -194,13 +192,13 @@ page{
   flex-direction: column;
 }
 .immage-mechanism {
-  width: 120rpx;
-  height: 120rpx;
+  width: 110rpx;
+  height: 110rpx;
   border-radius: 10rpx;
 }
 .logo{
-  width: 120rpx;
-  height: 120rpx;
+  width: 110rpx;
+  height: 110rpx;
 }
 .Aunt-Zhang {
   margin-top: 20rpx;

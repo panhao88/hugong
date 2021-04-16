@@ -1,0 +1,90 @@
+/* pages/Allcomments/Allcomments.wxss */
+/* 用户好评 */
+.todo-nurse {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  background: #FFFFFFFF;
+}
+.Praise {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.displ{
+  margin-top: 20rpx;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.classification{
+  width: 170rpx;
+  height: 170rpx;
+  margin-right: 21rpx;
+  border-radius: 10rpx;
+}
+.imnmn{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.head-portrait {
+  padding: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.timerr{
+  color: #333333FF;
+  font-size: 30rpx;
+}
+.tyime{
+  color: #999999FF;
+  font-size: 22rpx;
+  padding-right: 20rpx;
+}
+.antpd{
+  color: #333333FF;
+  font-size: 26rpx;
+}
+.Coffee {
+  display: flex;
+  justify-content: space-between;
+}
+
+.major {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999999FF;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.img-aunt {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.imgbin{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 10rpx;
+}
+.plScore{
+  display: flex;
+  align-items: center;
+  color: #333333;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+.five{
+  margin-left: 8rpx;
+}
+.van-divider{
+  margin: 0rpx !important;
+}

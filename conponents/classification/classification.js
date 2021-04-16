@@ -126,7 +126,109 @@ Component({
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
         dingwei:"../../img/mipmap-mdpi/dingwei.png",
-        weizhi:"蜀都中心一期"
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+    ],
+    evaluate:[
+      {
+        img:"../../img/mipmap-mdpi/hugong.png",
+        name:"咖啡时光",
+        timer:"2021.8.20",
+        pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
+        chart:[
+          {
+            imag:"../../img/mipmap-mdpi/bingren.png"
+          },
+          {
+            imag:"../../img/mipmap-mdpi/bingren.png"
+          },
+          {
+            imag:"../../img/mipmap-mdpi/bingren.png"
+          },
+        ],
+        imm:"../../img/mipmap-mdpi/hugong.png",
+        namm:"王阿姨"
+      },
+      {
+        img:"../../img/mipmap-mdpi/hugong.png",
+        name:"咖啡时光",
+        timer:"2021.8.20",
+        pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
+        imm:"../../img/mipmap-mdpi/hugong.png",
+        namm:"王阿姨"
+      },
+      {
+        img:"../../img/mipmap-mdpi/hugong.png",
+        name:"咖啡时光",
+        timer:"2021.8.20",
+        pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
+        imm:"../../img/mipmap-mdpi/hugong.png",
+        namm:"王阿姨"
+      },
+      {
+        img:"../../img/mipmap-mdpi/hugong.png",
+        name:"咖啡时光",
+        timer:"2021.8.20",
+        pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
+        imm:"../../img/mipmap-mdpi/hugong.png",
+        namm:"王阿姨"
+      },
+      {
+        img:"../../img/mipmap-mdpi/hugong.png",
+        name:"咖啡时光",
+        timer:"2021.8.20",
+        pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
+        imm:"../../img/mipmap-mdpi/hugong.png",
+        namm:"王阿姨"
       },
     ]
   },
@@ -153,9 +255,10 @@ Component({
     },
     //去机构详情页
     goorgandetail(){
-      wx.navigateTo({
-        url: '/pages/Organizationdetails/Organizationdetails',
-      })
+        let id = 0
+        wx.navigateTo({
+          url: `/pages/details/details?id=${id}`,
+        })
     },
     Discoloration(e){
       this.setData({

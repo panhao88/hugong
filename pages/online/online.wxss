@@ -87,3 +87,6 @@
 .van-divider {
   margin: 1rpx 5rpx !important;
 }
+.box{
+  touch-action: none
+}

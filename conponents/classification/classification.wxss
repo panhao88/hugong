@@ -79,18 +79,16 @@
 
 .service {
   font-size: 30rpx;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
+  margin-top: 26rpx;
   width: 20%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
 .Aunt-Zhang {
   margin-top: 20rpx;
-  margin-left: 20rpx;
+  margin-left: 10rpx;
   margin-bottom: 20rpx;
   width: 80%;
 }
@@ -163,12 +161,25 @@
   width: 120rpx;
   height: 120rpx;
 }
-
+.plScore{
+  display: flex;
+  align-items: center;
+  color: #333333;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+.five{
+  margin-left: 8rpx;
+}
 .authentication {
   width: 100%;
   display: flex;
 }
-
+.tication{
+  width: 100%;
+  display: flex;
+  margin-top: 10rpx;
+}
 .bor-der {
   border: #EEEEEEFF 0.1rpx solid;
   margin-top: 10rpx;
@@ -198,8 +209,8 @@
 }
 /* 热门机构 */
 .immage-mechanism {
-  width: 120rpx;
-  height: 120rpx;
+  width: 110rpx;
+  height: 110rpx;
   border-radius: 10rpx;
 }
 .flag1 {
@@ -214,8 +225,8 @@
   font-size: 30rpx;
 }
 .logo{
-  width: 120rpx;
-  height: 120rpx;
+  width: 110rpx;
+  height: 110rpx;
 }
 .Service-Centre {
   height: 50rpx;
@@ -233,7 +244,7 @@
 
 /* 用户好评 */
 .Praise {
-  width: 20%;
+  width: 15%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -241,6 +252,7 @@
 .imnmn{
   width: 80rpx;
   height: 80rpx;
+  border-radius: 50%;
 }
 .head-portrait {
   padding: 20rpx;
@@ -279,6 +291,24 @@
   width: 40rpx;
   height: 40rpx;
   border-radius: 50%;
+  margin-right: 10rpx;
+}
+.displ{
+  margin-top: 20rpx;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.classification{
+  width: 170rpx;
+  height: 170rpx;
+  margin-right: 21rpx;
+  border-radius: 10rpx;
+}
+.imgbin{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 10rpx;
 }
 .PhaseI{
   padding-left: 8rpx;

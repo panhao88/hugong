@@ -47,7 +47,7 @@
       <view class="four-upper" >
         <view class="Home-care" bindtap="goAthome">
           <view class="jia-wu">
-            <image src="../../img/mipmap-mdpi/shouye(2).png" class="f-zi"></image>
+            <image src="../../img/mipmap-mdpi/jujia.png" class="f-zi"></image>
           </view>
           居家陪护
         </view>

@@ -11,9 +11,9 @@
   <view class="central">
     <view class="region">
       <view class="region-tow">
-        <view class="service">
+        <view class="prrservice">
           <view class="service-zh">
-            <view class="Aunt_Zhang">张阿姨</view>
+            <view class="aZhang">张阿姨</view>
             <view class="Serviceable">可服务</view>
           </view>
           <view class="good">最早可约17：00</view>
@@ -25,7 +25,8 @@
             <view>
               <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
             </view>
-            <view>蜀都中心一期</view>
+            <view>蜀都中心一期-</view>
+            <view class="Kilometer">0.1km</view>
           </view>
         </view>
         <view class="authentication">
@@ -36,9 +37,9 @@
           </scroll-view>
         </view>
         <view class="Years">
-          <view class="score">
+          <view class="score" bindtap="goAllcomments">
             <view class="cool">5.0</view>
-            <van-rate size="{{ 14 }}" color="#ee0a24" void-icon="star" />
+            <van-rate size="{{ 14 }}" color="#ee0a24" void-icon="star" disabled />
           </view>
           <view class="score">
             <view class="cool">10</view>
@@ -176,7 +177,7 @@
                   <view>
                     <scroll-view class="scroll-view" scroll-x="true">
                       <view wx:for="{{arrli}}" wx:key="index" class="scroll-item_H">
-                        <view class="Platform-certification">
+                        <view class="addcertification">
                           <view class="bor-de">{{item.name}}</view>
                         </view>
                       </view>
@@ -197,7 +198,7 @@
             <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image>
           </view>
         </view>
-        <view class="Popular-nurse">
+        <view class="addPopular">
           <view class="plservice">
             <view>
               <view class="immage-mechanism">

@@ -10,6 +10,7 @@ Page({
       img:"../../img/mipmap-mdpi/yuesao.png",
       name: "王阿姨",
       Gender:"女",
+      Praise:"98%",
       age:"40",
       Years:3,
       right: 0
@@ -18,6 +19,7 @@ Page({
       img:"../../img/mipmap-mdpi/yuesao.png",
       name: "王阿姨",
       Gender:"女",
+      Praise:"98%",
       age:"40",
       Years:3,
       right: 0
@@ -26,6 +28,7 @@ Page({
       img:"../../img/mipmap-mdpi/yuesao.png",
       name: "王阿姨",
       Gender:"女",
+      Praise:"98%",
       age:"40",
       Years:3,
       right: 0
@@ -48,9 +51,6 @@ Page({
     this.setData({
       flag: e.currentTarget.dataset.index
     })
-  },
-  onOpen(e){
-    console.log(e)
   },
   /**
    * 生命周期函数--监听页面加载

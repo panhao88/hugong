@@ -112,4 +112,5 @@
       </view>
     </van-popup>
   </view>
+  <view class="bottom"></view>
 </view>

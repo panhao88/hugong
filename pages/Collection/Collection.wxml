@@ -1,7 +1,7 @@
 <view class="local">
   <view class="central">
     <view class="Nursing-workers">
-      <view class="Hot" wx:for="{{hugong}}" wx:key="index" class="{{flag === index ? 'colore' : ''}}" bindtap="goto"
+      <view wx:for="{{hugong}}" wx:key="index" class="{{flag === index ? 'colore' : ''}}" bindtap="goto"
         data-index="{{index}}">
         <view class="tob-name">
           {{item.name}}
@@ -11,20 +11,20 @@
         </view>
       </view>
     </view>
-    <view wx:if="{{flag === 0}}">
-      <van-swipe-cell right-width="{{ 65 }}" bind:open="onOpen" wx:key="item" wx:for="{{data}}">
-        <view class="Popular-nurse">
+    <view wx:if="{{flag === 0}}" class="box">
+      <van-swipe-cell right-width="{{ 65 }}"  wx:key="item" wx:for="{{data}}">
+        <view class="nurse">
           <view class="service">
             <view>
-              <image src="../../img/mipmap-mdpi/yuesao.png" class="imm-age"></image>
+              <image src="{{item.img}}" class="imm-age"></image>
             </view>
           </view>
           <view>
             <view class="Aunt-Zhang">
               <view class="aunt">
-                <view class="font">张阿姨</view>
+                <view class="font">{{item.name}}</view>
                 <view class="font"> 好评率:
-                  <view class="cor">98%</view>
+                  <view class="cor">{{item.Praise}}</view>
                 </view>
               </view>
               <view class="Gender">
@@ -40,20 +40,18 @@
             </view>
           </view>
         </view>
-        <van-divider />
         <van-button type="danger" slot="right">删除</van-button>
+        <van-divider />
       </van-swipe-cell>
     </view>
-    <view wx:if="{{flag === 1}}">
+    <view wx:if="{{flag === 1}}" class="box">
       <van-swipe-cell right-width="{{ 65 }}">
         <view class="flag1">
-          <view class="Popular-nurse" bindtap="godetaild">
+          <view class="nurse" bindtap="godetaild">
             <view class="service">
-              <view>
                 <view class="immage-mechanism">
                   <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
                 </view>
-              </view>
             </view>
             <view class="Aunt-Zhang">
               <view class="hao-jj">成都好姐姐陪护服务有限公司</view>

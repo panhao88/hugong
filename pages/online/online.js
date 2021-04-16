@@ -5,7 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    arr:[
+      {
+        img:"../../img/mipmap-mdpi/hugong.png",
+        name:"王阿姨",
+        title:"早上胃口不好，中午再看看情况",
+        timer:"9.50"
+      },
+      {
+        img:"../../img/mipmap-mdpi/hugong.png",
+        name:"王阿姨",
+        title:"早上胃口不好，中午再看看情况",
+        timer:"9.50"
+      },
+      {
+        img:"../../img/mipmap-mdpi/hugong.png",
+        name:"王阿姨",
+        title:"早上胃口不好，中午再看看情况",
+        timer:"9.50"
+      },
+      {
+        img:"../../img/mipmap-mdpi/hugong.png",
+        name:"王阿姨",
+        title:"早上胃口不好，中午再看看情况",
+        timer:"9.50"
+      },
+    ]
   },
 
   /**

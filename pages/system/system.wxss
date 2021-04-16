@@ -11,12 +11,16 @@
   width: 95%;
   background: #fff;
 }
+.box{
+  touch-action: none
+}
 .van-button{
   width: 140rpx !important;
   background: #FF2C2C;
   color: #FAFAFAFF;
 }
 .separate{
+  margin-top: 5rpx;
   height: 80rpx;
   display: flex;
   flex-direction: column;
@@ -33,5 +37,5 @@
   font-weight: 600;
 }
 .van-divider{
-  margin: 8rpx 0 !important;
+  margin: 0rpx 0 !important;
 }

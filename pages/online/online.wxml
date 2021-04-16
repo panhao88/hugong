@@ -1,33 +1,21 @@
 <view class="local">
   <view class="central">
-    <van-swipe-cell right-width="{{ 65 }}">
-      <view class="tp-news">
-        <view class="tp-img">
-          <image src="../../img/mipmap-mdpi/hugong.png" class="img"></image>
-          <view class="number">9</view>
+    <view wx:for="{{arr}}" wx:key="index" class="box">
+      <van-swipe-cell right-width="{{ 65 }}" >
+        <view class="tp-news">
+          <view class="tp-img">
+            <image src="{{item.img}}" class="img"></image>
+            <view class="number">9</view>
+          </view>
+          <view class="separate">
+            <view class="A-Wang">{{item.name}}</view>
+            <view class="appetite">{{item.title}}</view>
+          </view>
+          <view class="timer">{{item.timer}}</view>
         </view>
-        <view class="separate">
-          <view class="A-Wang">王阿姨</view>
-          <view class="appetite">早上胃口不好，中午再看看情况早上胃口不好，中午再看看情况</view>
-        </view>
-        <view class="timer">9.50</view>
-      </view>
-      <van-button type="danger" slot="right">删除</van-button>
-    </van-swipe-cell>
-    <van-divider />
-    <van-swipe-cell right-width="{{ 65 }}">
-      <view class="tp-news">
-        <view class="tp-img">
-          <image src="../../img/mipmap-mdpi/hugong.png" class="img"></image>
-        </view>
-        <view class="separate">
-          <view class="A-Wang">王阿姨</view>
-          <view class="appetite">早上胃口不好，中午再看看情况早上胃口不好，中午再看看情况</view>
-        </view>
-        <view class="timer">9.50</view>
-      </view>
-      <van-button type="danger" slot="right">删除</van-button>
-    </van-swipe-cell>
-    <van-divider />
+        <van-button type="danger" slot="right">删除</van-button>
+      </van-swipe-cell>
+      <van-divider />
+    </view>
   </view>
 </view>

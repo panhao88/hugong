@@ -3,5 +3,5 @@
     "van-rate":"../../lib/vant/rate",
     "van-divider": "../../lib/vant/divider"
   },
-  "navigationBarTitleText": "用户好评"
+  "navigationBarTitleText": "全部评价"
 }

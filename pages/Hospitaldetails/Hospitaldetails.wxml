@@ -70,7 +70,7 @@
     </view>
     <!-- 张阿姨1 -->
     <view class="Popular-nurse" wx:if="{{flag === 0}}" bindtap="godetaild"  wx:for="{{list}}" wx:key="index">
-        <view class="serviceaunt">
+        <view class="service">
           <view>
             <image src="{{item.img}}" class="imm-age"></image>
           </view>
@@ -116,7 +116,7 @@
     <view wx:if="{{flag === 1}}" bindtap="goorgandetail" wx:for="{{arr}}" wx:key="index">
       <view class="flag1">
         <view class="Popular-nurse">
-          <view class="service">
+          <view class="mechservicoe">
             <view>
               <view class="immage-mechanism">
                 <image src="{{item.img}}" class="logo"></image>

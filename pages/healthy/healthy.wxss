@@ -1,24 +1,15 @@
-.parentstyle {
-  display: flex;
-  align-items: center;
-  border: 1rpx solid #e0e0e0;
-  border-radius: 10rpx;
-  box-shadow: 0 0 5rpx #e0e0e0;
-  margin: 30rpx 38px;
-  padding: 20rpx;
+.news-text{
+  color: red;
+  /*关键属性（必须有的）  */
+  display: -webkit-box;
 }
 
-.parentstyle .imageStyle {
-  width: 41rpx;
-  height: 41rpx;
-  margin-right: 20rpx;
+.news-text.hide{
+  /*规定子元素的排列方向 */
+  -webkit-box-orient: vertical;
+  /*限制文本显示的行数  */
+  -webkit-line-clamp: 2;
+  /*实现多余的文字隐藏并用省略号来代表被隐藏的文字  */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.parentstyle .centerStyle {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 28rpx;
-}
-

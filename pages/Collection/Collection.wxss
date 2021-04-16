@@ -25,15 +25,11 @@
   margin-bottom: 8rpx;
   font-size: 26rpx;
 }
-
-.Hot {
-  margin-left: 20rpx;
-}
-
 .tob-name {
-  width: 170rpx;
+  width: 120rpx;
   display: flex;
   height: 60rpx;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   margin: 0 20rpx 0 0;
@@ -51,8 +47,9 @@
   font-weight: 600;
 }  
 /* 护工 */
-.Popular-nurse {
+.nurse {
   width: 100%;
+  height: 176rpx;
   display: flex;
   background: #FFFFFFFF;
   border-radius: 20rpx;
@@ -128,7 +125,7 @@
 /* 机构 */
 .immage-mechanism {
   width: 120rpx;
-  height: 120rpx;
+  height: 150rpx;
   border-radius: 10rpx;
 }
 .flag1 {
@@ -161,4 +158,7 @@
 }
 .van-divider {
   margin: 8rpx 0 !important;
+}
+.box{
+  touch-action: none
 }

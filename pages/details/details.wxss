@@ -76,6 +76,7 @@
 .region {
   width: 100%;
   border-radius: 20rpx;
+  background: yellow;
 }
 
 .region-tow {
@@ -107,25 +108,27 @@
   height: 750rpx !important;
 }
 
-.service {
+.prrservice {
+  height:60rpx ;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .service-zh {
+  height:60rpx ;
   display: flex;
-  margin-top: 10rpx;
+  align-items: center;
 }
 
-.Aunt_Zhang {
+.aZhang {
   font-weight: 600;
   font-size: 32rpx;
   color: #333333FF;
 }
 
 .Serviceable {
-  width: 70rpx;
+  width: 80rpx;
   display: flex;
   align-items: center;
   background: #61CF8CFF;
@@ -137,6 +140,7 @@
 }
 
 .good {
+  margin-top: 6rpx;
   display: flex;
   justify-content: flex-end;
   background: #DFFBEAFF;
@@ -148,6 +152,7 @@
 }
 
 .Gender {
+  width: 100%;
   display: flex;
   margin-top: 20rpx;
   font-size: 28rpx;
@@ -168,6 +173,8 @@
 }
 
 .mar-gin {
+  width: 30%;
+  display: flex;
   margin-right: 30rpx;
   color: #333333FF;
   font-size: 24rpx;
@@ -368,11 +375,20 @@
   border-radius: 14rpx;
 
 }
-.Platform-certification {
+.addcertification {
+  border: #BBBBBBFF 1rpx solid;
+  background: #FFFFFFFF;
   font-size: 18rpx;
-  color: #EEEEEE;
+  color: #FFFFFFFF;
+  width: 100rpx;
+  height: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   letter-spacing: 3rpx;
+  margin: 0 18rpx 0 0;
   border-radius: 8rpx;
+  border: none;
 }
 .bor-de{
   display: flex;
@@ -1279,9 +1295,8 @@
   margin-top: 20rpx;
   border-radius: 10rpx;
 }
-.Popular-nurse {
+.addPopular {
   width: 100%;
-  /* margin-top: 20rpx; */
   display: flex;
   align-content: center;
   background: #FFFFFFFF;
@@ -1310,7 +1325,9 @@
   margin-left: 20rpx;
   margin-right: 20rpx;
 }
-
+.Kilometer{
+  color: #61CF8C;
+}
 .font-f {
   font-size: 24rpx;
   color: #333333FF;

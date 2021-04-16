@@ -1,12 +1,14 @@
 <view class="local">
   <view class="central">
-    <van-swipe-cell right-width="{{ 65 }}">
-       <view class="separate">
-        <view class="A-Wang">优惠卷</view>
-        <view class="appetite">你收到一张优惠卷</view>
-       </view>
-       <van-divider />
-      <van-button type="danger" slot="right">删除</van-button>
-    </van-swipe-cell>
+    <view wx:for="{{arr}}" wx:key="index" class="box">
+      <van-swipe-cell right-width="{{ 65 }}">
+        <view class="separate">
+          <view class="A-Wang">{{item.name}}</view>
+          <view class="appetite">{{item.title}}</view>
+        </view>
+        <van-divider />
+        <van-button type="danger" slot="right">删除</van-button>
+      </van-swipe-cell>
+    </view>
   </view>
 </view>

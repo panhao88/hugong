@@ -2,7 +2,7 @@
   <view class="central">
     <view class="flag1" bindtap="goorgandetail" wx:for="{{arr}}" wx:key="index">
       <view class="Popular-nurse">
-        <view class="service">
+        <view class="mechservicoe">
           <view>
             <view class="immage-mechanism">
               <image src="{{item.img}}" class="logo"></image>

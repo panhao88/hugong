@@ -44,10 +44,11 @@
         </view>
         <view class="Aunt-Zhang">
           <view class="hao-jj">{{item.name}}</view>
-          <view>
-            <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+          <view class="Score">
+            <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
+            <view class="five">5.0</view>
           </view>
-          <view class="authentication">
+          <view class="tication">
             <view class="Platform-certification">平台认证</view>
             <view class="Platform-certification">病人陪护</view>
             <view class="Platform-certification">产妇陪护</view>

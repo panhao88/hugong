@@ -30,7 +30,10 @@
       <view class="font">{{item.name}}</view>
       <view class="score">
         <view class="wu-lin">
-          <van-rate value="{{ value }}" size="{{ 13 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+          <view class="plScore">
+            <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
+            <view class="five">5.0</view>
+          </view>
         </view>
         <view class="appointment">{{item.zuizao}}</view>
       </view>
@@ -84,9 +87,12 @@
       <view class="Aunt-Zhang">
         <view class="hao-jj">{{item.name}}</view>
         <view>
-          <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+          <view class="plScore">
+            <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
+            <view class="five">5.0</view>
+          </view>
         </view>
-        <view class="authentication">
+        <view class="tication">
           <view class="Platform-certification">平台认证</view>
           <view class="Platform-certification">病人陪护</view>
           <view class="Platform-certification">产妇陪护</view>
@@ -101,63 +107,39 @@
           <image src="{{item.dingwei}}" class="img-di"></image>
         </view>
         <view class="PhaseI">{{item.weizhi}}-</view>
-        <view class="Kilometer">0.1km</view>
+        <view class="Kilometer">{{item.qianmi}}</view>
       </view>
     </view>
   </view>
 </view>
 <view wx:if="{{flag === 2}}">
   <!-- 评价1 -->
-  <view class="Popular-nurse">
+  <view class="Popular-nurse" wx:for="{{evaluate}}" wx:key="index">
     <view class="Praise">
       <view class="head-portrait">
-        <image src="../../img/mipmap-mdpi/touxiang.png" class="imnmn"></image>
+        <image src="{{item.img}}" class="imnmn"></image>
       </view>
     </view>
     <view class="Aunt-Zhang" bindtap="Userpraise">
       <view class="Coffee">
-        <view class="timerr">咖啡时光</view>
-        <view class="tyime">2021.8.20</view>
+        <view class="timerr">{{item.name}}</view>
+        <view class="tyime">{{item.timer}}</view>
       </view>
       <view>
-        <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
+        <view class="plScore">
+          <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
+          <view class="five">5.0</view>
+        </view>
       </view>
-      <view class="antpd">
-        王阿姨非常的专业王阿姨非常的专业
-        王阿姨非常的专业
-        王阿姨非常的专业
-        王阿姨非常的专业
-      </view>
-      <view class="major">
-        <image src="../../img/mipmap-mdpi/touxiang.png" class="img-aunt"></image>
-        王阿姨
-      </view>
-    </view>
-  </view>
-  <!-- 评价2 -->
-  <view class="Popular-nurse">
-    <view class="Praise">
-      <view class="head-portrait">
-        <image src="../../img/mipmap-mdpi/touxiang.png" class="imnmn"></image>
-      </view>
-    </view>
-    <view class="Aunt-Zhang" bindtap="Userpraise">
-      <view class="Coffee">
-        <view class="timerr">咖啡时光</view>
-        <view class="tyime">2021.8.20</view>
-      </view>
-      <view>
-        <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" />
-      </view>
-      <view class="antpd">
-        王阿姨非常的专业王阿姨非常的专业
-        王阿姨非常的专业
-        王阿姨非常的专业
-        王阿姨非常的专业
+      <view class="antpd">{{item.pingjia}}</view>
+      <view class="displ">
+        <view wx:for="{{item.chart}}" wx:key="index" class="classification">
+          <image src="{{item.imag}}" class="imgbin"></image>
+        </view>
       </view>
       <view class="major">
-        <image src="../../img/mipmap-mdpi/touxiang.png" class="img-aunt"></image>
-        王阿姨
+        <image src="{{item.imm}}" class="img-aunt"></image>
+        {{item.namm}}
       </view>
     </view>
   </view>

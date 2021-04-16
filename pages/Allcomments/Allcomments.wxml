@@ -1,0 +1,37 @@
+<view class="local">
+  <view class="central">
+    <view wx:for="{{evaluate}}" wx:key="index">
+      <view class="todo-nurse">
+        <view class="Praise">
+          <view class="head-portrait">
+            <image src="{{item.img}}" class="imnmn"></image>
+          </view>
+        </view>
+        <view class="Aunt-Zhang" bindtap="Userpraise">
+          <view class="Coffee">
+            <view class="timerr">{{item.name}}</view>
+            <view class="tyime">{{item.timer}}</view>
+          </view>
+          <view>
+            <view class="plScore">
+              <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star"
+                disabled />
+              <view class="five">5.0</view>
+            </view>
+          </view>
+          <view class="antpd">{{item.pingjia}}</view>
+          <view class="displ">
+            <view wx:for="{{item.chart}}" wx:key="index" class="classification">
+              <image src="{{item.imag}}" class="imgbin"></image>
+            </view>
+          </view>
+          <view class="major">
+            <image src="{{item.imm}}" class="img-aunt"></image>
+            {{item.namm}}
+          </view>
+        </view>
+      </view>
+      <van-divider />
+    </view>
+  </view>
+</view>

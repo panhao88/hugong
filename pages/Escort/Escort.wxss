@@ -50,18 +50,6 @@
   width: 100%;
   height: 296rpx;
 }
-/* 医院陪护 */
-.flag1 {
-  height: 220rpx;
-  background: #FFFFFFFF;
-  border-radius: 20rpx ;
-  margin-bottom: 6rpx;
-  margin-top: 40rpx;
-}
-.logo{
-  width: 120rpx;
-  height: 120rpx;
-}
 .Nursing-workers {
   width: 100%;
   height: 40rpx;
@@ -69,21 +57,14 @@
   font-size: 30rpx;
   margin-top: 20rpx;
 }
+.Hot {
+  margin-left: 20rpx;
+}
 .colore {
   font-size: 34rpx;
   font-weight: 600;
   color: #61CF8Ced;
 }
-.tubiao-p{
-  position: relative;
-  top: -15rpx;
-  width: 20rpx;
-  height: 20rpx;
-}
-.Hot {
-  margin-left: 20rpx;
-}
-
 .tob-name {
   width: 170rpx;
   display: flex;
@@ -92,169 +73,24 @@
   margin:0  20rpx 0 0;
   color: #333333FF;
 }
-.bor-der {
-  border: #EEEEEEFF 0.1rpx solid;
-  margin-top: 6rpx;
+.tubiao-p{
+  position: relative;
+  top: -15rpx;
+  width: 20rpx;
+  height: 20rpx;
 }
-.img-di {
-  width: 23rpx;
-  height: 23rpx;
-}
-.Popular-nurse{
-  width: 100%;
-  margin-top: 20rpx;
+.Score{
   display: flex;
-  align-content: center;
-  border-radius: 20rpx;
-}
-.service {
-  font-size: 30rpx;
-  margin-top: 20rpx;
-  margin-bottom: 10rpx;
-  width: 30%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-
-.Aunt-Zhang {
-  margin-top: 20rpx;
-  margin-left: 20rpx;
-  margin-bottom: 20rpx;
-  width: 100%;
-}
-.font {
-  font-size: 30rpx;
-  font-weight: 600;
-}
-
-.Serviceable {
-  background: #61CF8C;
-  border-radius: 20rpx;
-  width: 120rpx;
-  height: 36rpx;
-  font-size: 22rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #F0F8FF;
-  margin-top: 10rpx;
-}
-
-.appointment {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 20rpx 0 25rpx;
-  background: #DFFBEAFF;
-  color: #61CF8CFF;
-  border-radius: 20rpx 0 0 20rpx;
-  font-size: 20rpx;
-}
-
-.score {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 30rpx;
-  margin-top: 6rpx;
-  margin-bottom: 10rpx;
-}
-
-.wu-lin {
+  color: #333333;
   font-size: 26rpx;
-  color: #333333FF;
+  font-weight: 500;
 }
-
-.brief-introduction {
-  margin-top: 15rpx;
-  font-size: 20rpx;
-  color: #999999FF;
+.five{
+  margin-left: 8rpx;
 }
-
-.Platform-certification {
-  border: #BBBBBBFF 1rpx solid;
-  background: #61CF8CFF;
-  font-size: 18rpx;
-  color: #FFFFFFFF;
-  width: 100rpx;
-  height: 28rpx;
+.tication{
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 3rpx;
-  margin: 0 20rpx 0 0;
-  border-radius: 8rpx;
-  border: none;
-}
-
-.imm-age {
-  width: 120rpx;
-  height: 120rpx;
-}
-
-.authentication {
-  display: flex;
-}
-
-.bor-der {
-  border: #EEEEEEFF 0.1rpx solid;
-  margin-top: 6rpx;
-}
-
-.Service-person {
-  display: flex;
-  justify-content: space-between;
-  font-size: 24rpx;
-  padding: 10rpx 0 10rpx 0;
-  font-weight: 400;
-  color: #333333FF;
-}
-.location {
-  display: flex;
-  margin-left: 30rpx;
-  color: #333333FF;
-  font-size: 24rpx;
-}
-.img-di {
-  width: 23rpx;
-  height: 23rpx;
-}
-.imm-age{
-  width: 120rpx;
-  height: 120rpx;
-}
-.authentication{
-  display: flex;
-  font-size: 30rpx;
-}
-.bor-der{
-  border: #EEEEEEFF 0.5rpx solid;
-  margin-top: 6rpx;
-}
-.immage-mechanism{
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 10rpx;
-  background: #61CF8C;
-}
-.location {
-  display: flex;
-  margin-left: 30rpx;
-  color: #333333FF;
-  font-size: 24rpx;
-}
-.Service-Centre {
-  height: 50rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-}
-
-.font-f {
-  font-size: 24rpx;
-  color: #333333FF;
+  margin-top: 8rpx;
 }

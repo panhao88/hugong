@@ -1028,7 +1028,12 @@ Page({
       scrollTopId: this.data.showPy
     })
   },
-
+  //评价
+  goAllcomments(){
+    wx.navigateTo({
+      url: '/pages/Allcomments/Allcomments',
+    })
+  },
   //滑动选择城市
   tMove: function (e) {
     var y = e.touches[0].clientY,
