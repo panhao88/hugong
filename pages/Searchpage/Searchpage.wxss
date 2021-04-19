@@ -1,24 +1,13 @@
-.local {
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #FAFAFAFF;
-}
 
-.central {
-  width: 95%;
-  height: 100%;
+.van-search{
+  padding: 0 20rpx 0 20rpx !important;
 }
-
-/* 护工 */
 .Popular-nurse {
   width: 100%;
   margin-top: 20rpx;
   display: flex;
   align-content: center;
-  background: #FFFFFFFF;
+  background: #FAFAFAFF;
   border-radius: 20rpx;
 }
 
@@ -26,7 +15,7 @@
   font-size: 30rpx;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
-  width: 30%;
+  width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +24,6 @@
 
 .Aunt-Zhang {
   margin-top: 20rpx;
-  margin-left: 20rpx;
   width: 100%;
 }
 .font {
@@ -206,7 +194,7 @@
 }
 .vertical {
   width: 5rpx;
-  height: 140rpx;
+  height: 60rpx;
   background: #EEEEEE;
 }
 

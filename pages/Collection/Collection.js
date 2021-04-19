@@ -6,6 +6,48 @@ Page({
    */
   data: {
     flag: 0,
+    arr:[
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km",
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+      {
+        img:"../../img/mipmap-mdpi/logo.png",
+        name:"成都好姐姐陪护服务有限公司",
+        title:"以服务1000人",
+        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        weizhi:"蜀都中心一期",
+        qianmi:"0.1km"
+      },
+    ],
     data: [{
       img:"../../img/mipmap-mdpi/yuesao.png",
       name: "王阿姨",
@@ -41,10 +83,6 @@ Page({
         name: "机构",
         id: 2,
       },
-      {
-        name: "健康知识",
-        id: 3,
-      }
     ],
   },
   goto(e) {

@@ -1,6 +1,7 @@
 /* pages/order/order.wxss */
 .local {
   width: 100vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +10,7 @@
 
 .central {
   width: 95%;
+  height: 100%;
   background: #FAFAFAFF;
 }
 .van-tabs__line{
@@ -34,10 +36,7 @@
   border-radius: 20rpx;
 }
 .Order-time {
-  height: 60rpx;
-  align-items: center;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
+  margin: 20rpx;
   display: flex;
   justify-content: space-between;
 }

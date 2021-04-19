@@ -36,8 +36,8 @@
   position: absolute;
   z-index: -1;
   top: -40rpx;
-  width: 110rpx;
-  height: 110rpx;
+  width: 90rpx;
+  height: 56rpx;
   border-radius: 50%;
   border-top: 1rpx solid #e6e6e6;
   background-color: #FFF;

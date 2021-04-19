@@ -1,17 +1,5 @@
 /* pages/bankcard/bankcard.wxss */
-.local {
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom:calc(70rpx + var(--iphonex-fix-bottom));
-  background:#FAFAFA;
-}
-.central {
-  width: 95%;
-  height: 100%;
-}
+
 .login-bu{
   width: 600rpx !important;
   height: 70rpx;

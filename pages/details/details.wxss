@@ -1,10 +1,3 @@
-.local {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #FAFAFAFF;
-}
 
 .localpl {
   width: 100vw;
@@ -24,7 +17,15 @@
   position: absolute;
   top: 60rpx;
 }
-
+.lobu{
+  width: 600rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius:40rpx ;
+  color: #ffffff;
+  line-height: 35rpx;
+  font-size: 30rpx;
+}
 .shang-top {
   width: 100%;
   position: relative;
@@ -527,14 +528,13 @@
 .Servicetype {
   margin-top: 20rpx;
   width: 100%;
-  height: 100%;
   border-radius: 20rpx;
   background: #FFFFFFFF;
 }
 
 .service-sp {
   font-size: 28rpx;
-  padding: 15rpx 0 18rpx 0;
+  padding: 8rpx 0 18rpx 0;
   font-weight: 600;
 }
 
@@ -558,6 +558,7 @@
   width: 100%;
   flex-wrap: wrap;
   display: flex;
+  margin-bottom: 20rpx;
 }
 
 .yi-Escort {
@@ -673,7 +674,8 @@
 
 .mapp {
   width: 100%;
-  height: 400rpx;
+  height: 500rpx;
+  position: relative;
 }
 
 .current-site-icon {
@@ -687,7 +689,7 @@
 
 .near-list {
   width: 100%;
-  height: 500rpx;
+  height: 550rpx;
   box-sizing: border-box;
 }
 
@@ -1076,8 +1078,6 @@
   width: 100%;
   height: 100rpx;
   background: #FFFFFF;
-  position: fixed;
-  bottom: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;

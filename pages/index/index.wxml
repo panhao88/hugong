@@ -6,19 +6,20 @@
         <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi"></image>
         </view>
         <view class="box-therr">
-          <van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="goserch" />
+          <van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="goserch" disabled/>
         </view>
       </view>
       <view class="wei-icoc">
         <image src="../../img/mipmap-mdpi/shouwei.png" class="weiimg"></image>
+        <view class="garden"></view>
       </view>
     </view>
     <!-- 轮播图 -->
-    <view class="wrap">
-      <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
+    <view>
+      <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}" class="wrap">
         <swiper-item wx:for="{{list}}" wx:key="index">
           <view>
-            <image src="{{item.image}}" mode="widthFix" class="img-i"></image>
+            <image src="{{item.image}}"  class="img-i"></image>
           </view>
         </swiper-item>
       </swiper>

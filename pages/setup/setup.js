@@ -96,7 +96,6 @@ Page({
   },
   //修改生日
   cliinput() {
-    console.log(111)
     this.setData({
       show: true
     })

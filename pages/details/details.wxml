@@ -292,13 +292,15 @@
           </view>
         </view>
       </view>
-      <view class="gopayment">
-        <view class="A-gopayment">
-          <view class="font-lp">待支付</view>
-          <view class="font-tg">￥1500.00</view>
-        </view>
-        <view>
-          <button class="Pay-immediately" bindtap="goConfirmorder">立即预约</button>
+      <view class="fixed-bottom">
+        <view class="gopayment">
+          <view class="A-gopayment">
+            <view class="font-lp">待支付</view>
+            <view class="font-tg">￥1500.00</view>
+          </view>
+          <view>
+            <button class="Pay-immediately" bindtap="goConfirmorder">立即预约</button>
+          </view>
         </view>
       </view>
     </van-popup>
@@ -362,20 +364,18 @@
     </van-popup>
     <!-- 地图 -->
     <van-popup show="{{ Shadow }}" position="bottom" custom-style="height: 90%;" bind:close="onClose">
-      <view class="local">
-        <!-- 输入框 -->
-        <view class="topp">
-          <view class="box-top">
-            <view class="box-ru">{{currentRegion.city}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi">
-              </image>
-            </view>
-            <view class="box-three">
-              <van-search placeholder="请输入搜索关键词" bindtap="gosearch" />
-            </view>
+      <!-- 输入框 -->
+      <view class="topp">
+        <view class="box-top">
+          <view class="box-ru">{{currentRegion.city}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi">
+            </image>
+          </view>
+          <view class="box-three">
+            <van-search placeholder="请输入搜索关键词" bindtap="gosearch" disabled />
           </view>
         </view>
       </view>
-      <view wx:if="{{!addListShow && !chooseCity}}">
+      <view>
         <!--地图容器-->
         <map id="myMap" class="mapp" longitude="{{longitude}}" latitude="{{latitude}}" scale="14"
           bindregionchange="mapChange">
@@ -388,21 +388,23 @@
             </cover-view>
           </cover-view>
         </map>
-        <scroll-view class="near-list" scroll-y>
-          <!--绑定回填事件-->
-          <view class="near-item" wx:for="{{nearList}}" wx:key="index">
-            <view class="current-site iconfont icon-location" wx:if="{{index == selectedId }}"></view>
-            <!--根据需求渲染相应数据-->
-            <view bindtap="chooseCenter" id="{{index}}" data-name="{{item.title}}">
-              <!--渲染地址title-->
-              <view class="title {{ index == selectedId?'title1':'' }}">{{item.title}}</view>
-              <!--渲染详细地址-->
-              <view class="add {{ index == selectedId?'add1':'' }}">{{item.addr}}</view>
+        <view class="middle" catchtouchmove='true'>
+          <scroll-view class="near-list" scroll-y>
+            <!--绑定回填事件-->
+            <view class="near-item" wx:for="{{nearList}}" wx:key="index">
+              <view class="current-site iconfont icon-location" wx:if="{{index == selectedId }}"></view>
+              <!--根据需求渲染相应数据-->
+              <view bindtap="chooseCenter" id="{{index}}" data-name="{{item.title}}">
+                <!--渲染地址title-->
+                <view class="title {{ index == selectedId?'title1':'' }}">{{item.title}}</view>
+                <!--渲染详细地址-->
+                <view class="add {{ index == selectedId?'add1':'' }}">{{item.addr}}</view>
+              </view>
             </view>
-          </view>
-        </scroll-view>
-        <view class="bottom-box">
-          <button bindtap="selectedOk">确认地址</button>
+          </scroll-view>
+        </view>
+        <view class="fixed-bottom">
+          <button bindtap="selectedOk" class="lobu">确认地址</button>
         </view>
       </view>
     </van-popup>

@@ -59,6 +59,10 @@ Page({
     }
   ],
   },
+  // 阻止键盘弹出
+  noBomBox(e) {
+		document.activeElement.blur();
+	},
   goserch(e){
     wx.navigateTo({
       url: '/pages/Searchpage/Searchpage',

@@ -1,18 +1,5 @@
 /* pages/psychology/psychology.wxss */
-.local {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #FAFAFAFF;
-  /* 应用安全边距，因为有悬浮按钮，应加上按钮高度 */
-  padding-bottom: calc(90rpx + var(--iphonex-fix-bottom));
-}
-.central {
-  width: 95%;
-  height: 100%;
-}
+
 .top{
   width: 100%;
   display: flex;

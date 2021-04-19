@@ -37,5 +37,5 @@
   font-weight: 600;
 }
 .van-divider{
-  margin: 0rpx 0 !important;
+  margin: 10rpx 0 !important;
 }

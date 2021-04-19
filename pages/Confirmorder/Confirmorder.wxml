@@ -79,7 +79,8 @@
         </view>
     </view>
   </view>
-  <view class="gopayment">
+  <view class="fixed-bottom">
+    <view class="gopayment">
     <view class="A-gopayment">
       <view class="font-lp">待支付</view>
       <view class="font-tg">￥1500.00</view>
@@ -87,5 +88,6 @@
     <view>
       <button class="Pay-immediately" >立即支付</button>
     </view>
+  </view>
   </view>
 </view>

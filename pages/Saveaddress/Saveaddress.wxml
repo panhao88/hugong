@@ -37,11 +37,11 @@
           <view class="box-sou">
             <image src="../../img/mipmap-mdpi/sousuo.png" class="souimg"></image>
           </view>
-          <view> <input placeholder="请输入搜索关键词" bindtap="gosearch" /></view>
+          <view> <input placeholder="请输入搜索关键词" bindtap="gosearch" disabled/></view>
         </view>
       </view>
     </view>
-    <view wx:if="{{!addListShow && !chooseCity}}">
+    <view >
       <!--地图容器-->
       <map id="myMap" class="mapp" longitude="{{longitude}}" latitude="{{latitude}}" scale="14"
         bindregionchange="mapChange">
@@ -54,7 +54,7 @@
           </cover-view>
         </cover-view>
       </map>
-      <view class="middle">
+      <view class="middle" catchtouchmove='true'>
         <scroll-view class="near-list" scroll-y>
           <!--绑定回填事件-->
           <view class="near-item" wx:for="{{nearList}}" wx:key="index">

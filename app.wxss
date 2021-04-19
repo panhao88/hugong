@@ -22,12 +22,21 @@ page{
   flex-direction: column;
   align-items: center;
   padding-bottom: calc(70rpx + var(--iphonex-fix-bottom));
-  background: #FAFAFAFF;
+  background: #FFFFFF;
+}
+.whole{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(var(--iphonex-fix-bottom));
+  align-items: center;
+  background: #FFFFFF;
 }
 .central {
   width: 95%;
   height: 100%;
-  background: #FAFAFAFF;
+  /* background: #FAFAFAFF; */
 }
 /* 底部按钮边距 */
 .fixed-bottom {
@@ -47,7 +56,7 @@ page{
   margin-top: 20rpx;
   display: flex;
   align-content: center;
-  background: #FFFFFFFF;
+  background: #FAFAFA;
   border-radius: 20rpx;
 }
 .service {
@@ -169,8 +178,9 @@ page{
 }
 /* 2-2机构 */
 .flag1 {
-  background: #FFFFFFFF;
+  background: #FAFAFA;
   border-radius: 20rpx ;
+  margin-top: 15rpx;
   margin-bottom: 20rpx;
 }
 /* .Popular-nurse {

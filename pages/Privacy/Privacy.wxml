@@ -1,5 +1,6 @@
 <view class="local">
   <view class="central">
-    <image src="../../img/mipmap-mdpi/yingsi.png" class="img"></image>
+    <!-- <image src="../../img/mipmap-mdpi/yingsi.png" class="img"></image> -->
+    隐私条款
   </view>
 </view>

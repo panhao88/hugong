@@ -1,9 +1,0 @@
-{
-  "usingComponents": {
-    "van-rate":"../../lib/vant/rate",
-    "van-goods-action": "../../lib/vant/goods-action",
-  "van-goods-action-icon": "../../lib/vant/goods-action-icon",
-  "van-goods-action-button": "../../lib/vant/goods-action-button"
-  },
-  "navigationBarTitleText": "机构详情"
-}
