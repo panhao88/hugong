@@ -5,24 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    news: "据国家卫生健康委发布，2月20日，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例889例，新增死亡病例118例（湖北115例，浙江、重庆、云南各1例），新增疑似病例1614例。",
-    foldStat: true,
+   
   },
-  fold: function() {
-    var that = this;
-    that.setData({
-      foldStat: !that.data.foldStat
-    })
-  },
+ 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    that.setData({
-      //显示30个字，多余的用...表示
-      shortText: that.data.news.slice(0,40?30:11)+'...'
-    })
+
   },
 
   /**

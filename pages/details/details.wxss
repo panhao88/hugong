@@ -1,12 +1,45 @@
-
+.wrap {
+  height: auto;
+  position: relative;
+  width: 100%;
+  height: 750rpx;
+}
+ /*用来包裹所有的小圆点 */
+ .dots {
+  width: 100%;
+  height: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: center;
+  bottom: 80rpx;
+ }
+ /*未选中时的小圆点样式 */
+ .dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%; 
+  margin-right: 18rpx;
+  background-color: #ECF1FB; 
+ }
+ /*选中以后的小圆点样式 */
+ .active {
+  width: 28rpx;
+  height: 14rpx;
+  border-radius: 40rpx;
+  background-color: #ffffff;
+ }
+.Popup{
+  height:100vh;
+  overflow: hidden;
+}
 .localpl {
   width: 100vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #F5F5F5;
 }
-
 .zhishitu {
   width: 20rpx;
   height: 20rpx;
@@ -28,12 +61,13 @@
 }
 .shang-top {
   width: 100%;
+  height: 100rpx;
   position: relative;
-  bottom: 60rpx;
+  bottom: 50rpx;
 }
-
 .shang-updata {
-  height: 90rpx;
+  height: 80rpx;
+  background: #FAFAFA;
   align-items: center;
   flex-direction: column;
   display: flex;
@@ -47,6 +81,7 @@
 }
 
 .Healthcare {
+  margin-top: 50rpx;
   width: 100%;
   height: 1800rpx;
 }
@@ -55,7 +90,13 @@
   width: 100%;
   height: 1800rpx;
 }
-
+.addbox{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: #FAFAFA;
+}
 .central {
   width: 95%;
   display: flex;
@@ -63,21 +104,17 @@
   align-items: center;
   position: relative;
   bottom: 60rpx;
-  background: #F5F5F5;
+  background: #FAFAFA;
 }
 
 .scroll-item_Hkl {
   display: inline-block;
 }
 
-/* .scroll-view {
-  white-space: nowrap;
-} */
-
 .region {
   width: 100%;
   border-radius: 20rpx;
-  background: yellow;
+  background: #F4F4F4;
 }
 
 .region-tow {
@@ -98,12 +135,6 @@
   width: 20rpx;
   height: 20rpx;
 }
-
-.wrap {
-  width: 100%;
-  height: 750rpx;
-}
-
 .img-i {
   width: 100%;
   height: 750rpx !important;
@@ -346,11 +377,11 @@
   border-radius: 10rpx;
 }
 .immediately {
-  margin-bottom: 20rpx;
   width: 100%;
   display: flex;
   justify-content: center;
   position: relative;
+  background: #FFFFFF;
   bottom: 0;
 }
 .login-bu {
@@ -426,27 +457,6 @@
   width: 100% !important;
   height: 120rpx !important;
 }
-
-.immediately {
-  margin-bottom: 20rpx;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 0;
-}
-
-.login-bu {
-  margin-top: 20rpx;
-  width: 680rpx !important;
-  height: 70rpx;
-  background-color: #61CF8CFF;
-  border-radius: 40rpx;
-  color: #ffffff;
-  line-height: 35rpx;
-  font-size: 28rpx;
-}
-
 .background-color {
   background: #FAFAFA;
 }
@@ -619,11 +629,6 @@
   justify-content: flex-end;
   margin-right: 40rpx;
 }
-
-.buootb {
-  height: 100rpx;
-}
-
 /* 定位 */
 .topp {
   margin-top: 20rpx;
@@ -692,7 +697,6 @@
   height: 550rpx;
   box-sizing: border-box;
 }
-
 .near-item {
   line-height: 40rpx;
   padding: 30rpx 50rpx 30rpx 90rpx;
@@ -1060,7 +1064,9 @@
   background-color: #61CF8CFF;
   border-radius: 40rpx;
   color: #ffffff;
-  line-height: 35rpx;
+ display: flex;
+ justify-content: center;
+ align-items: center;
   font-size: 28rpx;
 }
 
@@ -1070,7 +1076,9 @@
   background-color: #61CF8CFF;
   border-radius: 40rpx;
   color: #ffffff;
-  line-height: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 28rpx;
 }
 
@@ -1102,10 +1110,6 @@
 
 /* 选择时间 */
 /* pages/setCalendar/setCalendar.ttss */
-.plBox {
-  position: relative;
-}
-
 .calendar {
   width: 100%;
   height: auto;
@@ -1216,21 +1220,11 @@
   box-sizing: border-box;
 }
 
-.btnBox {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background: #FFFFFF;
-}
-
 .btn {
   width: 680rpx !important;
   height: 80rpx;
   margin: 20rpx auto;
   border-radius: 40rpx;
-  background: #dd434b;
 }
 /* 热门机构 */
 .plservice {
@@ -1331,4 +1325,7 @@
 .font-f {
   font-size: 24rpx;
   color: #333333FF;
+}
+.bottom{
+  height: 140rpx;
 }

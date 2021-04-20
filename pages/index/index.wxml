@@ -6,23 +6,27 @@
         <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi"></image>
         </view>
         <view class="box-therr">
-          <van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="goserch" disabled/>
+          <van-search value="{{ value }}" placeholder="搜一搜" bindtap="goserch" disabled />
         </view>
       </view>
       <view class="wei-icoc">
-        <image src="../../img/mipmap-mdpi/shouwei.png" class="weiimg"></image>
+        <image src="../../img/mipmap-mdpi/shouwei.png" class="weiimg" bindtap="gonews"></image>
         <view class="garden"></view>
       </view>
     </view>
     <!-- 轮播图 -->
-    <view>
-      <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}" class="wrap">
+    <view class="wrap">
+      <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}" current="{{currentSwiper}}" bindchange="swiperChange" class="wrap">
         <swiper-item wx:for="{{list}}" wx:key="index">
-          <view>
-            <image src="{{item.image}}"  class="img-i"></image>
-          </view>
+          <image src="{{item.image}}" class="img-i"></image>
         </swiper-item>
       </swiper>
+      <!--重置小圆点的样式 -->
+      <view class="dots">
+        <view wx:for="{{list}}" wx:key="index">
+          <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+        </view>
+      </view>
     </view>
     <!-- 陪护 -->
     <view class="Escort">
@@ -45,7 +49,7 @@
     </view>
     <!-- 居家陪护 -->
     <view class="page-four">
-      <view class="four-upper" >
+      <view class="four-upper">
         <view class="Home-care" bindtap="goAthome">
           <view class="jia-wu">
             <image src="../../img/mipmap-mdpi/jujia.png" class="f-zi"></image>

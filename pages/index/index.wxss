@@ -1,13 +1,42 @@
-
-.top{
+.wrap {
+  height: auto;
+  position: relative;
+  width: 100%;
+ }
+ /*用来包裹所有的小圆点 */
+ .dots {
+  width: 100%;
+  height: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+ justify-content: center;
+  bottom: 15rpx;
+ }
+ /*未选中时的小圆点样式 */
+ .dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%; 
+  margin-right: 18rpx;
+  background-color: #84E5CC; 
+ }
+ /*选中以后的小圆点样式 */
+ .active {
+  width: 28rpx;
+  height: 14rpx;
+  border-radius: 40rpx;
+  background-color: #ffffff;
+ }
+ .top{
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.box-now{
-  width: 90% ;
-  height: 80rpx;
+.box-now {
+  width: 90%;
+  height: 60rpx;
   display: flex;
   align-items: center;
   background: #F1F1F1;
@@ -16,28 +45,39 @@
   margin-top: 20rpx;
   margin-bottom: 20rpx;
 }
-.box-tow{
+.weiimg {
+  width: 45rpx;
+  height: 45rpx;
+}
+.box-tow {
   position: absolute;
-  font-size: 30rpx;
+  font-size: 28rpx;
   left: 16rpx;
-  top: 17rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
 }
-.box-therr{
+
+.box-therr {
   position: absolute;
-  left: 200rpx;
+  left: 170rpx;
 }
-.img-dizhi{
-  width: 15rpx;
-  height: 15rpx;
+
+.img-dizhi {
+  width: 12rpx;
+  height: 12rpx;
 }
-.wei-icoc{
+
+.wei-icoc {
   width: 10%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
+  right: 8rpx;
 }
-.garden{
+
+.garden {
   top: 0;
   right: 4rpx;
   position: absolute;
@@ -46,32 +86,35 @@
   background: #FF3636;
   border-radius: 50%;
 }
-.weiimg{
-  width: 52rpx;
-  height: 52rpx;
-}
-.van-search__content{
+.van-search__content {
   padding-left: 0 !important;
   width: 80% !important;
   background: #F1F1F1 !important;
+  height: 60rpx !important;
 }
-.van-search{
+
+.van-search {
   padding: 0 !important;
   width: 80% !important;
+  height: 60rpx !important;
 }
-.img-weixin{
+
+.img-weixin {
   width: 65rpx;
   height: 65rpx;
 }
+
 .wrap {
   width: 100%;
   height: 296rpx;
 }
-.img-i{
+
+.img-i {
   width: 100%;
   height: 296rpx;
   border-radius: 20rpx;
 }
+
 .Escort {
   margin-top: 20rpx;
   width: 100%;
@@ -88,25 +131,30 @@
   border-radius: 20rpx;
   position: relative;
 }
-.img-hospital{
+
+.img-hospital {
   width: 100%;
   height: 100%;
 }
-.Hospital-escort{
+
+.Hospital-escort {
   position: absolute;
   top: 36rpx;
   left: 28rpx;
 }
-.hospitalone{
+
+.hospitalone {
   color: #333333;
   font-size: 32rpx;
   font-weight: 800;
 }
-.hospitaltow{
+
+.hospitaltow {
   color: #999999;
   font-size: 26rpx;
 }
-.hospitaltherr{
+
+.hospitaltherr {
   color: #59ADF8;
   font-size: 20rpx;
   width: 96rpx;
@@ -118,7 +166,8 @@
   margin-top: 32rpx;
   border-radius: 12rpx;
 }
-.makeltherr{
+
+.makeltherr {
   color: #4EB276;
   font-size: 20rpx;
   width: 96rpx;
@@ -130,6 +179,7 @@
   margin-top: 32rpx;
   border-radius: 12rpx;
 }
+
 .Sanatorium {
   width: 48%;
   height: 200rpx;
@@ -166,7 +216,8 @@
   font-size: 40rpx;
   border-radius: 0 0 20rpx 20rpx;
 }
-.jia-wu{
+
+.jia-wu {
   height: 60rpx;
   width: 80rpx;
   display: flex;
@@ -174,7 +225,7 @@
   justify-content: center;
 }
 
-.f-zi{
+.f-zi {
   width: 40rpx;
   height: 40rpx;
 }
@@ -185,7 +236,8 @@
   border-radius: 10rpx;
   position: relative;
 }
-.nana-tit{
+
+.nana-tit {
   width: 210rpx;
   top: 18rpx;
   position: absolute;
@@ -195,57 +247,67 @@
   align-items: center;
   flex-direction: column;
 }
-.itemnane{
+
+.itemnane {
   font-weight: 700;
   font-size: 28rpx;
 }
-.pop{
+
+.pop {
   color: #999999;
   font-size: 20rpx;
 }
+
 .Patient-escort {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.scorl{
+
+.scorl {
   width: 95%;
   position: relative;
   bottom: 50rpx;
 }
-.p-x{
+
+.p-x {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.fon-tit{
+
+.fon-tit {
   margin-top: 30rpx;
   display: flex;
   justify-content: space-around;
   font-size: 28rpx;
 }
-.icon{
+
+.icon {
   width: 30rpx;
   height: 30rpx;
-  padding-right:15rpx ;
+  padding-right: 15rpx;
   padding-top: 4rpx;
 }
+
 /* 横向滚动 */
 .scroll-view {
   white-space: nowrap;
 }
+
 .scroll-item_H {
   display: inline-block;
   margin: 0 10rpx;
 }
+
 .picture {
   width: 100%;
   height: 180rpx;
   border-radius: 20rpx;
 }
-.worry{
+
+.worry {
   width: 100%;
   height: 180rpx;
 }
-

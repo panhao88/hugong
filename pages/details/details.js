@@ -4,7 +4,7 @@ var qqmapsdk;
 var city = require('../../lib/city');
 Page({
   data: {
-    arrid:0,
+    arrid: 0,
     boxshow: true, //展开收缩
     picture: true, //图文
     arrli: [{
@@ -25,6 +25,42 @@ Page({
       },
     ],
     items: [{
+        name: '王桂香',
+        phone: "123456789",
+        position: "武侯区新希望大厦",
+        remarks: "糖尿病，高血压"
+      },
+      {
+        name: '王桂香',
+        phone: "123456789",
+        position: "武侯区新希望大厦",
+        remarks: "糖尿病，高血压"
+      },
+      {
+        name: '王桂香',
+        phone: "123456789",
+        position: "武侯区新希望大厦",
+        remarks: "糖尿病，高血压"
+      },
+      {
+        name: '王桂香',
+        phone: "123456789",
+        position: "武侯区新希望大厦",
+        remarks: "糖尿病，高血压"
+      },
+      {
+        name: '王桂香',
+        phone: "123456789",
+        position: "武侯区新希望大厦",
+        remarks: "糖尿病，高血压"
+      },
+      {
+        name: '王桂香',
+        phone: "123456789",
+        position: "武侯区新希望大厦",
+        remarks: "糖尿病，高血压"
+      },
+      {
         name: '王桂香',
         phone: "123456789",
         position: "武侯区新希望大厦",
@@ -85,39 +121,41 @@ Page({
         img: '../../img/mipmap-mdpi/hugong.png'
       },
     ],
+    currentSwiper: 0,
+    autoplay: true,
     arrpp: [{
-      imag: '../../img/mipmap-mdpi/bingren.png',
-      title:"专业培训",
-      icon:"../../img/mipmap-mdpi/qi.png",
-      name:"病人陪护",
-      pop:"以服务29.9万人",
-      color:"#61CF8C"
-    },
-    {
-      imag: '../../img/mipmap-mdpi/chanfu.png',
-      title:"服务认证",
-      icon:"../../img/mipmap-mdpi/qi.png",
-      name:"产妇陪护",
-      pop:"以服务29.9万人",
-      color:"#60AAE5"
-    },
-    {
-      imag: '../../img/mipmap-mdpi/yuesao.png',
-      title:"安全保障",
-      icon:"../../img/mipmap-mdpi/qi.png",
-      name:"月嫂陪护",
-      pop:"以服务29.9万人",
-      color:"#FFB85D"
-    },
-    {
-      imag: '../../img/mipmap-mdpi/yuesao.png',
-      title:"专业培训",
-      icon:"../../img/mipmap-mdpi/qi.png",
-      name:"病人陪护",
-      pop:"以服务29.9万人",
-      color:"#FFB85D"
-    },
-  ],
+        imag: '../../img/mipmap-mdpi/bingren.png',
+        title: "专业培训",
+        icon: "../../img/mipmap-mdpi/qi.png",
+        name: "病人陪护",
+        pop: "以服务29.9万人",
+        color: "#61CF8C"
+      },
+      {
+        imag: '../../img/mipmap-mdpi/chanfu.png',
+        title: "服务认证",
+        icon: "../../img/mipmap-mdpi/qi.png",
+        name: "产妇陪护",
+        pop: "以服务29.9万人",
+        color: "#60AAE5"
+      },
+      {
+        imag: '../../img/mipmap-mdpi/yuesao.png',
+        title: "安全保障",
+        icon: "../../img/mipmap-mdpi/qi.png",
+        name: "月嫂陪护",
+        pop: "以服务29.9万人",
+        color: "#FFB85D"
+      },
+      {
+        imag: '../../img/mipmap-mdpi/yuesao.png',
+        title: "专业培训",
+        icon: "../../img/mipmap-mdpi/qi.png",
+        name: "病人陪护",
+        pop: "以服务29.9万人",
+        color: "#FFB85D"
+      },
+    ],
     pavalue: '', //搜索框输入内容
     radio: '1', //男女选择单选框
     colo: 0, //服务类型选择器 
@@ -179,6 +217,12 @@ Page({
     next5Year: '',
     next5Month: '',
     next6MonthArr: [],
+    pierce:false //解决弹窗穿透问题
+  },
+  swiperChange: function (e) {
+    this.setData({
+      currentSwiper: e.detail.current
+    })
   },
   // 点击时间详情
   select_date: function (e) {
@@ -806,7 +850,7 @@ Page({
   goobj() {
     this.setData({
       showobj: true,
-      show:false
+      show: false
     })
   },
   //新增服务对象详情
@@ -820,7 +864,8 @@ Page({
   gotime() {
     this.setData({
       showtime: true,
-      show: false
+      show: false,
+      pierce:true
     })
   },
   //点击遮罩层阴影关闭
@@ -835,7 +880,8 @@ Page({
       showobj: false,
       showaddress: false,
       objdetails: false,
-      showtime: false
+      showtime: false,
+      pierce:false
     })
   },
   //跳转搜索地图
@@ -1029,7 +1075,7 @@ Page({
     })
   },
   //评价
-  goAllcomments(){
+  goAllcomments() {
     wx.navigateTo({
       url: '/pages/Allcomments/Allcomments',
     })
@@ -1083,7 +1129,7 @@ Page({
   onLoad: function (options) {
     let id = parseInt(options.id)
     this.setData({
-      arrid:id
+      arrid: id
     })
     //初始化日历数据
     var nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月

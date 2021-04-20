@@ -20,13 +20,15 @@ Page({
         id: 3,
       }
     ],
-    ppplist: [{
+    pplist: [{
         image: '../../img/mipmap-mdpi/lunbotu.png',
       },
       {
         image: '../../img/mipmap-mdpi/lunbotu.png',
       },
     ],
+    currentSwiper: 0,
+    autoplay: true,
     arr:[
       {
         img:"../../img/mipmap-mdpi/logo.png",
@@ -69,6 +71,11 @@ Page({
         qianmi:"0.1km"
       },
     ]
+  },
+  swiperChange: function (e) {
+    this.setData({
+      currentSwiper: e.detail.current
+    })
   },
   // 医院跳转
   goto(e) {

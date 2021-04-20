@@ -11,13 +11,17 @@
       </view>
     </view>
     <view class="wrap">
-      <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}">
-        <swiper-item wx:for="{{ppplist}}" wx:key="index">
-          <view>
-            <image src="{{item.image}}" mode="widthFix" class="img-i"></image>
-          </view>
+      <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" circular="{{true}}" current="{{currentSwiper}}" bindchange="swiperChange">
+        <swiper-item wx:for="{{pplist}}" wx:key="index">
+          <image src="{{item.image}}" class="img-i"></image>
         </swiper-item>
       </swiper>
+      <!--重置小圆点的样式 -->
+      <view class="dots">
+        <view wx:for="{{pplist}}" wx:key="index">
+          <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+        </view>
+      </view>
     </view>
     <view class="Nursing-workers">
       <view class="Hot" wx:for="{{list}}" wx:key="index" class="{{flag === index ? 'colore' : ''}}" bindtap="goto"

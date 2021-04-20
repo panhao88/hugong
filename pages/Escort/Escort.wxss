@@ -1,4 +1,34 @@
 /* pages/Escort/Escort.wxss */
+.wrap {
+  height: auto;
+  position: relative;
+  width: 100%;
+ }
+ /*用来包裹所有的小圆点 */
+ .dots {
+  width: 100%;
+  height: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+ justify-content: center;
+  bottom: 15rpx;
+ }
+ /*未选中时的小圆点样式 */
+ .dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%; 
+  margin-right: 18rpx;
+  background-color: #84E5CC; 
+ }
+ /*选中以后的小圆点样式 */
+ .active {
+  width: 28rpx;
+  height: 14rpx;
+  border-radius: 40rpx;
+  background-color: #ffffff;
+ }
 /* 搜索框 */
 .top{
   width: 100%;
