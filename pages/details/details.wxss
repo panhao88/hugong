@@ -1223,7 +1223,9 @@
 .btn {
   width: 680rpx !important;
   height: 80rpx;
-  margin: 20rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 40rpx;
 }
 /* 热门机构 */

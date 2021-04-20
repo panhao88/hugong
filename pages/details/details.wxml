@@ -910,6 +910,6 @@
     </view>
     <view class="bottom"></view>
     <view class="fixed-bottom">
-      <button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="onConfirm">确定</button>
+      <button class="login-bu" bindtap="onConfirm">确定</button>
     </view>
   </van-popup>
