@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/details/details",
     "pages/index/index",
+    "pages/details/details",
     "pages/Saveaddress/Saveaddress",
     "pages/Collection/Collection",
     "pages/order/order",
@@ -46,7 +46,8 @@
     "pages/more/more",
     "pages/news/news",
     "pages/system/system",
-    "pages/forget/forget"
+    "pages/forget/forget",
+    "pages/forget111/forget111"
   ],
   "window": {
     "backgroundTextStyle": "light",
