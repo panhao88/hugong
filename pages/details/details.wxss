@@ -4,8 +4,9 @@
   width: 100%;
   height: 750rpx;
 }
- /*用来包裹所有的小圆点 */
- .dots {
+
+/*用来包裹所有的小圆点 */
+.dots {
   width: 100%;
   height: 20rpx;
   display: flex;
@@ -13,26 +14,30 @@
   position: absolute;
   justify-content: center;
   bottom: 80rpx;
- }
- /*未选中时的小圆点样式 */
- .dot {
+}
+
+/*未选中时的小圆点样式 */
+.dot {
   width: 16rpx;
   height: 16rpx;
-  border-radius: 50%; 
+  border-radius: 50%;
   margin-right: 18rpx;
-  background-color: #ECF1FB; 
- }
- /*选中以后的小圆点样式 */
- .active {
+  background-color: #ECF1FB;
+}
+
+/*选中以后的小圆点样式 */
+.active {
   width: 28rpx;
   height: 14rpx;
   border-radius: 40rpx;
   background-color: #ffffff;
- }
-.Popup{
-  height:100vh;
+}
+
+.Popup {
+  height: 100vh;
   overflow: hidden;
 }
+
 .localpl {
   width: 100vw;
   height: 100%;
@@ -40,6 +45,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .zhishitu {
   width: 20rpx;
   height: 20rpx;
@@ -50,21 +56,24 @@
   position: absolute;
   top: 60rpx;
 }
-.lobu{
+
+.lobu {
   width: 600rpx !important;
   height: 70rpx;
   background-color: #61CF8CFF;
-  border-radius:40rpx ;
+  border-radius: 40rpx;
   color: #ffffff;
   line-height: 35rpx;
   font-size: 30rpx;
 }
+
 .shang-top {
   width: 100%;
   height: 100rpx;
   position: relative;
   bottom: 50rpx;
 }
+
 .shang-updata {
   height: 80rpx;
   background: #FAFAFA;
@@ -90,13 +99,15 @@
   width: 100%;
   height: 1800rpx;
 }
-.addbox{
+
+.addbox {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   background: #FAFAFA;
 }
+
 .central {
   width: 95%;
   display: flex;
@@ -135,20 +146,21 @@
   width: 20rpx;
   height: 20rpx;
 }
+
 .img-i {
   width: 100%;
   height: 750rpx !important;
 }
 
 .prrservice {
-  height:60rpx ;
+  height: 60rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .service-zh {
-  height:60rpx ;
+  height: 60rpx;
   display: flex;
   align-items: center;
 }
@@ -258,11 +270,13 @@
   justify-content: center;
   flex-direction: column;
 }
-.img{
+
+.img {
   width: 314rpx;
   height: 280rpx;
 }
-.top-bo{
+
+.top-bo {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -270,7 +284,8 @@
   font-size: 24rpx;
   margin-right: 20rpx;
 }
-.plsecurity{
+
+.plsecurity {
   position: relative;
   color: #333333FF;
   font-size: 30rpx;
@@ -284,24 +299,28 @@
   flex-direction: column;
   padding-left: 20rpx;
 }
-.aunt{
+
+.aunt {
   width: 314rpx;
   height: 140rpx;
   display: flex;
   flex-direction: column;
   align-content: space-around;
 }
-.Aunt-Wang{
+
+.Aunt-Wang {
   color: #333333;
   font-size: 28rpx;
   font-weight: 700;
 }
+
 /* 横向滚动 */
 
 .scroll-item_H {
   display: inline-block;
   margin: 0 10rpx 0 3rpx;
 }
+
 .bor-d {
   margin-top: 15rpx;
   border: solid 0.5rpx #EEEEEEFF;
@@ -368,14 +387,16 @@
   color: #FF5C5CFF;
   font-size: 22rpx;
 }
+
 /* 全部护工 */
-.Service-pl{
+.Service-pl {
   width: 100%;
   height: 563rpx;
   background: #FFFFFFFF;
   margin-top: 20rpx;
   border-radius: 10rpx;
 }
+
 .immediately {
   width: 100%;
   display: flex;
@@ -384,6 +405,7 @@
   background: #FFFFFF;
   bottom: 0;
 }
+
 .login-bu {
   margin-top: 20rpx;
   width: 680rpx !important;
@@ -394,19 +416,23 @@
   line-height: 35rpx;
   font-size: 28rpx;
 }
-.background-color{
+
+.background-color {
   background: #FAFAFA;
 }
+
 /* 横向滚动 */
 .scroll-view {
   white-space: nowrap;
 }
-.img-a{
+
+.img-a {
   width: 314rpx;
   height: 420rpx;
   border-radius: 14rpx;
 
 }
+
 .addcertification {
   border: #BBBBBBFF 1rpx solid;
   background: #FFFFFFFF;
@@ -422,7 +448,8 @@
   border-radius: 8rpx;
   border: none;
 }
-.bor-de{
+
+.bor-de {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -431,6 +458,7 @@
   border: #EEEEEE 1rpx solid;
   color: #999999;
 }
+
 .Allcertifications {
   margin-top: 10rpx;
   display: flex;
@@ -457,6 +485,7 @@
   width: 100% !important;
   height: 120rpx !important;
 }
+
 .background-color {
   background: #FAFAFA;
 }
@@ -480,7 +509,7 @@
   width: 100%;
   height: 350rpx;
   border-radius: 20rpx;
-  background: #FFFFFFFF;
+  background: #FAFAFA;
 }
 
 .contact {
@@ -496,9 +525,11 @@
   display: flex;
   flex-direction: column;
 }
-.paddim{
+
+.paddim {
   padding-right: 20rpx;
 }
+
 .lastname {
   display: flex;
   font-size: 30rpx;
@@ -512,11 +543,13 @@
   white-space: nowrap;
   font-weight: 600;
 }
-.commontimer{
+
+.commontimer {
   font-weight: 550;
   color: #61CF8C;
   font-size: 26rpx;
 }
+
 .Contact-address {
   width: 30%;
   font-size: 28rpx;
@@ -534,12 +567,16 @@
   height: 30rpx;
 }
 
+.van-goods-action {
+  padding: 14rpx !important;
+}
+
 /* 服务类型 */
 .Servicetype {
   margin-top: 20rpx;
   width: 100%;
   border-radius: 20rpx;
-  background: #FFFFFFFF;
+  background: #FFFFFF;
 }
 
 .service-sp {
@@ -550,13 +587,16 @@
 
 .textar {
   width: 100%;
-  height: 400rpx;
+  height: 240rpx;
 }
 
 .pltextarea {
   width: 100%;
-  height: 400rpx;
+  height: 240rpx;
   border-radius: 5rpx;
+  padding: 8rpx;
+  box-sizing: border-box;
+  background: #F7F4F8;
 }
 
 .yi-hospital {
@@ -629,6 +669,7 @@
   justify-content: flex-end;
   margin-right: 40rpx;
 }
+
 /* 定位 */
 .topp {
   margin-top: 20rpx;
@@ -697,6 +738,7 @@
   height: 550rpx;
   box-sizing: border-box;
 }
+
 .near-item {
   line-height: 40rpx;
   padding: 30rpx 50rpx 30rpx 90rpx;
@@ -1064,9 +1106,9 @@
   background-color: #61CF8CFF;
   border-radius: 40rpx;
   color: #ffffff;
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 28rpx;
 }
 
@@ -1228,6 +1270,7 @@
   align-items: center;
   border-radius: 40rpx;
 }
+
 /* 热门机构 */
 .plservice {
   font-size: 30rpx;
@@ -1239,15 +1282,18 @@
   display: flex;
   flex-direction: column;
 }
+
 .Aunt-Zhang {
   margin-top: 20rpx;
   width: 100%;
 }
+
 .tication {
   margin-top: 8rpx;
   width: 100%;
   display: flex;
 }
+
 .Poplatform-pcertification {
   border: #BBBBBBFF 1rpx solid;
   background: #61CF8CFF;
@@ -1263,10 +1309,12 @@
   border-radius: 8rpx;
   border: none;
 }
+
 .bor-der {
   border: #EEEEEEFF 0.1rpx solid;
   margin-top: 10rpx;
 }
+
 .plglocation {
   width: 60%;
   display: flex;
@@ -1274,23 +1322,28 @@
   color: #333333FF;
   font-size: 24rpx;
 }
-.PhaseI{
+
+.PhaseI {
   padding-left: 8rpx;
- }
- .Kilometer{
+}
+
+.Kilometer {
   color: #61CF8C;
 }
+
 .plimg-di {
   width: 30rpx;
   height: 30rpx;
 }
-.ServiceplkItems{
+
+.ServiceplkItems {
   width: 100%;
   height: 330rpx;
   background: #FFFFFFFF;
   margin-top: 20rpx;
   border-radius: 10rpx;
 }
+
 .addPopular {
   width: 100%;
   display: flex;
@@ -1298,21 +1351,25 @@
   background: #FFFFFFFF;
   border-radius: 20rpx;
 }
+
 .immage-mechanism {
   width: 120rpx;
   height: 120rpx;
   border-radius: 10rpx;
 }
+
 .hao-jj {
   font-weight: 600;
   letter-spacing: 3rpx;
   color: #333333FF;
   font-size: 30rpx;
 }
-.logo{
+
+.logo {
   width: 120rpx;
   height: 120rpx;
 }
+
 .Service-Centre {
   height: 50rpx;
   display: flex;
@@ -1321,13 +1378,132 @@
   margin-left: 20rpx;
   margin-right: 20rpx;
 }
-.Kilometer{
+
+.Kilometer {
   color: #61CF8C;
 }
+
 .font-f {
   font-size: 24rpx;
   color: #333333FF;
 }
-.bottom{
+
+.bottom {
   height: 140rpx;
+}
+
+/* 心理咨询时间 */
+/* pages/orderTime/index.wxss */
+scroll-view {
+  height: 128rpx;
+  width: 100%;
+}
+
+scroll-view .list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 1302rpx;
+}
+
+scroll-view .listItem {
+  text-align: center;
+  width: 186rpx;
+  height: 128rpx;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+scroll-view .listItem text {
+  display: block;
+}
+
+scroll-view .listItem .name {
+  font-size: 30rpx;
+}
+
+scroll-view .listItem .date {
+  font-size: 30rpx;
+}
+
+scroll-view .current {
+  background: #FFFFFF;
+
+}
+
+scroll-view .current text {
+  color: #61CF8C;
+}
+
+.time {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.time .listItem {
+  width: 22%;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #F5F5F5;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.time .listItem text {
+  display: block;
+  font-size: 30rpx;
+}
+
+.time .current {
+  color: #61CF8C;
+  background: #DFFBEA;
+}
+.time .Pretimer{
+  text-decoration:line-through;
+}
+.operate button {
+  width: 300rpx;
+  height: 88rpx;
+  background-color: #fff;
+}
+
+.operate .del {
+
+  color: #e54449;
+}
+
+.operate button::after {
+  border: 2px solid #e54449;
+}
+
+.operate {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.operate button:nth-child(2):after {
+  border: 2px solid #e54449;
+}
+
+.operate .save {
+  color: #fff;
+  background-color: #e54449;
+
+}
+
+.operate {
+  width: 100%;
+  padding: 30rpx 0;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
 }

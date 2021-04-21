@@ -159,13 +159,23 @@
 .service-sp {
   margin-top: 20rpx;
 }
-.pltextarea{
+.textar{
   width: 100%;
   height: 240rpx;
+  border-radius: 20rpx;
   background: #FFFFFF;
-  padding: 5rpx;
+}
+.remarks{
+  padding: 10rpx 0 0rpx 10rpx;
+}
+.pltextarea{
+  width: 100%;
+  height: 200rpx;
+  background: #FFFFFF;
+  padding: 10rpx;
+  box-sizing:border-box;
   font-size: 28rpx;
-  color: #333333;
+  color: #999999;
   border-radius: 20rpx;
 }
 .gopayment{
@@ -198,4 +208,22 @@
   color: #ffffff;
   line-height: 35rpx;
   font-size: 28rpx;
+}
+.tication{
+  width: 100%;
+  display: flex;
+  margin-top: 8rpx;
+}
+.box{
+  background: #FFFFFF;
+  border-radius: 20rpx ;
+  margin-top: 20rpx;
+}
+.lar-nurse{
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  align-content: center;
+  background: #FFFFFF;
+  border-radius: 20rpx;
 }

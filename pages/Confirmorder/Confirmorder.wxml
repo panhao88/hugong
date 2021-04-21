@@ -75,19 +75,54 @@
     </view>
     <view class="service-sp">
       <view class="textar">
-        <textarea class="pltextarea" placeholder="备注" />
+        <view class="remarks">备注</view>
+        <textarea class="pltextarea" placeholder="告诉我们你的其他需求"></textarea>
+      </view>
+    </view>
+    <view class="box" wx:for="{{arr}}" wx:key="index">
+      <view class="lar-nurse" bindtap="gomechanismdetaild">
+        <view class="service">
+          <view>
+            <view class="immage-mechanism">
+              <image src="{{item.img}}" class="logo"></image>
+            </view>
+          </view>
         </view>
+        <view class="Aunt-Zhang">
+          <view class="hao-jj">{{item.name}}</view>
+          <view class="Score">
+            <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
+            <view class="five">5.0</view>
+          </view>
+          <view class="tication">
+            <view class="Platform-certification">平台认证</view>
+            <view class="Platform-certification">病人陪护</view>
+            <view class="Platform-certification">产妇陪护</view>
+          </view>
+        </view>
+      </view>
+      <view class="bor-der"></view>
+      <view class="Service-Centre">
+        <view class="font-f">{{item.title}}</view>
+        <view class="location">
+          <view>
+            <image src="{{item.dingwei}}" class="img-di"></image>
+          </view>
+          <view class="PhaseI">{{item.weizhi}}-</view>
+          <view class="Kilometer">{{item.qianmi}}</view>
+        </view>
+      </view>
     </view>
   </view>
   <view class="fixed-bottom">
     <view class="gopayment">
-    <view class="A-gopayment">
-      <view class="font-lp">待支付</view>
-      <view class="font-tg">￥1500.00</view>
+      <view class="A-gopayment">
+        <view class="font-lp">待支付</view>
+        <view class="font-tg">￥1500.00</view>
+      </view>
+      <view>
+        <button class="Pay-immediately">立即支付</button>
+      </view>
     </view>
-    <view>
-      <button class="Pay-immediately" >立即支付</button>
-    </view>
-  </view>
   </view>
 </view>

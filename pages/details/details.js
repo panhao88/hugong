@@ -4,6 +4,7 @@ var qqmapsdk;
 var city = require('../../lib/city');
 Page({
   data: {
+    hhhh: true,
     arrid: 0,
     boxshow: true, //展开收缩
     picture: true, //图文
@@ -25,36 +26,6 @@ Page({
       },
     ],
     items: [{
-        name: '王桂香',
-        phone: "123456789",
-        position: "武侯区新希望大厦",
-        remarks: "糖尿病，高血压"
-      },
-      {
-        name: '王桂香',
-        phone: "123456789",
-        position: "武侯区新希望大厦",
-        remarks: "糖尿病，高血压"
-      },
-      {
-        name: '王桂香',
-        phone: "123456789",
-        position: "武侯区新希望大厦",
-        remarks: "糖尿病，高血压"
-      },
-      {
-        name: '王桂香',
-        phone: "123456789",
-        position: "武侯区新希望大厦",
-        remarks: "糖尿病，高血压"
-      },
-      {
-        name: '王桂香',
-        phone: "123456789",
-        position: "武侯区新希望大厦",
-        remarks: "糖尿病，高血压"
-      },
-      {
         name: '王桂香',
         phone: "123456789",
         position: "武侯区新希望大厦",
@@ -217,13 +188,81 @@ Page({
     next5Year: '',
     next5Month: '',
     next6MonthArr: [],
-    pierce:false //解决弹窗穿透问题
+    pierce: false, //解决弹窗穿透问题
+    // 心理咨询变量
+    calendar: [],
+    hour: "",
+    year: '',
+    ipdyuan: false,
+    width: 0,
+    currentIndex: 0, //年月日下表
+    currentTime: 0, //时间下标
+    timehouur: '', //选取时间
+    timeArr: [{
+        "time": "08:00",
+        flag:false,
+      },
+      {
+        "time": "09:00",
+        flag:false,
+      },
+      {
+        "time": "10:00",
+        flag:false,
+      },
+      {
+        "time": "11:00",
+        flag:false,
+      },
+      {
+        "time": "12:00",
+        flag:false,
+      },
+      {
+        "time": "13:00",
+        flag:false,
+      },
+      {
+        "time": "14:00",
+        flag:false,
+      },
+      {
+        "time": "15:00",
+        flag:false,
+      },
+      {
+        "time": "16:00",
+        flag:false,
+      },
+      {
+        "time": "17:00",
+        flag:false,
+      },
+      {
+        "time": "18:00",
+        flag:false,
+      },
+      {
+        "time": "19:00",
+        flag:false,
+      },
+      {
+        "time": "20:00",
+        flag:false,
+      },
+      {
+        "time": "21:00",
+        flag:false,
+      },
+    ]
   },
+  // 轮播图
   swiperChange: function (e) {
     this.setData({
       currentSwiper: e.detail.current
     })
   },
+  // ====================服务时间=====================
   // 点击时间详情
   select_date: function (e) {
     let checkedMonth = ''
@@ -315,7 +354,6 @@ Page({
   //根据指定年月获得当月日历数组
   getDateArr(date) {
     //根据指定年月
-
     //var myDate = new Date();
     var myDate = date;
     var thisYear = myDate.getFullYear(); //获取完整的年份
@@ -799,13 +837,15 @@ Page({
       console.log(this.data.date, "全部取消")
     }
   },
-  // 弹出预约信息
+  // ====================弹出框=======================
+  // 填写预约信息
   onClickButton() {
     this.setData({
-      show: true,
+      show: true, //填写预约信息
+      pierce: true //滚动穿透
     })
   },
-  //选择联系地址弹窗
+  //请选择联系地址弹窗
   goaddress() {
     this.setData({
       showaddress: true,
@@ -865,7 +905,7 @@ Page({
     this.setData({
       showtime: true,
       show: false,
-      pierce:true
+      pierce: true
     })
   },
   //点击遮罩层阴影关闭
@@ -881,7 +921,7 @@ Page({
       showaddress: false,
       objdetails: false,
       showtime: false,
-      pierce:false
+      pierce: false
     })
   },
   //跳转搜索地图
@@ -891,18 +931,25 @@ Page({
       Shadow: false
     })
   },
-  // 文字展开收缩
+  // 详情文字展开收缩
   Negation() {
     this.setData({
       boxshow: !this.data.boxshow
     })
   },
-  // 图片展开收缩
+  // 详情图片展开收缩
   gopicture() {
     this.setData({
       picture: !this.data.picture
     })
   },
+  //去评价页
+  goAllcomments() {
+    wx.navigateTo({
+      url: '/pages/Allcomments/Allcomments',
+    })
+  },
+  // =============================地图定位=================================
   //选择城市
   selectCity: function (e) {
     var dataset = e.currentTarget.dataset.fullname;
@@ -1068,16 +1115,9 @@ Page({
       showPy: e.target.id,
     })
   },
-
   setPy: function (e) {
     this.setData({
       scrollTopId: this.data.showPy
-    })
-  },
-  //评价
-  goAllcomments() {
-    wx.navigateTo({
-      url: '/pages/Allcomments/Allcomments',
     })
   },
   //滑动选择城市
@@ -1092,14 +1132,12 @@ Page({
       })
     };
   },
-
   //触发全部开始选择
   tStart: function () {
     this.setData({
       hidden: false
     })
   },
-
   //触发结束选择
   tEnd: function () {
     this.setData({
@@ -1123,10 +1161,126 @@ Page({
       })
     }
   },
+  //重新定位
+  reload: function () {
+    this.onLoad();
+  },
+  //地图标记点
+  addMarker: function (data) {
+    //console.log(data.title)
+    var mks = [];
+    mks.push({ // 获取返回结果，放到mks数组中
+      title: data.title,
+      id: data.id,
+      addr: data.addr,
+      province: data.province,
+      city: data.city,
+      district: data.district,
+      latitude: data.latitude,
+      longitude: data.longitude,
+      iconPath: "../../img/mipmap-mdpi/my_marker.png", //图标路径
+      width: 25,
+      height: 25
+    })
+    this.setData({ //设置markers属性，将搜索结果显示在地图中
+      markers: mks,
+      currentRegion: {
+        street: data.title,
+        province: data.province,
+        city: data.city,
+        district: data.district,
+      }
+    })
+    wx.hideLoading({});
+  },
+  //点击选择地图下方列表某项
+  chooseCenter: function (e) {
+    var id = e.currentTarget.id;
+    let name = e.currentTarget.dataset.name;
+    for (var i = 0; i < this.data.nearList.length; i++) {
+      if (i == id) {
+        this.setData({
+          selectedId: id,
+          centerData: this.data.nearList[i],
+          latitude: this.data.nearList[i].latitude,
+          longitude: this.data.nearList[i].longitude,
+        });
+        this.addMarker(this.data.nearList[id]);
+        return;
+        //console.log(this.data.centerData)
+      }
+    }
+  },
+  // 确认地址
+  selectedOk: function () {
+    console.log(this.data.centerData)
+  },
+  //===========================心理咨询时间========================
+  select: function (event) {
+    let curren = event.currentTarget.dataset.date
+    //为上半部分的点击事件
+    if (curren === this.data.year) {
+      this.setData({
+        ipdyuan: false
+      })
+    }
+    if (curren !== this.data.year) {
+      this.setData({
+        ipdyuan: true
+      })
+    }
+    this.setData({
+      currentIndex: event.currentTarget.dataset.index,
+      currentTime: -1
+    })
+    // console.log(event.currentTarget.dataset.date)
+  },
+  // 今天
+  selectTime: function (event) {
+    this.setData({
+      currentTime: event.currentTarget.dataset.tindex,
+      timehouur: event.currentTarget.dataset.time
+    })
+    console.log(this.data.timehouur)
+    // console.log(event.currentTarget.dataset.time)
+  },
+  // 获取当前小时
+  seletime() {
+    let ttimer = new Date().getHours()
+    let time = ''
+    if (ttimer < 10) {
+      time = '0' + ttimer + ":" + "00".toString()
+    } else {
+      time = ttimer + ":" + "00".toString()
+    }
+    this.setData({
+      hour: time,
+    })
+  },
+  // 获取当前年月日
+  seleyear() {
+    let timestamp = Date.parse(new Date());
+    let date = new Date(timestamp);
+    //获取年份  
+    let Y = date.getFullYear();
+    //获取月份  
+    let M = (date.getMonth() + 1 < 10 ? (date.getMonth() + 1) : date.getMonth() + 1);
+    //获取当日日期 
+    let D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+    let timeyrar = Y + '-' + M + '-' + D
+    this.setData({
+      year: timeyrar
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //获取当前小时
+    this.seletime()
+    //获取当前年月日
+    this.seleyear()
+    // 判断是护工详情，还是机构详情
     let id = parseInt(options.id)
     this.setData({
       arrid: id
@@ -1224,59 +1378,54 @@ Page({
       cityData: city.all,
       hotCityData: city.hot
     });
-  },
-  //重新定位
-  reload: function () {
-    this.onLoad();
-  },
-  //地图标记点
-  addMarker: function (data) {
-    //console.log(data.title)
-    var mks = [];
-    mks.push({ // 获取返回结果，放到mks数组中
-      title: data.title,
-      id: data.id,
-      addr: data.addr,
-      province: data.province,
-      city: data.city,
-      district: data.district,
-      latitude: data.latitude,
-      longitude: data.longitude,
-      iconPath: "../../img/mipmap-mdpi/my_marker.png", //图标路径
-      width: 25,
-      height: 25
-    })
-    this.setData({ //设置markers属性，将搜索结果显示在地图中
-      markers: mks,
-      currentRegion: {
-        street: data.title,
-        province: data.province,
-        city: data.city,
-        district: data.district,
-      }
-    })
-    wx.hideLoading({});
-  },
-  //点击选择地图下方列表某项
-  chooseCenter: function (e) {
-    var id = e.currentTarget.id;
-    let name = e.currentTarget.dataset.name;
-    for (var i = 0; i < this.data.nearList.length; i++) {
-      if (i == id) {
-        this.setData({
-          selectedId: id,
-          centerData: this.data.nearList[i],
-          latitude: this.data.nearList[i].latitude,
-          longitude: this.data.nearList[i].longitude,
-        });
-        this.addMarker(this.data.nearList[id]);
-        return;
-        //console.log(this.data.centerData)
+    // 心理咨询时间
+    // var that = this;
+    function getThisMonthDays(year, month) {
+      return new Date(year, month, 0).getDate();
+    }
+    // 计算每月第一天是星期几
+    function getFirstDayOfWeek(year, month) {
+      return new Date(Date.UTC(year, month - 1, 1)).getDay();
+    }
+    const date = new Date();
+    const cur_year = date.getFullYear();
+    const cur_month = date.getMonth() + 1;
+    const cur_date = date.getDate();
+    const weeks_ch = ['日', '一', '二', '三', '四', '五', '六'];
+    //利用构造函数创建对象
+    function calendar(date, week) {
+      this.date = cur_year + '-' + cur_month + '-' + date;
+      if (date == cur_date) {
+        this.week = "今天";
+      } else if (date == cur_date + 1) {
+        this.week = "明天";
+      } else {
+        this.week = '星期' + week;
       }
     }
-  },
-  selectedOk: function () {
-    console.log(this.data.centerData)
+    //当前月份的天数
+    var monthLength = getThisMonthDays(cur_year, cur_month)
+    //当前月份的第一天是星期几
+    var week = getFirstDayOfWeek(cur_year, cur_month)
+    var x = week;
+    for (var i = 1; i <= monthLength; i++) {
+      //当循环完一周后，初始化再次循环
+      if (x > 6) {
+        x = 0;
+      }
+      //利用构造函数创建对象
+      self.data.calendar[i] = new calendar(i, [weeks_ch[x]][0])
+      x++;
+    }
+    //限制要渲染的日历数据天数为7天以内（用户体验）
+    var flag = self.data.calendar.splice(cur_date, self.data.calendar.length - cur_date <= 7 ? self.data.calendar.length : 7)
+    self.setData({
+      calendar: flag
+    })
+    //设置scroll-view的子容器的宽度
+    self.setData({
+      width: 186 * parseInt(self.data.calendar.length - cur_date <= 7 ? self.data.calendar.length : 7)
+    })
   },
   /*
    * 生命周期函数--监听页面初次渲染完成

@@ -43,7 +43,7 @@
       </view>
       <view class="Carousel">
         <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}"
-          circular="{{true}}">
+          circular="{{true}}" bindchange="swiperChange" current="{{currentSwiper}}" >
           <swiper-item wx:for="{{list}}" wx:key="index">
             <view class="lCarous">
               <view class="im-age">
@@ -61,6 +61,11 @@
             </view>
           </swiper-item>
         </swiper>
+        <view class="dots">
+          <view wx:for="{{list}}" wx:key="index">
+            <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+          </view>
+        </view>
       </view>
     </view>
     <!-- 订单管理 -->
@@ -112,5 +117,5 @@
       </view>
     </van-popup>
   </view>
-  <view class="bottom"></view>
+  <view class="bottom-BOX"></view>
 </view>

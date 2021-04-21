@@ -33,17 +33,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20rpx;
 }
 .box-now {
   width: 90%;
-  height: 60rpx;
+  height: 70rpx ;
   display: flex;
   align-items: center;
   background: #F1F1F1;
   border-radius: 40rpx;
   position: relative;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
 }
 .weiimg {
   width: 45rpx;
@@ -56,9 +55,12 @@
   height: 60rpx;
   display: flex;
   align-items: center;
+  width: 25%;
 }
 
 .box-therr {
+  width: 70%;
+  background: red;
   position: absolute;
   left: 170rpx;
 }
@@ -72,7 +74,6 @@
   width: 10%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   position: relative;
   right: 8rpx;
 }
@@ -88,17 +89,17 @@
 }
 .van-search__content {
   padding-left: 0 !important;
-  width: 80% !important;
+  width: 100% !important;
   background: #F1F1F1 !important;
-  height: 60rpx !important;
 }
 
 .van-search {
   padding: 0 !important;
-  width: 80% !important;
-  height: 60rpx !important;
+  width: 100% !important;
 }
-
+.van-cell{
+  padding: 0 !important;
+}
 .img-weixin {
   width: 65rpx;
   height: 65rpx;
