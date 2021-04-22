@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    flag:false, //影藏气泡框
     identification:0, //tabs标识
     id:'',//存储的id
     Shadow:false, //电话弹窗
@@ -73,7 +74,12 @@ Page({
       id:e.detail.index
     })
   },
-
+  //显示影藏删除订单按钮
+  bindmore(e){
+    this.setData({
+      flag:!this.data.flag
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

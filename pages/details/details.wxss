@@ -413,7 +413,9 @@
   background-color: #61CF8CFF;
   border-radius: 40rpx;
   color: #ffffff;
-  line-height: 35rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 28rpx;
 }
 
@@ -1394,19 +1396,19 @@
 
 /* 心理咨询时间 */
 /* pages/orderTime/index.wxss */
-scroll-view {
+.scroll-view_H {
   height: 128rpx;
   width: 100%;
 }
 
-scroll-view .list {
+.scroll-view_H .list {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
   width: 1302rpx;
 }
 
-scroll-view .listItem {
+.scroll-view_H .listItem {
   text-align: center;
   width: 186rpx;
   height: 128rpx;
@@ -1415,24 +1417,24 @@ scroll-view .listItem {
   display: inline-block;
 }
 
-scroll-view .listItem text {
+.scroll-view_H .listItem text {
   display: block;
 }
 
-scroll-view .listItem .name {
+.scroll-view_H .listItem .name {
   font-size: 30rpx;
 }
 
-scroll-view .listItem .date {
+.scroll-view_H .listItem .date {
   font-size: 30rpx;
 }
 
-scroll-view .current {
+.scroll-view_H .current {
   background: #FFFFFF;
 
 }
 
-scroll-view .current text {
+.scroll-view_H .current text {
   color: #61CF8C;
 }
 
@@ -1506,4 +1508,21 @@ scroll-view .current text {
   background-color: #fff;
   position: fixed;
   bottom: 0;
+}
+.plappointment{
+  width: 100%;
+  position: relative;
+  bottom: -200rpx;
+  color: #61CF8C;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.garden {
+  width: 12rpx;
+  height: 12rpx;
+  background: #61CF8C;
+  border-radius: 50%;
+  margin-right: 8rpx;
 }

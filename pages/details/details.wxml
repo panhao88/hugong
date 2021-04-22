@@ -44,7 +44,7 @@
             </scroll-view>
           </view>
           <view class="Years">
-            <view class="score" bindtap="goAllcomments">
+            <view class="score">
               <view class="cool">5.0</view>
               <van-rate size="{{ 14 }}" color="#ee0a24" void-icon="star" disabled />
             </view>
@@ -56,7 +56,7 @@
               <view class="cool">10</view>
               <view class="fu-color"> 从业年限</view>
             </view>
-            <view class="score">
+            <view class="score" bindtap="goAllcomments">
               <view class="cool">9999+</view>
               <view class="fu-color">用户评论</view>
             </view>
@@ -178,8 +178,7 @@
                   <view class="aunt">
                     <view class="Aunt-Wang">王阿姨</view>
                     <view>
-                      <van-rate value="{{ value }}" size="{{ 14 }}" color="#FCC954" void-color="#eee" void-icon="star"
-                        bind:change="onChange" />5.0
+                      <van-rate value="{{ value }}" size="{{ 14 }}" color="#FCC954" void-color="#eee" void-icon="star"/>5.0
                     </view>
                     <view>
                       <scroll-view class="scroll-view" scroll-x="true">
@@ -351,14 +350,6 @@
     <view class="immediately">
       <button class="login-bu" bindtap="gotoexamine" bindtap="Newaddress">+新增地址</button>
     </view>
-  </view>
-</van-popup>
-<!-- 服务地址 -->
-<van-popup show="{{ Serviceaddress }}" position="bottom" custom-style="height: 90%;" bind:close="onClose">
-  <view>
-    <map longitude="{{marks[0].longitude}}" latitude="{{marks[0].latitude}}" style="width:100%;height:400px" scale="20"
-      markers="{{marks}}">
-    </map>
   </view>
 </van-popup>
 <!-- 联系地址 -->
@@ -907,6 +898,10 @@
         </block>
       </view>
     </scroll-view>
+    <view class="bottom"></view>
+    <view class="fixed-bottom">
+      <button class="login-bu" bindtap="onConfirm">确定</button>
+    </view>
   </view>
   <!-- 心理陪护时间 -->
   <view wx:if="{{hhhh === true}}">
@@ -924,23 +919,26 @@
         </view>
       </scroll-view>
       <view class='time' wx:if="{{ipdyuan === false}}">
-        <view wx:for="{{ timeArr }}" wx:for-item="timeItem" wx:for-index="timeIndex" data-Tindex="{{ timeIndex }}"
-          data-time="{{ timeItem.time}}" bindtap='selectTime'
-          class='listItem {{timeItem.time < hour ? "Pretimer" : ""}} {{timeItem.time === timehouur ? "current" :""}} {{}}' wx:key='index'>
-          <text>{{ timeItem.time }}</text>
+        <view wx:for="{{ timeArr }}" data-index="{{index}}" data-time="{{ item.time}}" data-flag="{{ item.flag}}"
+          bindtap='selectTime'
+          class='listItem {{item.time < hour ? "Pretimer" : ""}} {{item.flag === true ? "current":""}}' wx:key='index'>
+          <text>{{ item.time }}</text>
         </view>
       </view>
       <view class='time' wx:if="{{ipdyuan === true}}">
-        <view wx:for="{{ timeArr }}" wx:for-item="timeItem" wx:for-index="timeIndex" data-Tindex="{{ timeIndex }}"
-          data-time="{{ timeItem.time}}" bindtap='tomorrow'
-          class='listItem {{ currentTime==timeIndex? "current":"" }}' wx:key='index'>
-          <text>{{ timeItem.time }}</text>
+        <view wx:for="{{ timeArr }}" data-index="{{index }}" data-flag="{{item.flag}}" data-time="{{item.time}}"
+          bindtap='selectTime' class='listItem {{item.flag === true ? "current":""}}' wx:key='index'>
+          <text>{{item.time }}</text>
         </view>
       </view>
     </view>
-  </view>
-  <view class="bottom"></view>
-  <view class="fixed-bottom">
-    <button class="login-bu" bindtap="onConfirm">确定</button>
+    <view class="plappointment">
+      <view class="garden"></view>
+      <view>仅08:00-21:00可预约</view>
+    </view>
+    <view class="bottom"></view>
+    <view class="fixed-bottom">
+      <button class="login-bu" bindtap="onConfirm">确定</button>
+    </view>
   </view>
 </van-popup>

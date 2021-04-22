@@ -60,7 +60,7 @@
       <view class="Patient-escort">
         <view class="scorl">
           <scroll-view class="scroll-view" scroll-x="true">
-            <view wx:for="{{arr}}" wx:key="index" class="scroll-item_H">
+            <view wx:for="{{arr}}" wx:key="index" class="scroll-item_H"  bindtap="goAthome">
               <view class="p-x">
                 <view class="nana-tit">
                   <view style="color:{{item.color}}" class="itemnane">{{item.name}}</view>

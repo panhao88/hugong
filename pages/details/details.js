@@ -138,7 +138,6 @@ Page({
     showaddress: false, //新增地址
     objdetails: false, //服务对象详情
     keepaddress: false, //联系地址弹窗
-    Serviceaddress: false, //服务地址弹窗
     cityData: {},
     hotCityData: [],
     _py: ["hot", "A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "W", "X", "Y", "Z"],
@@ -191,68 +190,68 @@ Page({
     pierce: false, //解决弹窗穿透问题
     // 心理咨询变量
     calendar: [],
+    Mehours: [],
     hour: "",
     year: '',
     ipdyuan: false,
     width: 0,
     currentIndex: 0, //年月日下表
     currentTime: 0, //时间下标
-    timehouur: '', //选取时间
     timeArr: [{
         "time": "08:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "09:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "10:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "11:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "12:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "13:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "14:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "15:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "16:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "17:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "18:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "19:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "20:00",
-        flag:false,
+        "flag": false,
       },
       {
         "time": "21:00",
-        flag:false,
+        "flag": false,
       },
     ]
   },
@@ -914,7 +913,6 @@ Page({
       show: false,
       showaddress: false,
       keepaddress: false,
-      Serviceaddress: false,
       Shadow: false,
       searchshow: false,
       showobj: false,
@@ -1216,8 +1214,16 @@ Page({
     console.log(this.data.centerData)
   },
   //===========================心理咨询时间========================
-  select: function (event) {
-    let curren = event.currentTarget.dataset.date
+  // 选择年月日
+  select(e) {
+    let arryear = this.data.timeArr
+    this.data.Mehours = []
+    arryear.map(item => {
+      item.flag = false
+    })
+    console.log(this.data.Mehours,"清空所有")
+    let curren = e.currentTarget.dataset.date
+    let timecurren = e.currentTarget.dataset.date
     //为上半部分的点击事件
     if (curren === this.data.year) {
       this.setData({
@@ -1230,19 +1236,53 @@ Page({
       })
     }
     this.setData({
-      currentIndex: event.currentTarget.dataset.index,
-      currentTime: -1
+      currentIndex: e.currentTarget.dataset.index,
+      timeArr: arryear,
+      year:timecurren
     })
-    // console.log(event.currentTarget.dataset.date)
   },
   // 今天
-  selectTime: function (event) {
-    this.setData({
-      currentTime: event.currentTarget.dataset.tindex,
-      timehouur: event.currentTarget.dataset.time
-    })
-    console.log(this.data.timehouur)
-    // console.log(event.currentTarget.dataset.time)
+  selectTime(e) {
+    let arrhour = this.data.timeArr
+    let time = e.currentTarget.dataset.time;
+    let index = e.currentTarget.dataset.index;
+    if (this.data.ipdyuan === false) {
+      if (time >= this.data.hour) {
+        if (arrhour[index].flag === false) {
+          arrhour[index].flag = true
+          let Splicingtime = this.data.year + " " + arrhour[index].time
+          this.data.Mehours.push(Splicingtime)
+          this.setData({
+            timeArr: arrhour
+          })
+          console.log(this.data.Mehours, "选中")
+        } else if (arrhour[index].flag === true) {
+          arrhour[index].flag = false
+          this.data.Mehours.splice(arrhour[index], 1)
+          this.setData({
+            timeArr: arrhour
+          })
+          console.log(this.data.Mehours, "删除")
+        }
+      }
+    } else if (this.data.ipdyuan === true) {
+      if (arrhour[index].flag === false) {
+        arrhour[index].flag = true
+        let Splicingtime = this.data.year + " " + arrhour[index].time
+          this.data.Mehours.push(Splicingtime)
+        this.setData({
+          timeArr: arrhour
+        })
+        console.log(this.data.Mehours, "选中")
+      } else if (arrhour[index].flag === true) {
+        arrhour[index].flag = false
+        this.data.Mehours.splice(arrhour[index], 1)
+        this.setData({
+          timeArr: arrhour
+        })
+        console.log(this.data.Mehours, "删除")
+      }
+    }
   },
   // 获取当前小时
   seletime() {
@@ -1271,6 +1311,10 @@ Page({
     this.setData({
       year: timeyrar
     })
+  },
+  //心理陪护时间确认
+  onConfirm(){
+
   },
   /**
    * 生命周期函数--监听页面加载

@@ -11,7 +11,18 @@
 .central {
   width: 95%;
   height: 100%;
-  background: #FAFAFAFF;
+  /* background: #FAFAFAFF; */
+}
+.van-divider{
+  margin: 0 !important;
+  margin-left: 20rpx !important;
+  margin-right: 20rpx !important;
+}
+.bor{
+  border: solid 0.5rpx #EEEEEE;
+  margin-top: 15rpx;
+  margin-left: 20rpx ;
+  margin-right: 20rpx ;
 }
 .van-tabs__line{
   z-index: 0 !important;
@@ -20,7 +31,7 @@
 .top {
   margin-top: 20rpx;
   width: 100%;
-  height: 446rpx;
+  height: 430rpx;
   display: flex;
   flex-direction: column;
   background: #FFFFFFFF;
@@ -29,7 +40,7 @@
 .top-refund{
   margin-top: 20rpx;
   width: 100%;
-  height: 380rpx;
+  height: 360rpx;
   display: flex;
   flex-direction: column;
   background: #FFFFFFFF;
@@ -51,11 +62,6 @@
   font-weight: 700;
 }
 
-.bor {
-  border: 0.5rpx solid #EEEEEEFF;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-}
 
 .Popular-nurse {
   width: 100%;
@@ -154,7 +160,7 @@
 }
 
 .butto-delete {
-  width: 140rpx;
+  width: 160rpx;
   height: 48rpx;
   display: flex;
   border-radius: 40rpx;
@@ -179,10 +185,10 @@
 }
 .button-tow{
   width: 50%;
-  height: 140rpx;
+  margin-top: 18rpx;
+  margin-bottom: 15rpx;
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 /* 待服务 */
 .top-service{
@@ -195,18 +201,57 @@
   border-radius: 20rpx;
 }
 .butto-service{
+  margin-top: 15rpx;
   width: 100%;
   height: 140rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.chat-img{
+  width: 24rpx;
+  height: 25rpx;
+  margin-right: 8rpx;
+}
 .button-tow-service{
   width: 20%;
   color: #999999FF;
   font-size: 24rpx;
-  display: flex;
   margin-left: 20rpx;
+  position: relative;
+}
+/* 气泡框 */
+.appbox{
+  margin-top: 20rpx;
+  position: absolute;
+  width: 160rpx;
+  height: 60rpx;
+}
+.map-prompt {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #333333;
+  text-align: center;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  left: 10%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.div1 {
+  position: absolute;
+  left: 5%;
+  top: -20%;
+  width: 0;
+  height: 0;
+  border-left: 13rpx solid transparent;
+  border-right: 13rpx solid transparent;
+  border-bottom: 15rpx solid #fff;
 }
 .phone{
   width: 100%;
@@ -225,8 +270,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.m-bottom{
-  height: 20rpx;
-  background: #FFFFFFFF;
 }

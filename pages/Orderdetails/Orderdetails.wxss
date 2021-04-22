@@ -1,5 +1,6 @@
 .local {
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,9 +8,11 @@
 }
 .central {
   width: 95%;
+  height: 100%;
 }
 /* 按钮 */
 .butto-b {
+  margin-top: 20rpx;
   width: 100%;
   height: 80rpx;
   display: flex;
@@ -130,7 +133,6 @@
   margin-right: 20rpx;
 }
 .Total-price{
-  /* width: 100%; */
   display: flex;
   margin-left: 20rpx;
   margin-right: 20rpx;
@@ -139,7 +141,7 @@
 .total{
   margin-left: 15rpx;
   width: 50%;
-  height: 210rpx;
+  height: 180rpx;
   color: #333333FF;
   font-size: 28rpx;
   font-weight: 700;
@@ -151,7 +153,7 @@
   margin-right: 15rpx;
   width: 50%;
   font-size: 28rpx;
-  height: 210rpx;
+  height: 180rpx;
   font-weight: 500;
   align-items: flex-end;
   display: flex;

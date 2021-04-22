@@ -109,7 +109,7 @@
         </view>
       </view>
     </view>
-    <van-popup show="{{Shadow}}" custom-style="height:20%;" overlay-style="height:100%;" position="bottom"
+    <van-popup show="{{Shadow}}" custom-style="height:29%;" overlay-style="height:100%;" position="bottom"
       bind:click-overlay="goclose">
       <view class="phone">
         <view class="dial">18783399654</view>

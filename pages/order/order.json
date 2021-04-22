@@ -3,7 +3,8 @@
     "van-tab": "../../lib/vant/tab",
     "van-tabs": "../../lib/vant/tabs",
     "van-button": "../../lib/vant/button",
-    "van-popup": "../../lib/vant/popup"
+    "van-popup": "../../lib/vant/popup",
+    "van-divider": "../../lib/vant/divider"
   },
   "navigationBarTitleText": "订单管理"
 }

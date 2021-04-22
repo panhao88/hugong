@@ -604,6 +604,6 @@
         </view>
       </view>
     </view>
-    <view class="m-bottom"></view>
+    <!-- <view class="m-bottom"></view> -->
   </view>
 </view>

@@ -12,7 +12,7 @@
               </view>
               <view class="Tobepaid">待付款</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="goorderdetails">
               <view class="service">
                 <view>
@@ -58,7 +58,7 @@
               </view>
               <view class="Tobepaid">待服务</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="godetaild">
               <view class="service">
                 <view>
@@ -80,15 +80,26 @@
                 <view>实付款￥1500.00</view>
               </view>
             </view>
+            <view class="bor"></view>
             <view class="butto-service">
               <view class="button-tow-service">
-                <view>更多</view>
+                <view  bindtap="bindmore">更多</view>
+                <view class="appbox" wx:if="{{flag}}">
+                  <view class="map-prompt">
+                    删除订单
+                    <view class="div1"></view>
+                  </view>
+                </view>
               </view>
               <view>
-                <view class="butto-delete">在线沟通</view>
+                <view class="butto-delete">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>在线沟通
+                </view>
               </view>
               <view>
-                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+                <view class="butto-delete" bindtap="gophone">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                </view>
               </view>
               <view>
                 <view class="butto-payment">立即付款</view>
@@ -104,7 +115,7 @@
               </view>
               <view class="Tobepaid">服务中</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="godetaild">
               <view class="service">
                 <view>
@@ -126,15 +137,21 @@
                 <view>实付款￥1500.00</view>
               </view>
             </view>
+            <view class="bor"></view>
             <view class="butto-service">
               <view class="button-tow-service">
                 <view>更多</view>
               </view>
               <view>
-                <view class="butto-delete">在线沟通</view>
+                <view class="butto-delete">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>
+                  在线沟通
+                </view>
               </view>
               <view>
-                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+                <view class="butto-delete" bindtap="gophone">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                </view>
               </view>
               <view>
                 <view class="butto-payment">立即付款</view>
@@ -155,7 +172,7 @@
               </view>
               <view class="Tobepaid">待付款</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="goorderdetails">
               <view class="service">
                 <view>
@@ -207,7 +224,7 @@
               </view>
               <view class="Tobepaid">待服务</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="goTobeserved">
               <view class="service">
                 <view>
@@ -229,21 +246,25 @@
                 <view>实付款￥1500.00</view>
               </view>
             </view>
+            <view class="bor"></view>
             <view class="butto-service">
               <view class="button-tow-service">
                 <view>更多</view>
               </view>
               <view>
-                <view class="butto-delete">在线沟通</view>
+                <view class="butto-delete">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>在线沟通
+                </view>
               </view>
               <view>
-                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+                <view class="butto-delete" bindtap="gophone">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                </view>
               </view>
               <view>
                 <view class="butto-payment">立即付款</view>
               </view>
             </view>
-            <view class="bor-der"></view>
           </view>
         </view>
       </view>
@@ -259,7 +280,7 @@
               </view>
               <view class="Tobepaid" bindtap="goInservice">服务中</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="goInservice">
               <view class="service">
                 <view>
@@ -281,21 +302,25 @@
                 <view>实付款￥1500.00</view>
               </view>
             </view>
+            <view class="bor"></view>
             <view class="butto-service">
               <view class="button-tow-service">
                 <view>更多</view>
               </view>
               <view>
-                <view class="butto-delete">在线沟通</view>
+                <view class="butto-delete">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>在线沟通
+                </view>
               </view>
               <view>
-                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+                <view class="butto-delete" bindtap="gophone">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                </view>
               </view>
               <view>
                 <view class="butto-payment">立即付款</view>
               </view>
             </view>
-            <view class="bor-der"></view>
           </view>
         </view>
       </view>
@@ -311,7 +336,7 @@
               </view>
               <view class="Tobepaid">待评价</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="goTobeevaluated">
               <view class="service">
                 <view>
@@ -333,21 +358,25 @@
                 <view>实付款￥1500.00</view>
               </view>
             </view>
+            <view class="bor"></view>
             <view class="butto-service">
               <view class="button-tow-service">
                 <view>更多</view>
               </view>
               <view>
-                <view class="butto-delete">在线沟通</view>
+                <view class="butto-delete">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>在线沟通
+                </view>
               </view>
               <view>
-                <view class="butto-delete" bindtap="gophone">拨打电话</view>
+                <view class="butto-delete" bindtap="gophone">
+                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                </view>
               </view>
               <view>
                 <view class="butto-payment">立即付款</view>
               </view>
             </view>
-            <view class="bor-der"></view>
           </view>
         </view>
       </view>
@@ -363,7 +392,7 @@
               </view>
               <view class="Tobepaid">退款成功</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="gosuccessrefundone" data-gito="1">
               <view class="service">
                 <view>
@@ -403,7 +432,7 @@
               </view>
               <view class="Tobepaid">退款失败</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="gosuccessrefundtow" data-gito="2">
               <view class="service">
                 <view>
@@ -443,7 +472,7 @@
               </view>
               <view class="Tobepaid">退款中</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="goorderdetailstherr" data-gito="3">
               <view class="service">
                 <view>
@@ -483,7 +512,7 @@
               </view>
               <view class="Tobepaid">被拒单</view>
             </view>
-            <view class="bor"></view>
+            <van-divider />
             <view class="Popular-nurse" bindtap="goorderdetails">
               <view class="service">
                 <view>
@@ -519,9 +548,9 @@
       </view>
     </van-tab>
   </van-tabs>
-  <view class="m-bottom"></view>
   <view>
-    <van-popup show="{{Shadow}}" custom-style="height:20%;" overlay-style="height:100%;" position="bottom" bind:click-overlay="goclose">
+    <van-popup show="{{Shadow}}" custom-style="height:20%;" overlay-style="height:100%;" position="bottom"
+      bind:click-overlay="goclose">
       <view class="phone">
         <view class="dial">18783399654</view>
         <view class="dial">拨打</view>
