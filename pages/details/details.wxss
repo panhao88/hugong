@@ -1,3 +1,12 @@
+.whole{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(var(--iphonex-fix-bottom));
+  align-items: center;
+  background: #FAFAFA;
+}
 .wrap {
   height: auto;
   position: relative;
@@ -511,7 +520,7 @@
   width: 100%;
   height: 350rpx;
   border-radius: 20rpx;
-  background: #FAFAFA;
+  background: #FFFFFF;
 }
 
 .contact {
@@ -570,7 +579,7 @@
 }
 
 .van-goods-action {
-  padding: 14rpx !important;
+  padding: 28rpx !important;
 }
 
 /* 服务类型 */
@@ -583,7 +592,7 @@
 
 .service-sp {
   font-size: 28rpx;
-  padding: 8rpx 0 18rpx 0;
+  padding: 15rpx 0 18rpx 15rpx;
   font-weight: 600;
 }
 

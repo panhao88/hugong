@@ -63,6 +63,7 @@
 .van-cell{
   padding: 0 !important;
 }
+
 .box-tow{
   position: absolute;
   font-size: 28rpx;

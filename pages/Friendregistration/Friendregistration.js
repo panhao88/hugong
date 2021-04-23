@@ -1,26 +1,13 @@
-// pages/invitation/invitation.js
+// pages/Friendregistration/Friendregistration.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    arr:[
-      1,2,3,4,5,6
-    ]
+
   },
-  // 活动规则
-  gorule(){
-    wx.navigateTo({
-      url: '/pages/Activityrules/Activityrules',
-    })
-  },
-  //转发邀请好友
-  goFriends(){
-    wx.navigateTo({
-      url: '/pages/Friendregistration/Friendregistration',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

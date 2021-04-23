@@ -23,7 +23,7 @@ Page({
     currentSwiper: 0,
     autoplay: true,
     arr: [{
-        imag: '../../img/mipmap-mdpi/bingren.png',
+      imag: '../../img/mipmap-mdpi/yuesao.png',
         title: "专业培训",
         icon: "../../img/mipmap-mdpi/qi.png",
         name: "病人陪护",
@@ -31,7 +31,7 @@ Page({
         color: "#61CF8C"
       },
       {
-        imag: '../../img/mipmap-mdpi/chanfu.png',
+        imag: '../../img/mipmap-mdpi/yuesao.png',
         title: "服务认证",
         icon: "../../img/mipmap-mdpi/qi.png",
         name: "产妇陪护",
@@ -70,9 +70,11 @@ Page({
     ],
   },
   swiperChange: function (e) {
-    this.setData({
-      currentSwiper: e.detail.current
-    })
+    if(e.detail.source == "autoplay" || e.detail.source == "touch"){
+      this.setData({
+        currentSwiper: e.detail.current
+      })
+    }
   },
   // 去消息中心
   gonews(){

@@ -127,9 +127,11 @@ Page({
     ]
   },
   swiperChange: function (e) {
-    this.setData({
-      currentSwiper: e.detail.current
-    })
+    if(e.detail.source == "autoplay" || e.detail.source == "touch"){
+      this.setData({
+        currentSwiper: e.detail.current
+      })
+    }
   },
   //go常用服务人
   goCommonlyused() {

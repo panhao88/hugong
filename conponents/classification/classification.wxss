@@ -73,7 +73,7 @@
   margin-top: 20rpx;
   display: flex;
   align-content: center;
-  background: #FAFAFA;
+  background: #FFFFFF;
   border-radius: 20rpx;
 }
 
@@ -214,7 +214,7 @@
   border-radius: 10rpx;
 }
 .flag1 {
-  background: #FFFFFFFF;
+  background: #FFFFFF;
   border-radius: 20rpx ;
   margin-bottom: 20rpx;
 }

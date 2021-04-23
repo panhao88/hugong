@@ -242,8 +242,8 @@
   </view>
   <!-- 查看图文 -->
   <view class="shang-top">
-    <view class="shang-updata">
-      <image src="../../img/mipmap-mdpi/shang.png" class="img-shang" bindtap="gopicture"></image>
+    <view class="shang-updata" bindtap="gopicture">
+      <image src="../../img/mipmap-mdpi/shang.png" class="img-shang" ></image>
       <view class="updata">上拉查看图文详情</view>
     </view>
     <view class="Healthcare" wx:if="{{picture === true}}">

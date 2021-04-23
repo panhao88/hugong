@@ -2,7 +2,7 @@
   <view>
     <van-search shape="round" placeholder="请输入你想要的护工或机构"  show-action/>
   </view>
-  <view class="local">
+  <view class="whole">
     <view class="central">
       <view wx:for="{{arr}}" wx:key="index" >
         <view class="Popular-nurse">

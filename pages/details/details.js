@@ -81,6 +81,14 @@ Page({
         name: "产妇陪护",
         id: 4
       },
+      {
+        name: "产妇陪护",
+        id: 4
+      },
+      {
+        name: "产妇陪护",
+        id: 4
+      },
     ],
     list: [{
         img: '../../img/mipmap-mdpi/hugong.png'
@@ -196,6 +204,7 @@ Page({
     ipdyuan: false,
     width: 0,
     currentIndex: 0, //年月日下表
+    Yueartoday:"", //今天年月日
     currentTime: 0, //时间下标
     timeArr: [{
         "time": "08:00",
@@ -257,9 +266,11 @@ Page({
   },
   // 轮播图
   swiperChange: function (e) {
-    this.setData({
-      currentSwiper: e.detail.current
-    })
+    if(e.detail.source == "autoplay" || e.detail.source == "touch"){
+      this.setData({
+        currentSwiper: e.detail.current
+      })
+    }
   },
   // ====================服务时间=====================
   // 点击时间详情
@@ -1223,7 +1234,7 @@ Page({
     })
     console.log(this.data.Mehours,"清空所有")
     let curren = e.currentTarget.dataset.date
-    let timecurren = e.currentTarget.dataset.date
+    let Arrcurren = e.currentTarget.dataset.date
     //为上半部分的点击事件
     if (curren === this.data.year) {
       this.setData({
@@ -1238,7 +1249,7 @@ Page({
     this.setData({
       currentIndex: e.currentTarget.dataset.index,
       timeArr: arryear,
-      year:timecurren
+      Yueartoday:Arrcurren
     })
   },
   // 今天
@@ -1250,8 +1261,10 @@ Page({
       if (time >= this.data.hour) {
         if (arrhour[index].flag === false) {
           arrhour[index].flag = true
-          let Splicingtime = this.data.year + " " + arrhour[index].time
-          this.data.Mehours.push(Splicingtime)
+          if(this.data.ipdyuan === false){
+            let Splicingtime = this.data.year + " " + arrhour[index].time
+            this.data.Mehours.push(Splicingtime)
+          }
           this.setData({
             timeArr: arrhour
           })
@@ -1268,7 +1281,7 @@ Page({
     } else if (this.data.ipdyuan === true) {
       if (arrhour[index].flag === false) {
         arrhour[index].flag = true
-        let Splicingtime = this.data.year + " " + arrhour[index].time
+        let Splicingtime = this.data.Yueartoday + " " + arrhour[index].time
           this.data.Mehours.push(Splicingtime)
         this.setData({
           timeArr: arrhour
@@ -1314,7 +1327,10 @@ Page({
   },
   //心理陪护时间确认
   onConfirm(){
-
+    // this.setData({
+    //   year:Yueartoday
+    // })
+    console.log(this.data.Yueartoday)
   },
   /**
    * 生命周期函数--监听页面加载

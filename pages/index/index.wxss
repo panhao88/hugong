@@ -29,6 +29,7 @@
   background-color: #ffffff;
  }
  .top{
+   margin-top: 15rpx;
   width: 100%;
   display: flex;
   justify-content: space-between;

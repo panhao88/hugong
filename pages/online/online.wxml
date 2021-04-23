@@ -1,5 +1,5 @@
-<view class="whole">
-  <view class="central">
+<view class="local">
+  <view class="lpCenter">
     <view wx:for="{{arr}}" wx:key="index" class="box">
       <van-swipe-cell right-width="{{ 65 }}" >
         <view class="tp-news">

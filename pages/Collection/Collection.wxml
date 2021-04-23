@@ -1,5 +1,5 @@
 <view class="local">
-  <view class="central">
+  <view class="plcentral">
     <view class="Nursing-workers">
       <view wx:for="{{hugong}}" wx:key="index" class="{{flag === index ? 'colore' : ''}}" bindtap="goto"
         data-index="{{index}}">

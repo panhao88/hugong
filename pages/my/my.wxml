@@ -42,8 +42,7 @@
         </view>
       </view>
       <view class="Carousel">
-        <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}"
-          circular="{{true}}" bindchange="swiperChange" current="{{currentSwiper}}" >
+        <swiper indicator-dots="{{false}}"  circular="{{true}}" bindchange="swiperChange" current="{{currentSwiper}}" >
           <swiper-item wx:for="{{list}}" wx:key="index">
             <view class="lCarous">
               <view class="im-age">

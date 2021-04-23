@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-checkbox":"../../lib/vant/checkbox"
+  },
+  "navigationBarTitleText": "帮帮陪护"
+}

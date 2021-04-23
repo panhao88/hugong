@@ -7,8 +7,8 @@
   background: #FAFAFAFF;
 }
 
-.central {
-  width: 95%;
+.lpCenter {
+  width: 100%;
   background: #fff;
 }
 
@@ -47,7 +47,7 @@
 }
 .tp-img {
   position: relative;
-  width: 90rpx;
+  width: 110rpx;
   height: 64rpx;
   display: flex;
   margin-right: 10rpx;

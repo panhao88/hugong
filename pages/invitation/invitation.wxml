@@ -20,7 +20,7 @@
       </view>
       <view class="myid">我的ID：123456</view>
       <view class="immediately">
-        <button class="login-bu" bindtap="Logout">转发邀请好友</button>
+        <button class="login-bu" bindtap="goFriends">转发邀请好友</button>
       </view>
     </view>
     <view class="Longpress">
