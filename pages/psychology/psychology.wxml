@@ -3,7 +3,7 @@
     <!-- 输入框 -->
     <view class="top">
       <view class="box-now">
-        <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi"></image>
+        <view class="box-tow">{{Capital}} <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xia.png" class="img-dizhi"></image>
         </view>
         <view class="box-therr">
           <van-search value="{{ value }}" placeholder="请输入搜索关键词" />

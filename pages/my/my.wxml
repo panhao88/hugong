@@ -2,16 +2,16 @@
   <view class="top-backorun">
     <view class="Chat-settings">
       <view class="icon-distance">
-        <image src="../../img/mipmap-mdpi/liaotian.png" class="icon" mode="" bindtap="gonews"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/liaotian.png" class="icon" mode="" bindtap="gonews"></image>
         <view class="garden"></view>
       </view>
       <view class="icon-distance">
-        <image src="../../img/mipmap-mdpi/shezhi.png" class="icon" mode="" bindtap="gosetup"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shezhi.png" class="icon" mode="" bindtap="gosetup"></image>
       </view>
     </view>
     <view class="portrait">
       <view class="circular">
-        <image src="../../img/mipmap-mdpi/touxiang.png" class="tou-x" bindtap="gosetup"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png" class="tou-x" bindtap="gosetup"></image>
       </view>
       <view class="user-name">
         <view class="" bindtap="gosetup">咖啡时光</view>
@@ -49,7 +49,7 @@
                 <image src="{{item.img}}" class="img-g"></image>
               </view>
               <view class="tobi">
-                <view>{{item.title}} <image src="../../img/mipmap-mdpi/nv.png" class="img-nv"></image>
+                <view>{{item.title}} <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/nv.png" class="img-nv"></image>
                 </view>
                 <view class="nama-age">
                   <view class="mar-gin" wx:for="{{item.texy}}" wx:key="index" wx:for-item="newitem">

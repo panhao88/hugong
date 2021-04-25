@@ -5,13 +5,13 @@
         <view class="tab-img">
           <view bindtap="onLoginWay">登录</view>
           <view>
-            <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="tubiao-p" wx:if="{{flag === 0}}"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhishitubiao.png" class="tubiao-p" wx:if="{{flag === 0}}"></image>
           </view>
         </view>
         <view class="tab-img">
           <view bindtap="onregister">注册</view>
           <view>
-            <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="tubiao-p" wx:if="{{flag === 1}}"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhishitubiao.png" class="tubiao-p" wx:if="{{flag === 1}}"></image>
           </view>
         </view>
       </view>
@@ -21,14 +21,14 @@
           <view class="box1">
             <view class="box">
               <view bindtap="goregion" class="region">{{phonetittle}}</view>
-              <image src="../../img/mipmap-mdpi/xiajiantou.png" class="xia-tou" bindtap="goregion"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiajiantou.png" class="xia-tou" bindtap="goregion"></image>
               <view class="shu-x"></view>
             </view>
             <view> <input placeholder="请输入手机号" class="iptutp" /></view>
           </view>
           <view class="passwod">
             <input placeholder="请输入密码" class="ipt" password='{{passwordType}}' />
-            <image src='{{defaultType? "../../img/mipmap-mdpi/bi.png": "../../img/mipmap-mdpi/kai.png"}}'
+            <image src='{{defaultType? "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/bi.png": "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/kai.png"}}'
               class='imgicon' bindtap='eyeStatus'></image>
           </view>
           <view>
@@ -43,7 +43,7 @@
           <view class="box1">
             <view class="box">
               <view bindtap="goregion" class="region">+8633</view>
-              <image src="../../img/mipmap-mdpi/xiajiantou.png" class="xia-tou" bindtap="goregion"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiajiantou.png" class="xia-tou" bindtap="goregion"></image>
               <view class="shu-x"></view>
             </view>
             <view> <input placeholder="请输入手机号" class="iptutp" /></view>
@@ -67,7 +67,7 @@
       </view>
       <view class="mode">
         <view>
-          <image src="../../img/mipmap-mdpi/weixin.png" class="WeChat"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/weixin.png" class="WeChat"></image>
         </view>
       </view>
     </view>

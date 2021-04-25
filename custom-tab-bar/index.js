@@ -6,33 +6,33 @@ Component({
       {
         pagePath: "/pages/index/index",
         text: "首页",
-        iconPath: "/img/mipmap-mdpi/shouye(1).png",
-        selectedIconPath: "/img/mipmap-mdpi/shouye(2).png"
+        iconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shouye(1).png",
+        selectedIconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shouye(2).png"
       },
       {
         pagePath: "/pages/Escort/Escort",
         text: "陪护结构",
-        iconPath: "/img/mipmap-mdpi/peihujigou(1).png",
-        selectedIconPath: "/img/mipmap-mdpi/peihujigou(2).png"
+        iconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/peihujigou(1).png",
+        selectedIconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/peihujigou(2).png"
       },
       {
         pagePath: "/pages/service/service",
         text: "服务进度",
          bulge:true,
-        iconPath: "/img/mipmap-mdpi/fuwujindu(2).png",
-        selectedIconPath: "/img/mipmap-mdpi/fuwujindu(2).png"
+        iconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/fuwujindu(2).png",
+        selectedIconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/fuwujindu(2).png"
       },
       {
         pagePath: "/pages/healthy/healthy",
         text: "健康知识",
-        iconPath: "/img/mipmap-mdpi/jiankangzhishi(1).png",
-        selectedIconPath: "/img/mipmap-mdpi/jiankangzhishi(2).png"
+        iconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/jiankangzhishi(1).png",
+        selectedIconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/jiankangzhishi(2).png"
       },
       {
         pagePath: "/pages/my/my",
         text: "我的",
-        iconPath: "/img/mipmap-mdpi/wode(1).png",
-        selectedIconPath: "/img/mipmap-mdpi/wode(2).png"
+        iconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/wode(1).png",
+        selectedIconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/wode(2).png"
       }
     ]
   },

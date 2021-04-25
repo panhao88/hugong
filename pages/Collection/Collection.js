@@ -8,48 +8,48 @@ Page({
     flag: 0,
     arr:[
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km",
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
     ],
     data: [{
-      img:"../../img/mipmap-mdpi/yuesao.png",
+      img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png",
       name: "王阿姨",
       Gender:"女",
       Praise:"98%",
@@ -58,7 +58,7 @@ Page({
       right: 0
     },
     {
-      img:"../../img/mipmap-mdpi/yuesao.png",
+      img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png",
       name: "王阿姨",
       Gender:"女",
       Praise:"98%",
@@ -67,7 +67,7 @@ Page({
       right: 0
     },
     {
-      img:"../../img/mipmap-mdpi/yuesao.png",
+      img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png",
       name: "王阿姨",
       Gender:"女",
       Praise:"98%",

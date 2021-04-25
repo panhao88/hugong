@@ -4,7 +4,7 @@
       <view class="servic">
         <view>
           <view class="immage-mechanism">
-            <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo"></image>
           </view>
         </view>
       </view>
@@ -13,7 +13,7 @@
         <view class="service-time">
           <view>服务时间:2020-3-20 - 2021-3-21</view>
           <view>
-            <image src="../../img/mipmap-mdpi/xiangyou.png" class="img-age"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiangyou.png" class="img-age"></image>
           </view>
         </view>
         <view class="service-time">服务机构:四川好姐姐陪护服务有限公司</view>
@@ -31,7 +31,7 @@
         </view>
         <view>
           <view>
-            <image src="../../img/mipmap-mdpi/xiangyou.png" class="img"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiangyou.png" class="img"></image>
           </view>
         </view>
       </view>
@@ -47,7 +47,7 @@
         </view>
         <view>
           <view>
-            <image src="../../img/mipmap-mdpi/xiangyou.png" class="img"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiangyou.png" class="img"></image>
           </view>
         </view>
       </view>
@@ -58,7 +58,7 @@
           <view>2021-3-12 - 2021-4-12 共5天</view>
         </view>
         <view>
-          <image src="../../img/mipmap-mdpi/xiangyou.png" class="img"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiangyou.png" class="img"></image>
         </view>
       </view>
     </view>

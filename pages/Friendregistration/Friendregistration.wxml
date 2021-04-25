@@ -1,27 +1,27 @@
 <view class="loace">
   <view class="img-age">
-    <image src="../../img/mipmap-mdpi/yao.png" class="img"></image>
+    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yao.png" class="img"></image>
     <view class="img-vie">
-      <image src="../../img/mipmap-mdpi/qian.png" class="img-qian"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qian.png" class="img-qian"></image>
     </view>
     <view class="invitation">
       <view class="Invitationcode">你的邀请码</view>
       <view class='search'>
         <view class='searchItem'>
-          <image src='../../img/mipmap-mdpi/bianji.png' />
+          <image src='cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/bianji.png' />
           <input placeholder='请输入手机号' type="text"></input>
         </view>
       </view>
       <view class='search'>
         <view class='searchItem'>
-          <image src='../../img/mipmap-mdpi/bianji.png' />
+          <image src='cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/bianji.png' />
           <input placeholder='请输入验证码' />
           <view class="icationCode">获取验证码</view>
         </view>
       </view>
       <view class='search'>
         <view class='searchItem'>
-          <image src='../../img/mipmap-mdpi/bianji.png' />
+          <image src='cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/bianji.png' />
           <input placeholder='请输入6-16位登录密码'></input>
         </view>
       </view>

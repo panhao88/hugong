@@ -1,14 +1,14 @@
 <view class="local">
   <view class="central">
     <view class="rule">
-      <image src="../../img/mipmap-mdpi/tuikuanguize.png" class="img"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/tuikuanguize.png" class="img"></image>
     </view>
     <view class="backgroun">
       <view class="Popular-nurse">
         <view class="service">
           <view>
             <view class="immage-mechanism">
-              <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo"></image>
             </view>
           </view>
         </view>

@@ -29,13 +29,13 @@
     <!-- 输入框 -->
     <view class="topp" catchtouchmove='true'>
       <view class="box-top">
-        <view class="box-ru" bindtap="gosearch">{{currentRegion.city}} <image src="../../img/mipmap-mdpi/xia.png"
+        <view class="box-ru" bindtap="gosearch">{{currentRegion.city}} <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xia.png"
             class="img-dizhi">
           </image>
         </view>
         <view class="box-three">
           <view class="box-sou">
-            <image src="../../img/mipmap-mdpi/sousuo.png" class="souimg"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/sousuo.png" class="souimg"></image>
           </view>
           <view> <input placeholder="请输入搜索关键词" bindtap="gosearch" disabled/></view>
         </view>
@@ -47,7 +47,7 @@
         bindregionchange="mapChange">
         <view class="map-prompt">{{currentRegion.street}}</view>
         <view class="div1"></view>
-        <image class="current-site-icon" src="../../img/mipmap-mdpi/my_marker.png"></image>
+        <image class="current-site-icon" src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/my_marker.png"></image>
         <cover-view class="reload" bindtap="reload">
           <cover-view class="center1">
             <cover-view class="center2"></cover-view>
@@ -78,7 +78,7 @@
 <van-popup show="{{ searchshow }}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
   <view class='cert'>
     <view class="img-age">
-      <image src="../../img/mipmap-mdpi/fanhui.png" class="img-fan" bindtap="preturn"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/fanhui.png" class="img-fan" bindtap="preturn"></image>
     </view>
     <view class="imput">
       <van-search value="{{ pavalue }}" placeholder="请输入搜索关键词" clearable="{{false}}" bind:change="getsuggest"

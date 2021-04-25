@@ -6,50 +6,50 @@ Page({
     Capital: "蜀都中心...",
     keyword: '遥看瀑布挂前川',
     list: [{
-        image: '../../img/mipmap-mdpi/lunbotu.png',
+        image: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/lunbotu.png',
       },
       {
-        image: '../../img/mipmap-mdpi/lunbotu.png',
+        image: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/lunbotu.png',
       },
       {
-        image: '../../img/mipmap-mdpi/lunbotu.png',
+        image: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/lunbotu.png',
       },
       {
-        image: '../../img/mipmap-mdpi/lunbotu.png',
+        image: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/lunbotu.png',
       }, {
-        image: '../../img/mipmap-mdpi/lunbotu.png',
+        image: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/lunbotu.png',
       },
     ],
     currentSwiper: 0,
     autoplay: true,
     arr: [{
-      imag: '../../img/mipmap-mdpi/yuesao.png',
+      imag: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/bingren.png',
         title: "专业培训",
-        icon: "../../img/mipmap-mdpi/qi.png",
+        icon: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qi.png",
         name: "病人陪护",
         pop: "以服务29.9万人",
         color: "#61CF8C"
       },
       {
-        imag: '../../img/mipmap-mdpi/yuesao.png',
+        imag: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/chanfu.png',
         title: "服务认证",
-        icon: "../../img/mipmap-mdpi/qi.png",
+        icon: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qi.png",
         name: "产妇陪护",
         pop: "以服务29.9万人",
         color: "#60AAE5"
       },
       {
-        imag: '../../img/mipmap-mdpi/yuesao.png',
+        imag: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png',
         title: "安全保障",
-        icon: "../../img/mipmap-mdpi/qi.png",
+        icon: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qi.png",
         name: "月嫂陪护",
         pop: "以服务29.9万人",
         color: "#FFB85D"
       },
       {
-        imag: '../../img/mipmap-mdpi/yuesao.png',
+        imag: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png',
         title: "专业培训",
-        icon: "../../img/mipmap-mdpi/qi.png",
+        icon: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qi.png",
         name: "病人陪护",
         pop: "以服务29.9万人",
         color: "#FFB85D"

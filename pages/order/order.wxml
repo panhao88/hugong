@@ -17,7 +17,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -63,7 +63,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -93,12 +93,12 @@
               </view>
               <view>
                 <view class="butto-delete">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>在线沟通
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>在线沟通
                 </view>
               </view>
               <view>
                 <view class="butto-delete" bindtap="gophone">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>拨打电话
                 </view>
               </view>
               <view>
@@ -120,7 +120,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -144,13 +144,13 @@
               </view>
               <view>
                 <view class="butto-delete">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>
                   在线沟通
                 </view>
               </view>
               <view>
                 <view class="butto-delete" bindtap="gophone">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>拨打电话
                 </view>
               </view>
               <view>
@@ -177,7 +177,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -229,7 +229,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -253,12 +253,12 @@
               </view>
               <view>
                 <view class="butto-delete">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>在线沟通
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>在线沟通
                 </view>
               </view>
               <view>
                 <view class="butto-delete" bindtap="gophone">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>拨打电话
                 </view>
               </view>
               <view>
@@ -285,7 +285,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -309,12 +309,12 @@
               </view>
               <view>
                 <view class="butto-delete">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>在线沟通
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>在线沟通
                 </view>
               </view>
               <view>
                 <view class="butto-delete" bindtap="gophone">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>拨打电话
                 </view>
               </view>
               <view>
@@ -341,7 +341,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -365,12 +365,12 @@
               </view>
               <view>
                 <view class="butto-delete">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>在线沟通
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>在线沟通
                 </view>
               </view>
               <view>
                 <view class="butto-delete" bindtap="gophone">
-                  <image src="../../img/mipmap-mdpi/daipingjia.png" class="chat-img"></image>拨打电话
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png" class="chat-img"></image>拨打电话
                 </view>
               </view>
               <view>
@@ -397,7 +397,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -437,7 +437,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -477,7 +477,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                   </view>
                 </view>
               </view>
@@ -517,7 +517,7 @@
               <view class="service">
                 <view>
                   <view class="immage-mechanism">
-                    <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                   </view>
                 </view>
               </view>

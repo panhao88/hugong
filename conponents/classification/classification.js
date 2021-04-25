@@ -70,164 +70,164 @@ Component({
     ],
     list:[
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
     ],
     jigou:[
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:"../../img/mipmap-mdpi/logo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png",
         name:"成都好姐姐陪护服务有限公司",
         title:"以服务1000人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
     ],
     evaluate:[
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
         chart:[
           {
-            imag:"../../img/mipmap-mdpi/bingren.png"
+            imag:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png"
           },
           {
-            imag:"../../img/mipmap-mdpi/bingren.png"
+            imag:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png"
           },
           {
-            imag:"../../img/mipmap-mdpi/bingren.png"
+            imag:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png"
           },
         ],
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
     ]

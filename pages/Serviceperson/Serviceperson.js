@@ -6,7 +6,7 @@ Page({
    */
   data: {
     list: [{
-      img: '../../img/mipmap-mdpi/touxiang.png',
+      img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
       title: '王桂香',
       age:48555252,
       texy:[
@@ -19,7 +19,7 @@ Page({
       ]
     },
     {
-      img: '../../img/mipmap-mdpi/touxiang.png',
+      img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
       title: '李富贵',
       age:48,
       texy:[
@@ -38,7 +38,7 @@ Page({
       ]
     },
     {
-      img: '../../img/mipmap-mdpi/touxiang.png',
+      img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
       title: '张三',
       age:48,
       texy:[
@@ -51,7 +51,7 @@ Page({
       ]
     },
     {
-      img: '../../img/mipmap-mdpi/touxiang.png',
+      img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
       title: '李富贵',
       age:48,
       texy:[
@@ -70,7 +70,7 @@ Page({
       ]
     },
     {
-      img: '../../img/mipmap-mdpi/touxiang.png',
+      img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
       title: '李富贵',
       age:48,
       texy:[
@@ -89,7 +89,7 @@ Page({
       ]
     },
     {
-      img: '../../img/mipmap-mdpi/touxiang.png',
+      img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
       title: '李富贵',
       age:48,
       texy:[
@@ -108,7 +108,7 @@ Page({
       ]
     },
     {
-      img: '../../img/mipmap-mdpi/touxiang.png',
+      img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
       title: '李富贵',
       age:48,
       texy:[
@@ -127,7 +127,7 @@ Page({
       ]
     },
     {
-      img: '../../img/mipmap-mdpi/touxiang.png',
+      img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
       title: '李富贵',
       age:48,
       texy:[

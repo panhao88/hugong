@@ -49,52 +49,52 @@ Page({
     ],
     list:[
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },
       {
-        img:'../../img/mipmap-mdpi/5bcf6403efb3d.png',
+        img:'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png',
         fuwu:"可服务",
         name:"张阿姨",
         zuizao:"最早可约3月1号",
         yi:"以服务100人",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"蜀都中心一期",
         qianmi:"0.1km"
       },

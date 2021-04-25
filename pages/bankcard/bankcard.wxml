@@ -1,11 +1,11 @@
 <view class="local">
   <view class="central">
     <view class="businesscircles">
-      <image src="../../img/mipmap-mdpi/gongshang.png" class="img"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/gongshang.png" class="img"></image>
       <view class="box">
         <view class="work">
           <view>
-            <image src="../../img/mipmap-mdpi/gongshangicon.png" class="gongicon"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/gongshangicon.png" class="gongicon"></image>
           </view>
           <view class="savings">
             <view class="font-work">工商银行</view>

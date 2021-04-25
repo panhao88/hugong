@@ -2,7 +2,7 @@
   <view class="central">
     <view class="img-jucent">
       <view>
-        <image src="../../img/mipmap-mdpi/dizhiguanli.png" class="img"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dizhiguanli.png" class="img"></image>
       </view>
       <view>你还没有添加地址哦~</view>
     </view>

@@ -9,7 +9,7 @@
         <view class="tob-name">
           {{item.name}}
           <view wx:if="{{flag === index}}">
-            <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="tubiao-p"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhishitubiao.png" class="tubiao-p"></image>
           </view>
         </view>
       </view>
@@ -27,7 +27,7 @@
       <view class="Popular-nurse" bindtap="godetaild">
         <view class="service">
           <view>
-            <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png" class="imm-age"></image>
           </view>
           <view class="Serviceable">可服务</view>
         </view>
@@ -59,7 +59,7 @@
             <view>以服务100人</view>
             <view class="location">
               <view>
-                <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png" class="img-di"></image>
               </view>
               <view>蜀都中心一期</view>
             </view>
@@ -81,7 +81,7 @@
           <view class="service">
             <view>
               <view class="immage-mechanism">
-                <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
               </view>
             </view>
           </view>
@@ -102,7 +102,7 @@
           <view class="font-f">以服务1000人</view>
           <view class="location">
             <view>
-              <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png" class="img-di"></image>
             </view>
             <view>蜀都中心一期</view>
           </view>

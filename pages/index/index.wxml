@@ -3,14 +3,14 @@
     <!-- 输入框 -->
     <view class="top">
       <view class="box-now">
-        <view class="box-tow">{{Capital}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi"></image>
+        <view class="box-tow">{{Capital}} <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xia.png" class="img-dizhi"></image>
         </view>
         <view class="box-therr">
           <van-search value="{{ value }}" placeholder="搜一搜" bindtap="goserch" disabled />
         </view>
       </view>
       <view class="wei-icoc">
-        <image src="../../img/mipmap-mdpi/shouwei.png" class="weiimg" bindtap="gonews"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shouwei.png" class="weiimg" bindtap="gonews"></image>
         <view class="garden"></view>
       </view>
     </view>
@@ -31,7 +31,7 @@
     <!-- 陪护 -->
     <view class="Escort">
       <view class="hospital">
-        <image src="../../img/mipmap-mdpi/yiyuan.png" class="img-hospital" bindtap="goserch"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yiyuan.png" class="img-hospital" bindtap="goserch"></image>
         <view class="Hospital-escort" bindtap="goserch">
           <view class="hospitalone">医院陪护</view>
           <view class="hospitaltow">限时优惠</view>
@@ -39,7 +39,7 @@
         </view>
       </view>
       <view class="Sanatorium">
-        <image src="../../img/mipmap-mdpi/liaoyangyuan.png" class="img-hospital" bindtap="goserch"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/liaoyangyuan.png" class="img-hospital" bindtap="goserch"></image>
         <view class="Hospital-escort" bindtap="goserch">
           <view class="hospitalone">康养院陪护</view>
           <view class="hospitaltow">限时优惠</view>
@@ -52,7 +52,7 @@
       <view class="four-upper">
         <view class="Home-care" bindtap="goAthome">
           <view class="jia-wu">
-            <image src="../../img/mipmap-mdpi/jujia.png" class="f-zi"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/jujia.png" class="f-zi"></image>
           </view>
           居家陪护
         </view>
@@ -80,7 +80,7 @@
       </view>
     </view>
     <view class="picture">
-      <image src="../../img/mipmap-mdpi/zhanshitu.png" class="worry" bindtap="gopsychology"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhanshitu.png" class="worry" bindtap="gopsychology"></image>
     </view>
     <view>
       <classification hugong="{{hugong}}"></classification>

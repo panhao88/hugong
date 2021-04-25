@@ -26,7 +26,7 @@
     <view class="central">
       <view class="choice">
         <view class="cancel" bindtap="gocancel">
-          <image src="../../img/mipmap-mdpi/quxiao.png" class="img" bindtap="goshoufalse"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/quxiao.png" class="img" bindtap="goshoufalse"></image>
         </view>
         <view class="Choosetime">选择到账信息</view>
       </view>
@@ -34,7 +34,7 @@
       <view class="branch">
         <view class="card">
           <view>
-            <image src="../../img/mipmap-mdpi/gongshangicon.png" class="gonicon"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/gongshangicon.png" class="gonicon"></image>
           </view>
           <view class="bank">工商银行</view>
           <view>储蓄卡(1234)</view>
@@ -48,7 +48,7 @@
       <view class="branch">
         <view class="card">
           <view>
-            <image src="../../img/mipmap-mdpi/gongshangicon.png" class="gonicon"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/gongshangicon.png" class="gonicon"></image>
           </view>
           <view class="bank">工商银行</view>
           <view>储蓄卡(1234)</view>
@@ -62,14 +62,14 @@
       <view class="branch">
         <view class="card">
           <view>
-            <image src="../../img/mipmap-mdpi/qianbao1.png" class="Arrivalicon"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qianbao1.png" class="Arrivalicon"></image>
           </view>
           <view class="bank">使用新到账信息</view>
           <view></view>
           <view></view>
         </view>
         <view>
-          <image src="../../img/mipmap-mdpi/youjiantou.png" class="youicon"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/youjiantou.png" class="youicon"></image>
         </view>
       </view>
       <view class="bottom"></view>

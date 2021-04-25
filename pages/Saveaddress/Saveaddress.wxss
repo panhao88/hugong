@@ -362,3 +362,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.van-field__input{
+  z-index: 0 !important;
+}

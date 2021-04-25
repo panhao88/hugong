@@ -29,13 +29,13 @@
       <view class="box">
         <view class="box-img">
           <view class="mar-img">
-            <image src="../../img/mipmap-mdpi/zheng.png" class="img"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zheng.png" class="img"></image>
           </view>
           <view class="backgr">上传身份证正面</view>
         </view>
         <view class="box-img">
           <view class="mar-img">
-            <image src="../../img/mipmap-mdpi/fan.png" class="img"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/fan.png" class="img"></image>
           </view>
           <view class="backgr">上传身份证反面</view>
         </view>
@@ -43,13 +43,13 @@
       <view class="Realname">请拍摄并上传你的专业证书</view>
       <view class="upload-one">
         <view class="bor-jia">
-          <image src="../../img/mipmap-mdpi/jia.png" class="img-jia"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/jia.png" class="img-jia"></image>
         </view>
       </view>
       <view class="Realname">请拍摄并上传你的体检报告</view>
       <view class="upload-one">
         <view class="bor-jia">
-          <image src="../../img/mipmap-mdpi/jia.png" class="img-jia"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/jia.png" class="img-jia"></image>
         </view>
       </view>
     </view>

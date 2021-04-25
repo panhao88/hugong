@@ -1,11 +1,11 @@
 <view class="local">
   <view class="top">
     <view>
-      <image src="../../img/mipmap-mdpi/qianbaobeijing.png" class="img"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qianbaobeijing.png" class="img"></image>
     </view>
   </view>
   <view class="bankcard" bindtap="gobankcard">
-    <image src="../../img/mipmap-mdpi/qianbao.png" class="imgqian"></image>
+    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qianbao.png" class="imgqian"></image>
     <view class="card">银行卡</view>
   </view>
   <view class="tixian">

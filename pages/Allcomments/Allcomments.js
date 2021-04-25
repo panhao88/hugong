@@ -7,54 +7,54 @@ Page({
   data: {
     evaluate:[
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
         chart:[
           {
-            imag:"../../img/mipmap-mdpi/bingren.png"
+            imag:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/bingren.png"
           },
           {
-            imag:"../../img/mipmap-mdpi/bingren.png"
+            imag:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/bingren.png"
           },
           {
-            imag:"../../img/mipmap-mdpi/bingren.png"
+            imag:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/bingren.png"
           },
         ],
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"咖啡时光",
         timer:"2021.8.20",
         pingjia:"王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业王阿姨非常的专业",
-        imm:"../../img/mipmap-mdpi/hugong.png",
+        imm:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         namm:"王阿姨"
       },
     ]

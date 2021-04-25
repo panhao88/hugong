@@ -1,8 +1,8 @@
 <view class="loace">
   <view class="img-age">
-    <image src="../../img/mipmap-mdpi/yao.png" class="img"></image>
+    <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yao.png" class="img"></image>
     <view class="img-vie">
-      <image src="../../img/mipmap-mdpi/qian.png" class="img-qian"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qian.png" class="img-qian"></image>
     </view>
       <view class="activity" bindtap="gorule">活动会规则</view>
     <view class="invitation">
@@ -15,7 +15,7 @@
       <view class="Invite">邀请的好友也可在注册时直接填写邀请码</view>
       <view class="QRcode">
         <view>
-          <image src="../../img/mipmap-mdpi/erweima.png" class="towcode"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/erweima.png" class="towcode"></image>
         </view>
       </view>
       <view class="myid">我的ID：123456</view>

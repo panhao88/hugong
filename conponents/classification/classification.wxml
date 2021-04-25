@@ -4,7 +4,7 @@
     <view class="tob-name">
       {{item.name}}
       <view wx:if="{{flag === index}}">
-        <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="tubiao-p"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhishitubiao.png" class="tubiao-p"></image>
       </view>
     </view>
   </view>

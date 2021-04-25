@@ -6,7 +6,7 @@
     </view>
     <view class="newpeople">
       <view>
-        <image src="../../img/mipmap-mdpi/juxing.png" class="img"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/juxing.png" class="img"></image>
       </view>
       <view class="Discount">
         <view class="y-money">
@@ -29,7 +29,7 @@
     <!-- 灰色优惠卷 -->
     <view class="newpeople">
       <view>
-        <image src="../../img/mipmap-mdpi/hui.png" class="img"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hui.png" class="img"></image>
       </view>
       <view class="Discount">
         <view class="y-money">

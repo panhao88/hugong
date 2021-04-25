@@ -1,9 +1,9 @@
 <view class="local">
   <view class="central">
     <view class="top">
-      <image src="../../img/mipmap-mdpi/touxiang.png" class="img"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png" class="img"></image>
       <view class="box">
-        <image src="../../img/mipmap-mdpi/shangtou.png" class="img-xiang"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shangtou.png" class="img-xiang"></image>
       </view>
     </view>
     <view>

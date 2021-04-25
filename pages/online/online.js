@@ -7,25 +7,25 @@ Page({
   data: {
     arr:[
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"王阿姨",
         title:"早上胃口不好，中午再看看情况",
         timer:"9.50"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"王阿姨",
         title:"早上胃口不好，中午再看看情况",
         timer:"9.50"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"王阿姨",
         title:"早上胃口不好，中午再看看情况",
         timer:"9.50"
       },
       {
-        img:"../../img/mipmap-mdpi/hugong.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png",
         name:"王阿姨",
         title:"早上胃口不好，中午再看看情况",
         timer:"9.50"

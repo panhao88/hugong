@@ -38,13 +38,13 @@
       <view class="Realname">请拍摄并上传你的专业证书</view>
       <view class="upload-one">
         <view class="bor-jia">
-          <image src="../../img/mipmap-mdpi/jia.png" class="img-jia"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/jia.png" class="img-jia"></image>
         </view>
       </view>
       <view class="Realname">请拍摄并上传你的体检报告</view>
       <view class="upload-one">
         <view class="bor-jia">
-          <image src="../../img/mipmap-mdpi/jia.png" class="img-jia"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/jia.png" class="img-jia"></image>
         </view>
       </view>
     </view>

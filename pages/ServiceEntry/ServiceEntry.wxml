@@ -3,11 +3,11 @@
     <view class="identity">请选择你的身份</view>
     <view class="img-branch">
       <view class="mechanism" bindtap="gomechanism">
-        <image src="../../img/mipmap-mdpi/nanyi.png" class="img"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/nanyi.png" class="img"></image>
         <view class="mar-g">陪护机构</view>
       </view>
       <view class="mechanism" bindtap="goparttimejob">
-        <image src="../../img/mipmap-mdpi/nvyi.png" class="img"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/nvyi.png" class="img"></image>
         <view class="mar-g">兼职陪护人员</view>
       </view>
     </view>

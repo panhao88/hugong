@@ -9,13 +9,13 @@ Page({
     news: "非常感谢你对我们的支持与信任, 非常感谢你对我们的支持与信任, 非常感谢你对我们的支持与信任, 非常感谢你对我们的支持与信任,非常感谢你对我们的支持与信任,非常感谢你对我们的支持与信任,非常感谢你对我们的支持与信任,",
     foldStat: true,
     arr: [{
-        img: "../../img/mipmap-mdpi/yuesao.png"
+        img: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png"
       },
       {
-        img: "../../img/mipmap-mdpi/yuesao.png"
+        img: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png"
       },
       {
-        img: "../../img/mipmap-mdpi/yuesao.png"
+        img: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png"
       },
     ]
   },

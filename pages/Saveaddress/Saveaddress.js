@@ -57,6 +57,7 @@ Page({
   },
     //跳转搜索地图
     gosearch() {
+      console.log(1111)
       this.setData({
         searchshow: true,
         Shadow: false
@@ -374,7 +375,7 @@ Page({
       district: data.district,
       latitude: data.latitude,
       longitude: data.longitude,
-      iconPath: "../../img/mipmap-mdpi/my_marker.png", //图标路径
+      iconPath: "cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/my_marker.png", //图标路径
       width: 25,
       height: 25
     })

@@ -14,13 +14,13 @@
       <view class="Realname">营业执照</view>
       <view class="upload-one">
         <view class="bor-jia">
-          <image src="../../img/mipmap-mdpi/zhengshu.png" class="img-jia"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhengshu.png" class="img-jia"></image>
         </view>
       </view>
       <view class="Realname">机构专业证书</view>
       <view class="upload-one">
         <view class="bor-jia">
-          <image src="../../img/mipmap-mdpi/zhengshu.png" class="img-jia"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhengshu.png" class="img-jia"></image>
         </view>
       </view>
     </view>
@@ -28,7 +28,7 @@
   <view wx:if="{{flag === 1}}" class="wait">
     <view>你的入驻审核正在审核,请耐心等候!</view>
     <view class="img-examine">
-      <image src="../../img/mipmap-mdpi/shenghe.png" class="examine"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shenghe.png" class="examine"></image>
     </view>
   </view>
   <view wx:if="{{flag === 2}}" class="examinesuccess">
@@ -39,7 +39,7 @@
     </view>
     <view class="cor">点击下载服务端APP:XXXXXXXXXX</view>
     <view class="img-examine">
-      <image src="../../img/mipmap-mdpi/shengheyes.png" class="examine"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shengheyes.png" class="examine"></image>
     </view>
   </view>
   <view wx:if="{{flag === 3}}" class="Auditfailed">
@@ -50,7 +50,7 @@
       <button class="login-bu" bindtap="gotoexamine">提交审核</button>
     </view>
     <view class="imgplexamine">
-      <image src="../../img/mipmap-mdpi/shengheno.png" class="examine"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shengheno.png" class="examine"></image>
     </view>
   </view>
 </view>

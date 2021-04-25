@@ -2,7 +2,7 @@
   <view slot="title">
     <view class="on-line">
       <view class="image">
-        <image src="../../img/mipmap-mdpi/xiaowei.png" class="img"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiaowei.png" class="img"></image>
         <view class="garden"></view>
       </view>
       <view class="news">在线消息</view>
@@ -13,7 +13,7 @@
   <view slot="title">
     <view class="on-line">
       <view class="image">
-        <image src="../../img/mipmap-mdpi/xiaoling.png" class="img"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiaolin.png" class="img"></image>
       </view>
       <view class="news">系统消息</view>
     </view>

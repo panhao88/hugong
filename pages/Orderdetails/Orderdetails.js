@@ -9,24 +9,24 @@ Page({
     flag:5,
     gito:1,//退单拒单
     arr: [{
-      imag: '../../img/mipmap-mdpi/bingren.png',
+      imag: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/bingren.png',
       title:"专业培训",
-      icon:"../../img/mipmap-mdpi/qi.png",
+      icon:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qi.png",
     },
     {
-      imag: '../../img/mipmap-mdpi/chanfu.png',
+      imag: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/chanfu.png',
       title:"服务认证",
-      icon:"../../img/mipmap-mdpi/qi.png",
+      icon:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qi.png",
     },
     {
-      imag: '../../img/mipmap-mdpi/yuesao.png',
+      imag: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png',
       title:"安全保障",
-      icon:"../../img/mipmap-mdpi/qi.png",
+      icon:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qi.png",
     },
     {
-      imag: '../../img/mipmap-mdpi/yuesao.png',
+      imag: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yuesao.png',
       title:"专业培训",
-      icon:"../../img/mipmap-mdpi/qi.png",
+      icon:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/qi.png",
     },
   ],
   },

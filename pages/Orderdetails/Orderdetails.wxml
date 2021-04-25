@@ -9,7 +9,7 @@
           <view class="service">
             <view>
               <view class="immage-mechanism">
-                <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo"></image>
               </view>
             </view>
           </view>
@@ -98,7 +98,7 @@
           <view class="service">
             <view>
               <view class="immage-mechanism">
-                <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo"></image>
               </view>
             </view>
           </view>
@@ -177,7 +177,7 @@
             <view class="service">
               <view>
                 <view class="immage-mechanism">
-                  <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                 </view>
               </view>
             </view>
@@ -198,7 +198,7 @@
             <view class="font-f">以服务1000人</view>
             <view class="location">
               <view>
-                <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png" class="img-di"></image>
               </view>
               <view>蜀都中心一期</view>
             </view>
@@ -212,7 +212,7 @@
           <view class="service">
             <view>
               <view class="immage-mechanism">
-                <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo"></image>
               </view>
             </view>
           </view>
@@ -297,7 +297,7 @@
           <view class="service">
             <view>
               <view class="immage-mechanism">
-                <image src="../../img/mipmap-mdpi/hugong.png" class="logo"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo"></image>
               </view>
             </view>
           </view>
@@ -310,11 +310,11 @@
         <view class="butto">
           <view class="button-three">
             <view class="butto-payment">
-              <image src="../../img/mipmap-mdpi/weixin.png" class="w-img"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/weixin.png" class="w-img"></image>
               <view>在线沟通</view>
             </view>
             <view class="butto-payment">
-              <image src="../../img/mipmap-mdpi/weixin.png" class="w-img"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/weixin.png" class="w-img"></image>
               <view>拨打电话</view>
             </view>
             <view>
@@ -395,7 +395,7 @@
     <view wx:if="{{flag === 5 && gito === 1}}">
       <view class="top-success">
         <view class="top-img">
-          <image src="../../img/mipmap-mdpi/chenggong.png" class="img-gou"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/chenggong.png" class="img-gou"></image>
         </view>
         <view class="retreat">
           <view class="cor">退款成功</view>
@@ -405,7 +405,7 @@
       <view class="sessuer-p">
         <view class="Bisection">
           <view class="imgnursing">
-            <image src="../../img/mipmap-mdpi/hugong.png" class="logo-img"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo-img"></image>
           </view>
           <view class="Aunt-Zhang">
             <view class="hao-jj">医院陪护-老人陪护</view>
@@ -455,7 +455,7 @@
     <view wx:if="{{flag === 5 && gito === 2}}">
       <view class="top-success">
         <view class="top-img">
-          <image src="../../img/mipmap-mdpi/shibai.png" class="img-gou"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shibai.png" class="img-gou"></image>
         </view>
         <view class="retreat">
           <view class="cor">退款失败</view>
@@ -465,7 +465,7 @@
       <view class="sessuer-p">
         <view class="Bisection">
           <view class="imgnursing">
-            <image src="../../img/mipmap-mdpi/hugong.png" class="logo-img"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo-img"></image>
           </view>
           <view class="Aunt-Zhang">
             <view class="hao-jj">医院陪护-老人陪护</view>
@@ -516,7 +516,7 @@
       <view class="service">
         <view>
           <view class="immage-mechanism">
-            <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
           </view>
         </view>
       </view>
@@ -537,7 +537,7 @@
       <view class="font-f">以服务1000人</view>
       <view class="location">
         <view>
-          <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png" class="img-di"></image>
         </view>
         <view>蜀都中心一期</view>
       </view>
@@ -547,7 +547,7 @@
     <view wx:if="{{flag === 5 && gito === 3}}">
       <view class="top-success">
         <view class="top-img">
-          <image src="../../img/mipmap-mdpi/deng.png" class="img-gou"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/deng.png" class="img-gou"></image>
         </view>
         <view class="retreat">
           <view class="cor">退款中</view>
@@ -557,7 +557,7 @@
       <view class="sessuer-p">
         <view class="Bisection">
           <view class="imgnursing">
-            <image src="../../img/mipmap-mdpi/hugong.png" class="logo-img"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="logo-img"></image>
           </view>
           <view class="Aunt-Zhang">
             <view class="hao-jj">医院陪护-老人陪护</view>

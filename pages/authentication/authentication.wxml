@@ -9,13 +9,13 @@
     <view class="box">
       <view class="box-img">
         <view class="mar-img">
-          <image src="../../img/mipmap-mdpi/zheng.png" class="img"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zheng.png" class="img"></image>
         </view>
         <view class="backgr">上传身份证正面</view>
       </view>
       <view class="box-img">
         <view class="mar-img">
-          <image src="../../img/mipmap-mdpi/fan.png" class="img"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/fan.png" class="img"></image>
         </view>
         <view class="backgr">上传身份证反面</view>
       </view>

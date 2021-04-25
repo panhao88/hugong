@@ -2,7 +2,7 @@
 <view class="local">
   <view class="central">
     <view class="details">
-      <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" alt="" class="img-portrait"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png" alt="" class="img-portrait"></image>
       <view class="top">咖啡时光</view>
       <view class="Score">
         <van-rate value="{{ value }}" size="{{ 15 }}" color="#ee0a24" void-color="#eee" void-icon="star" disabled />
@@ -29,7 +29,7 @@
     </view>
     <view class="reply">
       <view class="flex">
-        <image src="../../img/mipmap-mdpi/huifu.png" class="imghui"></image>
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/huifu.png" class="imghui"></image>
         <view class="colo">张阿姨回复</view>
       </view>
       <!-- 被text包含的text会丢失，绑定事件无效 -->
@@ -44,7 +44,7 @@
     <view class="Popular-nurse" bindtap="godetaild">
       <view class="service">
         <view>
-          <image src="../../img/mipmap-mdpi/5bcf6403efb3d.png" class="imm-age"></image>
+          <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ayi.png" class="imm-age"></image>
         </view>
         <view class="Serviceable">可服务</view>
       </view>
@@ -78,7 +78,7 @@
           <view>以服务100人</view>
           <view class="location">
             <view>
-              <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png" class="img-di"></image>
             </view>
             <view class="PhaseI">蜀都中心一期-</view>
             <view class="Kilometer">0.1km</view>
@@ -92,7 +92,7 @@
         <view class="service">
           <view>
             <view class="immage-mechanism">
-              <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
             </view>
           </view>
         </view>
@@ -114,7 +114,7 @@
         <view class="font-f">以服务1000人</view>
         <view class="location">
           <view>
-            <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png" class="img-di"></image>
           </view>
           <view class="PhaseI">蜀都中心一期-</view>
             <view class="Kilometer">0.1km</view>

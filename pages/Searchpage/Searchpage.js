@@ -8,76 +8,76 @@ Page({
     Shadow:false,
     arr:[
       {
-        img:"../../img/mipmap-mdpi/yiyuansousuo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yiyuansousuo.png",
         name:"四川大学华西医院",
         title:"三级甲等",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"世纪城蜀都中心",
         qianmi:"0.1km",
-        dianhua:"../../img/mipmap-mdpi/dianhua.png"
+        dianhua:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dianhua.png"
       },
       {
-        img:"../../img/mipmap-mdpi/yiyuansousuo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yiyuansousuo.png",
         name:"四川大学华西医院",
         title:"三级甲等",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"世纪城蜀都中心",
         qianmi:"0.1km",
-        dianhua:"../../img/mipmap-mdpi/dianhua.png"
+        dianhua:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dianhua.png"
       },
       {
-        img:"../../img/mipmap-mdpi/yiyuansousuo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yiyuansousuo.png",
         name:"四川大学华西医院",
         title:"三级甲等",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"世纪城蜀都中心",
         qianmi:"0.1km",
-        dianhua:"../../img/mipmap-mdpi/dianhua.png"
+        dianhua:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dianhua.png"
       },
       {
-        img:"../../img/mipmap-mdpi/yiyuansousuo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yiyuansousuo.png",
         name:"四川大学华西医院",
         title:"三级甲等",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"世纪城蜀都中心",
         qianmi:"0.1km",
-        dianhua:"../../img/mipmap-mdpi/dianhua.png"
+        dianhua:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dianhua.png"
       },
       {
-        img:"../../img/mipmap-mdpi/yiyuansousuo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yiyuansousuo.png",
         name:"四川大学华西医院",
         title:"三级甲等",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"世纪城蜀都中心",
         qianmi:"0.1km",
-        dianhua:"../../img/mipmap-mdpi/dianhua.png"
+        dianhua:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dianhua.png"
       },
       {
-        img:"../../img/mipmap-mdpi/yiyuansousuo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yiyuansousuo.png",
         name:"四川大学华西医院",
         title:"三级甲等",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"世纪城蜀都中心",
         qianmi:"0.1km",
-        dianhua:"../../img/mipmap-mdpi/dianhua.png"
+        dianhua:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dianhua.png"
       },
       {
-        img:"../../img/mipmap-mdpi/yiyuansousuo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yiyuansousuo.png",
         name:"四川大学华西医院",
         title:"三级甲等",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"世纪城蜀都中心",
         qianmi:"0.1km",
-        dianhua:"../../img/mipmap-mdpi/dianhua.png"
+        dianhua:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dianhua.png"
       },
       {
-        img:"../../img/mipmap-mdpi/yiyuansousuo.png",
+        img:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yiyuansousuo.png",
         name:"四川大学华西医院",
         title:"三级甲等",
-        dingwei:"../../img/mipmap-mdpi/dingwei.png",
+        dingwei:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png",
         weizhi:"世纪城蜀都中心",
         qianmi:"0.1km",
-        dianhua:"../../img/mipmap-mdpi/dianhua.png"
+        dianhua:"cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dianhua.png"
       },
     ]
   },

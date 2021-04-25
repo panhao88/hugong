@@ -9,7 +9,7 @@ Page({
     currentSwiper: 0,
     autoplay: true,
     list: [{
-        img: '../../img/mipmap-mdpi/touxiang.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
         title: '王桂香',
         age: 48555252,
         texy: [{
@@ -21,7 +21,7 @@ Page({
         ]
       },
       {
-        img: '../../img/mipmap-mdpi/touxiang.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
         title: '李富贵',
         age: 48,
         texy: [{
@@ -33,7 +33,7 @@ Page({
         ]
       },
       {
-        img: '../../img/mipmap-mdpi/touxiang.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/touxiang.png',
         title: '张三',
         age: 48,
         texy: [{
@@ -48,80 +48,80 @@ Page({
     orderNav: [{
         id: 1,
         title: '待付款',
-        img: '../../img/mipmap-mdpi/daifukuan.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daifukuan.png',
         type: 'nopay'
       },
       {
         id: 2,
         title: '待服务',
-        img: '../../img/mipmap-mdpi/daifuwu.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daifuwu.png',
         type: 'nosend'
       },
       {
         id: 3,
         title: '服务中',
-        img: '../../img/mipmap-mdpi/fuwuzhong.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/fuwuzhong.png',
         type: 'noget'
       },
       {
         id: 4,
         title: '待评价',
-        img: '../../img/mipmap-mdpi/daipingjia.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/daipingjia.png',
         type: 'nocomment'
       },
       {
         id: 5,
         title: '退款/拒单',
-        img: '../../img/mipmap-mdpi/tuikuan.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/tuikuan.png',
         type: 'nocomment'
       }
     ],
     gridtextlist: [{
         text: "我的收藏",
         icon: "n",
-        img: '../../img/mipmap-mdpi/shoucang.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shoucang.png',
         url: "/pages/Collection/Collection",
       },
       {
         text: "实名认证",
         icon: "w",
-        img: '../../img/mipmap-mdpi/shimingrenzheng.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shimingrenzheng.png',
         url: "/pages/authentication/authentication",
       },
       {
         text: "邀请好友",
         icon: "j",
-        img: '../../img/mipmap-mdpi/yaoqing.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/yaoqing.png',
         url: "/pages/invitation/invitation",
       },
       {
         text: "服务入驻",
         icon: "g",
-        img: '../../img/mipmap-mdpi/ruzhu.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ruzhu.png',
         url: "/pages/ServiceEntry/ServiceEntry",
       },
       {
         text: "地址管理",
         icon: "h",
-        img: '../../img/mipmap-mdpi/dizhi.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dizhi.png',
         url: "/pages/address/address",
       },
       {
         text: "联系客服",
         icon: "template",
-        img: '../../img/mipmap-mdpi/lianxi.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/lianxi.png',
         url: false
       },
       {
         text: "隐私条款",
         icon: "scoped",
-        img: '../../img/mipmap-mdpi/pingsi.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/pingsi.png',
         url: "/pages/Privacy/Privacy",
       },
       {
         text: "更多服务",
         icon: "sh",
-        img: '../../img/mipmap-mdpi/gengduo.png',
+        img: 'cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/gengduo.png',
         url: "/pages/more/more",
       },
     ]

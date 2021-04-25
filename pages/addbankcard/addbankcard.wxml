@@ -6,7 +6,7 @@
       <van-field value="{{ value }}" placeholder="请输入卡号" label="卡号"  input-align="right" bind:change="onChange" />
       <van-field value="{{ value }}" placeholder="请输入开户行" label="开户行"  input-align="right" bind:change="onChange" />
     </van-cell-group>
-    <view class="immediately">
+    <view class="fixed-bottom">
       <button class="login-bu" bindtap="addbankcard">保存</button>
     </view>
   </view>

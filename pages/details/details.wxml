@@ -30,7 +30,7 @@
             <view class="mar-gin">年龄：41</view>
             <view class="location">
               <view>
-                <image src="../../img/mipmap-mdpi/dingwei.png" class="img-di"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png" class="img-di"></image>
               </view>
               <view>蜀都中心一期-</view>
               <view class="Kilometer">0.1km</view>
@@ -71,7 +71,7 @@
             本人从事配属行业10年
           </view>
           <view class="shang">
-            <image src="../../img/mipmap-mdpi/shang.png" class="img-shang" bindtap="Negation"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shang.png" class="img-shang" bindtap="Negation"></image>
           </view>
         </view>
       </view>
@@ -80,37 +80,37 @@
           <view class="security">
             <view>安全保障</view>
             <view class="image-icon">
-              <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhishitubiao.png" class="zhishitu"></image>
             </view>
           </view>
           <view class="Allcertifications">
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/pingtai.png" class="rz-tu"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/an1.png" class="rz-tu"></image>
               </view>
               <view class="platform">平台认证</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/shiming.png" class="rz-tu"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/an2.png" class="rz-tu"></image>
               </view>
               <view class="platform">实名认证</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/gongan.png" class="rz-tu"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/an3.png" class="rz-tu"></image>
               </view>
               <view class="platform">公安联网</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/tijian.png" class="rz-tu"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/an4.png" class="rz-tu"></image>
               </view>
               <view class="platform">体检报告</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/zhuanye.png" class="rz-tu"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/an5.png" class="rz-tu"></image>
               </view>
               <view class="platform">专业证书</view>
             </view>
@@ -122,34 +122,34 @@
           <view class="security">
             <view>服务项目</view>
             <view class="image-icon">
-              <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhishitubiao.png" class="zhishitu"></image>
             </view>
           </view>
           <view class="Allcertifications">
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/ji1.png" class="rz-tu-ren"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ji1.png" class="rz-tu-ren"></image>
               </view>
               <view class="pin-authentication">病人陪护</view>
               <view class="three-hundred">300天/1月</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/ji2.png" class="rz-tu-ren"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ji2.png" class="rz-tu-ren"></image>
               </view>
               <view class="pin-authentication">产妇陪护</view>
               <view class="three-hundred">300天/1月</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/ji3.png" class="rz-tu-ren"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ji3.png" class="rz-tu-ren"></image>
               </view>
               <view class="pin-authentication">老人陪护</view>
               <view class="three-hundred">300天/1月</view>
             </view>
             <view class="vertical">
               <view>
-                <image src="../../img/mipmap-mdpi/ji4.png" class="rz-tu-ren"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/ji4.png" class="rz-tu-ren"></image>
               </view>
               <view class="pin-authentication">月嫂陪护</view>
               <view class="three-hundred">300天/1月</view>
@@ -163,7 +163,7 @@
             <view class="plsecurity">
               <view>护工(200)</view>
               <view class="image-icon">
-                <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhishitubiao.png" class="zhishitu"></image>
               </view>
             </view>
             <view>查看全部></view>
@@ -201,14 +201,14 @@
           <view class="security">
             <view>所属机构</view>
             <view class="image-icon">
-              <image src="../../img/mipmap-mdpi/zhishitubiao.png" class="zhishitu"></image>
+              <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/zhishitubiao.png" class="zhishitu"></image>
             </view>
           </view>
           <view class="addPopular">
             <view class="plservice">
               <view>
                 <view class="immage-mechanism">
-                  <image src="../../img/mipmap-mdpi/logo.png" class="logo"></image>
+                  <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/logo.png" class="logo"></image>
                 </view>
               </view>
             </view>
@@ -230,7 +230,7 @@
             <view class="font-f">以服务1000人</view>
             <view class="plglocation">
               <view>
-                <image src="../../img/mipmap-mdpi/dingwei.png" class="plimg-di"></image>
+                <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/dingwei.png" class="plimg-di"></image>
               </view>
               <view class="PhaseI">蜀都中心一期-</view>
               <view class="Kilometer">0.1km</view>
@@ -243,11 +243,11 @@
   <!-- 查看图文 -->
   <view class="shang-top">
     <view class="shang-updata" bindtap="gopicture">
-      <image src="../../img/mipmap-mdpi/shang.png" class="img-shang" ></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shang.png" class="img-shang" ></image>
       <view class="updata">上拉查看图文详情</view>
     </view>
     <view class="Healthcare" wx:if="{{picture === true}}">
-      <image src="../../img/mipmap-mdpi/tu.png" class="imgtext"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/tu.png" class="imgtext"></image>
     </view>
     <view class="bottom"></view>
   </view>
@@ -258,7 +258,7 @@
 </view>
 <!-- 遮罩层 -->
 <!-- 填写预约信息 -->
-<van-popup show="{{ show }}" position="bottom" custom-style="height: 75%;" bind:close="onClose">
+<van-popup show="{{show}}" position="bottom" custom-style="height: 75%;" bind:close="onClose" >
   <view class="whole">
     <view class="central-section">
       <view class="fill-in">填写预约信息</view>
@@ -274,7 +274,7 @@
             <view class="addPlace">武侯区蜀都中心新希望大厦3号楼</view>
           </view>
           <view class="picture">
-            <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiangyou.png" class="immm-g"></image>
           </view>
         </view>
         <van-divider />
@@ -289,7 +289,7 @@
             <view class="addPlace">高血压,糖尿病</view>
           </view>
           <view class="picture">
-            <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiangyou.png" class="immm-g"></image>
           </view>
         </view>
         <van-divider />
@@ -297,7 +297,7 @@
           <view class="Contact-address">请选择服务时间</view>
           <view class="commontimer">2021-3-10-2022-4-10　共5天</view>
           <view class="picture">
-            <image src="../../img/mipmap-mdpi/xiangyou.png" class="immm-g"></image>
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiangyou.png" class="immm-g"></image>
           </view>
         </view>
       </view>
@@ -384,7 +384,7 @@
   <!-- 输入框 -->
   <view class="topp" catchtouchmove='true'>
     <view class="box-top">
-      <view class="box-ru">{{currentRegion.city}} <image src="../../img/mipmap-mdpi/xia.png" class="img-dizhi">
+      <view class="box-ru">{{currentRegion.city}} <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xia.png" class="img-dizhi">
         </image>
       </view>
       <view class="box-three">
@@ -398,7 +398,7 @@
       bindregionchange="mapChange">
       <view class="map-prompt">{{currentRegion.street}}</view>
       <view class="div1"></view>
-      <image class="current-site-icon" src="../../img/mipmap-mdpi/my_marker.png"></image>
+      <image class="current-site-icon" src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/my_marker.png"></image>
       <cover-view class="reload" bindtap="reload">
         <cover-view class="center1">
           <cover-view class="center2"></cover-view>
@@ -429,7 +429,7 @@
 <van-popup show="{{ searchshow }}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
   <view class='cert'>
     <view class="img-age">
-      <image src="../../img/mipmap-mdpi/fanhui.png" class="img-fan" bindtap="preturn"></image>
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/fanhui.png" class="img-fan" bindtap="preturn"></image>
     </view>
     <view class="imput">
       <van-search value="{{ pavalue }}" placeholder="请输入搜索关键词" clearable="{{false}}" bind:change="getsuggest" />
