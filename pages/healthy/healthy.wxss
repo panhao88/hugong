@@ -1,0 +1,17 @@
+.app{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50rpx;
+  margin-top: 50rpx;
+}
+.buttom{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.van-button{
+  width: 500rpx !important;
+  border-radius: 40rpx !important;
+}

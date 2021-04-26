@@ -1327,10 +1327,7 @@ Page({
   },
   //心理陪护时间确认
   onConfirm(){
-    // this.setData({
-    //   year:Yueartoday
-    // })
-    console.log(this.data.Yueartoday)
+
   },
   /**
    * 生命周期函数--监听页面加载

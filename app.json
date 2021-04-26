@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/login/login",
     "pages/details/details",
      "pages/my/my",
     "pages/Friendregistration/Friendregistration",
     "pages/healthy/healthy",
     "pages/invitation/invitation",
-    "pages/login/login",
     "pages/online/online",
     "pages/order/order",
     "pages/Orderdetails/Orderdetails",

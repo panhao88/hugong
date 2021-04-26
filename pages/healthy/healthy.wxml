@@ -1,0 +1,10 @@
+<view>
+  <van-dialog use-slot title="提示！" show="{{ show }}" showConfirmButton="{{false}}">
+    <view class="app">
+      请下载app
+    </view>
+   <view class="buttom">
+    <van-button type="info" bindtap="goindex">返回首页</van-button>
+   </view>
+  </van-dialog>
+</view>

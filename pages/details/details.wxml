@@ -258,7 +258,7 @@
 </view>
 <!-- 遮罩层 -->
 <!-- 填写预约信息 -->
-<van-popup show="{{show}}" position="bottom" custom-style="height: 75%;" bind:close="onClose" >
+<van-popup show="{{show}}" position="bottom" custom-style="height: 75%;" bind:close="onClose">
   <view class="whole">
     <view class="central-section">
       <view class="fill-in">填写预约信息</view>
