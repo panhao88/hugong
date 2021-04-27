@@ -50,20 +50,6 @@
   width: 15rpx;
   height: 15rpx;
 }
-.van-search__content {
-  padding-left: 0 !important;
-  width: 100% !important;
-  background: #F1F1F1 !important;
-}
-
-.van-search {
-  padding: 0 !important;
-  width: 100% !important;
-}
-.van-cell{
-  padding: 0 !important;
-}
-
 .box-tow{
   position: absolute;
   font-size: 28rpx;
@@ -72,11 +58,6 @@
   display: flex;
   align-items: center;
   width: 23%;
-}
-.box-therr{
-  width: 66%;
-  position: absolute;
-  left: 170rpx;
 }
 /* 轮播 */
 .wrap {

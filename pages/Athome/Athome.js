@@ -72,6 +72,11 @@ Page({
       flag: e.currentTarget.dataset.index
     })
   },
+  goClickevent(e){
+    this.setData({
+      flagIndex:e.currentTarget.dataset.index
+    })
+  },
   //去护工详情
   godetaild() {
     wx.navigateTo({

@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/service/service",
     "pages/index/index",
-    "pages/login/login",
+    "pages/my/my",
     "pages/details/details",
-     "pages/my/my",
+    "pages/login/login",
     "pages/Friendregistration/Friendregistration",
     "pages/healthy/healthy",
     "pages/invitation/invitation",
@@ -35,7 +36,6 @@
     "pages/toexamine/toexamine",
     "pages/ServiceEntry/ServiceEntry",
     "pages/parttimejob/parttimejob",
-    "pages/service/service",
     "pages/Activityrules/Activityrules",
     "pages/authentication/authentication",
     "pages/addService/addService",

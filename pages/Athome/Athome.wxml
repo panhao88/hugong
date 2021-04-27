@@ -1,5 +1,13 @@
 <view>
-  <van-search shape="round" placeholder="请输入搜索关键词" />
+  <view class="input">
+    <view class="box">
+      <view class="img-sou">
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/sousuo.png"
+          class="img-sousuo"></image>
+      </view>
+      <input placeholder="搜你想要的机构或护工" class="placeholder-class" />
+    </view>
+  </view>
 </view>
 <view class="local">
   <view class="central">
@@ -18,7 +26,7 @@
       <view>
         <scroll-view class="scroll-view_H" scroll-x="true">
           <view wx:for="{{arr}}" wx:key="index" class="scroll-view-item_H {{flagIndex===index ? 'cor':'cor1'}}"
-            data-index="{{index}}">
+            data-index="{{index}}" bindtap="goClickevent">
             <view>{{item.title}}</view>
           </view>
         </scroll-view>

@@ -1,10 +1,16 @@
 <view>
-  <view>
-    <van-search shape="round" placeholder="请输入你想要的护工或机构"  show-action/>
+  <view class="input">
+    <view class="box">
+      <view class="img-sou">
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/sousuo.png"
+          class="img-sousuo"></image>
+      </view>
+      <input placeholder="搜你想要的医院" class="placeholder-class" />
+    </view>
   </view>
   <view class="whole">
     <view class="central">
-      <view wx:for="{{arr}}" wx:key="index" >
+      <view wx:for="{{arr}}" wx:key="index">
         <view class="Popular-nurse">
           <view class="service" bindtap="goHospitaldetails">
             <view>

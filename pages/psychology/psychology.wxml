@@ -24,7 +24,7 @@
     </view>
     <view wx:if="{{flag === 0}}">
       <!-- 张阿姨1 -->
-      <view class="Popular-nurse" bindtap="godetails" wx:for="{{list}}" wx:key="index">
+      <view class="Popular-nurse" bindtap="godetails" wx:for="{{list}}" wx:key="index" data-psy="psy">
         <view class="service">
           <view>
             <image src="{{item.img}}" class="imm-age"></image>

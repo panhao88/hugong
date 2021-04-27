@@ -57,7 +57,6 @@ Page({
   },
     //跳转搜索地图
     gosearch() {
-      console.log(1111)
       this.setData({
         searchshow: true,
         Shadow: false

@@ -492,13 +492,15 @@
   border-radius: 10rpx;
 }
 
-.van-button {
-  width: 100% !important;
-  height: 120rpx !important;
-}
-
-.background-color {
-  background: #FAFAFA;
+.pldel {
+  width: 140rpx ;
+  height: 120rpx ;
+  background-color: #FF2C2C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 28rpx;
 }
 
 /* 预约信息 */
@@ -701,29 +703,27 @@
 }
 
 .box-ru {
+  height: 40rpx;
+  display: flex;
+  align-items: center;
   position: absolute;
   font-size: 30rpx;
   left: 16rpx;
 }
 
 .box-three {
+  width: 75%;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
   position: absolute;
-  left: 158rpx;
-}
-
-.van-search__content {
-  padding-left: 0 !important;
-  background: #F1F1F1 !important;
-}
-
-.van-search {
-  padding: 0 !important;
-  width: 480rpx;
+  left: 136rpx;
 }
 
 .img-dizhi {
   width: 18rpx;
-  height: 20rpx;
+  height: 19rpx;
+  margin:0 6rpx 0 6rpx;
 }
 
 /* pages/shopMap/shopMap.wxss */
@@ -880,7 +880,29 @@
   padding-left: 20rpx;
   background: #F1F1F1;
 }
-
+.box{
+  width: 95%;
+  border-radius: 40rpx;
+  font-size: 26rpx ;
+  display: flex;
+  align-items: center;
+  background: #F1F1F1;
+}
+.img-sou{
+  margin-left: 5rpx;
+  width: 30rpx;
+  height: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.placeholder-class{
+  width: 90%;
+  height: 70rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  background: #F1F1F1;
+}
 .img-fan {
   height: 32rpx;
   width: 20rpx;
@@ -1031,9 +1053,12 @@
 
 /* 新增地址 */
 /* pages/online/online.wxss */
-
+.ppp{
+  height: 100%;
+  background-color: #FAFAFA;
+}
 .tp-news {
-  margin-top: 15rpx;
+  margin-bottom: 15rpx;
   width: 100%;
   height: 120rpx;
   display: flex;
@@ -1042,10 +1067,11 @@
 }
 
 .timer {
-  width: 15%;
+  width: 12%;
   display: flex;
   justify-content: flex-end;
   color: #999999;
+  font-size: 28rpx;
 }
 
 .boe-der {
@@ -1102,13 +1128,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.van-buttom {
-  width: 140rpx !important;
-  height: 120rpx !important;
-  background: #FF2C2C;
-  color: #FAFAFAFF;
 }
 
 .appointment-now {
@@ -1521,7 +1540,7 @@
 .plappointment{
   width: 100%;
   position: relative;
-  bottom: -200rpx;
+  bottom: -80rpx;
   color: #61CF8C;
   font-size: 24rpx;
   display: flex;

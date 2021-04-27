@@ -1,4 +1,36 @@
 /* pages/Athome/Athome.wxss */
+
+.input{
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  height: 88rpx;
+  align-items: center;
+}
+.box{
+  width: 95%;
+  border-radius: 40rpx;
+  font-size: 26rpx ;
+  display: flex;
+  align-items: center;
+  background: #F1F1F1;
+}
+.img-sou{
+  margin-left: 15rpx;
+  width: 30rpx;
+  height: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.placeholder-class{
+  width: 88%;
+  height: 70rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  background: #F1F1F1;
+}
 .local {
   width: 100vw;
   height: 100vh;

@@ -364,5 +364,5 @@
   align-items: center;
 }
 .bottom-BOX{
-  height: 110rpx;
+  height: 70rpx;
 }

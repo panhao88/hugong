@@ -106,10 +106,11 @@ Page({
     })
   },
   //去详情
-  godetails(){
+  godetails(e){
+    let psy = 1
     let id = 1
     wx.navigateTo({
-      url: `/pages/details/details?id=${id}`,
+      url: `/pages/details/details?id=${id}&psy=${psy}`,
     })
   },
   /**

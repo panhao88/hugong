@@ -4,7 +4,9 @@ var qqmapsdk;
 var city = require('../../lib/city');
 Page({
   data: {
-    hhhh: true,
+    objaddress: {}, //新增确认地址
+    serviceobj: {}, //服务对象确认
+    psy:0,//心理陪护时间判断
     arrid: 0,
     boxshow: true, //展开收缩
     picture: true, //图文
@@ -26,28 +28,36 @@ Page({
       },
     ],
     items: [{
-        name: '王桂香',
+        name: '张三',
         phone: "123456789",
         position: "武侯区新希望大厦",
-        remarks: "糖尿病，高血压"
+        remarks: "糖尿病，高血压",
+        Gender: "女",
+        age: "66岁"
+      },
+      {
+        name: '李四',
+        phone: "123456789",
+        position: "武侯区新希望大厦",
+        remarks: "糖尿病，高血压",
+        Gender: "男",
+        age: "12岁"
       },
       {
         name: '王桂香',
         phone: "123456789",
         position: "武侯区新希望大厦",
-        remarks: "糖尿病，高血压"
+        remarks: "糖尿病，高血压",
+        Gender: "男",
+        age: "65岁"
       },
       {
-        name: '王桂香',
+        name: '579',
         phone: "123456789",
         position: "武侯区新希望大厦",
-        remarks: "糖尿病，高血压"
-      },
-      {
-        name: '王桂香',
-        phone: "123456789",
-        position: "武侯区新希望大厦",
-        remarks: "糖尿病，高血压"
+        remarks: "糖尿病，高血压",
+        Gender: "男",
+        age: "66岁"
       },
     ],
     objdetail: [{
@@ -76,14 +86,6 @@ Page({
       {
         name: "月嫂陪护",
         id: 3
-      },
-      {
-        name: "产妇陪护",
-        id: 4
-      },
-      {
-        name: "产妇陪护",
-        id: 4
       },
       {
         name: "产妇陪护",
@@ -146,6 +148,8 @@ Page({
     showaddress: false, //新增地址
     objdetails: false, //服务对象详情
     keepaddress: false, //联系地址弹窗
+    showpsychology:false,//心理陪护弹窗
+    value: '', //搜索输入框关键字
     cityData: {},
     hotCityData: [],
     _py: ["hot", "A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "W", "X", "Y", "Z"],
@@ -204,7 +208,7 @@ Page({
     ipdyuan: false,
     width: 0,
     currentIndex: 0, //年月日下表
-    Yueartoday:"", //今天年月日
+    Yueartoday: "", //今天年月日
     currentTime: 0, //时间下标
     timeArr: [{
         "time": "08:00",
@@ -266,7 +270,7 @@ Page({
   },
   // 轮播图
   swiperChange: function (e) {
-    if(e.detail.source == "autoplay" || e.detail.source == "touch"){
+    if (e.detail.source == "autoplay" || e.detail.source == "touch") {
       this.setData({
         currentSwiper: e.detail.current
       })
@@ -294,25 +298,25 @@ Page({
     typedate.date = e.currentTarget.dataset.year + checkedMonth + checkedDate
     typedate.month = checkedMonth
     //如果点击项为空百项目，不继续执行
-    var date = e.currentTarget.dataset.date;
+    let date = e.currentTarget.dataset.date;
     if (date == '' || date <= 0) {
       return;
     }
-    var index = e.currentTarget.dataset.key;
-    var item = e.currentTarget.dataset.keyitem;
-    var month = e.currentTarget.dataset.month;
+    let index = e.currentTarget.dataset.key;
+    let item = e.currentTarget.dataset.keyitem;
+    let month = e.currentTarget.dataset.month;
     if (month == 'thisMonth') {
-      var that = this.data.thisMonthArr;
+      let that = this.data.thisMonthArr;
     } else if (month == 'nextMonth') {
-      var that = this.data.nextMonthArr;
+      let that = this.data.nextMonthArr;
     } else if (month == 'next2Month') {
-      var that = this.data.next2MonthArr;
+      let that = this.data.next2MonthArr;
     } else if (month == 'next3Month') {
-      var that = this.data.next3MonthArr;
+      let that = this.data.next3MonthArr;
     } else if (month == 'next4Month') {
-      var that = this.data.next4MonthArr;
+      let that = this.data.next4MonthArr;
     } else {
-      var that = this.data.next5MonthArr;
+      let that = this.data.next5MonthArr;
     }
     //切换选中状态
     if (that[index][item].state == true) {
@@ -358,32 +362,31 @@ Page({
   },
   //根据指定年月获得当月天数
   mGetDate(year, month) {
-    var d = new Date(year, month, 0);
+    let d = new Date(year, month, 0);
     return d.getDate();
   },
   //根据指定年月获得当月日历数组
   getDateArr(date) {
     //根据指定年月
-    //var myDate = new Date();
-    var myDate = date;
-    var thisYear = myDate.getFullYear(); //获取完整的年份
-    var thisMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
-    var firstDay = new Date(thisYear + ',' + thisMonth + ',01').getDay(); //本月第一天星期几,0表示星期天
-    var nowDay = myDate.getDate(); // 今天是几号
-    var monthNum = this.mGetDate(thisYear, thisMonth); //本月多少天
+    let myDate = date;
+    let thisYear = myDate.getFullYear(); //获取完整的年份
+    let thisMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
+    let firstDay = new Date(thisYear + ',' + thisMonth + ',01').getDay(); //本月第一天星期几,0表示星期天
+    let nowDay = myDate.getDate(); // 今天是几号
+    let monthNum = this.mGetDate(thisYear, thisMonth); //本月多少天
 
-    var monthArray = [];
-    var week = 1; //第一周
-    var oneDay = '';
-    var isToday = false;
+    let monthArray = [];
+    let week = 1; //第一周
+    let oneDay = '';
+    let isToday = false;
     monthArray[week] = new Array(); //声明本周的二维数组
 
     //循环当月的每一天
-    for (var k = 1; k <= monthNum; k++) {
+    for (let k = 1; k <= monthNum; k++) {
       isToday = false;
       //组装当前日期
       oneDay = thisYear + ',' + thisMonth + ',' + k;
-      var witchDay = new Date(oneDay).getDay(); //当前是星期几
+      let witchDay = new Date(oneDay).getDay(); //当前是星期几
       //如果当期循环日期为今天
       if (k == nowDay) {
         isToday = true;
@@ -393,7 +396,7 @@ Page({
         //判断当前日期是否是本月第一天
         if (k == 1) {
           //第一天之前的日期补为空
-          for (var a = 0; a < firstDay; a++) {
+          for (let a = 0; a < firstDay; a++) {
             monthArray[week][a] = {
               date: '',
               isToday: isToday,
@@ -893,7 +896,25 @@ Page({
   preturn() {
     this.setData({
       searchshow: false,
-      Shadow: true
+      Shadow: true,
+      value: ''
+    })
+    this.onLoad()
+  },
+  //新增地址确认
+  Clickconfirm(e) {
+    this.setData({
+      showaddress: false,
+      show: true,
+      objaddress: e.currentTarget.dataset.item
+    })
+  },
+  //服务对象确认
+  Clickservice(e) {
+    this.setData({
+      showobj: false,
+      show: true,
+      serviceobj: e.currentTarget.dataset.item
     })
   },
   //新增服务对象
@@ -912,11 +933,19 @@ Page({
   },
   //选择服务时间
   gotime() {
-    this.setData({
-      showtime: true,
-      show: false,
-      pierce: true
-    })
+    if(this.data.psy === undefined){
+      this.setData({
+        showtime: true,
+        show: false,
+        pierce: true //弹窗穿透
+      })
+    }else if(this.data.psy === "1") {
+      this.setData({
+        showpsychology: true,
+        show: false,
+        pierce: true //弹窗穿透
+      })
+    }
   },
   //点击遮罩层阴影关闭
   onClose() {
@@ -930,14 +959,17 @@ Page({
       showaddress: false,
       objdetails: false,
       showtime: false,
-      pierce: false
+      pierce: false,
+      showpsychology:false,
+      value: ''
     })
   },
   //跳转搜索地图
   gosearch() {
     this.setData({
       searchshow: true,
-      Shadow: false
+      Shadow: false,
+      flag: true
     })
   },
   // 详情文字展开收缩
@@ -961,12 +993,12 @@ Page({
   // =============================地图定位=================================
   //选择城市
   selectCity: function (e) {
-    var dataset = e.currentTarget.dataset.fullname;
+    let dataset = e.currentTarget.dataset.fullname;
     this.setData({
       pavalue: dataset
     })
-    var _this = this;
-    var keyword = e.currentTarget.dataset.fullname;
+    let _this = this;
+    let keyword = e.currentTarget.dataset.fullname;
     //调用关键词提示接口
     qqmapsdk.getSuggestion({
       //获取输入框值并设置keyword参数
@@ -977,8 +1009,8 @@ Page({
       //region:'北京', //设置城市名，限制关键词所示的地域范围，非必填参数
       success: function (res) { //搜索成功后的回调
         //console.log(res);
-        var sug = [];
-        for (var i = 0; i < res.data.length; i++) {
+        let sug = [];
+        for (let i = 0; i < res.data.length; i++) {
           sug.push({ // 获取返回结果，放到sug数组中
             title: res.data[i].title,
             id: res.data[i].id,
@@ -1007,9 +1039,17 @@ Page({
   },
   //根据关键词搜索匹配位置
   getsuggest: function (e) {
-    if (e.detail !== '') {
-      var _this = this;
-      var keyword = e.detail;
+    // 双向绑定输入框值
+    let name = e.currentTarget.dataset.modal;
+    let value = e.detail.value;
+    let dataMap = {};
+    dataMap[name] = value;
+    this.setData({
+      value: dataMap.name
+    })
+    if (e.detail.value !== '') {
+      let _this = this;
+      let keyword = e.detail.value;
       _this.setData({
         flag: false
       })
@@ -1023,8 +1063,8 @@ Page({
         //region:'北京', //设置城市名，限制关键词所示的地域范围，非必填参数
         success: function (res) { //搜索成功后的回调
           //console.log(res);
-          var sug = [];
-          for (var i = 0; i < res.data.length; i++) {
+          let sug = [];
+          for (let i = 0; i < res.data.length; i++) {
             sug.push({ // 获取返回结果，放到sug数组中
               title: res.data[i].title,
               id: res.data[i].id,
@@ -1051,13 +1091,13 @@ Page({
       });
     } else {
       this.setData({
-        flag: true
+        flag: true,
       });
     }
   },
   // 根据关键词搜索附近位置
   nearby_search: function () {
-    var self = this;
+    let self = this;
     wx.hideLoading();
     // 调用接口
     qqmapsdk.search({
@@ -1068,8 +1108,8 @@ Page({
       page_index: 1,
       success: function (res) { //搜索成功后的回调
         //console.log(res.data)
-        var sug = [];
-        for (var i = 0; i < res.data.length; i++) {
+        let sug = [];
+        for (let i = 0; i < res.data.length; i++) {
           sug.push({ // 获取返回结果，放到sug数组中
             title: res.data[i].title,
             id: res.data[i].id,
@@ -1098,9 +1138,9 @@ Page({
   },
   //点击选择搜索结果
   backfill: function (e) {
-    var id = e.currentTarget.id;
+    let id = e.currentTarget.id;
     let name = e.currentTarget.dataset.name;
-    for (var i = 0; i < this.data.suggestion.length; i++) {
+    for (let i = 0; i < this.data.suggestion.length; i++) {
       if (i == id) {
         //console.log(this.data.suggestion[i])
         this.setData({
@@ -1131,11 +1171,11 @@ Page({
   },
   //滑动选择城市
   tMove: function (e) {
-    var y = e.touches[0].clientY,
+    let y = e.touches[0].clientY,
       offsettop = e.currentTarget.offsetTop;
     //判断选择区域,只有在选择区才会生效
     if (y > offsettop) {
-      var num = parseInt((y - offsettop) / 12);
+      let num = parseInt((y - offsettop) / 12);
       this.setData({
         showPy: this.data._py[num]
       })
@@ -1177,7 +1217,7 @@ Page({
   //地图标记点
   addMarker: function (data) {
     //console.log(data.title)
-    var mks = [];
+    let mks = [];
     mks.push({ // 获取返回结果，放到mks数组中
       title: data.title,
       id: data.id,
@@ -1204,9 +1244,9 @@ Page({
   },
   //点击选择地图下方列表某项
   chooseCenter: function (e) {
-    var id = e.currentTarget.id;
+    let id = e.currentTarget.id;
     let name = e.currentTarget.dataset.name;
-    for (var i = 0; i < this.data.nearList.length; i++) {
+    for (let i = 0; i < this.data.nearList.length; i++) {
       if (i == id) {
         this.setData({
           selectedId: id,
@@ -1232,7 +1272,7 @@ Page({
     arryear.map(item => {
       item.flag = false
     })
-    console.log(this.data.Mehours,"清空所有")
+    console.log(this.data.Mehours, "清空所有")
     let curren = e.currentTarget.dataset.date
     let Arrcurren = e.currentTarget.dataset.date
     //为上半部分的点击事件
@@ -1249,7 +1289,7 @@ Page({
     this.setData({
       currentIndex: e.currentTarget.dataset.index,
       timeArr: arryear,
-      Yueartoday:Arrcurren
+      Yueartoday: Arrcurren
     })
   },
   // 今天
@@ -1261,7 +1301,7 @@ Page({
       if (time >= this.data.hour) {
         if (arrhour[index].flag === false) {
           arrhour[index].flag = true
-          if(this.data.ipdyuan === false){
+          if (this.data.ipdyuan === false) {
             let Splicingtime = this.data.year + " " + arrhour[index].time
             this.data.Mehours.push(Splicingtime)
           }
@@ -1282,7 +1322,7 @@ Page({
       if (arrhour[index].flag === false) {
         arrhour[index].flag = true
         let Splicingtime = this.data.Yueartoday + " " + arrhour[index].time
-          this.data.Mehours.push(Splicingtime)
+        this.data.Mehours.push(Splicingtime)
         this.setData({
           timeArr: arrhour
         })
@@ -1326,35 +1366,38 @@ Page({
     })
   },
   //心理陪护时间确认
-  onConfirm(){
+  onConfirm() {
 
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      this.setData({
+        psy:options.psy
+      })
+    // 判断是护工详情，还是机构详情或者心理
+    // let idd = parseInt(options.id)
+    // this.setData({
+    //   arrid: idd
+    // })
     //获取当前小时
     this.seletime()
     //获取当前年月日
     this.seleyear()
-    // 判断是护工详情，还是机构详情
-    let id = parseInt(options.id)
-    this.setData({
-      arrid: id
-    })
     //初始化日历数据
-    var nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月
-    var nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下二个月
-    var nextM3_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 3)); //下三个月
-    var nextM4_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 4)); //下四个月
-    var nextM5_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 5)); //下五个月
+    let nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月
+    let nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下二个月
+    let nextM3_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 3)); //下三个月
+    let nextM4_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 4)); //下四个月
+    let nextM5_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 5)); //下五个月
 
-    var thisMonthArr = this.getDateArr(new Date());
-    var nextMonthArr = this.getDateArr(nextM_start);
-    var next2MonthArr = this.getDateArr(nextM2_start);
-    var next3MonthArr = this.getDateArr(nextM3_start);
-    var next4MonthArr = this.getDateArr(nextM4_start);
-    var next5MonthArr = this.getDateArr(nextM5_start);
+    let thisMonthArr = this.getDateArr(new Date());
+    let nextMonthArr = this.getDateArr(nextM_start);
+    let next2MonthArr = this.getDateArr(nextM2_start);
+    let next3MonthArr = this.getDateArr(nextM3_start);
+    let next4MonthArr = this.getDateArr(nextM4_start);
+    let next5MonthArr = this.getDateArr(nextM5_start);
     this.setData({
       thisYear: new Date().getFullYear(),
       thisMonth: new Date().getMonth() + 1,
@@ -1461,11 +1504,11 @@ Page({
       }
     }
     //当前月份的天数
-    var monthLength = getThisMonthDays(cur_year, cur_month)
+    let monthLength = getThisMonthDays(cur_year, cur_month)
     //当前月份的第一天是星期几
-    var week = getFirstDayOfWeek(cur_year, cur_month)
-    var x = week;
-    for (var i = 1; i <= monthLength; i++) {
+    let week = getFirstDayOfWeek(cur_year, cur_month)
+    let x = week;
+    for (let i = 1; i <= monthLength; i++) {
       //当循环完一周后，初始化再次循环
       if (x > 6) {
         x = 0;
@@ -1475,7 +1518,7 @@ Page({
       x++;
     }
     //限制要渲染的日历数据天数为7天以内（用户体验）
-    var flag = self.data.calendar.splice(cur_date, self.data.calendar.length - cur_date <= 7 ? self.data.calendar.length : 7)
+    let flag = self.data.calendar.splice(cur_date, self.data.calendar.length - cur_date <= 7 ? self.data.calendar.length : 7)
     self.setData({
       calendar: flag
     })

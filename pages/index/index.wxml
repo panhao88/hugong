@@ -6,7 +6,11 @@
         <view class="box-tow">{{Capital}} <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xia.png" class="img-dizhi"></image>
         </view>
         <view class="box-therr">
-          <van-search value="{{ value }}" placeholder="搜一搜" bindtap="goserch" disabled />
+          <view class="bor"></view>
+          <view class="imsou">
+            <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/sousuo.png" class="img-sousuo"></image>
+          </view>
+          <input  placeholder="搜一搜" class="placeholder-class" bindtap="goserch" disabled/>
         </view>
       </view>
       <view class="wei-icoc">

@@ -59,18 +59,6 @@
   width: 25%;
 }
 
-.box-therr {
-  width: 70%;
-  background: red;
-  position: absolute;
-  left: 170rpx;
-}
-
-.img-dizhi {
-  width: 12rpx;
-  height: 12rpx;
-}
-
 .wei-icoc {
   width: 10%;
   display: flex;
@@ -87,19 +75,6 @@
   height: 12rpx;
   background: #FF3636;
   border-radius: 50%;
-}
-.van-search__content {
-  padding-left: 0 !important;
-  width: 100% !important;
-  background: #F1F1F1 !important;
-}
-
-.van-search {
-  padding: 0 !important;
-  width: 100% !important;
-}
-.van-cell{
-  padding: 0 !important;
 }
 .img-weixin {
   width: 65rpx;
