@@ -4,162 +4,144 @@ Page({
    * 页面的初始数据
    */
   data: {
-    calendar: [],
-    width: 0,
-    currentIndex: 0,
-    currentTime: 0,
-    timeArr: [{
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-10:00",
-        "status": "约满"
-      },
-      {
-        "time": "8:00-22:00",
-        "status": "约满"
+    show:false,
+    checked: false, //全选反选的按钮判断条件
+    checkedNext: false, //全选反选的按钮判断条件
+    checkedNexttwo: false, //全选反选的按钮判断条件
+    checkedNextthree: false, //全选反选的按钮判断条件
+    checkedNextfour: false, //全选反选的按钮判断条件
+    checkedNextfive: false, //全选反选的按钮判断条件
+    date: [], //存储所有选择的时间数组
+    thisYear: '', //当前年
+    thisMonth: '', //当前月
+    thisMonthArr: [], //当前月号数
+    today: new Date().getDate(), //获取今天号数数组
+    nextYear: '', //下一个月年
+    nextMonth: '', //下一个月
+    nextMonthArr: [], //下一月号数
+    next2Year: '', //下二月年
+    next2Month: '', //下二月
+    next2MonthArr: [], //下二月号数数组
+    next3Year: '', //下三月年
+    next3Month: '', //下三月
+    next3MonthArr: [], //下三月数组
+    next4Year: '', //下四月年
+    next4Month: '', //下四月
+    next4MonthArr: [], //下四月号数数组
+    next5Year: '', //下五月年
+    next5Month: '', //下五月
+    next6MonthArr: [], //下五月号数数组
+  },
+  ppp(){
+    this.setData({
+      show:true
+    })
+  },
+  getmyevent(e){
+    console.log(e)
+  },
+   //根据指定年月获得当月日历数组
+   getDateArr(date) {
+    //根据指定年月
+    let myDate = date;
+    let thisYear = myDate.getFullYear(); //获取完整的年份
+    let thisMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
+    let firstDay = new Date(thisYear + ',' + thisMonth + ',01').getDay(); //本月第一天星期几,0表示星期天
+    let nowDay = myDate.getDate(); // 今天是几号
+    let monthNum = this.mGetDate(thisYear, thisMonth); //本月多少天
+
+    let monthArray = [];
+    let week = 1; //第一周
+    let oneDay = '';
+    let isToday = false;
+    monthArray[week] = new Array(); //声明本周的二维数组
+
+    //循环当月的每一天
+    for (let k = 1; k <= monthNum; k++) {
+      isToday = false;
+      //组装当前日期
+      oneDay = thisYear + ',' + thisMonth + ',' + k;
+      let witchDay = new Date(oneDay).getDay(); //当前是星期几
+      //如果当期循环日期为今天
+      if (k == nowDay) {
+        isToday = true;
       }
-    ]
+      //如果是第一周
+      if (week == 1) {
+        //判断当前日期是否是本月第一天
+        if (k == 1) {
+          //第一天之前的日期补为空
+          for (let a = 0; a < firstDay; a++) {
+            monthArray[week][a] = {
+              date: '',
+              isToday: isToday,
+              state: false
+            };
+          }
+        }
+      }
+      monthArray[week][witchDay] = {
+        date: k,
+        isToday: isToday,
+        state: false
+      };
+
+      //如果已经是周六，切换到下一周
+      if (witchDay == 6) {
+        week++;
+        monthArray[week] = new Array(); //声明本周的二维数组
+      }
+    }
+    monthArray.splice(0, 1); //删除下标为0的空元素
+    //console.log(monthArray);
+    return monthArray;
+  },
+  //根据指定年月获得当月天数
+  mGetDate(year, month) {
+    let d = new Date(year, month, 0);
+    return d.getDate();
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-
-    function getThisMonthDays(year, month) {
-      return new Date(year, month, 0).getDate();
-    }
-    // 计算每月第一天是星期几
-    function getFirstDayOfWeek(year, month) {
-      return new Date(Date.UTC(year, month - 1, 1)).getDay();
-    }
-    const date = new Date();
-    const cur_year = date.getFullYear();
-    const cur_month = date.getMonth() + 1;
-    const yu_month = date.getMonth() + 2;
-    const cur_date = date.getDate();
-    const weeks_ch = ['日', '一', '二', '三', '四', '五', '六'];
-    //利用构造函数创建对象
-    function calendar(date, week) {
-      this.date = cur_year + '-' + cur_month + '-' + date;
-      if (date == cur_date) {
-        this.week = "今天";
-      } else if (date == cur_date + 1) {
-        this.week = "明天";
-      } else {
-        this.week = '星期' + week;
-      }
-    }
-    //当前月份的天数
-    var siyue = getThisMonthDays(cur_year, cur_month)
-    console.log(siyue)
-    var wuyue = getThisMonthDays(cur_year, yu_month)
-    console.log(wuyue)
-    var monthLength = siyue
-    //当前月份的第一天是星期几
-    var week = getFirstDayOfWeek(cur_year, cur_month)
-    var x = week;
-    for (var i = 1; i <= monthLength; i++) {
-      //当循环完一周后，初始化再次循环
-      if (x > monthLength) {
-        x = 0;
-      }
-      //利用构造函数创建对象
-      that.data.calendar[i] = new calendar(i, [weeks_ch[x]][0])
-      x++;
-    }
-    //限制要渲染的日历数据天数为7天以内（用户体验）
-    var flag = that.data.calendar.splice(cur_date, that.data.calendar.length - cur_date <= 7 ? that.data.calendar.length : 7)
-    that.setData({
-      calendar: flag
-    })
-    //设置scroll-view的子容器的宽度
-    that.setData({
-      width: 186 * parseInt(that.data.calendar.length - cur_date <= 7 ? that.data.calendar.length : 7)
-    })
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {},
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {},
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {},
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {},
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {},
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {},
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {},
-  select: function (event) {
-    //为上半部分的点击事件
-    this.setData({
-      currentIndex: event.currentTarget.dataset.index
-    })
-    console.log(event.currentTarget.dataset.date)
-  },
-  selectTime: function (event) {
-    //为下半部分的点击事件
-    this.setData({
-      currentTime: event.currentTarget.dataset.tindex
-    })
-    console.log(event.currentTarget.dataset.time)
+     //初始化日历数据
+     let nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月
+     let nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下二个月
+     let nextM3_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 3)); //下三个月
+     let nextM4_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 4)); //下四个月
+     let nextM5_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 5)); //下五个月
+ 
+     let thisMonthArr = this.getDateArr(new Date());
+     let nextMonthArr = this.getDateArr(nextM_start);
+     let next2MonthArr = this.getDateArr(nextM2_start);
+     let next3MonthArr = this.getDateArr(nextM3_start);
+     let next4MonthArr = this.getDateArr(nextM4_start);
+     let next5MonthArr = this.getDateArr(nextM5_start);
+     this.setData({
+       thisYear: new Date().getFullYear(),
+       thisMonth: new Date().getMonth() + 1,
+       thisMonthArr: thisMonthArr,
+ 
+       nextYear: nextM_start.getFullYear(),
+       nextMonth: nextM_start.getMonth() + 1,
+       nextMonthArr: nextMonthArr,
+ 
+       next2Year: nextM2_start.getFullYear(),
+       next2Month: nextM2_start.getMonth() + 1,
+       next2MonthArr: next2MonthArr,
+ 
+       next3Year: nextM3_start.getFullYear(),
+       next3Month: nextM3_start.getMonth() + 1,
+       next3MonthArr: next3MonthArr,
+ 
+       next4Year: nextM4_start.getFullYear(),
+       next4Month: nextM4_start.getMonth() + 1,
+       next4MonthArr: next4MonthArr,
+ 
+       next5Year: nextM5_start.getFullYear(),
+       next5Month: nextM5_start.getMonth() + 1,
+       next5MonthArr: next5MonthArr,
+     })
   }
 })

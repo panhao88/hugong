@@ -4,8 +4,9 @@ var qqmapsdk;
 var city = require('../../lib/city');
 Page({
   data: {
-    objaddress: {}, //新增确认地址
-    serviceobj: {}, //服务对象确认
+    pierce: false, //解决弹窗穿透问题
+    objaddress: {}, //新增确认地址对象
+    serviceobj: {}, //服务对象确认对象
     psy: 0, //心理陪护时间判断
     arrid: 0,
     boxshow: true, //展开收缩
@@ -172,42 +173,41 @@ Page({
     selectedId: 0,
     defaultKeyword: '房产小区',
     keyword: '',
-    checked: false, //时间
-    checkedNext: false,
-    checkedNexttwo: false,
-    checkedNextthree: false,
-    checkedNextfour: false,
-    checkedNextfive: false,
-    SessionId: '',
-    date: [],
-    thisYear: '',
-    thisMonth: '',
-    thisMonthArr: [],
-    today: new Date().getDate(),
-    nextYear: '',
-    nextMonth: '',
-    nextMonthArr: [],
-    next2Year: '',
-    next2Month: '',
-    next2MonthArr: [],
-    next3Year: '',
-    next3Month: '',
-    next3MonthArr: [],
-    next4Year: '',
-    next4Month: '',
-    next4MonthArr: [],
-    next5Year: '',
-    next5Month: '',
-    next6MonthArr: [],
-    pierce: false, //解决弹窗穿透问题
-    // 心理咨询变量
+    checked: false, //全选反选的按钮判断条件
+    checkedNext: false, //全选反选的按钮判断条件
+    checkedNexttwo: false, //全选反选的按钮判断条件
+    checkedNextthree: false, //全选反选的按钮判断条件
+    checkedNextfour: false, //全选反选的按钮判断条件
+    checkedNextfive: false, //全选反选的按钮判断条件
+    date: [], //存储所有选择的时间数组
+    thisYear: '', //当前年
+    thisMonth: '', //当前月
+    thisMonthArr: [], //当前月号数
+    today: new Date().getDate(), //获取今天号数数组
+    nextYear: '', //下一个月年
+    nextMonth: '', //下一个月
+    nextMonthArr: [], //下一月号数
+    next2Year: '', //下二月年
+    next2Month: '', //下二月
+    next2MonthArr: [], //下二月号数数组
+    next3Year: '', //下三月年
+    next3Month: '', //下三月
+    next3MonthArr: [], //下三月数组
+    next4Year: '', //下四月年
+    next4Month: '', //下四月
+    next4MonthArr: [], //下四月号数数组
+    next5Year: '', //下五月年
+    next5Month: '', //下五月
+    next6MonthArr: [], //下五月号数数组
+    //--------------- 心理咨询变量
     calendar: [],
+    calendar111: [],
     Mehours: [],
-    hour: "",
-    year: '',
-    ipdyuan: false,
-    width: 0,
-    currentIndex: 0, //年月日下表
+    hour: "", //获取当前小时
+    year: '', //获取当前年份
+    ipdyuan: false, //判断心理咨询是不是今天的时间
+    width: 0, //心理咨询时间动态宽度
+    currentIndex: 0, //年月日下标
     Yueartoday: "", //今天年月日
     currentTime: 0, //时间下标
     timeArr: [{
@@ -933,19 +933,19 @@ Page({
   },
   //选择服务时间
   gotime() {
-    if (this.data.psy === undefined) {
-      this.setData({
-        showtime: true,
-        show: false,
-        pierce: true //弹窗穿透
-      })
-    } else if (this.data.psy === "1") {
-      this.setData({
-        showpsychology: true,
-        show: false,
-        pierce: true //弹窗穿透
-      })
-    }
+    // if (this.data.psy === undefined) {
+    //   this.setData({
+    //     showtime: true,
+    //     show: false,
+    //     pierce: true //弹窗穿透
+    //   })
+    // } else if (this.data.psy === "1") {
+    this.setData({
+      showpsychology: true,
+      show: false,
+      pierce: true //弹窗穿透
+    })
+    // }
   },
   //点击遮罩层阴影关闭
   onClose() {
@@ -1530,11 +1530,29 @@ Page({
       self.data.calendar[i] = new calendar(i, [weeks_ch[x]][0])
       x++;
     }
+    //下个月的天数
+    var monthLength111 = getThisMonthDays(cur_year, cur_month + 1)
+    //当前月份的第一天是星期几
+    var week111 = getFirstDayOfWeek(cur_year, cur_month + 1)
+    var y = week111;
+    for (var i = 1; i <= monthLength111; i++) {
+      //当循环完一周后，初始化再次循环
+      if (y > 6) {
+        y = 0;
+      }
+      //利用构造函数创建对象
+      this.data.calendar111[i] = new calendar111(i, [weeks_ch[y]][0])
+      y++;
+    }
+    this.data.calendar = this.data.calendar.concat(this.data.calendar111)
     //限制要渲染的日历数据天数为7天以内（用户体验）
-    let flag = self.data.calendar.splice(cur_date, this.data.calendar.length - cur_date <= 7 ? this.data.calendar.length : 7)
+    let flag = self.data.calendar.splice(cur_date, this.data.calendar.length - cur_date <= 7 ? this.data.calendar.length : 7).filter((item) => {
+      return item
+    })
     this.setData({
       calendar: flag
     })
+    console.log(this.data.calendar, "日历")
     //设置scroll-view的子容器的宽度
     this.setData({
       width: 186 * parseInt(this.data.calendar.length - cur_date <= 7 ? this.data.calendar.length : 7)

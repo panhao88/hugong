@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "time":"../../conponents/time/time",
     "van-popup": "../../lib/vant/popup"
   }
 }

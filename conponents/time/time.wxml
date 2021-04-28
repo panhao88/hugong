@@ -1,0 +1,330 @@
+<scroll-view scroll-y>
+  <!-- 当前月 -->
+  <view class='calendar'>
+    <view class="choice">选择时间</view>
+    <view class="pddlevel">
+      <view class='year_month'> {{thisYear}}年{{thisMonth}}月</view>
+      <view>
+        <van-checkbox value="{{ checked }}" checked-color="#07c160" bind:change="goonange" icon-size="35rpx"
+          data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}">
+          选择整月
+        </van-checkbox>
+      </view>
+    </view>
+    <view class='week'>
+      <text class='saturday'>周日</text>
+      <text>周一</text>
+      <text>周二</text>
+      <text>周三</text>
+      <text>周四</text>
+      <text>周五</text>
+      <text class='sunday'>周六</text>
+    </view>
+    <block wx:for="{{thisMonthArr}}" wx:key="index">
+      <view class='week'>
+        <text
+          class="saturday {{item[0]['isToday'] == true ? 'now' : ''}} {{item[0]['date'] < today ? 'disabled' : ''}} {{item[0]['state']==true?'selected':''}} {{item[0]['isToday'] == false ? 'aaaa' : ''}} {{item[0]['date'] == '' ? 'empty' : ''}}"
+          data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+          data-date="{{item[0]['date'] < today ? '' :item[0]['date']}}" data-key='{{index}}' data-keyitem='0'
+          bindtap="select_date">{{item[0]['date']}}</text>
+        <text
+          class="{{item[1]['isToday'] == true ? 'now' : ''}} {{item[1]['date'] < today ? 'disabled' : ''}} {{item[1]['state']==true?'selected':''}}  {{item[1]['isToday'] == false ? 'aaaa' : ''}} {{item[1]['date'] == '' ? 'empty' : ''}} "
+          data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+          data-date="{{item[1]['date'] < today ? '' :item[1]['date']}}" data-key='{{index}}' data-keyitem='1'
+          bindtap="select_date">{{item[1]['date']}}</text>
+        <text
+          class="{{item[2]['isToday'] == true ? 'now' : ''}} {{item[2]['date'] < today ? 'disabled' : ''}} {{item[2]['state']==true?'selected':''}}  {{item[2]['isToday'] == false ? 'aaaa' : ''}} {{item[2]['date'] == '' ? 'empty' : ''}} "
+          data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+          data-date="{{item[2]['date'] < today ? '' :item[2]['date']}}" data-key='{{index}}' data-keyitem='2'
+          bindtap="select_date">{{item[2]['date']}}</text>
+        <text
+          class="{{item[3]['isToday'] == true ? 'now' : ''}} {{item[3]['date'] < today ? 'disabled' : ''}} {{item[3]['state']==true?'selected':''}}  {{item[3]['isToday'] == false ? 'aaaa' : ''}} {{item[3]['date'] == '' ? 'empty' : ''}} "
+          data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+          data-date="{{item[3]['date'] < today ? '' :item[3]['date']}}" data-key='{{index}}' data-keyitem='3'
+          bindtap="select_date">{{item[3]['date']}}</text>
+        <text
+          class="{{item[4]['isToday'] == true ? 'now' : ''}} {{item[4]['date'] < today ? 'disabled' : ''}} {{item[4]['state']==true?'selected':''}}  {{item[4]['isToday'] == false ? 'aaaa' : ''}} {{item[4]['date'] == '' ? 'empty' : ''}} "
+          data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+          data-date="{{item[4]['date'] < today ? '' :item[4]['date']}}" data-key='{{index}}' data-keyitem='4'
+          bindtap="select_date">{{item[4]['date']}}</text>
+        <text
+          class="{{item[5]['isToday'] == true ? 'now' : ''}} {{item[5]['date'] < today ? 'disabled' : ''}} {{item[5]['state']==true?'selected':''}}  {{item[5]['isToday'] == false ? 'aaaa' : ''}} {{item[5]['date'] == '' ? 'empty' : ''}} "
+          data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+          data-date="{{item[5]['date'] < today ? '' :item[5]['date']}}" data-key='{{index}}' data-keyitem='5'
+          bindtap="select_date">{{item[5]['date']}}</text>
+        <text
+          class="sunday {{item[6]['isToday'] == true ? 'now' : ''}} {{item[6]['date'] < today ? 'disabled' : ''}} {{item[6]['state']==true?'selected':''}}  {{item[6]['isToday'] == false ? 'aaaa' : ''}} {{item[6]['date'] == '' ? 'empty' : ''}} "
+          data-month='thisMonth' data-Year="{{thisYear}}" data-Month1="{{thisMonth}}"
+          data-date="{{item[6]['date'] < today ? '' :item[6]['date']}}" data-key='{{index}}' data-keyitem='6'
+          bindtap="select_date">{{item[6]['date']}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 下一月 -->
+  <view class='calendar'>
+    <view class="pddlevel">
+      <view class='year_month'> {{nextYear}}年{{nextMonth}}月</view>
+      <view>
+        <van-checkbox value="{{ checkedNext }}" checked-color="#07c160" bind:change="onChangenext" icon-size="35rpx"
+          data-month='nextMonth' data-Year="{{nextYear}}" data-Month1="{{nextMonth}}">
+          选择整月
+        </van-checkbox>
+      </view>
+    </view>
+    <view class='week'>
+      <text class='saturday'>周日</text>
+      <text>周一</text>
+      <text>周二</text>
+      <text>周三</text>
+      <text>周四</text>
+      <text>周五</text>
+      <text class='sunday'>周六</text>
+    </view>
+    <block wx:for="{{nextMonthArr}}" wx:key="index">
+      <view class='week'>
+        <text
+          class="saturday {{item[0]['state']==true?'selected':''}} {{item[0]['isToday'] == false ? 'aaaa' : ''}} {{item[0]['date'] == '' ? 'empty' : ''}} {{item[0]['isToday'] == true ? 'now' : ''}}"
+          data-month='nextMonth' data-Year="{{nextYear}}" data-Month1="{{nextMonth}}" data-date="{{item[0]['date']}}"
+          data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+        <text
+          class="{{item[1]['state']==true?'selected':''}}  {{item[1]['isToday'] == false ? 'aaaa' : ''}} {{item[1]['date'] == '' ? 'empty' : ''}} {{item[1]['isToday'] == true ? 'now' : ''}}"
+          data-month='nextMonth' data-Year="{{nextYear}}" data-Month1="{{nextMonth}}" data-date="{{item[1]['date']}}"
+          data-key='{{index}}' data-keyitem='1' bindtap="select_date">{{item[1]['date']}}</text>
+        <text
+          class="{{item[2]['state']==true?'selected':''}}  {{item[2]['isToday'] == false ? 'aaaa' : ''}} {{item[2]['date'] == '' ? 'empty' : ''}} {{item[2]['isToday'] == true ? 'now' : ''}}"
+          data-month='nextMonth' data-Year="{{nextYear}}" data-Month1="{{nextMonth}}" data-date="{{item[2]['date']}}"
+          data-key='{{index}}' data-keyitem='2' bindtap="select_date">{{item[2]['date']}}</text>
+        <text
+          class="{{item[3]['state']==true?'selected':''}}  {{item[3]['isToday'] == false ? 'aaaa' : ''}} {{item[3]['date'] == '' ? 'empty' : ''}} {{item[3]['isToday'] == true ? 'now' : ''}}"
+          data-month='nextMonth' data-Year="{{nextYear}}" data-Month1="{{nextMonth}}" data-date="{{item[3]['date']}}"
+          data-key='{{index}}' data-keyitem='3' bindtap="select_date">{{item[3]['date']}}</text>
+        <text
+          class="{{item[4]['state']==true?'selected':''}}  {{item[4]['isToday'] == false ? 'aaaa' : ''}} {{item[4]['date'] == '' ? 'empty' : ''}} {{item[4]['isToday'] == true ? 'now' : ''}}"
+          data-month='nextMonth' data-Year="{{nextYear}}" data-Month1="{{nextMonth}}" data-date="{{item[4]['date']}}"
+          data-key='{{index}}' data-keyitem='4' bindtap="select_date">{{item[4]['date']}}</text>
+        <text
+          class="{{item[5]['state']==true?'selected':''}}  {{item[5]['isToday'] == false ? 'aaaa' : ''}} {{item[5]['date'] == '' ? 'empty' : ''}} {{item[5]['isToday'] == true ? 'now' : ''}}"
+          data-month='nextMonth' data-Year="{{nextYear}}" data-Month1="{{nextMonth}}" data-date="{{item[5]['date']}}"
+          data-key='{{index}}' data-keyitem='5' bindtap="select_date">{{item[5]['date']}}</text>
+        <text
+          class="sunday {{item[6]['state']==true?'selected':''}}  {{item[6]['isToday'] == false ? 'aaaa' : ''}} {{item[6]['date'] == '' ? 'empty' : ''}} {{item[6]['isToday'] == true ? 'now' : ''}}"
+          data-month='nextMonth' data-Year="{{nextYear}}" data-Month1="{{nextMonth}}" data-date="{{item[6]['date']}}"
+          data-key='{{index}}' data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 下二月 -->
+  <view class='calendar'>
+    <view class="pddlevel">
+      <view class='year_month'> {{next2Year}}年{{next2Month}}月</view>
+      <view>
+        <van-checkbox value="{{ checkedNexttwo }}" checked-color="#07c160" bind:change="onChangetow" icon-size="35rpx"
+          data-month='next2Month' data-Year="{{next2Year}}" data-Month1="{{next2Month}}">
+          选择整月
+        </van-checkbox>
+      </view>
+    </view>
+    <view class='week'>
+      <text class='saturday'>周日</text>
+      <text>周一</text>
+      <text>周二</text>
+      <text>周三</text>
+      <text>周四</text>
+      <text>周五</text>
+      <text class='sunday'>周六</text>
+    </view>
+    <block wx:for="{{next2MonthArr}}" wx:key="index">
+      <view class='week'>
+        <text
+          class="saturday {{item[0]['state']==true?'selected':''}}  {{item[0]['isToday'] == false ? 'aaaa' : ''}} {{item[0]['date'] == '' ? 'empty' : ''}} {{item[0]['isToday'] == true ? 'now' : ''}}"
+          data-month='next2Month' data-Year="{{next2Year}}" data-Month1="{{next2Month}}" data-date="{{item[0]['date']}}"
+          data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+        <text
+          class="{{item[1]['state']==true?'selected':''}}  {{item[1]['isToday'] == false ? 'aaaa' : ''}} {{item[1]['date'] == '' ? 'empty' : ''}} {{item[1]['isToday'] == true ? 'now' : ''}}"
+          data-month='next2Month' data-Year="{{next2Year}}" data-Month1="{{next2Month}}" data-date="{{item[1]['date']}}"
+          data-key='{{index}}' data-keyitem='1' bindtap="select_date">{{item[1]['date']}}</text>
+        <text
+          class="{{item[2]['state']==true?'selected':''}}  {{item[2]['isToday'] == false ? 'aaaa' : ''}} {{item[2]['date'] == '' ? 'empty' : ''}} {{item[2]['isToday'] == true ? 'now' : ''}}"
+          data-month='next2Month' data-Year="{{next2Year}}" data-Month1="{{next2Month}}" data-date="{{item[2]['date']}}"
+          data-key='{{index}}' data-keyitem='2' bindtap="select_date">{{item[2]['date']}}</text>
+        <text
+          class="{{item[3]['state']==true?'selected':''}}  {{item[3]['isToday'] == false ? 'aaaa' : ''}} {{item[3]['date'] == '' ? 'empty' : ''}} {{item[3]['isToday'] == true ? 'now' : ''}}"
+          data-month='next2Month' data-Year="{{next2Year}}" data-Month1="{{next2Month}}" data-date="{{item[3]['date']}}"
+          data-key='{{index}}' data-keyitem='3' bindtap="select_date">{{item[3]['date']}}</text>
+        <text
+          class="{{item[4]['state']==true?'selected':''}}  {{item[4]['isToday'] == false ? 'aaaa' : ''}} {{item[4]['date'] == '' ? 'empty' : ''}} {{item[4]['isToday'] == true ? 'now' : ''}}"
+          data-month='next2Month' data-Year="{{next2Year}}" data-Month1="{{next2Month}}" data-date="{{item[4]['date']}}"
+          data-key='{{index}}' data-keyitem='4' bindtap="select_date">{{item[4]['date']}}</text>
+        <text
+          class="{{item[5]['state']==true?'selected':''}}  {{item[5]['isToday'] == false ? 'aaaa' : ''}} {{item[5]['date'] == '' ? 'empty' : ''}} {{item[5]['isToday'] == true ? 'now' : ''}}"
+          data-month='next2Month' data-Year="{{next2Year}}" data-Month1="{{next2Month}}" data-date="{{item[5]['date']}}"
+          data-key='{{index}}' data-keyitem='5' bindtap="select_date">{{item[5]['date']}}</text>
+        <text
+          class="sunday {{item[6]['state']==true?'selected':''}}  {{item[6]['isToday'] == false ? 'aaaa' : ''}} {{item[6]['date'] == '' ? 'empty' : ''}} {{item[6]['isToday'] == true ? 'now' : ''}}"
+          data-month='next2Month' data-Year="{{next2Year}}" data-Month1="{{next2Month}}" data-date="{{item[6]['date']}}"
+          data-key='{{index}}' data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 下三月 -->
+  <view class='calendar'>
+    <view class="pddlevel">
+      <view class='year_month'> {{next3Year}}年{{next3Month}}月</view>
+      <view>
+        <van-checkbox value="{{ checkedNextthree }}" checked-color="#07c160" bind:change="onChangetherr"
+          icon-size="35rpx" data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}">
+          选择整月
+        </van-checkbox>
+      </view>
+    </view>
+    <view class='week'>
+      <text class='saturday'>周日</text>
+      <text>周一</text>
+      <text>周二</text>
+      <text>周三</text>
+      <text>周四</text>
+      <text>周五</text>
+      <text class='sunday'>周六</text>
+    </view>
+    <block wx:for="{{next3MonthArr}}" wx:key="index">
+      <view class='week'>
+        <text
+          class="saturday {{item[0]['state']==true?'selected':''}}  {{item[6]['isToday'] == false ? 'aaaa' : ''}} {{item[6]['date'] == '' ? 'empty' : ''}} {{item[6]['isToday'] == true ? 'now' : ''}}"
+          data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[0]['date']}}"
+          data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+        <text
+          class="{{item[1]['state']==true?'selected':''}}  {{item[1]['isToday'] == false ? 'aaaa' : ''}} {{item[1]['date'] == '' ? 'empty' : ''}} {{item[1]['isToday'] == true ? 'now' : ''}}"
+          data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[1]['date']}}"
+          data-key='{{index}}' data-keyitem='1' bindtap="select_date">{{item[1]['date']}}</text>
+        <text
+          class="{{item[2]['state']==true?'selected':''}}  {{item[2]['isToday'] == false ? 'aaaa' : ''}} {{item[2]['date'] == '' ? 'empty' : ''}} {{item[2]['isToday'] == true ? 'now' : ''}}"
+          data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[2]['date']}}"
+          data-key='{{index}}' data-keyitem='2' bindtap="select_date">{{item[2]['date']}}</text>
+        <text
+          class="{{item[3]['state']==true?'selected':''}}  {{item[3]['isToday'] == false ? 'aaaa' : ''}} {{item[3]['date'] == '' ? 'empty' : ''}} {{item[3]['isToday'] == true ? 'now' : ''}}"
+          data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[3]['date']}}"
+          data-key='{{index}}' data-keyitem='3' bindtap="select_date">{{item[3]['date']}}</text>
+        <text
+          class="{{item[4]['state']==true?'selected':''}}  {{item[4]['isToday'] == false ? 'aaaa' : ''}} {{item[4]['date'] == '' ? 'empty' : ''}} {{item[4]['isToday'] == true ? 'now' : ''}}"
+          data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[4]['date']}}"
+          data-key='{{index}}' data-keyitem='4' bindtap="select_date">{{item[4]['date']}}</text>
+        <text
+          class="{{item[5]['state']==true?'selected':''}}  {{item[5]['isToday'] == false ? 'aaaa' : ''}} {{item[5]['date'] == '' ? 'empty' : ''}} {{item[5]['isToday'] == true ? 'now' : ''}}"
+          data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[5]['date']}}"
+          data-key='{{index}}' data-keyitem='5' bindtap="select_date">{{item[5]['date']}}</text>
+        <text
+          class="sunday {{item[6]['state']==true?'selected':''}}  {{item[6]['isToday'] == false ? 'aaaa' : ''}} {{item[6]['date'] == '' ? 'empty' : ''}} {{item[6]['isToday'] == true ? 'now' : ''}}"
+          data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[6]['date']}}"
+          data-key='{{index}}' data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 下四月 -->
+  <view class='calendar'>
+    <view class="pddlevel">
+      <view class='year_month'> {{next4Year}}年{{next4Month}}月</view>
+      <view>
+        <van-checkbox value="{{ checkedNextfour }}" checked-color="#07c160" bind:change="onChangefour" icon-size="35rpx"
+          data-month='next4Month' data-Year="{{next4Year}}" data-Month1="{{next4Month}}">
+          选择整月
+        </van-checkbox>
+      </view>
+    </view>
+    <view class='week'>
+      <text class='saturday'>周日</text>
+      <text>周一</text>
+      <text>周二</text>
+      <text>周三</text>
+      <text>周四</text>
+      <text>周五</text>
+      <text class='sunday'>周六</text>
+    </view>
+    <block wx:for="{{next4MonthArr}}" wx:key="index">
+      <view class='week'>
+        <text
+          class="saturday {{item[0]['state']==true?'selected':''}}  {{item[0]['isToday'] == false ? 'aaaa' : ''}} {{item[0]['date'] == '' ? 'empty' : ''}} {{item[0]['isToday'] == true ? 'now' : ''}}"
+          data-month='next4Month' data-Year="{{next4Year}}" data-Month1="{{next4Month}}" data-date="{{item[0]['date']}}"
+          data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+        <text
+          class="{{item[1]['state']==true?'selected':''}}  {{item[1]['isToday'] == false ? 'aaaa' : ''}} {{item[1]['date'] == '' ? 'empty' : ''}} {{item[1]['isToday'] == true ? 'now' : ''}}"
+          data-month='next4Month' data-Year="{{next4Year}}" data-Month1="{{next4Month}}" data-date="{{item[1]['date']}}"
+          data-key='{{index}}' data-keyitem='1' bindtap="select_date">{{item[1]['date']}}</text>
+        <text
+          class="{{item[2]['state']==true?'selected':''}}  {{item[2]['isToday'] == false ? 'aaaa' : ''}} {{item[2]['date'] == '' ? 'empty' : ''}} {{item[2]['isToday'] == true ? 'now' : ''}}"
+          data-month='next4Month' data-Year="{{next4Year}}" data-Month1="{{next4Month}}" data-date="{{item[2]['date']}}"
+          data-key='{{index}}' data-keyitem='2' bindtap="select_date">{{item[2]['date']}}</text>
+        <text
+          class="{{item[3]['state']==true?'selected':''}}  {{item[3]['isToday'] == false ? 'aaaa' : ''}} {{item[3]['date'] == '' ? 'empty' : ''}} {{item[3]['isToday'] == true ? 'now' : ''}}"
+          data-month='next4Month' data-Year="{{next4Year}}" data-Month1="{{next4Month}}" data-date="{{item[3]['date']}}"
+          data-key='{{index}}' data-keyitem='3' bindtap="select_date">{{item[3]['date']}}</text>
+        <text
+          class="{{item[4]['state']==true?'selected':''}}  {{item[4]['isToday'] == false ? 'aaaa' : ''}} {{item[4]['date'] == '' ? 'empty' : ''}} {{item[4]['isToday'] == true ? 'now' : ''}}"
+          data-month='next4Month' data-Year="{{next4Year}}" data-Month1="{{next4Month}}" data-date="{{item[4]['date']}}"
+          data-key='{{index}}' data-keyitem='4' bindtap="select_date">{{item[4]['date']}}</text>
+        <text
+          class="{{item[5]['state']==true?'selected':''}}  {{item[5]['isToday'] == false ? 'aaaa' : ''}} {{item[5]['date'] == '' ? 'empty' : ''}} {{item[5]['isToday'] == true ? 'now' : ''}}"
+          data-month='next4Month' data-Year="{{next4Year}}" data-Month1="{{next4Month}}" data-date="{{item[5]['date']}}"
+          data-key='{{index}}' data-keyitem='5' bindtap="select_date">{{item[5]['date']}}</text>
+        <text
+          class="sunday {{item[6]['state']==true?'selected':''}}  {{item[6]['isToday'] == false ? 'aaaa' : ''}} {{item[6]['date'] == '' ? 'empty' : ''}} {{item[6]['isToday'] == true ? 'now' : ''}}"
+          data-month='next4Month' data-Year="{{next4Year}}" data-Month1="{{next4Month}}" data-date="{{item[6]['date']}}"
+          data-key='{{index}}' data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 下五月 -->
+  <view class='calendar'>
+    <view class="pddlevel">
+      <view class='year_month'> {{next5Year}}年{{next5Month}}月</view>
+      <view>
+        <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChangefive" icon-size="35rpx"
+          data-month='thisMonth' data-Year="{{next5Year}}" data-Month1="{{next5Month}}">
+          选择整月
+        </van-checkbox>
+      </view>
+    </view>
+    <view class='week'>
+      <text class='saturday'>周日</text>
+      <text>周一</text>
+      <text>周二</text>
+      <text>周三</text>
+      <text>周四</text>
+      <text>周五</text>
+      <text class='sunday'>周六</text>
+    </view>
+    <block wx:for="{{next5MonthArr}}" wx:key="index">
+      <view class='week'>
+        <text
+          class="saturday {{item[0]['state']==true?'selected':''}}  {{item[0]['isToday'] == false ? 'aaaa' : ''}} {{item[0]['date'] == '' ? 'empty' : ''}} {{item[0]['isToday'] == true ? 'now' : ''}}"
+          data-Year="{{next5Year}}" data-Month1="{{next5Month}}" data-date="{{item[0]['date']}}" data-key='{{index}}'
+          data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+        <text
+          class="{{item[1]['state']==true?'selected':''}}  {{item[1]['isToday'] == false ? 'aaaa' : ''}} {{item[1]['date'] == '' ? 'empty' : ''}} {{item[1]['isToday'] == true ? 'now' : ''}}"
+          data-Year="{{next5Year}}" data-Month1="{{next5Month}}" data-date="{{item[1]['date']}}" data-key='{{index}}'
+          data-keyitem='1' bindtap="select_date">{{item[1]['date']}}</text>
+        <text
+          class="{{item[2]['state']==true?'selected':''}}  {{item[2]['isToday'] == false ? 'aaaa' : ''}} {{item[2]['date'] == '' ? 'empty' : ''}} {{item[2]['isToday'] == true ? 'now' : ''}}"
+          data-Year="{{next5Year}}" data-Month1="{{next5Month}}" data-date="{{item[2]['date']}}" data-key='{{index}}'
+          data-keyitem='2' bindtap="select_date">{{item[2]['date']}}</text>
+        <text
+          class="{{item[3]['state']==true?'selected':''}}  {{item[3]['isToday'] == false ? 'aaaa' : ''}} {{item[3]['date'] == '' ? 'empty' : ''}} {{item[3]['isToday'] == true ? 'now' : ''}}"
+          data-Year="{{next5Year}}" data-Month1="{{next5Month}}" data-date="{{item[3]['date']}}" data-key='{{index}}'
+          data-keyitem='3' bindtap="select_date">{{item[3]['date']}}</text>
+        <text
+          class="{{item[4]['state']==true?'selected':''}}  {{item[4]['isToday'] == false ? 'aaaa' : ''}} {{item[4]['date'] == '' ? 'empty' : ''}} {{item[4]['isToday'] == true ? 'now' : ''}}"
+          data-Year="{{next5Year}}" data-Month1="{{next5Month}}" data-date="{{item[4]['date']}}" data-key='{{index}}'
+          data-keyitem='4' bindtap="select_date">{{item[4]['date']}}</text>
+        <text
+          class="{{item[5]['state']==true?'selected':''}}  {{item[5]['isToday'] == false ? 'aaaa' : ''}} {{item[5]['date'] == '' ? 'empty' : ''}} {{item[5]['isToday'] == true ? 'now' : ''}}"
+          data-Year="{{next5Year}}" data-Month1="{{next5Month}}" data-date="{{item[5]['date']}}" data-key='{{index}}'
+          data-keyitem='5' bindtap="select_date">{{item[5]['date']}}</text>
+        <text
+          class="sunday {{item[6]['state']==true?'selected':''}}  {{item[6]['isToday'] == false ? 'aaaa' : ''}} {{item[6]['date'] == '' ? 'empty' : ''}} {{item[6]['isToday'] == true ? 'now' : ''}}"
+          data-Year="{{next5Year}}" data-Month1="{{next5Month}}" data-date="{{item[6]['date']}}" data-key='{{index}}'
+          data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>
