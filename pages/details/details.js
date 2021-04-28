@@ -6,7 +6,7 @@ Page({
   data: {
     objaddress: {}, //新增确认地址
     serviceobj: {}, //服务对象确认
-    psy:0,//心理陪护时间判断
+    psy: 0, //心理陪护时间判断
     arrid: 0,
     boxshow: true, //展开收缩
     picture: true, //图文
@@ -148,7 +148,7 @@ Page({
     showaddress: false, //新增地址
     objdetails: false, //服务对象详情
     keepaddress: false, //联系地址弹窗
-    showpsychology:false,//心理陪护弹窗
+    showpsychology: false, //心理陪护弹窗
     value: '', //搜索输入框关键字
     cityData: {},
     hotCityData: [],
@@ -933,13 +933,13 @@ Page({
   },
   //选择服务时间
   gotime() {
-    if(this.data.psy === undefined){
+    if (this.data.psy === undefined) {
       this.setData({
         showtime: true,
         show: false,
         pierce: true //弹窗穿透
       })
-    }else if(this.data.psy === "1") {
+    } else if (this.data.psy === "1") {
       this.setData({
         showpsychology: true,
         show: false,
@@ -960,7 +960,7 @@ Page({
       objdetails: false,
       showtime: false,
       pierce: false,
-      showpsychology:false,
+      showpsychology: false,
       value: ''
     })
   },
@@ -1373,9 +1373,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.setData({
-        psy:options.psy
-      })
+    this.setData({
+      psy: options.psy
+    })
     // 判断是护工详情，还是机构详情或者心理
     // let idd = parseInt(options.id)
     // this.setData({
@@ -1503,6 +1503,19 @@ Page({
         this.week = '星期' + week;
       }
     }
+
+    function calendar111(date, week) {
+      if (cur_year != 12) {
+        let cur_month111 = cur_month + 1
+        this.date = cur_year + '-' + cur_month111 + '-' + date;
+        this.week = '星期' + week;
+      } else {
+        let cur_month111 = cur_month + 1
+        let cur_year111 = cur_year + 1
+        this.date = cur_year111 + '-' + cur_month111 + '-' + date;
+        this.week = '星期' + week;
+      }
+    }
     //当前月份的天数
     let monthLength = getThisMonthDays(cur_year, cur_month)
     //当前月份的第一天是星期几
@@ -1518,13 +1531,13 @@ Page({
       x++;
     }
     //限制要渲染的日历数据天数为7天以内（用户体验）
-    let flag = self.data.calendar.splice(cur_date, self.data.calendar.length - cur_date <= 7 ? self.data.calendar.length : 7)
-    self.setData({
+    let flag = self.data.calendar.splice(cur_date, this.data.calendar.length - cur_date <= 7 ? this.data.calendar.length : 7)
+    this.setData({
       calendar: flag
     })
     //设置scroll-view的子容器的宽度
-    self.setData({
-      width: 186 * parseInt(self.data.calendar.length - cur_date <= 7 ? self.data.calendar.length : 7)
+    this.setData({
+      width: 186 * parseInt(this.data.calendar.length - cur_date <= 7 ? this.data.calendar.length : 7)
     })
   },
   /*

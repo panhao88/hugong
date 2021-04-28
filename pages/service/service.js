@@ -79,24 +79,11 @@ Page({
     const cur_year = date.getFullYear();
     const cur_month = date.getMonth() + 1;
     const yu_month = date.getMonth() + 2;
-    console.log(yu_month)
-    console.log(date)
     const cur_date = date.getDate();
-    console.log(cur_date, 222)
     const weeks_ch = ['日', '一', '二', '三', '四', '五', '六'];
-    //当前月份的天数
-    var gege = getThisMonthDays(cur_year, cur_month)
-    console.log(gege)
-    var didi = getThisMonthDays(cur_year, yu_month)
-    var monthLength = gege + didi
-    console.log(monthLength)
     //利用构造函数创建对象
     function calendar(date, week) {
-      if((cur_date - 4) >= cur_mont){
-        this.date=cur_year+'-'+yu_month+'-'+date;
-      }
-      this.date=cur_year+'-'+cur_month+'-'+date;
-      console.log(this.date)
+      this.date = cur_year + '-' + cur_month + '-' + date;
       if (date == cur_date) {
         this.week = "今天";
       } else if (date == cur_date + 1) {
@@ -105,13 +92,18 @@ Page({
         this.week = '星期' + week;
       }
     }
+    //当前月份的天数
+    var siyue = getThisMonthDays(cur_year, cur_month)
+    console.log(siyue)
+    var wuyue = getThisMonthDays(cur_year, yu_month)
+    console.log(wuyue)
+    var monthLength = siyue
     //当前月份的第一天是星期几
     var week = getFirstDayOfWeek(cur_year, cur_month)
-    console.log(week)
     var x = week;
     for (var i = 1; i <= monthLength; i++) {
       //当循环完一周后，初始化再次循环
-      if (x > 6) {
+      if (x > monthLength) {
         x = 0;
       }
       //利用构造函数创建对象
@@ -120,7 +112,6 @@ Page({
     }
     //限制要渲染的日历数据天数为7天以内（用户体验）
     var flag = that.data.calendar.splice(cur_date, that.data.calendar.length - cur_date <= 7 ? that.data.calendar.length : 7)
-    console.log(flag)
     that.setData({
       calendar: flag
     })

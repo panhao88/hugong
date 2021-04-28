@@ -537,7 +537,7 @@
     </van-swipe-cell>
   </view>
   <view class="fixed-bottom">
-    <button class="login-bu"  bindtap="goobjdetail">+新增服务对象</button>
+    <button class="login-bu" bindtap="goobjdetail">+新增服务对象</button>
   </view>
 </van-popup>
 <!-- 新增服务对象详情 -->
@@ -754,7 +754,6 @@
         </view>
       </block>
     </view>
-
     <!-- 下三月 -->
     <view class='calendar'>
       <view class="pddlevel">
