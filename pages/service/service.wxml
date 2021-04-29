@@ -1,4 +1,16 @@
 <van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 80%;">
-  <time thisYear="{{thisYear}}" thisMonth="{{thisMonth}}" thisMonthArr="{{thisMonthArr}}" bind:myevent="getmyevent"></time>
+  <time thisYear="{{thisYear}}" thisMonth="{{thisMonth}}" thisMonthArr="{{thisMonthArr}}" nextYear="{{nextYear}}"
+    nextMonth="{{nextMonth}}" nextMonthArr="{{nextMonthArr}}" nextYear="{{nextYear}}" next2Year="{{next2Year}}"
+    next2Month="{{next2Month}}" next2MonthArr="{{next2MonthArr}}" next3Year="{{next3Year}}" next3Month="{{next3Month}}"
+    next3MonthArr="{{next3MonthArr}}" next4Year="{{next4Year}}" next4Month="{{next4Month}}"
+    next4MonthArr="{{next4MonthArr}}" next5Year="{{next5Year}}" next5Month="{{next5Month}}"
+    next5MonthArr="{{next5MonthArr}}" next6Year="{{next6Year}}" next6Month="{{next6Month}}"
+    next6MonthArr="{{next6MonthArr}}" next7Year="{{next7Year}}" next7Month="{{next7Month}}"
+    next7MonthArr="{{next7MonthArr}}" next8Year="{{next8Year}}" next8Month="{{next8Month}}"
+    next8MonthArr="{{next8MonthArr}}" next9Year="{{next9Year}}" next9Month="{{next9Month}}"
+    next9MonthArr="{{next9MonthArr}}" next10Year="{{next10Year}}" next10Month="{{next10Month}}"
+    next10MonthArr="{{next10MonthArr}}" next11Year="{{next11Year}}" next11Month="{{next11Month}}"
+    next11MonthArr="{{next11MonthArr}}" next12Year="{{next12Year}}" next12Month="{{next12Month}}"
+    next12MonthArr="{{next12MonthArr}}" bind:traCheckedNum="getmyevent"></time>
 </van-popup>
 <view bindtap="ppp">展开popop</view>

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "time":"../../conponents/time/time",
     "van-rate":"../../lib/vant/rate",
     "van-checkbox": "../../lib/vant/checkbox",
     "van-checkbox-group": "../../lib/vant/checkbox-group",

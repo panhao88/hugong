@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/service/service",
-    "pages/index/index",
-    "pages/details/details",
     "pages/psychology/psychology",
     "pages/healthy/healthy",
+    "pages/details/details",
+    "pages/index/index",
     "pages/my/my",
     "pages/login/login",
     "pages/Friendregistration/Friendregistration",

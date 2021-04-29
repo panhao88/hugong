@@ -96,7 +96,6 @@
 /* 为空白时间 */
 .calendar .week .empty {
   border: none;
-  /* background: #F5F5F5; */
   background: #FFFFFF !important;
   box-sizing: border-box;
 }
@@ -109,4 +108,28 @@
   border: #FFFFFF 1px solid;
   color: #888888;
   box-sizing: border-box;
+}
+.bottom {
+  height: 140rpx;
+}
+.login-bu {
+  margin-top: 20rpx;
+  width: 680rpx !important;
+  height: 70rpx;
+  background-color: #61CF8CFF;
+  border-radius: 40rpx;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+/* 底部按钮边距 */
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: var(--iphonex-fix-bottom);
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
 }
