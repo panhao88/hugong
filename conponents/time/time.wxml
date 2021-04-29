@@ -186,11 +186,11 @@
       <text>周五</text>
       <text class='sunday'>周六</text>
     </view>
-    <view>111</view>
+    <!-- <view>111</view> -->
     <block wx:for="{{next3MonthArr}}" wx:key="index">
       <view class='week'>
         <text
-          class="saturday {{item[0]['state']==true?'selected':''}}  {{item[6]['isToday'] == false ? 'aaaa' : ''}} {{item[6]['date'] == '' ? 'empty' : ''}} {{item[6]['isToday'] == true ? 'now' : ''}}"
+          class="saturday {{item[0]['state']==true?'selected':''}}  {{item[0]['isToday'] == false ? 'aaaa' : ''}} {{item[0]['date'] == '' ? 'empty' : ''}} {{item[6]['isToday'] == true ? 'now' : ''}}"
           data-month='next3Month' data-Year="{{next3Year}}" data-Month1="{{next3Month}}" data-date="{{item[0]['date']}}"
           data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
         <text

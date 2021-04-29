@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show:false,
+    show: false,
     thisYear: '', //当前年
     thisMonth: '', //当前月
     thisMonthArr: [], //当前月号数
@@ -46,13 +46,13 @@ Page({
     next12Month: '', //下12月
     next12MonthArr: [], //下12月号数数组
   },
-  ppp(){
+  ppp() {
     this.setData({
-      show:true
+      show: true
     })
   },
-   //根据指定年月获得当月日历数组
-   getDateArr(date) {
+  //根据指定年月获得当月日历数组
+  getDateArr(date) {
     //根据指定年月
     let myDate = date;
     let thisYear = myDate.getFullYear(); //获取完整的年份
@@ -115,87 +115,113 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     //初始化日历数据
-     let nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月
-     let nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下二个月
-     let nextM3_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 3)); //下三个月
-     let nextM4_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 4)); //下四个月
-     let nextM5_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 5)); //下五个月
-     let nextM6_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 6)); //下六个月
-     let nextM7_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 7)); //下七个月
-     let nextM8_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 8)); //下八个月
-     let nextM9_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 9)); //下九个月
-     let nextM10_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 10)); //下十个月
-     let nextM11_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 11)); //下十一个月
-     let nextM12_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 12)); //下十二个月
-     
-     let thisMonthArr = this.getDateArr(new Date());
-     let nextMonthArr = this.getDateArr(nextM_start);
-     let next2MonthArr = this.getDateArr(nextM2_start);
-     let next3MonthArr = this.getDateArr(nextM3_start);
-     let next4MonthArr = this.getDateArr(nextM4_start);
-     let next5MonthArr = this.getDateArr(nextM5_start);
-     let next6MonthArr = this.getDateArr(nextM6_start);
-     let next7MonthArr = this.getDateArr(nextM7_start);
-     let next8MonthArr = this.getDateArr(nextM8_start);
-     let next9MonthArr = this.getDateArr(nextM9_start);
-     let next10MonthArr = this.getDateArr(nextM10_start);
-     let next11MonthArr = this.getDateArr(nextM11_start);
-     let next12MonthArr = this.getDateArr(nextM11_start);
+    // let nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月
+    // let nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下二个月
+    // let nextM3_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 3)); //下三个月
+    // let nextM4_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 4)); //下四个月
+    // let nextM5_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 5)); //下五个月
+    // let nextM6_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 6)); //下六个月
+    // let nextM7_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 7)); //下七个月
+    // let nextM8_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 8)); //下八个月
+    // let nextM9_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 9)); //下十个月
+    // let nextM11_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 11)); //下十个月
+    // let nextM12_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 12)); //下十一个月
+    //初始化日历数据
+    let myDate = new Date()
+    let timer = myDate.setDate(myDate.getDate() - 3)
+    if (new Date().getDate() > 28) {
+      var nextM_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 1)) // 下1个月
+      var nextM2_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 2)) // 下2个月
+      var nextM3_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 3)) // 下3个月
+      var nextM4_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 4)) // 下4个月
+      var nextM5_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 5)) // 下5个月
+      var nextM6_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 6)) // 下6个月
+      var nextM7_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 7)) // 下7个月
+      var nextM8_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 8)) // 下8个月
+      var nextM9_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 9)) // 下9个月
+      var nextM10_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 10)) // 下10个月
+      var nextM11_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 11)) // 下11个月
+      var nextM12_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 12)) // 下12个月
+    } else {
+      var nextM_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 1)); //下1个月
+      var nextM2_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 2)); //下1个月
+      var nextM3_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 3)); //下1个月
+      var nextM4_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 4)); //下1个月
+      var nextM5_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 5)); //下1个月
+      var nextM6_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 6)); //下1个月
+      var nextM7_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 7)); //下1个月
+      var nextM8_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 8)); //下1个月
+      var nextM9_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 9)); //下1个月
+      var nextM10_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 10)); //下1个月
+      var nextM11_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 11)); //下1个月
+      var nextM12_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 12)); //下1个月
+    }
 
-     this.setData({
-       thisYear: new Date().getFullYear(),
-       thisMonth: new Date().getMonth() + 1,
-       thisMonthArr: thisMonthArr,
- 
-       nextYear: nextM_start.getFullYear(),
-       nextMonth: nextM_start.getMonth() + 1,
-       nextMonthArr: nextMonthArr,
- 
-       next2Year: nextM2_start.getFullYear(),
-       next2Month: nextM2_start.getMonth() + 1,
-       next2MonthArr: next2MonthArr,
- 
-       next3Year: nextM3_start.getFullYear(),
-       next3Month: nextM3_start.getMonth() + 1,
-       next3MonthArr: next3MonthArr,
- 
-       next4Year: nextM4_start.getFullYear(),
-       next4Month: nextM4_start.getMonth() + 1,
-       next4MonthArr: next4MonthArr,
- 
-       next5Year: nextM5_start.getFullYear(),
-       next5Month: nextM5_start.getMonth() + 1,
-       next5MonthArr: next5MonthArr,
+    let thisMonthArr = this.getDateArr(new Date());
+    let nextMonthArr = this.getDateArr(nextM_start);
+    let next2MonthArr = this.getDateArr(nextM2_start);
+    let next3MonthArr = this.getDateArr(nextM3_start);
+    let next4MonthArr = this.getDateArr(nextM4_start);
+    let next5MonthArr = this.getDateArr(nextM5_start);
+    let next6MonthArr = this.getDateArr(nextM6_start);
+    let next7MonthArr = this.getDateArr(nextM7_start);
+    let next8MonthArr = this.getDateArr(nextM8_start);
+    let next9MonthArr = this.getDateArr(nextM9_start);
+    let next10MonthArr = this.getDateArr(nextM10_start);
+    let next11MonthArr = this.getDateArr(nextM11_start);
+    let next12MonthArr = this.getDateArr(nextM12_start);
+    this.setData({
+      thisYear: new Date().getFullYear(),
+      thisMonth: new Date().getMonth() + 1,
+      thisMonthArr: thisMonthArr,
 
-       next6Year: nextM6_start.getFullYear(),
-       next6Month: nextM6_start.getMonth() + 1,
-       next6MonthArr: next6MonthArr,
+      nextYear: nextM_start.getFullYear(),
+      nextMonth: nextM_start.getMonth() + 1,
+      nextMonthArr: nextMonthArr,
 
-       next7Year: nextM7_start.getFullYear(),
-       next7Month: nextM7_start.getMonth() + 1,
-       next7MonthArr: next7MonthArr,
+      next2Year: nextM2_start.getFullYear(),
+      next2Month: nextM2_start.getMonth() + 1,
+      next2MonthArr: next2MonthArr,
 
-       next8Year: nextM8_start.getFullYear(),
-       next8Month: nextM8_start.getMonth() + 1,
-       next8MonthArr: next8MonthArr,
+      next3Year: nextM3_start.getFullYear(),
+      next3Month: nextM3_start.getMonth() + 1,
+      next3MonthArr: next3MonthArr,
 
-       next9Year: nextM9_start.getFullYear(),
-       next9Month: nextM9_start.getMonth() + 1,
-       next9MonthArr: next9MonthArr,
-       
-       next10Year: nextM10_start.getFullYear(),
-       next10Month: nextM10_start.getMonth(),
-       next10MonthArr: next10MonthArr,
-      
-       next11Year: nextM11_start.getFullYear(),
-       next11Month: nextM11_start.getMonth() + 1,
-       next11MonthArr: next11MonthArr,
+      next4Year: nextM4_start.getFullYear(),
+      next4Month: nextM4_start.getMonth() + 1,
+      next4MonthArr: next4MonthArr,
 
-       next12Year: nextM12_start.getFullYear(),
-       next12Month: nextM12_start.getMonth() + 1,
-       next12MonthArr: next12MonthArr,
-     })
-     console.log(this.data.next3MonthArr)
+      next5Year: nextM5_start.getFullYear(),
+      next5Month: nextM5_start.getMonth() + 1,
+      next5MonthArr: next5MonthArr,
+
+      next6Year: nextM6_start.getFullYear(),
+      next6Month: nextM6_start.getMonth() + 1,
+      next6MonthArr: next6MonthArr,
+
+      next7Year: nextM7_start.getFullYear(),
+      next7Month: nextM7_start.getMonth() + 1,
+      next7MonthArr: next7MonthArr,
+
+      next8Year: nextM8_start.getFullYear(),
+      next8Month: nextM8_start.getMonth() + 1,
+      next8MonthArr: next8MonthArr,
+
+      next9Year: nextM9_start.getFullYear(),
+      next9Month: nextM9_start.getMonth() + 1,
+      next9MonthArr: next9MonthArr,
+
+      next10Year: nextM10_start.getFullYear(),
+      next10Month: nextM10_start.getMonth() + 1,
+      next10MonthArr: next10MonthArr,
+
+      next11Year: nextM11_start.getFullYear(),
+      next11Month: nextM11_start.getMonth() + 1,
+      next11MonthArr: next11MonthArr,
+
+      next12Year: nextM12_start.getFullYear(),
+      next12Month: nextM12_start.getMonth() + 1,
+      next12MonthArr: next12MonthArr,
+    })
   }
 })
