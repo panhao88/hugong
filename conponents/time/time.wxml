@@ -186,7 +186,6 @@
       <text>周五</text>
       <text class='sunday'>周六</text>
     </view>
-    <!-- <view>111</view> -->
     <block wx:for="{{next3MonthArr}}" wx:key="index">
       <view class='week'>
         <text
@@ -333,7 +332,7 @@
     <view class="pddlevel">
       <view class='year_month'> {{next6Year}}年{{next6Month}}月</view>
       <view>
-        <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChangefive" icon-size="35rpx"
+        <van-checkbox value="{{ checkedNextsix }}" checked-color="#07c160" bind:change="onChangesix" icon-size="35rpx"
           data-month='thisMonth' data-Year="{{next6Year}}" data-Month1="{{next6Month}}">
           选择整月
         </van-checkbox>
@@ -386,7 +385,7 @@
     <view class="pddlevel">
       <view class='year_month'> {{next7Year}}年{{next7Month}}月</view>
       <view>
-        <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChangefive" icon-size="35rpx"
+        <van-checkbox value="{{ checkedNextseven }}" checked-color="#07c160" bind:change="onChangeseven" icon-size="35rpx"
           data-month='thisMonth' data-Year="{{next7Year}}" data-Month1="{{next7Month}}">
           选择整月
         </van-checkbox>
@@ -439,7 +438,7 @@
     <view class="pddlevel">
       <view class='year_month'> {{next8Year}}年{{next8Month}}月</view>
       <view>
-        <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChangefive" icon-size="35rpx"
+        <van-checkbox value="{{ checkedNexteight }}" checked-color="#07c160" bind:change="onChangeeight" icon-size="35rpx"
           data-month='thisMonth' data-Year="{{next8Year}}" data-Month1="{{next8Month}}">
           选择整月
         </van-checkbox>
@@ -492,7 +491,7 @@
     <view class="pddlevel">
       <view class='year_month'> {{next9Year}}年{{next9Month}}月</view>
       <view>
-        <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChangefive" icon-size="35rpx"
+        <van-checkbox value="{{ checkedNextnine }}" checked-color="#07c160" bind:change="onChangenine" icon-size="35rpx"
           data-month='thisMonth' data-Year="{{next9Year}}" data-Month1="{{next9Month}}">
           选择整月
         </van-checkbox>
@@ -545,7 +544,7 @@
     <view class="pddlevel">
       <view class='year_month'> {{next10Year}}年{{next10Month}}月</view>
       <view>
-        <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChangefive" icon-size="35rpx"
+        <van-checkbox value="{{ checkedNextten }}" checked-color="#07c160" bind:change="onChangeten" icon-size="35rpx"
           data-month='thisMonth' data-Year="{{next10Year}}" data-Month1="{{next10Month}}">
           选择整月
         </van-checkbox>
@@ -598,7 +597,7 @@
     <view class="pddlevel">
       <view class='year_month'> {{next11Year}}年{{next11Month}}月</view>
       <view>
-        <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChangefive" icon-size="35rpx"
+        <van-checkbox value="{{ checkedNexteleven }}" checked-color="#07c160" bind:change="onChangeeleven" icon-size="35rpx"
           data-month='thisMonth' data-Year="{{next11Year}}" data-Month1="{{next11Month}}">
           选择整月
         </van-checkbox>
@@ -651,7 +650,7 @@
     <view class="pddlevel">
       <view class='year_month'> {{next12Year}}年{{next12Month}}月</view>
       <view>
-        <van-checkbox value="{{ checkedNextfive }}" checked-color="#07c160" bind:change="onChangefive" icon-size="35rpx"
+        <van-checkbox value="{{ checkedNexttwelve }}" checked-color="#07c160" bind:change="onChangetwelve" icon-size="35rpx"
           data-month='thisMonth' data-Year="{{next12Year}}" data-Month1="{{next12Month}}">
           选择整月
         </van-checkbox>

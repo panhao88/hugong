@@ -198,14 +198,13 @@ Page({
     //--------------- 心理咨询变量
     calendar: [],
     calendar111: [],
-    Mehours: [],
     hour: "", //获取当前小时
     year: '', //获取当前年份
     ipdyuan: false, //判断心理咨询是不是今天的时间
     width: 0, //心理咨询时间动态宽度
     currentIndex: 0, //年月日下标
     Yueartoday: "", //今天年月日
-    currentTime: 0, //时间下标
+    currentTime: -1, //时间下标
     timeArr: [{
         "time": "08:00",
         "flag": false,
@@ -421,19 +420,19 @@ Page({
   },
   //选择服务时间
   gotime() {
-    if (this.data.psy === undefined) {
-      this.setData({
-        showtime: true,
-        show: false,
-        pierce: true //弹窗穿透
-      })
-    } else if (this.data.psy === "1") {
-      this.setData({
-        showpsychology: true,
-        show: false,
-        pierce: true //弹窗穿透
-      })
-    }
+    // if (this.data.psy === undefined) {
+    //   this.setData({
+    //     showtime: true,
+    //     show: false,
+    //     pierce: true //弹窗穿透
+    //   })
+    // } else if (this.data.psy === "1") {
+    this.setData({
+      showpsychology: true,
+      show: false,
+      pierce: true //弹窗穿透
+    })
+    // }
   },
   //点击遮罩层阴影关闭
   onClose() {
@@ -753,12 +752,6 @@ Page({
   //===========================心理咨询时间========================
   // 选择年月日
   select(e) {
-    let arryear = this.data.timeArr
-    this.data.Mehours = []
-    arryear.map(item => {
-      item.flag = false
-    })
-    console.log(this.data.Mehours, "清空所有")
     let curren = e.currentTarget.dataset.date
     let Arrcurren = e.currentTarget.dataset.date
     //为上半部分的点击事件
@@ -774,53 +767,25 @@ Page({
     }
     this.setData({
       currentIndex: e.currentTarget.dataset.index,
-      timeArr: arryear,
-      Yueartoday: Arrcurren
+      Yueartoday: Arrcurren,
+      currentTime:-1
     })
   },
-  // 今天
-  selectTime(e) {
-    let arrhour = this.data.timeArr
+  // 今天开始时间
+  startTime(e) {
     let time = e.currentTarget.dataset.time;
+    let flag = e.currentTarget.dataset.flag;
     let index = e.currentTarget.dataset.index;
     if (this.data.ipdyuan === false) {
       if (time >= this.data.hour) {
-        if (arrhour[index].flag === false) {
-          arrhour[index].flag = true
-          if (this.data.ipdyuan === false) {
-            let Splicingtime = this.data.year + " " + arrhour[index].time
-            this.data.Mehours.push(Splicingtime)
-          }
-          this.setData({
-            timeArr: arrhour
-          })
-          console.log(this.data.Mehours, "选中")
-        } else if (arrhour[index].flag === true) {
-          arrhour[index].flag = false
-          this.data.Mehours.splice(arrhour[index], 1)
-          this.setData({
-            timeArr: arrhour
-          })
-          console.log(this.data.Mehours, "删除")
-        }
-      }
-    } else if (this.data.ipdyuan === true) {
-      if (arrhour[index].flag === false) {
-        arrhour[index].flag = true
-        let Splicingtime = this.data.Yueartoday + " " + arrhour[index].time
-        this.data.Mehours.push(Splicingtime)
         this.setData({
-          timeArr: arrhour
+          currentTime: index
         })
-        console.log(this.data.Mehours, "选中")
-      } else if (arrhour[index].flag === true) {
-        arrhour[index].flag = false
-        this.data.Mehours.splice(arrhour[index], 1)
-        this.setData({
-          timeArr: arrhour
-        })
-        console.log(this.data.Mehours, "删除")
       }
+    }else if(this.data.ipdyuan === true){
+      this.setData({
+        currentTime: index
+      })
     }
   },
   // 获取当前小时
@@ -868,11 +833,35 @@ Page({
     //获取当前年月日
     this.seleyear()
     //初始化日历数据
-    let nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下一个月
-    let nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下二个月
-    let nextM3_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 3)); //下三个月
-    let nextM4_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 4)); //下四个月
-    let nextM5_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 5)); //下五个月
+    let myDate = new Date()
+    let timer = myDate.setDate(myDate.getDate() - 3)
+    if (new Date().getDate() > 28) {
+      var nextM_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 1)) // 下1个月
+      var nextM2_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 2)) // 下2个月
+      var nextM3_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 3)) // 下3个月
+      var nextM4_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 4)) // 下4个月
+      var nextM5_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 5)) // 下5个月
+      var nextM6_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 6)) // 下6个月
+      var nextM7_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 7)) // 下7个月
+      var nextM8_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 8)) // 下8个月
+      var nextM9_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 9)) // 下9个月
+      var nextM10_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 10)) // 下10个月
+      var nextM11_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 11)) // 下11个月
+      var nextM12_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 12)) // 下12个月
+    } else {
+      var nextM_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 1)); //下1个月
+      var nextM2_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 2)); //下1个月
+      var nextM3_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 3)); //下1个月
+      var nextM4_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 4)); //下1个月
+      var nextM5_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 5)); //下1个月
+      var nextM6_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 6)); //下1个月
+      var nextM7_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 7)); //下1个月
+      var nextM8_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 8)); //下1个月
+      var nextM9_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 9)); //下1个月
+      var nextM10_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 10)); //下1个月
+      var nextM11_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 11)); //下1个月
+      var nextM12_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 12)); //下1个月
+    }
 
     let thisMonthArr = this.getDateArr(new Date());
     let nextMonthArr = this.getDateArr(nextM_start);
@@ -880,6 +869,13 @@ Page({
     let next3MonthArr = this.getDateArr(nextM3_start);
     let next4MonthArr = this.getDateArr(nextM4_start);
     let next5MonthArr = this.getDateArr(nextM5_start);
+    let next6MonthArr = this.getDateArr(nextM6_start);
+    let next7MonthArr = this.getDateArr(nextM7_start);
+    let next8MonthArr = this.getDateArr(nextM8_start);
+    let next9MonthArr = this.getDateArr(nextM9_start);
+    let next10MonthArr = this.getDateArr(nextM10_start);
+    let next11MonthArr = this.getDateArr(nextM11_start);
+    let next12MonthArr = this.getDateArr(nextM12_start);
     this.setData({
       thisYear: new Date().getFullYear(),
       thisMonth: new Date().getMonth() + 1,
@@ -904,6 +900,34 @@ Page({
       next5Year: nextM5_start.getFullYear(),
       next5Month: nextM5_start.getMonth() + 1,
       next5MonthArr: next5MonthArr,
+
+      next6Year: nextM6_start.getFullYear(),
+      next6Month: nextM6_start.getMonth() + 1,
+      next6MonthArr: next6MonthArr,
+
+      next7Year: nextM7_start.getFullYear(),
+      next7Month: nextM7_start.getMonth() + 1,
+      next7MonthArr: next7MonthArr,
+
+      next8Year: nextM8_start.getFullYear(),
+      next8Month: nextM8_start.getMonth() + 1,
+      next8MonthArr: next8MonthArr,
+
+      next9Year: nextM9_start.getFullYear(),
+      next9Month: nextM9_start.getMonth() + 1,
+      next9MonthArr: next9MonthArr,
+
+      next10Year: nextM10_start.getFullYear(),
+      next10Month: nextM10_start.getMonth() + 1,
+      next10MonthArr: next10MonthArr,
+
+      next11Year: nextM11_start.getFullYear(),
+      next11Month: nextM11_start.getMonth() + 1,
+      next11MonthArr: next11MonthArr,
+
+      next12Year: nextM12_start.getFullYear(),
+      next12Month: nextM12_start.getMonth() + 1,
+      next12MonthArr: next12MonthArr,
     })
     let self = this;
     self.mapCtx = wx.createMapContext('myMap')

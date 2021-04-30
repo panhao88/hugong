@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/service/service",
-    "pages/psychology/psychology",
     "pages/healthy/healthy",
     "pages/details/details",
+    "pages/service/service",
+    "pages/psychology/psychology",
     "pages/index/index",
     "pages/my/my",
     "pages/login/login",
@@ -97,6 +97,12 @@
   "permission": {
     "scope.userLocation": {
       "desc": "您的位置信息将用于寻找附近的检测点"
+    }
+  },
+  "plugins": {
+    "myPlugin": {
+      "version": "2.1.1",
+      "provider": "wx6b6cb15df2836ebe"
     }
   },
   "style": "v2",

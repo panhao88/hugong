@@ -84,8 +84,8 @@ Component({
     next7MonthArr: {
       type: Array
     },
-     //获取下八本月年月日
-     next8Year: {
+    //获取下八本月年月日
+    next8Year: {
       type: String
     },
     next8Month: {
@@ -94,8 +94,8 @@ Component({
     next8MonthArr: {
       type: Array
     },
-     //获取下九本月年月日
-     next9Year: {
+    //获取下九本月年月日
+    next9Year: {
       type: String
     },
     next9Month: {
@@ -104,8 +104,8 @@ Component({
     next9MonthArr: {
       type: Array
     },
-     //获取下十本月年月日
-     next10Year: {
+    //获取下十本月年月日
+    next10Year: {
       type: String
     },
     next10Month: {
@@ -114,8 +114,8 @@ Component({
     next10MonthArr: {
       type: Array
     },
-     //获取下十一本月年月日
-     next11Year: {
+    //获取下十一本月年月日
+    next11Year: {
       type: String
     },
     next11Month: {
@@ -146,8 +146,15 @@ Component({
     checkedNextthree: false, //全选反选的按钮判断条件
     checkedNextfour: false, //全选反选的按钮判断条件
     checkedNextfive: false, //全选反选的按钮判断条件
+    checkedNextsix: false, //全选反选的按钮判断条件
+    checkedNextseven: false, //全选反选的按钮判断条件
+    checkedNexteight: false, //全选反选的按钮判断条件
+    checkedNextnine: false, //全选反选的按钮判断条件
+    checkedNextten: false, //全选反选的按钮判断条件
+    checkedNexteleven: false, //全选反选的按钮判断条件
+    checkedNexttwelve: false, //全选反选的按钮判断条件
     today: new Date().getDate(), //获取今天号数数组
-    date: [],//选中的时间
+    date: [], //选中的时间
   },
   /**
    * 组件的方法列表
@@ -232,360 +239,857 @@ Component({
       }
     },
     //下一月时间
-  onChangenext(e) {
-    let arr = this.data.nextMonthArr
-    let tempArr = []
-    let appdate = []
-    let nextMonth = ''
-    let checkedDate = ''
-    if (e.currentTarget.dataset.month1 < 10) {
-      nextMonth = '0' + e.currentTarget.dataset.month1.toString()
-    } else {
-      nextMonth = e.currentTarget.dataset.month1.toString()
-    }
-    if (this.data.checkedNext === false) {
-      arr.map(item => {
-        let tempA = []
-        let date1 = []
-        item.map(item1 => {
-          let typedate = {
-            date: '',
-            month: ''
-          }
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = true
-            typedate.date = e.currentTarget.dataset.year + nextMonth + checkedDate + item1.date
-            typedate.month = nextMonth
-          }
-          tempA.push(item1)
-          date1.push(typedate)
+    onChangenext(e) {
+      let arr = this.data.nextMonthArr
+      let tempArr = []
+      let appdate = []
+      let nextMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNext === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextMonth + checkedDate + item1.date
+              typedate.month = nextMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
         })
-        tempArr.push(tempA)
-        appdate.push(date1)
-      })
-      let convert = appdate.flat();
-      convert = convert.filter((item) => {
-        return item.date !== ''
-      })
-      this.data.date = this.data.date.concat(convert)
-      // 去重
-      let add = this.data.date
-      let hash = {};
-      let data2 = add.reduce((preVal, curVal) => {
-        hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
-        return preVal
-      }, [])
-      this.setData({
-        checkedNext: !this.data.checkedNext,
-        nextMonthArr: tempArr,
-        date: data2
-      })
-      console.log(this.data.date, "全部选中")
-    } else {
-      arr.map(item => {
-        let tempA = []
-        item.map(item1 => {
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = false
-          }
-          tempA.push(item1)
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
         })
-        tempArr.push(tempA)
-      })
-      this.data.date = this.data.date.filter(item => {
-        return item.month !== nextMonth
-      })
-      this.setData({
-        checkedNext: !this.data.checkedNext,
-        nextMonthArr: tempArr,
-      })
-      console.log(this.data.date, "全部取消")
-    }
-  },
-  //下二月时间
-  onChangetow(e) {
-    let arr = this.data.next2MonthArr
-    let tempArr = []
-    let appdate = []
-    let nexttowMonth = ''
-    let checkedDate = ''
-    if (e.currentTarget.dataset.month1 < 10) {
-      nexttowMonth = '0' + e.currentTarget.dataset.month1.toString()
-    } else {
-      nexttowMonth = e.currentTarget.dataset.month1.toString()
-    }
-    if (this.data.checkedNexttwo === false) {
-      arr.map(item => {
-        let tempA = []
-        let date1 = []
-        item.map(item1 => {
-          let typedate = {
-            date: '',
-            month: ''
-          }
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = true
-            typedate.date = e.currentTarget.dataset.year + nexttowMonth + checkedDate + item1.date
-            typedate.month = nexttowMonth
-          }
-          tempA.push(item1)
-          date1.push(typedate)
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNext: !this.data.checkedNext,
+          nextMonthArr: tempArr,
+          date: data2
         })
-        tempArr.push(tempA)
-        appdate.push(date1)
-      })
-      let convert = appdate.flat();
-      convert = convert.filter((item) => {
-        return item.date !== ''
-      })
-      this.data.date = this.data.date.concat(convert)
-      // 去重
-      let add = this.data.date
-      let hash = {};
-      let data2 = add.reduce((preVal, curVal) => {
-        hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
-        return preVal
-      }, [])
-      this.setData({
-        checkedNexttwo: !this.data.checkedNexttwo,
-        next2MonthArr: tempArr,
-        date: data2
-      })
-      console.log(this.data.date, "全部选中")
-    } else {
-      arr.map(item => {
-        let tempA = []
-        item.map(item1 => {
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = false
-          }
-          tempA.push(item1)
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
         })
-        tempArr.push(tempA)
-      })
-      this.data.date = this.data.date.filter(item => {
-        return item.month !== nexttowMonth
-      })
-      this.setData({
-        checkedNexttwo: !this.data.checkedNexttwo,
-        next2MonthArr: tempArr,
-      })
-      console.log(this.data.date, "全部取消")
-    }
-  },
-  //下三月时间
-  onChangetherr(e) {
-    let arr = this.data.next3MonthArr
-    let tempArr = []
-    let appdate = []
-    let nexttherrMonth = ''
-    let checkedDate = ''
-    if (e.currentTarget.dataset.month1 < 10) {
-      nexttherrMonth = '0' + e.currentTarget.dataset.month1.toString()
-    } else {
-      nexttherrMonth = e.currentTarget.dataset.month1.toString()
-    }
-    if (this.data.checkedNextthree === false) {
-      arr.map(item => {
-        let tempA = []
-        let date1 = []
-        item.map(item1 => {
-          let typedate = {
-            date: '',
-            month: ''
-          }
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = true
-            typedate.date = e.currentTarget.dataset.year + nexttherrMonth + checkedDate + item1.date
-            typedate.month = nexttherrMonth
-          }
-          tempA.push(item1)
-          date1.push(typedate)
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextMonth
         })
-        tempArr.push(tempA)
-        appdate.push(date1)
-      })
-      let convert = appdate.flat();
-      convert = convert.filter((item) => {
-        return item.date !== ''
-      })
-      this.data.date = this.data.date.concat(convert)
-      // 去重
-      let add = this.data.date
-      let hash = {};
-      let data2 = add.reduce((preVal, curVal) => {
-        hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
-        return preVal
-      }, [])
-      this.setData({
-        checkedNextthree: !this.data.checkedNextthree,
-        next3MonthArr: tempArr,
-        date: data2
-      })
-      console.log(this.data.date, "全部选中")
-    } else {
-      arr.map(item => {
-        let tempA = []
-        item.map(item1 => {
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = false
-          }
-          tempA.push(item1)
+        this.setData({
+          checkedNext: !this.data.checkedNext,
+          nextMonthArr: tempArr,
         })
-        tempArr.push(tempA)
-      })
-      this.data.date = this.data.date.filter(item => {
-        return item.month !== nexttherrMonth
-      })
-      this.setData({
-        checkedNextthree: !this.data.checkedNextthree,
-        next3MonthArr: tempArr,
-      })
-      console.log(this.data.date, "全部取消")
-    }
-  },
-  // 下四月时间
-  onChangefour(e) {
-    let arr = this.data.next4MonthArr
-    let tempArr = []
-    let appdate = []
-    let nextfourMonth = ''
-    let checkedDate = ''
-    if (e.currentTarget.dataset.month1 < 10) {
-      nextfourMonth = '0' + e.currentTarget.dataset.month1.toString()
-    } else {
-      nextfourMonth = e.currentTarget.dataset.month1.toString()
-    }
-    if (this.data.checkedNextfour === false) {
-      arr.map(item => {
-        let tempA = []
-        let date1 = []
-        item.map(item1 => {
-          let typedate = {
-            date: '',
-            month: ''
-          }
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = true
-            typedate.date = e.currentTarget.dataset.year + nextfourMonth + checkedDate + item1.date
-            typedate.month = nextfourMonth
-          }
-          tempA.push(item1)
-          date1.push(typedate)
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下二月时间
+    onChangetow(e) {
+      let arr = this.data.next2MonthArr
+      let tempArr = []
+      let appdate = []
+      let nexttowMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nexttowMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nexttowMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNexttwo === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nexttowMonth + checkedDate + item1.date
+              typedate.month = nexttowMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
         })
-        tempArr.push(tempA)
-        appdate.push(date1)
-      })
-      let convert = appdate.flat();
-      convert = convert.filter((item) => {
-        return item.date !== ''
-      })
-      this.data.date = this.data.date.concat(convert)
-      // 去重
-      let add = this.data.date
-      let hash = {};
-      let data2 = add.reduce((preVal, curVal) => {
-        hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
-        return preVal
-      }, [])
-      this.setData({
-        checkedNextfour: !this.data.checkedNextfour,
-        next4MonthArr: tempArr,
-        date: data2
-      })
-      console.log(this.data.date, "全部选中")
-    } else {
-      arr.map(item => {
-        let tempA = []
-        item.map(item1 => {
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = false
-          }
-          tempA.push(item1)
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
         })
-        tempArr.push(tempA)
-      })
-      this.data.date = this.data.date.filter(item => {
-        return item.month !== nextfourMonth
-      })
-      this.setData({
-        checkedNextfour: !this.data.checkedNextfour,
-        next4MonthArr: tempArr,
-      })
-      console.log(this.data.date, "全部取消")
-    }
-  },
-  //下五月时间
-  onChangefive(e) {
-    let arr = this.data.next5MonthArr
-    let tempArr = []
-    let appdate = []
-    let nextfiveMonth = ''
-    let checkedDate = ''
-    if (e.currentTarget.dataset.month1 < 10) {
-      nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
-    } else {
-      nextfiveMonth = e.currentTarget.dataset.month1.toString()
-    }
-    if (this.data.checkedNextfive === false) {
-      arr.map(item => {
-        let tempA = []
-        let date1 = []
-        item.map(item1 => {
-          let typedate = {
-            date: '',
-            month: ''
-          }
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = true
-            typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
-            typedate.month = nextfiveMonth
-          }
-          tempA.push(item1)
-          date1.push(typedate)
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNexttwo: !this.data.checkedNexttwo,
+          next2MonthArr: tempArr,
+          date: data2
         })
-        tempArr.push(tempA)
-        appdate.push(date1)
-      })
-      let convert = appdate.flat();
-      convert = convert.filter((item) => {
-        return item.date !== ''
-      })
-      this.data.date = this.data.date.concat(convert)
-      // 去重
-      let add = this.data.date
-      let hash = {};
-      let data2 = add.reduce((preVal, curVal) => {
-        hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
-        return preVal
-      }, [])
-      this.setData({
-        checkedNextfive: !this.data.checkedNextfive,
-        next5MonthArr: tempArr,
-        date: data2
-      })
-      console.log(this.data.date, "全部选中")
-    } else {
-      arr.map(item => {
-        let tempA = []
-        item.map(item1 => {
-          if (item1.date !== '' && item1.date >= 1) {
-            item1.state = false
-          }
-          tempA.push(item1)
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
         })
-        tempArr.push(tempA)
-      })
-      this.data.date = this.data.date.filter(item => {
-        return item.month !== nextfiveMonth
-      })
-      this.setData({
-        checkedNextfive: !this.data.checkedNextfive,
-        next5MonthArr: tempArr,
-      })
-      console.log(this.data.date, "全部取消")
-    }
-  },
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nexttowMonth
+        })
+        this.setData({
+          checkedNexttwo: !this.data.checkedNexttwo,
+          next2MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下三月时间
+    onChangetherr(e) {
+      let arr = this.data.next3MonthArr
+      let tempArr = []
+      let appdate = []
+      let nexttherrMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nexttherrMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nexttherrMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNextthree === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nexttherrMonth + checkedDate + item1.date
+              typedate.month = nexttherrMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNextthree: !this.data.checkedNextthree,
+          next3MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nexttherrMonth
+        })
+        this.setData({
+          checkedNextthree: !this.data.checkedNextthree,
+          next3MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    // 下四月时间
+    onChangefour(e) {
+      let arr = this.data.next4MonthArr
+      let tempArr = []
+      let appdate = []
+      let nextfourMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextfourMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextfourMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNextfour === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextfourMonth + checkedDate + item1.date
+              typedate.month = nextfourMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNextfour: !this.data.checkedNextfour,
+          next4MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextfourMonth
+        })
+        this.setData({
+          checkedNextfour: !this.data.checkedNextfour,
+          next4MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下五月时间
+    onChangefive(e) {
+      let arr = this.data.next5MonthArr
+      let tempArr = []
+      let appdate = []
+      let nextfiveMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNextfive === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              typedate.month = nextfiveMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNextfive: !this.data.checkedNextfive,
+          next5MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextfiveMonth
+        })
+        this.setData({
+          checkedNextfive: !this.data.checkedNextfive,
+          next5MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下六月
+    onChangesix(e) {
+      let arr = this.data.next6MonthArr
+      let tempArr = []
+      let appdate = []
+      let nextfiveMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNextsix === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              typedate.month = nextfiveMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNextsix: !this.data.checkedNextsix,
+          next6MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextfiveMonth
+        })
+        this.setData({
+          checkedNextsix: !this.data.checkedNextsix,
+          next6MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下七月
+    onChangeseven(e) {
+      let arr = this.data.next7MonthArr
+      let tempArr = []
+      let appdate = []
+      let nextfiveMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNextseven === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              typedate.month = nextfiveMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNextseven: !this.data.checkedNextseven,
+          next7MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextfiveMonth
+        })
+        this.setData({
+          checkedNextseven: !this.data.checkedNextseven,
+          next7MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下八月
+    onChangeeight(e) {
+      let arr = this.data.next8MonthArr
+      let tempArr = []
+      let appdate = []
+      let nextfiveMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNexteight === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              typedate.month = nextfiveMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNexteight: !this.data.checkedNexteight,
+          next8MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextfiveMonth
+        })
+        this.setData({
+          checkedNexteight: !this.data.checkedNexteight,
+          next8MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下九月
+    onChangenine(e) {
+      let arr = this.data.next9MonthArr
+      let tempArr = []
+      let appdate = []
+      let nextfiveMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNextnine === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              typedate.month = nextfiveMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNextnine: !this.data.checkedNextnine,
+          next9MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextfiveMonth
+        })
+        this.setData({
+          checkedNextnine: !this.data.checkedNextnine,
+          next9MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下十月
+    onChangeten(e) {
+      let arr = this.data.next10MonthArr
+      let tempArr = []
+      let appdate = []
+      let nextfiveMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNextten === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              typedate.month = nextfiveMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNextten: !this.data.checkedNextten,
+          next10MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextfiveMonth
+        })
+        this.setData({
+          checkedNextten: !this.data.checkedNextten,
+          next10MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下十一月
+    onChangeeleven(e) {
+      let arr = this.data.next11MonthArr
+      let tempArr = []
+      let appdate = []
+      let nextfiveMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNexteleven === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              typedate.month = nextfiveMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNexteleven: !this.data.checkedNexteleven,
+          next11MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextfiveMonth
+        })
+        this.setData({
+          checkedNexteleven: !this.data.checkedNexteleven,
+          next11MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
+    //下十二
+    onChangetwelve(e) {
+      let arr = this.data.next12MonthArr
+      let tempArr = []
+      let appdate = []
+      let nextfiveMonth = ''
+      let checkedDate = ''
+      if (e.currentTarget.dataset.month1 < 10) {
+        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+      } else {
+        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+      }
+      if (this.data.checkedNexttwelve === false) {
+        arr.map(item => {
+          let tempA = []
+          let date1 = []
+          item.map(item1 => {
+            let typedate = {
+              date: '',
+              month: ''
+            }
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = true
+              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              typedate.month = nextfiveMonth
+            }
+            tempA.push(item1)
+            date1.push(typedate)
+          })
+          tempArr.push(tempA)
+          appdate.push(date1)
+        })
+        let convert = appdate.flat();
+        convert = convert.filter((item) => {
+          return item.date !== ''
+        })
+        this.data.date = this.data.date.concat(convert)
+        // 去重
+        let add = this.data.date
+        let hash = {};
+        let data2 = add.reduce((preVal, curVal) => {
+          hash[curVal.date] ? '' : hash[curVal.date] = true && preVal.push(curVal);
+          return preVal
+        }, [])
+        this.setData({
+          checkedNexttwelve: !this.data.checkedNexttwelve,
+          next12MonthArr: tempArr,
+          date: data2
+        })
+        console.log(this.data.date, "全部选中")
+      } else {
+        arr.map(item => {
+          let tempA = []
+          item.map(item1 => {
+            if (item1.date !== '' && item1.date >= 1) {
+              item1.state = false
+            }
+            tempA.push(item1)
+          })
+          tempArr.push(tempA)
+        })
+        this.data.date = this.data.date.filter(item => {
+          return item.month !== nextfiveMonth
+        })
+        this.setData({
+          checkedNexttwelve: !this.data.checkedNexttwelve,
+          next12MonthArr: tempArr,
+        })
+        console.log(this.data.date, "全部取消")
+      }
+    },
     // 单击时间
     select_date: function (e) {
       let checkedMonth = ''
@@ -624,8 +1128,22 @@ Component({
         var that = this.data.next3MonthArr;
       } else if (month == 'next4Month') {
         var that = this.data.next4MonthArr;
-      } else {
+      } else if (month == 'next5Month') {
         var that = this.data.next5MonthArr;
+      } else if (month == 'next6Month') {
+        var that = this.data.next6MonthArr;
+      } else if (month == 'next7Month') {
+        var that = this.data.next7MonthArr;
+      } else if (month == 'next8Month') {
+        var that = this.data.next8MonthArr;
+      } else if (month == 'next9Month') {
+        var that = this.data.next9MonthArr;
+      } else if (month == 'next10Month') {
+        var that = this.data.next10MonthArr;
+      } else if (month == 'next11Month') {
+        var that = this.data.next11MonthArr;
+      } else {
+        var that = this.data.next12MonthArr;
       }
       //切换选中状态
       if (that[index][item].state == true) {
@@ -663,9 +1181,37 @@ Component({
         this.setData({
           next4MonthArr: that,
         });
-      } else {
+      } else if (month == 'next5Month') {
         this.setData({
           next5MonthArr: that,
+        });
+      } else if (month == 'next6Month') {
+        this.setData({
+          next6MonthArr: that,
+        });
+      } else if (month == 'next7Month') {
+        this.setData({
+          next7MonthArr: that,
+        });
+      } else if (month == 'next8Month') {
+        this.setData({
+          next8MonthArr: that,
+        });
+      } else if (month == 'next9Month') {
+        this.setData({
+          next9MonthArr: that,
+        });
+      } else if (month == 'next10Month') {
+        this.setData({
+          next10MonthArr: that,
+        });
+      } else if (month == 'next11Month') {
+        this.setData({
+          next11MonthArr: that,
+        });
+      } else {
+        this.setData({
+          next12MonthArr: that,
         });
       }
     },

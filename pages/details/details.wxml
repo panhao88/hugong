@@ -584,7 +584,14 @@
     next2Month="{{next2Month}}" next2MonthArr="{{next2MonthArr}}" next3Year="{{next3Year}}" next3Month="{{next3Month}}"
     next3MonthArr="{{next3MonthArr}}" next4Year="{{next4Year}}" next4Month="{{next4Month}}"
     next4MonthArr="{{next4MonthArr}}" next5Year="{{next5Year}}" next5Month="{{next5Month}}"
-    next5MonthArr="{{next5MonthArr}}" bind:traCheckedNum="getmyevent"></time>
+    next5MonthArr="{{next5MonthArr}}" next6Year="{{next6Year}}" next6Month="{{next6Month}}"
+    next6MonthArr="{{next6MonthArr}}" next7Year="{{next7Year}}" next7Month="{{next7Month}}"
+    next7MonthArr="{{next7MonthArr}}" next8Year="{{next8Year}}" next8Month="{{next8Month}}"
+    next8MonthArr="{{next8MonthArr}}" next9Year="{{next9Year}}" next9Month="{{next9Month}}"
+    next9MonthArr="{{next9MonthArr}}" next10Year="{{next10Year}}" next10Month="{{next10Month}}"
+    next10MonthArr="{{next10MonthArr}}" next11Year="{{next11Year}}" next11Month="{{next11Month}}"
+    next11MonthArr="{{next11MonthArr}}" next12Year="{{next12Year}}" next12Month="{{next12Month}}"
+    next12MonthArr="{{next12MonthArr}}" bind:traCheckedNum="getmyevent"></time>
 </van-popup>
 <!-- 心理陪护时间 -->
 <van-popup show="{{showpsychology}}" position="bottom" custom-style="height: 60%;" bind:close="onClose">
@@ -602,14 +609,14 @@
     </scroll-view>
     <view class='time' wx:if="{{ipdyuan === false}}">
       <view wx:for="{{ timeArr }}" data-index="{{index}}" data-time="{{ item.time}}" data-flag="{{ item.flag}}"
-        bindtap='selectTime'
-        class='listItem {{item.time < hour ? "Pretimer" : ""}} {{item.flag === true ? "current":""}}' wx:key='index'>
+        bindtap='startTime'
+        class='listItem {{item.time < hour ? "Pretimer" : ""}} {{item.flag === true ? "current":""}} {{index == currentTime ? "current":""}}' wx:key='index'>
         <text>{{ item.time }}</text>
       </view>
     </view>
     <view class='time' wx:if="{{ipdyuan === true}}">
       <view wx:for="{{ timeArr }}" data-index="{{index }}" data-flag="{{item.flag}}" data-time="{{item.time}}"
-        bindtap='selectTime' class='listItem {{item.flag === true ? "current":""}}' wx:key='index'>
+        bindtap='selectTime' class='listItem {{item.flag === true ? "current":""}} {{index == currentTime ? "current":""}}' wx:key='index'>
         <text>{{item.time }}</text>
       </view>
     </view>
