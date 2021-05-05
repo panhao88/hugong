@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/healthy/healthy",
     "pages/details/details",
+    "pages/healthy/healthy",
     "pages/service/service",
     "pages/psychology/psychology",
     "pages/index/index",

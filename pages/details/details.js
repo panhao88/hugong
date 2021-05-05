@@ -4,6 +4,8 @@ var qqmapsdk;
 var city = require('../../lib/city');
 Page({
   data: {
+    start:-1,
+    end:-1,
     pierce: false, //解决弹窗穿透问题
     objaddress: {}, //新增确认地址对象
     serviceobj: {}, //服务对象确认对象
@@ -259,6 +261,14 @@ Page({
       },
       {
         "time": "21:00",
+        "flag": false,
+      },
+      {
+        "time": "22:00",
+        "flag": false,
+      },
+      {
+        "time": "23:00",
         "flag": false,
       },
     ]
@@ -773,20 +783,48 @@ Page({
   },
   // 今天开始时间
   startTime(e) {
+    let list = this.data.timeArr
     let time = e.currentTarget.dataset.time;
     let flag = e.currentTarget.dataset.flag;
     let index = e.currentTarget.dataset.index;
     if (this.data.ipdyuan === false) {
       if (time >= this.data.hour) {
-        this.setData({
-          currentTime: index
-        })
+        if(!wx.getStorageSync("time")){
+          this.setData({
+            start: index
+          })
+          let arr = []
+          arr.push(index)
+          wx.setStorageSync('time', arr)
+        }else if(wx.getStorageSync("time")&&wx.getStorageSync("time").length==1){
+          this.setData({
+            end: index
+          })
+          let arr = []
+          arr = wx.getStorageSync("time")
+          arr.push(index)
+          arr =  arr.filter((item, index, app) => {
+            return app.indexOf(item) === index;
+          })
+          wx.setStorageSync('time',arr)
+        }else if(wx.getStorageSync("time")&&wx.getStorageSync("time").length==2){
+          this.setData({
+            start: index,
+            end:-1
+          })
+          let arr = []
+          arr.push(index)
+          wx.setStorageSync('time', arr)
+        };
+        list.slice(this.data.start,this.data.end)
+        console.log(list)
       }
-    }else if(this.data.ipdyuan === true){
-      this.setData({
-        currentTime: index
-      })
     }
+    // else if(this.data.ipdyuan === true){
+    //   this.setData({
+    //     start: index
+    //   })
+    // }
   },
   // 获取当前小时
   seletime() {
@@ -849,18 +887,18 @@ Page({
       var nextM11_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 11)) // 下11个月
       var nextM12_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 12)) // 下12个月
     } else {
-      var nextM_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 1)); //下1个月
-      var nextM2_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 2)); //下1个月
-      var nextM3_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 3)); //下1个月
-      var nextM4_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 4)); //下1个月
-      var nextM5_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 5)); //下1个月
-      var nextM6_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 6)); //下1个月
-      var nextM7_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 7)); //下1个月
-      var nextM8_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 8)); //下1个月
-      var nextM9_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 9)); //下1个月
-      var nextM10_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 10)); //下1个月
-      var nextM11_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 11)); //下1个月
-      var nextM12_start = new Date(new Date(new Date(timer).toLocaleDateString()).setMonth(new Date(timer).getMonth() + 12)); //下1个月
+      var nextM_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 1)); //下1个月
+      var nextM2_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 2)); //下1个月
+      var nextM3_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 3)); //下1个月
+      var nextM4_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 4)); //下1个月
+      var nextM5_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 5)); //下1个月
+      var nextM6_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 6)); //下1个月
+      var nextM7_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 7)); //下1个月
+      var nextM8_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 8)); //下1个月
+      var nextM9_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 9)); //下1个月
+      var nextM10_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 10)); //下1个月
+      var nextM11_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 11)); //下1个月
+      var nextM12_start = new Date(new Date(new Date().toLocaleDateString()).setMonth(new Date().getMonth() + 12)); //下1个月
     }
 
     let thisMonthArr = this.getDateArr(new Date());
