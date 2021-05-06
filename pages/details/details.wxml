@@ -609,20 +609,13 @@
     </scroll-view>
     <view class='time' wx:if="{{ipdyuan === false}}">
       <view wx:for="{{ timeArr }}" data-index="{{index}}" data-time="{{ item.time}}" data-flag="{{ item.flag}}"
-        bindtap='startTime'
-        class='listItem {{item.time < hour ? "Pretimer" : ""}} {{index == start ? "current":""}} {{index == end  ? "current":""}} ' wx:key='index'>
+        bindtap='startTime' class='listItem {{item.time < hour ? "Pretimer" : ""}} {{index == start ? "current":""}} {{index == end  ? "current":""}} {{item.flag === true ? "current":""}}' wx:key='index'>
         <text>{{ item.time }}</text>
       </view>
     </view>
-    <!-- <view class='time' wx:if="{{ipdyuan === true}}">
-      <view wx:for="{{ timeArr }}" data-index="{{index }}" data-flag="{{item.flag}}" data-time="{{item.time}}"
-        bindtap='selectTime' class='listItem {{item.flag === true ? "current":""}} {{index == currentTime ? "current":""}}' wx:key='index'>
-        <text>{{item.time }}</text>
-      </view>
-    </view> -->
     <view class='time' wx:if="{{ipdyuan === true}}">
       <view wx:for="{{ timeArr }}" data-index="{{index }}" data-flag="{{item.flag}}" data-time="{{item.time}}"
-        bindtap='selectTime' class='listItem {{index == currentTime ? "current":""}}' wx:key='index'>
+        bindtap='startTime' class='listItem {{index == start ? "current":""}} {{index == end  ? "current":""}} {{index >=start && index <= end  ? "current":""}}' wx:key='index'>
         <text>{{item.time }}</text>
       </view>
     </view>

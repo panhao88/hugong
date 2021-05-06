@@ -140,6 +140,18 @@ Component({
    * 组件的初始数据
    */
   data: {
+    Timereversal1:[],
+    Timereversal2:[],
+    Timereversal3:[],
+    Timereversal4:[],
+    Timereversal5:[],
+    Timereversal6:[],
+    Timereversal7:[],
+    Timereversal8:[],
+    Timereversal9:[],
+    Timereversal10:[],
+    Timereversal11:[],
+    Timereversal12:[],
     checked: false, //全选反选的按钮判断条件
     checkedNext: false, //全选反选的按钮判断条件
     checkedNexttwo: false, //全选反选的按钮判断条件
@@ -214,7 +226,8 @@ Component({
         this.setData({
           checked: !this.data.checked,
           thisMonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal1:data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -285,7 +298,8 @@ Component({
         this.setData({
           checkedNext: !this.data.checkedNext,
           nextMonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal2:data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -356,7 +370,8 @@ Component({
         this.setData({
           checkedNexttwo: !this.data.checkedNexttwo,
           next2MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal1:data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -1150,9 +1165,21 @@ Component({
         that[index][item].state = false;
         let today = e.currentTarget.dataset.year + checkedMonth + checkedDate
         let add = this.data.date
+        //本月取反
+        let ppp = this.data.Timereversal1 
+        this.data.Timereversal1 = ppp.filter((item, index) => {
+          return item.date !== today
+        })
+        //下一月取反
+
         this.data.date = add.filter((item, index) => {
           return item.date !== today
         })
+        if(this.data.Timereversal1.length === 0){
+          this.setData({
+            checked:false
+          })
+        }
         console.log(this.data.date, "单击取消")
       } else if (that[index][item].state == false) {
         that[index][item].state = true;

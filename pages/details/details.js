@@ -4,8 +4,8 @@ var qqmapsdk;
 var city = require('../../lib/city');
 Page({
   data: {
-    start:-1,
-    end:-1,
+    start: -1,
+    end: -1,
     pierce: false, //解决弹窗穿透问题
     objaddress: {}, //新增确认地址对象
     serviceobj: {}, //服务对象确认对象
@@ -205,8 +205,6 @@ Page({
     ipdyuan: false, //判断心理咨询是不是今天的时间
     width: 0, //心理咨询时间动态宽度
     currentIndex: 0, //年月日下标
-    Yueartoday: "", //今天年月日
-    currentTime: -1, //时间下标
     timeArr: [{
         "time": "08:00",
         "flag": false,
@@ -430,19 +428,19 @@ Page({
   },
   //选择服务时间
   gotime() {
-    // if (this.data.psy === undefined) {
-    //   this.setData({
-    //     showtime: true,
-    //     show: false,
-    //     pierce: true //弹窗穿透
-    //   })
-    // } else if (this.data.psy === "1") {
+    if (this.data.psy === undefined) {
+      this.setData({
+        showtime: true,
+        show: false,
+        pierce: true //弹窗穿透
+      })
+    } else if (this.data.psy === "1") {
     this.setData({
       showpsychology: true,
       show: false,
       pierce: true //弹窗穿透
     })
-    // }
+    }
   },
   //点击遮罩层阴影关闭
   onClose() {
@@ -763,68 +761,114 @@ Page({
   // 选择年月日
   select(e) {
     let curren = e.currentTarget.dataset.date
-    let Arrcurren = e.currentTarget.dataset.date
     //为上半部分的点击事件
     if (curren === this.data.year) {
       this.setData({
-        ipdyuan: false
+        ipdyuan:false,
+        currentIndex: e.currentTarget.dataset.index,
+        start:-1,
+        end:-1
       })
     }
     if (curren !== this.data.year) {
       this.setData({
-        ipdyuan: true
+        ipdyuan: true,
+        currentIndex: e.currentTarget.dataset.index,
+        start:-1,
+        end:-1
       })
     }
-    this.setData({
-      currentIndex: e.currentTarget.dataset.index,
-      Yueartoday: Arrcurren,
-      currentTime:-1
-    })
   },
   // 今天开始时间
   startTime(e) {
     let list = this.data.timeArr
     let time = e.currentTarget.dataset.time;
-    let flag = e.currentTarget.dataset.flag;
     let index = e.currentTarget.dataset.index;
     if (this.data.ipdyuan === false) {
       if (time >= this.data.hour) {
-        if(!wx.getStorageSync("time")){
+        if (!wx.getStorageSync("time")) {
           this.setData({
             start: index
           })
           let arr = []
           arr.push(index)
           wx.setStorageSync('time', arr)
-        }else if(wx.getStorageSync("time")&&wx.getStorageSync("time").length==1){
+        } else if (wx.getStorageSync("time") && wx.getStorageSync("time").length == 1) {
           this.setData({
             end: index
           })
           let arr = []
           arr = wx.getStorageSync("time")
           arr.push(index)
-          arr =  arr.filter((item, index, app) => {
+          arr = arr.filter((item, index, app) => {
             return app.indexOf(item) === index;
           })
-          wx.setStorageSync('time',arr)
-        }else if(wx.getStorageSync("time")&&wx.getStorageSync("time").length==2){
+          let arrpo = [this.data.start, this.data.end]
+          // 数组排序
+          let newArr = arrpo.sort(function (a, b) {
+            return a - b
+          })
+          let Arrlist = list.slice(newArr[0], newArr[1] + 1)
+          list.map((item,index) => {
+            if(index >= newArr[0] && index <= newArr[1]){
+              item.flag= true
+            }
+          })
           this.setData({
+            timeArr:list
+          })
+          console.log(this.data.timeArr)
+          wx.setStorageSync('time', arr)
+        } else if (wx.getStorageSync("time") && wx.getStorageSync("time").length == 2) {
+          list.map(item => {
+            item.flag = false
+          })
+          this.setData({
+            timeArr:list,
             start: index,
-            end:-1
+            end: -1
           })
           let arr = []
           arr.push(index)
           wx.setStorageSync('time', arr)
         };
-        list.slice(this.data.start,this.data.end)
-        console.log(list)
       }
+    } else if (this.data.ipdyuan === true) {
+      if (!wx.getStorageSync("time")) {
+        this.setData({
+          start: index
+        })
+        let arr = []
+        arr.push(index)
+        wx.setStorageSync('time', arr)
+      } else if (wx.getStorageSync("time") && wx.getStorageSync("time").length == 1) {
+        this.setData({
+          end: index
+        })
+        let arr = []
+        arr = wx.getStorageSync("time")
+        arr.push(index)
+        arr = arr.filter((item, index, app) => {
+          return app.indexOf(item) === index;
+        })
+        let arrpo = [this.data.start, this.data.end]
+        // 数组排序
+        let newArr = arrpo.sort(function (a, b) {
+          return a - b
+        })
+        let Arrlist = list.slice(newArr[0], newArr[1] + 1)
+        console.log(Arrlist)
+        wx.setStorageSync('time', arr)
+      } else if (wx.getStorageSync("time") && wx.getStorageSync("time").length == 2) {
+        this.setData({
+          start: index,
+          end: -1
+        })
+        let arr = []
+        arr.push(index)
+        wx.setStorageSync('time', arr)
+      };
     }
-    // else if(this.data.ipdyuan === true){
-    //   this.setData({
-    //     start: index
-    //   })
-    // }
   },
   // 获取当前小时
   seletime() {
@@ -848,7 +892,7 @@ Page({
     //获取月份  
     let M = (date.getMonth() + 1 < 10 ? (date.getMonth() + 1) : date.getMonth() + 1);
     //获取当日日期 
-    let D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+    let D = date.getDate() < 10 ? date.getDate() : date.getDate();
     let timeyrar = Y + '-' + M + '-' + D
     this.setData({
       year: timeyrar
