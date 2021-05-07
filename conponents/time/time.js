@@ -140,18 +140,19 @@ Component({
    * 组件的初始数据
    */
   data: {
-    Timereversal1:[],
-    Timereversal2:[],
-    Timereversal3:[],
-    Timereversal4:[],
-    Timereversal5:[],
-    Timereversal6:[],
-    Timereversal7:[],
-    Timereversal8:[],
-    Timereversal9:[],
-    Timereversal10:[],
-    Timereversal11:[],
-    Timereversal12:[],
+    Timereversal1: [],
+    Timereversal2: [],
+    Timereversal3: [],
+    Timereversal4: [],
+    Timereversal5: [],
+    Timereversal6: [],
+    Timereversal7: [],
+    Timereversal8: [],
+    Timereversal9: [],
+    Timereversal10: [],
+    Timereversal11: [],
+    Timereversal12: [],
+    Timereversal13: [],
     checked: false, //全选反选的按钮判断条件
     checkedNext: false, //全选反选的按钮判断条件
     checkedNexttwo: false, //全选反选的按钮判断条件
@@ -199,7 +200,11 @@ Component({
             }
             if (item1.date !== '' && item1.date >= this.data.today) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + checkedMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + checkedMonth + checkedDate + item1.date
+              }
               typedate.month = checkedMonth
             }
             tempA.push(item1)
@@ -227,7 +232,7 @@ Component({
           checked: !this.data.checked,
           thisMonthArr: tempArr,
           date: data2,
-          Timereversal1:data2 //单击取消全部全选高亮取消
+          Timereversal1: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -274,7 +279,11 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextMonth + checkedDate + item1.date
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nextMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nextMonth + checkedDate + item1.date
+              }
               typedate.month = nextMonth
             }
             tempA.push(item1)
@@ -299,7 +308,7 @@ Component({
           checkedNext: !this.data.checkedNext,
           nextMonthArr: tempArr,
           date: data2,
-          Timereversal2:data2 //单击取消全部全选高亮取消
+          Timereversal2: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -346,7 +355,11 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nexttowMonth + checkedDate + item1.date
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nexttowMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nexttowMonth + checkedDate + item1.date
+              }
               typedate.month = nexttowMonth
             }
             tempA.push(item1)
@@ -371,7 +384,7 @@ Component({
           checkedNexttwo: !this.data.checkedNexttwo,
           next2MonthArr: tempArr,
           date: data2,
-          Timereversal1:data2 //单击取消全部全选高亮取消
+          Timereversal3: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -418,7 +431,11 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nexttherrMonth + checkedDate + item1.date
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nexttherrMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nexttherrMonth + checkedDate + item1.date
+              }
               typedate.month = nexttherrMonth
             }
             tempA.push(item1)
@@ -442,7 +459,8 @@ Component({
         this.setData({
           checkedNextthree: !this.data.checkedNextthree,
           next3MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal4: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -489,7 +507,11 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextfourMonth + checkedDate + item1.date
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nextfourMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nextfourMonth + checkedDate + item1.date
+              }
               typedate.month = nextfourMonth
             }
             tempA.push(item1)
@@ -513,7 +535,8 @@ Component({
         this.setData({
           checkedNextfour: !this.data.checkedNextfour,
           next4MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal5: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -560,7 +583,11 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
+              }
               typedate.month = nextfiveMonth
             }
             tempA.push(item1)
@@ -584,7 +611,8 @@ Component({
         this.setData({
           checkedNextfive: !this.data.checkedNextfive,
           next5MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal6: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -613,12 +641,12 @@ Component({
       let arr = this.data.next6MonthArr
       let tempArr = []
       let appdate = []
-      let nextfiveMonth = ''
+      let nextsixMonth = ''
       let checkedDate = ''
       if (e.currentTarget.dataset.month1 < 10) {
-        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+        nextsixMonth = '0' + e.currentTarget.dataset.month1.toString()
       } else {
-        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+        nextsixMonth = e.currentTarget.dataset.month1.toString()
       }
       if (this.data.checkedNextsix === false) {
         arr.map(item => {
@@ -631,8 +659,12 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
-              typedate.month = nextfiveMonth
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nextsixMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nextsixMonth + checkedDate + item1.date
+              }
+              typedate.month = nextsixMonth
             }
             tempA.push(item1)
             date1.push(typedate)
@@ -655,7 +687,8 @@ Component({
         this.setData({
           checkedNextsix: !this.data.checkedNextsix,
           next6MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal7: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -670,7 +703,7 @@ Component({
           tempArr.push(tempA)
         })
         this.data.date = this.data.date.filter(item => {
-          return item.month !== nextfiveMonth
+          return item.month !== nextsixMonth
         })
         this.setData({
           checkedNextsix: !this.data.checkedNextsix,
@@ -684,12 +717,12 @@ Component({
       let arr = this.data.next7MonthArr
       let tempArr = []
       let appdate = []
-      let nextfiveMonth = ''
+      let nextsevenMonth = ''
       let checkedDate = ''
       if (e.currentTarget.dataset.month1 < 10) {
-        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+        nextsevenMonth = '0' + e.currentTarget.dataset.month1.toString()
       } else {
-        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+        nextsevenMonth = e.currentTarget.dataset.month1.toString()
       }
       if (this.data.checkedNextseven === false) {
         arr.map(item => {
@@ -702,8 +735,12 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
-              typedate.month = nextfiveMonth
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nextsevenMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nextsevenMonth + checkedDate + item1.date
+              }
+              typedate.month = nextsevenMonth
             }
             tempA.push(item1)
             date1.push(typedate)
@@ -726,7 +763,8 @@ Component({
         this.setData({
           checkedNextseven: !this.data.checkedNextseven,
           next7MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal8: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -741,7 +779,7 @@ Component({
           tempArr.push(tempA)
         })
         this.data.date = this.data.date.filter(item => {
-          return item.month !== nextfiveMonth
+          return item.month !== nextsevenMonth
         })
         this.setData({
           checkedNextseven: !this.data.checkedNextseven,
@@ -755,12 +793,12 @@ Component({
       let arr = this.data.next8MonthArr
       let tempArr = []
       let appdate = []
-      let nextfiveMonth = ''
+      let nexteightMonth = ''
       let checkedDate = ''
       if (e.currentTarget.dataset.month1 < 10) {
-        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+        nexteightMonth = '0' + e.currentTarget.dataset.month1.toString()
       } else {
-        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+        nexteightMonth = e.currentTarget.dataset.month1.toString()
       }
       if (this.data.checkedNexteight === false) {
         arr.map(item => {
@@ -773,8 +811,12 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
-              typedate.month = nextfiveMonth
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nexteightMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nexteightMonth + checkedDate + item1.date
+              }
+              typedate.month = nexteightMonth
             }
             tempA.push(item1)
             date1.push(typedate)
@@ -797,7 +839,8 @@ Component({
         this.setData({
           checkedNexteight: !this.data.checkedNexteight,
           next8MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal9: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -812,7 +855,7 @@ Component({
           tempArr.push(tempA)
         })
         this.data.date = this.data.date.filter(item => {
-          return item.month !== nextfiveMonth
+          return item.month !== nexteightMonth
         })
         this.setData({
           checkedNexteight: !this.data.checkedNexteight,
@@ -826,12 +869,12 @@ Component({
       let arr = this.data.next9MonthArr
       let tempArr = []
       let appdate = []
-      let nextfiveMonth = ''
+      let nextnineMonth = ''
       let checkedDate = ''
       if (e.currentTarget.dataset.month1 < 10) {
-        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+        nextnineMonth = '0' + e.currentTarget.dataset.month1.toString()
       } else {
-        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+        nextnineMonth = e.currentTarget.dataset.month1.toString()
       }
       if (this.data.checkedNextnine === false) {
         arr.map(item => {
@@ -844,8 +887,12 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
-              typedate.month = nextfiveMonth
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nextnineMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nextnineMonth + checkedDate + item1.date
+              }
+              typedate.month = nextnineMonth
             }
             tempA.push(item1)
             date1.push(typedate)
@@ -868,7 +915,8 @@ Component({
         this.setData({
           checkedNextnine: !this.data.checkedNextnine,
           next9MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal10: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -883,7 +931,7 @@ Component({
           tempArr.push(tempA)
         })
         this.data.date = this.data.date.filter(item => {
-          return item.month !== nextfiveMonth
+          return item.month !== nextnineMonth
         })
         this.setData({
           checkedNextnine: !this.data.checkedNextnine,
@@ -897,12 +945,12 @@ Component({
       let arr = this.data.next10MonthArr
       let tempArr = []
       let appdate = []
-      let nextfiveMonth = ''
+      let nexttenMonth = ''
       let checkedDate = ''
       if (e.currentTarget.dataset.month1 < 10) {
-        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+        nexttenMonth = '0' + e.currentTarget.dataset.month1.toString()
       } else {
-        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+        nexttenMonth = e.currentTarget.dataset.month1.toString()
       }
       if (this.data.checkedNextten === false) {
         arr.map(item => {
@@ -915,8 +963,12 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
-              typedate.month = nextfiveMonth
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nexttenMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nexttenMonth + checkedDate + item1.date
+              }
+              typedate.month = nexttenMonth
             }
             tempA.push(item1)
             date1.push(typedate)
@@ -939,7 +991,8 @@ Component({
         this.setData({
           checkedNextten: !this.data.checkedNextten,
           next10MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal11: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -954,7 +1007,7 @@ Component({
           tempArr.push(tempA)
         })
         this.data.date = this.data.date.filter(item => {
-          return item.month !== nextfiveMonth
+          return item.month !== nexttenMonth
         })
         this.setData({
           checkedNextten: !this.data.checkedNextten,
@@ -968,12 +1021,12 @@ Component({
       let arr = this.data.next11MonthArr
       let tempArr = []
       let appdate = []
-      let nextfiveMonth = ''
+      let nextelevenMonth = ''
       let checkedDate = ''
       if (e.currentTarget.dataset.month1 < 10) {
-        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+        nextelevenMonth = '0' + e.currentTarget.dataset.month1.toString()
       } else {
-        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+        nextelevenMonth = e.currentTarget.dataset.month1.toString()
       }
       if (this.data.checkedNexteleven === false) {
         arr.map(item => {
@@ -986,8 +1039,12 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
-              typedate.month = nextfiveMonth
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nextelevenMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nextelevenMonth + checkedDate + item1.date
+              }
+              typedate.month = nextelevenMonth
             }
             tempA.push(item1)
             date1.push(typedate)
@@ -1010,7 +1067,8 @@ Component({
         this.setData({
           checkedNexteleven: !this.data.checkedNexteleven,
           next11MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal12: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -1025,7 +1083,7 @@ Component({
           tempArr.push(tempA)
         })
         this.data.date = this.data.date.filter(item => {
-          return item.month !== nextfiveMonth
+          return item.month !== nextelevenMonth
         })
         this.setData({
           checkedNexteleven: !this.data.checkedNexteleven,
@@ -1039,12 +1097,12 @@ Component({
       let arr = this.data.next12MonthArr
       let tempArr = []
       let appdate = []
-      let nextfiveMonth = ''
+      let nexttwelveMonth = ''
       let checkedDate = ''
       if (e.currentTarget.dataset.month1 < 10) {
-        nextfiveMonth = '0' + e.currentTarget.dataset.month1.toString()
+        nexttwelveMonth = '0' + e.currentTarget.dataset.month1.toString()
       } else {
-        nextfiveMonth = e.currentTarget.dataset.month1.toString()
+        nexttwelveMonth = e.currentTarget.dataset.month1.toString()
       }
       if (this.data.checkedNexttwelve === false) {
         arr.map(item => {
@@ -1057,8 +1115,12 @@ Component({
             }
             if (item1.date !== '' && item1.date >= 1) {
               item1.state = true
-              typedate.date = e.currentTarget.dataset.year + nextfiveMonth + checkedDate + item1.date
-              typedate.month = nextfiveMonth
+              if(item1.date < 10){
+                typedate.date = e.currentTarget.dataset.year + nexttwelveMonth + checkedDate + "0" + item1.date
+              }else{
+                typedate.date = e.currentTarget.dataset.year + nexttwelveMonth + checkedDate + item1.date
+              }
+              typedate.month = nexttwelveMonth
             }
             tempA.push(item1)
             date1.push(typedate)
@@ -1081,7 +1143,8 @@ Component({
         this.setData({
           checkedNexttwelve: !this.data.checkedNexttwelve,
           next12MonthArr: tempArr,
-          date: data2
+          date: data2,
+          Timereversal13: data2 //单击取消全部全选高亮取消
         })
         console.log(this.data.date, "全部选中")
       } else {
@@ -1096,7 +1159,7 @@ Component({
           tempArr.push(tempA)
         })
         this.data.date = this.data.date.filter(item => {
-          return item.month !== nextfiveMonth
+          return item.month !== nexttwelveMonth
         })
         this.setData({
           checkedNexttwelve: !this.data.checkedNexttwelve,
@@ -1114,11 +1177,11 @@ Component({
       } else {
         checkedMonth = e.currentTarget.dataset.month1.toString()
       }
-      // if (e.currentTarget.dataset.date < 10) {
-      //   checkedDate = '0' + e.currentTarget.dataset.date.toString()
-      // } else {
+      if (e.currentTarget.dataset.date < 10) {
+        checkedDate = '0' + e.currentTarget.dataset.date.toString()
+      } else {
       checkedDate = e.currentTarget.dataset.date.toString()
-      // }
+      }
       let typedate = {
         date: '',
         month: ''
@@ -1165,19 +1228,137 @@ Component({
         that[index][item].state = false;
         let today = e.currentTarget.dataset.year + checkedMonth + checkedDate
         let add = this.data.date
+        this.data.date = add.filter((item) => {
+          return item.date !== today
+        })
         //本月取反
-        let ppp = this.data.Timereversal1 
-        this.data.Timereversal1 = ppp.filter((item, index) => {
+        let month = this.data.Timereversal1
+        this.data.Timereversal1 = month.filter((item) => {
           return item.date !== today
         })
         //下一月取反
-
-        this.data.date = add.filter((item, index) => {
+        let month1 = this.data.Timereversal2
+        this.data.Timereversal2 = month1.filter((item) => {
           return item.date !== today
         })
-        if(this.data.Timereversal1.length === 0){
+        //下二月取反
+        let month2 = this.data.Timereversal3
+        this.data.Timereversal3 = month2.filter((item) => {
+          return item.date !== today
+        })
+        //下三月取反
+        let month3 = this.data.Timereversal4
+        this.data.Timereversal4 = month3.filter((item) => {
+          return item.date !== today
+        })
+        // 下四月取反
+        let month4 = this.data.Timereversal5
+        this.data.Timereversal5 = month4.filter((item) => {
+          return item.date !== today
+        })
+        //下五月取反
+        let month5 = this.data.Timereversal6
+        this.data.Timereversal6 = month5.filter((item) => {
+          return item.date !== today
+        })
+        //下六月取反
+        let month6 = this.data.Timereversal7
+        this.data.Timereversal7 = month6.filter((item) => {
+          return item.date !== today
+        })
+        //下七月取反
+        let month7 = this.data.Timereversal8
+        this.data.Timereversal8 = month7.filter((item) => {
+          return item.date !== today
+        })
+        //下八月取反
+        let month8 = this.data.Timereversal9
+        this.data.Timereversal9 = month8.filter((item) => {
+          return item.date !== today
+        })
+        //下九月取反
+        let month9 = this.data.Timereversal10
+        this.data.Timereversal10 = month9.filter((item) => {
+          return item.date !== today
+        })
+        //下10月取反
+        let month10 = this.data.Timereversal11
+        this.data.Timereversal11 = month10.filter((item) => {
+          return item.date !== today
+        })
+        //下11月取反
+        let month11 = this.data.Timereversal12
+        this.data.Timereversal12 = month11.filter((item) => {
+          return item.date !== today
+        })
+        // 下12月取反
+        let month12 = this.data.Timereversal13
+        this.data.Timereversal13 = month12.filter((item) => {
+          return item.date !== today
+        })
+        if (this.data.Timereversal1.length === 0) {
           this.setData({
-            checked:false
+            checked: false
+          })
+        }
+        if (this.data.Timereversal2.length === 0) {
+          this.setData({
+            checkedNext: false
+          })
+        }
+        if (this.data.Timereversal3.length === 0) {
+          this.setData({
+            checkedNexttwo: false
+          })
+        }
+        if (this.data.Timereversal4.length === 0) {
+          this.setData({
+            checkedNextthree: false
+          })
+        }
+        if (this.data.Timereversal5.length === 0) {
+          this.setData({
+            checkedNextfour: false
+          })
+        }
+        if (this.data.Timereversal6.length === 0) {
+          this.setData({
+            checkedNextfive: false
+          })
+        }
+        if (this.data.Timereversal7.length === 0) {
+          this.setData({
+            checkedNextsix: false
+          })
+        }
+        if (this.data.Timereversal8.length === 0) {
+          this.setData({
+            checkedNextseven: false
+          })
+        }
+        if (this.data.Timereversal9.length === 0) {
+          this.setData({
+            checkedNexteight: false
+          })
+        }
+        if (this.data.Timereversal10.length === 0) {
+          this.setData({
+            checkedNextnine: false
+          })
+        }
+        if (this.data.Timereversal11.length === 0) {
+          this.setData({
+            checkedNextten: false
+          })
+        }
+        if (this.data.Timereversal12.length === 0) {
+          this.setData({
+            checkedNexteleven: false
+          })
+        }
+        if (this.data.Timereversal13.length === 0) {
+          this.setData({
+            checkedNexttwelve: false
           })
         }
         console.log(this.data.date, "单击取消")

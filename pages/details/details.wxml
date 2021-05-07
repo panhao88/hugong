@@ -319,7 +319,14 @@
         <van-divider />
         <view class="contact" bindtap="gotime">
           <view class="Contact-address">请选择服务时间</view>
-          <view class="commontimer">2021-3-10-2022-4-10　共5天</view>
+          <view class="plVertime">
+              <view  wx:for="{{ymtime}}" wx:key="index">
+                <view class="commontimer">{{item.date}}</view>
+              </view>
+            <!-- <view wx:if="{{ymtime.length > 0}}" class="commontimer">
+              共{{ymtime.length}}天
+            </view> -->
+          </view>
           <view class="picture">
             <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiangyou.png"
               class="immm-g"></image>
@@ -578,7 +585,7 @@
   </view>
 </van-popup>
 <!-- 时间弹窗 -->
-<van-popup show="{{showtime}}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
+<van-popup show="{{showtime}}" position="bottom" custom-style="height: 70%;" bind:close="onClose">
   <time thisYear="{{thisYear}}" thisMonth="{{thisMonth}}" thisMonthArr="{{thisMonthArr}}" nextYear="{{nextYear}}"
     nextMonth="{{nextMonth}}" nextMonthArr="{{nextMonthArr}}" nextYear="{{nextYear}}" next2Year="{{next2Year}}"
     next2Month="{{next2Month}}" next2MonthArr="{{next2MonthArr}}" next3Year="{{next3Year}}" next3Month="{{next3Month}}"
@@ -609,13 +616,17 @@
     </scroll-view>
     <view class='time' wx:if="{{ipdyuan === false}}">
       <view wx:for="{{ timeArr }}" data-index="{{index}}" data-time="{{ item.time}}" data-flag="{{ item.flag}}"
-        bindtap='startTime' class='listItem {{item.time < hour ? "Pretimer" : ""}} {{index == start ? "current":""}} {{index == end  ? "current":""}} {{item.flag === true ? "current":""}}' wx:key='index'>
+        bindtap='startTime'
+        class='listItem {{item.time < hour ? "Pretimer" : ""}} {{index == start ? "current":""}} {{index == end  ? "current":""}} {{item.flag === true ? "current":""}}'
+        wx:key='index'>
         <text>{{ item.time }}</text>
       </view>
     </view>
     <view class='time' wx:if="{{ipdyuan === true}}">
       <view wx:for="{{ timeArr }}" data-index="{{index }}" data-flag="{{item.flag}}" data-time="{{item.time}}"
-        bindtap='startTime' class='listItem {{index == start ? "current":""}} {{index == end  ? "current":""}} {{index >=start && index <= end  ? "current":""}}' wx:key='index'>
+        bindtap='startTime'
+        class='listItem {{index == start ? "current":""}} {{index == end  ? "current":""}} {{index >=start && index <= end  ? "current":""}}'
+        wx:key='index'>
         <text>{{item.time }}</text>
       </view>
     </view>

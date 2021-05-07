@@ -538,7 +538,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .paddim {
   padding-right: 20rpx;
 }
@@ -556,11 +555,22 @@
   white-space: nowrap;
   font-weight: 600;
 }
+.plVertime{
+  width: 55%;
+  display: flex;
+  background: red;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .commontimer {
   font-weight: 550;
   color: #61CF8C;
   font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .Contact-address {
@@ -1179,128 +1189,6 @@
   font-size: 32rpx;
   font-weight: 700;
 }
-
-/* 选择时间 */
-/* pages/setCalendar/setCalendar.ttss */
-.calendar {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.choice {
-  width: 100%;
-  height: 80rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30rpx;
-  color: #333333;
-  font-weight: 600;
-}
-
-.pddlevel {
-  height: 80rpx;
-  padding-left: 20rpx;
-  padding-right: 20rpx;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  font-size: 26rpx;
-  background: #ececec;
-  font-weight: 700;
-}
-
-.calendar .week {
-  width: 98%;
-  margin: 0 auto;
-  height: auto;
-  overflow: hidden;
-}
-
-.calendar .week text {
-  width: 60rpx;
-  margin: 0 auto;
-  text-align: center;
-  height: 60rpx;
-  border-radius: 50%;
-  margin: 22rpx;
-  font-size: 26rpx;
-  color: #333333;
-  font-weight: 700;
-  display: flex;
-  float: left;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: #FFFFFF 1px solid;
-  box-sizing: border-box;
-}
-
-.calendar .week .saturday {
-  color: #000;
-}
-
-.calendar .week .sunday {
-  color: #000;
-}
-
-/* 当天的时间 */
-.calendar .week .now {
-  border: none;
-  background: #F5F5F5;
-  color: #888888;
-  border-radius: 50%;
-  box-sizing: border-box;
-}
-
-/* 选中的时间 */
-.calendar .week .selected {
-  border: none;
-  background: #61CF8C !important;
-  color: #FFFFFF !important;
-  border-radius: 50%;
-  box-sizing: border-box;
-}
-
-/* 过去时间 */
-.calendar .week .disabled {
-  border: none;
-  background: #F5F5F5;
-  text-decoration: line-through;
-  border: #FFFFFF 1px solid;
-  color: #888888;
-  box-sizing: border-box;
-}
-
-/* 为空白时间 */
-.calendar .week .empty {
-  border: none;
-  /* background: #F5F5F5; */
-  background: #FFFFFF !important;
-  box-sizing: border-box;
-}
-
-/* 有天数的背景 */
-.calendar .week .aaaa {
-  border: none;
-  /* background: #F5F5F5; */
-  background: #F5F5F5;
-  border: #FFFFFF 1px solid;
-  color: #888888;
-  box-sizing: border-box;
-}
-
-.btn {
-  width: 680rpx !important;
-  height: 80rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40rpx;
-}
-
 /* 热门机构 */
 .plservice {
   font-size: 30rpx;

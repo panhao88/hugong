@@ -33,7 +33,7 @@ Page({
     items: [{
         name: '张三',
         phone: "123456789",
-        position: "武侯区新希望大厦",
+        position: "武侯区新希望大厦武侯区新希望大厦武侯区新希望大厦武侯区新希望大厦武侯区新希望大厦武侯区新希望大厦",
         remarks: "糖尿病，高血压",
         Gender: "女",
         age: "66岁"
@@ -196,7 +196,9 @@ Page({
     next4MonthArr: [], //下四月号数数组
     next5Year: '', //下五月年
     next5Month: '', //下五月
-    next6MonthArr: [], //下五月号数数组
+    next5MonthArr: [], //下五月号数数组
+    ymtime: [], //组件间传过来的时间
+    pltimer:[], //筛选出来的首尾时间
     //--------------- 心理咨询变量
     calendar: [],
     calendar111: [],
@@ -282,7 +284,30 @@ Page({
   // ====================服务时间=====================
   //获取子组件传过来的时间
   getmyevent(e) {
-    // console.log(e)
+    let Arrlist = e.detail
+    let sortArr = Arrlist.sort((obj1, obj2) => {
+      return obj1.date - obj2.date
+    });
+    // if (sortArr.length > 1) {
+    //   let arr = []
+    //   let app = []
+    //   app.push(sortArr[0])
+    //   arr.push(sortArr[sortArr.length - 1])
+    //   let listtimmer = []
+    //   listtimmer = app.concat(arr)
+    //  this.setData({
+    //   pltimer:listtimmer
+    //  })
+    // }else{
+    //   this.setData({
+    //     pltimer:sortArr
+    //   })
+    // }
+    this.setData({
+      ymtime: sortArr,
+      show: true,
+      showtime: false,
+    })
   },
   //根据指定年月获得当月天数
   mGetDate(year, month) {
@@ -435,11 +460,11 @@ Page({
         pierce: true //弹窗穿透
       })
     } else if (this.data.psy === "1") {
-    this.setData({
-      showpsychology: true,
-      show: false,
-      pierce: true //弹窗穿透
-    })
+      this.setData({
+        showpsychology: true,
+        show: false,
+        pierce: true //弹窗穿透
+      })
     }
   },
   //点击遮罩层阴影关闭
@@ -764,18 +789,18 @@ Page({
     //为上半部分的点击事件
     if (curren === this.data.year) {
       this.setData({
-        ipdyuan:false,
+        ipdyuan: false,
         currentIndex: e.currentTarget.dataset.index,
-        start:-1,
-        end:-1
+        start: -1,
+        end: -1
       })
     }
     if (curren !== this.data.year) {
       this.setData({
         ipdyuan: true,
         currentIndex: e.currentTarget.dataset.index,
-        start:-1,
-        end:-1
+        start: -1,
+        end: -1
       })
     }
   },
@@ -809,13 +834,13 @@ Page({
             return a - b
           })
           let Arrlist = list.slice(newArr[0], newArr[1] + 1)
-          list.map((item,index) => {
-            if(index >= newArr[0] && index <= newArr[1]){
-              item.flag= true
+          list.map((item, index) => {
+            if (index >= newArr[0] && index <= newArr[1]) {
+              item.flag = true
             }
           })
           this.setData({
-            timeArr:list
+            timeArr: list
           })
           console.log(this.data.timeArr)
           wx.setStorageSync('time', arr)
@@ -824,7 +849,7 @@ Page({
             item.flag = false
           })
           this.setData({
-            timeArr:list,
+            timeArr: list,
             start: index,
             end: -1
           })
