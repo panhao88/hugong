@@ -556,23 +556,22 @@
   font-weight: 600;
 }
 .plVertime{
-  width: 55%;
+  width: 65%;
   display: flex;
-  background: red;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
 .commontimer {
   font-weight: 550;
   color: #61CF8C;
   font-size: 26rpx;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
-
+.plmontimer{
+  margin-left: 10rpx;
+  font-weight: 550;
+  color: #61CF8C;
+  font-size: 26rpx;
+}
 .Contact-address {
   width: 30%;
   font-size: 28rpx;
@@ -584,7 +583,16 @@
   display: flex;
   justify-content: center;
 }
-
+.choice {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: 600;
+}
 .immm-g {
   width: 30rpx;
   height: 30rpx;

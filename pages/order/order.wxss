@@ -1,26 +1,13 @@
 /* pages/order/order.wxss */
-.local {
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #FAFAFAFF;
-}
 
-.central {
-  width: 95%;
-  height: 100%;
-  /* background: #FAFAFAFF; */
-}
 .van-divider{
   margin: 0 !important;
   margin-left: 20rpx !important;
   margin-right: 20rpx !important;
 }
-.bor{
+.bordd{
   border: solid 0.5rpx #EEEEEE;
-  margin-top: 15rpx;
+  margin-top: 10rpx;
   margin-left: 20rpx ;
   margin-right: 20rpx ;
 }
@@ -191,18 +178,9 @@
   justify-content: space-around;
 }
 /* 待服务 */
-.top-service{
-  margin-top: 20rpx;
-  width: 100%;
-  height: 395rpx;
-  display: flex;
-  flex-direction: column;
-  background: #FFFFFFFF;
-  border-radius: 20rpx;
-}
 .butto-service{
   margin-top: 15rpx;
-  width: 100%;
+  width: 98%;
   height: 140rpx;
   display: flex;
   justify-content: space-between;

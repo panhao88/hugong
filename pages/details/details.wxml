@@ -320,12 +320,10 @@
         <view class="contact" bindtap="gotime">
           <view class="Contact-address">请选择服务时间</view>
           <view class="plVertime">
-              <view  wx:for="{{ymtime}}" wx:key="index">
-                <view class="commontimer">{{item.date}}</view>
-              </view>
-            <!-- <view wx:if="{{ymtime.length > 0}}" class="commontimer">
+            <view class="commontimer">{{pltimer}}</view>
+            <view wx:if="{{ymtime.length > 0}}" class="plmontimer">
               共{{ymtime.length}}天
-            </view> -->
+            </view>
           </view>
           <view class="picture">
             <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xiangyou.png"

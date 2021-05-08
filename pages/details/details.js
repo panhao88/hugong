@@ -198,7 +198,7 @@ Page({
     next5Month: '', //下五月
     next5MonthArr: [], //下五月号数数组
     ymtime: [], //组件间传过来的时间
-    pltimer:[], //筛选出来的首尾时间
+    pltimer: '', //筛选出来的首尾时间
     //--------------- 心理咨询变量
     calendar: [],
     calendar111: [],
@@ -288,21 +288,44 @@ Page({
     let sortArr = Arrlist.sort((obj1, obj2) => {
       return obj1.date - obj2.date
     });
-    // if (sortArr.length > 1) {
-    //   let arr = []
-    //   let app = []
-    //   app.push(sortArr[0])
-    //   arr.push(sortArr[sortArr.length - 1])
-    //   let listtimmer = []
-    //   listtimmer = app.concat(arr)
-    //  this.setData({
-    //   pltimer:listtimmer
-    //  })
-    // }else{
-    //   this.setData({
-    //     pltimer:sortArr
-    //   })
-    // }
+    if (sortArr.length > 1) {
+      let arr = []
+      let app = []
+      app.push(sortArr[0].date)
+      arr.push(sortArr[sortArr.length - 1].date)
+      let listtimmer = []
+      listtimmer = app.concat(arr)
+      let ppp = listtimmer.toString().split('')
+      let ddd = ''
+      ppp.map((item, index) => {
+        if (item === ",") {
+          item = "~"
+        }
+        if (index === 4 || index === 6 || index === 13 || index === 15) {
+          ppp = item.split("")
+          item = "-" + ppp
+        }
+        ddd += item
+      })
+      this.setData({
+        pltimer: ddd
+      })
+    } else {
+      let arr = []
+      arr.push(Arrlist[0].date)
+      let ppp = arr.toString().split('')
+      let ddd = ''
+      ppp.map((item, index) => {
+        if (index === 4 || index === 6) {
+          ppp = item.split("")
+          item = "-" + ppp
+        }
+        ddd += item
+      })
+      this.setData({
+        pltimer: ddd
+      })
+    }
     this.setData({
       ymtime: sortArr,
       show: true,
@@ -453,19 +476,19 @@ Page({
   },
   //选择服务时间
   gotime() {
-    if (this.data.psy === undefined) {
-      this.setData({
-        showtime: true,
-        show: false,
-        pierce: true //弹窗穿透
-      })
-    } else if (this.data.psy === "1") {
+    // if (this.data.psy === undefined) {
+    //   this.setData({
+    //     showtime: true,
+    //     show: false,
+    //     pierce: true //弹窗穿透
+    //   })
+    // } else if (this.data.psy === "1") {
       this.setData({
         showpsychology: true,
         show: false,
         pierce: true //弹窗穿透
       })
-    }
+    // }
   },
   //点击遮罩层阴影关闭
   onClose() {
@@ -786,6 +809,13 @@ Page({
   // 选择年月日
   select(e) {
     let curren = e.currentTarget.dataset.date
+    let arr = this.data.timeArr
+    arr.map(item => {
+      item.flag = false
+    })
+    this.setData({
+      timeArr:arr
+    })
     //为上半部分的点击事件
     if (curren === this.data.year) {
       this.setData({
@@ -834,6 +864,7 @@ Page({
             return a - b
           })
           let Arrlist = list.slice(newArr[0], newArr[1] + 1)
+          console.log(Arrlist)
           list.map((item, index) => {
             if (index >= newArr[0] && index <= newArr[1]) {
               item.flag = true
@@ -842,7 +873,6 @@ Page({
           this.setData({
             timeArr: list
           })
-          console.log(this.data.timeArr)
           wx.setStorageSync('time', arr)
         } else if (wx.getStorageSync("time") && wx.getStorageSync("time").length == 2) {
           list.map(item => {

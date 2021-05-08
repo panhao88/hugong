@@ -57,15 +57,6 @@
   position: absolute;
   bottom: 0;
 }
-.fixed-bottom {
-  position: fixed;
-  bottom: 0;
-  padding-bottom: var(--iphonex-fix-bottom);
-  left: 0;
-  width: 100%;
-  background: #FFFFFF;
-  /* 设置背景色以透出页面内容 */
-}
 .login-bu{
   margin-top: 20rpx;
   width: 680rpx !important;

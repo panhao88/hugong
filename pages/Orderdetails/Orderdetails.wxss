@@ -448,7 +448,7 @@ border-radius: 20rpx;
   font-weight: 600;
 }
 .plimg{
-  padding: 0 15rpx 15rpx 15rpx;
+  padding: 15rpx 15rpx 15rpx 15rpx;
   color: #333333FF;
   font-size: 28rpx;
   font-weight: 700;

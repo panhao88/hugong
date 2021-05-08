@@ -23,15 +23,7 @@
   font-weight: 700;
   /* border-bottom: solid 0.5rpx #EEEEEE; */
 }
-.immediately{
-  width: 95%;
-  height: 100rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-}
+
 .login-bu{
   width: 600rpx !important;
   height: 70rpx;

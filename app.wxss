@@ -42,7 +42,7 @@ page{
 .fixed-bottom {
   position: fixed;
   bottom: 0;
-  padding-bottom: var(--iphonex-fix-bottom);
+  padding-bottom: 50rpx;
   left: 0;
   width: 100%;
   background: #FFFFFF;

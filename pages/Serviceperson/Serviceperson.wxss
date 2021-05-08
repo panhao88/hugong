@@ -131,12 +131,3 @@
   line-height: 35rpx;
   font-size: 30rpx;
 }
-.fixed-bottom {
-  position: fixed;
-  bottom: 0;
-  padding-bottom: var(--iphonex-fix-bottom);
-  left: 0;
-  width: 100%;
-  background: #FFFFFF;
-  /* 设置背景色以透出页面内容 */
-}

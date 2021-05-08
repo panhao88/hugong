@@ -104,7 +104,28 @@ Page({
 
   },
   onLoad() {
-
+    //微信授权登录弹窗
+    // if(!wx.getStorageSync('user')){
+    //   wx.showModal({
+    //     title:"检测到你未登录",
+    //     content: '是否获取您的昵称、头像、地区及性别',
+    //     success(res){
+    //       if(res.confirm){
+    //         wx.getUserProfile({
+    //           desc: '用于获取用户个人信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+    //           success(res){
+    //             if (res.errMsg == "getUserProfile:ok") {
+    //               console.log(res)
+    //               let userInfo = res.userInfo;
+    //               wx.setStorageSync('userInfo', userInfo)
+    //               wx.setStorageSync('user', 1)
+    //             }
+    //           }
+    //         })
+    //       }
+    //     }
+    //   })
+    // }
   },
   /**
    * 生命周期函数--监听页面显示
