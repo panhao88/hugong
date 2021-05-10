@@ -1,6 +1,6 @@
 <view class="local">
   <view class="central">
-    <!-- 输入框 -->
+    <!-- 输入框123 -->
     <view class="top">
       <view class="box-now">
         <view class="box-tow">{{Capital}} <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/xia.png" class="img-dizhi"></image>
