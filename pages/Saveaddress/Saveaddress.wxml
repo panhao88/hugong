@@ -54,7 +54,7 @@
           </cover-view>
         </cover-view>
       </map>
-      <view class="middle" catchtouchmove='true'>
+      <view  catchtouchmove='true'>
         <scroll-view class="near-list" scroll-y>
           <!--绑定回填事件-->
           <view class="near-item" wx:for="{{nearList}}" wx:key="index">

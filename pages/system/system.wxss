@@ -1,21 +1,15 @@
 /* pages/online/online.wxss */
-.local {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #FAFAFAFF;
-}
-
-.central {
-  width: 95%;
+.lpCenter {
+  width: 100%;
+  margin-left: 20rpx;
   background: #fff;
 }
 .box{
   touch-action: none
 }
 .van-button{
-  width: 140rpx !important;
+  width: 120rpx !important;
+  height: 90rpx !important;
   background: #FF2C2C;
   color: #FAFAFAFF;
 }

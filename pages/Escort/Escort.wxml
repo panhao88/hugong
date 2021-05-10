@@ -75,6 +75,6 @@
         </view>
       </view>
     </view>
-    <!-- <view class="bottom"></view> -->
+    <view class="bottom-box"></view>
   </view>
 </view>

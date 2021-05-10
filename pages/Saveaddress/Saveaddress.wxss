@@ -183,9 +183,6 @@
   border-radius: 50%;
   margin: 3rpx auto;
 }
-.middle{
-  padding-bottom:calc(80rpx + var(--iphonex-fix-bottom));
-}
 .near-list {
   width: 100%;
   height:550rpx;
@@ -235,22 +232,16 @@
 .near-item .add1 {
   color: #3095F9;
 }
-.fixed-bottom {
-  position: fixed;
-  bottom: 0;
-  padding-bottom: var(--iphonex-fix-bottom);
-  left: 0;
-  width: 100%;
-  background: #FFFFFF;
-  /* 设置背景色以透出页面内容 */
-}
+
 .lobu{
   width: 600rpx !important;
   height: 70rpx;
   background-color: #61CF8CFF;
   border-radius:40rpx ;
   color: #ffffff;
-  line-height: 35rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 30rpx;
 }
 /* 城市列表 */

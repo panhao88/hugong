@@ -1,5 +1,13 @@
 <view class="local">
   <view class="central">
+    <view class="top">
+      <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/hugong.png" class="img">
+      </image>
+      <view class="box">
+        <image src="cloud://cloud1-1g4t51tj57b7e1b7.636c-cloud1-1g4t51tj57b7e1b7-1305469223/img/shangtou.png"
+          class="img-xiang"></image>
+      </view>
+    </view>
     <van-cell-group>
       <van-field value="{{ value }}" placeholder="请输入姓名" label="姓名" input-align="right" />
       <view class="radio">
@@ -26,7 +34,7 @@
     <view class="service-sp">备注(选填)</view>
     <view class="textar">
       <textarea style="background:#F7F4F8" class="pltextarea" placeholder="列：需要居家陪护、做饭、清理" />
-    </view>
+      </view>
     <view class="fixed-bottom">
      <button class="login-bu" bindtap="addService">+保存服务人</button>
     </view>
